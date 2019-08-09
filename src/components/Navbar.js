@@ -1,10 +1,11 @@
 import React from 'react';
 import Scrollspy from 'react-scrollspy';
 import { Link } from 'gatsby';
+import ScrollIndicator from './ScrollIndicator';
 
 const Navbar = () => (
     <nav className="navbar navbar-fixed-top navbar-inverse" id="nav-parent">
-        <div id="scroll-indicator"></div>
+        <ScrollIndicator />
         <div className="container-fluid">
             <div className="navbar-header">
                 <button 
