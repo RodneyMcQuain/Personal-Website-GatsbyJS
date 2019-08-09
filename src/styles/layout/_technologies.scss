@@ -1,0 +1,25 @@
+ul.technologies {
+  margin: 0;
+  padding: 0;
+  
+  li {
+    padding: 10px;
+    list-style: none;
+    
+    &:before {
+      content: "⁍ ";
+    }
+  }  
+}
+
+.hidden-technology-row {
+  margin-top: 20px;
+}
+
+.hidden-technology-row div {
+  @include hide();
+}
+
+.hidden-technology-row.unhidden div {
+  @include unhide();
+}

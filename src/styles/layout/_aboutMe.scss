@@ -1,0 +1,17 @@
+#about-me-text {
+  text-align: left;
+}
+
+#me-img {
+  float: right;
+  background: $white;
+  padding: 3px;
+  margin-left: 10px;
+}
+
+@media (max-width: 325px) {
+  #me-img {
+    float: none;
+    margin-bottom: 10px;
+  }
+}

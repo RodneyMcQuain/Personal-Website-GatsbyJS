@@ -1,0 +1,36 @@
+.dark-section {
+  background: $black;
+  background-image: $dark-gradient;
+  padding-bottom: 30px;
+  margin-top: 20px;
+  color: $white;
+
+  .-curved-border {
+    border: 1px solid $lighter-black;
+    box-shadow: 4px 4px 10px $darker-black;
+  }
+
+  .btn {
+    background: $white;
+    color: $black;
+    box-shadow: 2px 2px 5px $darker-black;
+
+    a, span {
+      color: $black;
+    }
+
+    &:hover {
+      border: 1px solid $white;
+      background: $black;
+      color: $white;
+
+      a, span {
+        color: $white;
+      }
+    }
+  }
+
+  .container-top-image {
+    border-bottom: 2px solid $lighter-black;
+  }
+}

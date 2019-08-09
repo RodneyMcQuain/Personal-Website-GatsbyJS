@@ -1,0 +1,163 @@
+:root {
+  font-size: 6.25%;
+}
+
+body {
+  margin-top: $navbar-height;
+}
+
+h1 {
+  font-size: 50rem;
+  position: relative;
+}
+
+h1 span {
+  position: absolute;
+  top: -60px;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 26rem;
+  font-weight: bold;
+}
+
+p, span, div, a {
+  text-align: center;
+  font-size: 20rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn {
+  background: $black;
+  color: $white;
+  box-shadow: 2px 2px 5px #ccc;
+  transition: all .5s ease-in-out;
+
+  a, span {
+    font-size: 16rem;
+    color: $white;
+  }
+
+  &:hover {
+    border: 1px solid $black;
+    background: $white;
+    color: $black;
+    -webkit-transform: translate3D(0, 0, 0);
+    @include transform($minor-scale);
+
+    a, span {
+      color: $black;
+    }
+  }
+
+  &:focus {
+    color: $white;
+
+    &:hover {
+        color: $black;
+    }
+  }
+}
+
+button, div {
+  text-align: center;
+}
+
+a {
+  color: $black;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.-border, .-curved-border {
+  border: 1px solid $white;
+}
+
+.-curved-border {
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px #ccc;
+  overflow: hidden;
+}
+
+.-top-margin {
+  margin-top: 10px;
+}
+
+.center-container {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.row {
+  border: none;
+}
+
+.in-view-hide {
+  opacity: 0;
+}
+
+.in-view-appear {
+  opacity: 1;
+  transition: width .75s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.appear {
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+}
+
+.container-top-image {
+  max-width: 100%;
+  width: 100%;
+  border-bottom: 2px solid $darker-white;
+}
+
+.padding-container {
+  padding: 10px;
+}
+
+.padding-container-all div {
+  padding: 10px;
+}
+
+.upscale-container {
+  -webkit-transform: translate3D(0, 0, 0);
+  transition: transform .25s ease-in-out;
+
+  &:hover {
+    @include transform($minor-scale);
+  }
+}
+
+.margin-container {
+  margin: 10px 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
