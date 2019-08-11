@@ -1,17 +1,20 @@
 import React from 'react';
 import Institution from './Institution';
 import institutions from '../../data/institutions';
+import InViewAnimation from '../InViewAnimation';
 
 const Education = () => (
-    <section className="dark-section">
-        <div className="container">
-            <div className="page-header">
-                <h1><span id="education"></span>Education</h1>
-            </div>
+    <InViewAnimation>
+        <div className="dark-section">
+            <div className="container">
+                <div className="page-header">
+                    <h1><span id="education"></span>Education</h1>
+                </div>
 
-            {institutions.map(institution => <Institution key={institution} institution={institution} />)}
+                {institutions.map(institution => <Institution key={institution} institution={institution} />)}
+            </div>
         </div>
-    </section>
+    </InViewAnimation>
 );
 
 export default Education;

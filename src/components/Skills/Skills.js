@@ -1,17 +1,20 @@
 import React from 'react';
 import SkillSection from './SkillSection';
 import skills from '../../data/skills';
+import InViewAnimation from '../InViewAnimation';
 
 const Skills = () => (
-    <section className="dark-section">
-        <div className="container">
-            <div className="page-header">
-                <h1><span id="skills"></span>Skills</h1>
-            </div>
+    <InViewAnimation>    
+        <div className="dark-section">
+            <div className="container">
+                <div className="page-header">
+                    <h1><span id="skills"></span>Skills</h1>
+                </div>
 
-            {skills.map(skillSection => <SkillSection key={skillSection.title} skillSection={skillSection} />)} 
+                {skills.map(skillSection => <SkillSection key={skillSection.title} skillSection={skillSection} />)} 
+            </div>
         </div>
-    </section>
+    </InViewAnimation>
 );
 
 export default Skills;
