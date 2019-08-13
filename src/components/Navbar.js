@@ -24,7 +24,7 @@ const Navbar = () => (
                 <div className="collapse navbar-collapse" id="nav-child">
                     <Scrollspy 
                         className="nav navbar-nav"
-                        items={['about-me', 'education', 'projects', 'skills']} 
+                        items={['about-me', 'education', 'projects', 'skills', 'contact']} 
                         currentClassName='active'
                     >
                         <li><Link className="anchor" to={'/blog-posts'}>
