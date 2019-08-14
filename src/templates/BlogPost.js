@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import FullDate from '../components/FullDate';
 import InViewAnimation from '../components/InViewAnimation';
 import BlogSidebar from '../components/BlogSidebar';
+import BlogReadTime from '../components/BlogReadTime';
 
 export default function Template({ data }) {
     const post = data.thisPost;
@@ -13,7 +14,11 @@ export default function Template({ data }) {
             <InViewAnimation>
                 <div className="container">
                     <div className="col-md-9">
-                        <FullDate style="left-align blog-post-date-spacing" date={post.frontmatter.date} />
+                        <div className="blog-small-text-spacing">
+                           <FullDate style="left-align" date={post.frontmatter.date} />
+                           <BlogReadTime wordCount={post.wordCount.words} />
+                        </div>
+                        
                         <div className="page-header">
                             <h1 className="left-align blog-title">{post.frontmatter.title}</h1>
                         </div>
@@ -36,6 +41,9 @@ export const pageQuery = graphql`
                 path
                 title
                 date
+            }
+            wordCount {
+                words
             }
         }
         recentPosts: allMarkdownRemark(limit: 5) {

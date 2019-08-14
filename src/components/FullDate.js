@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types"
 
-
 const FullDate = props => (
-    <p className={`fa fa-clock-o blog-date-size left-align ${props.style}`}>
-        <span className="blog-date-size"> {getFullDate(props.date)}</span>
+    <p className={`fa fa-calendar blog-small-text ${props.style}`}>
+        <span className="blog-small-text"> {getFullDate(props.date)}</span>
     </p>
 );
 
