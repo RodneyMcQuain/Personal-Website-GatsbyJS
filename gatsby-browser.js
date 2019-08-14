@@ -6,3 +6,5 @@ if (typeof window !== 'undefined') {
     window.jQuery = window.$ = require('jquery');
     require('bootstrap');
 }
+
+require("prismjs/themes/prism-okaidia.css");

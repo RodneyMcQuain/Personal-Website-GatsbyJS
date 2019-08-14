@@ -5,6 +5,8 @@ module.exports = {
     author: `Rodney McQuain`,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
@@ -15,6 +17,13 @@ module.exports = {
         name: `pages`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-prismjs`,
+        ]
+      }
+    }
   ],
 }
