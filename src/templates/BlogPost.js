@@ -5,6 +5,7 @@ import FullDate from '../components/FullDate';
 import InViewAnimation from '../components/InViewAnimation';
 import BlogSidebar from '../components/BlogSidebar';
 import BlogReadTime from '../components/BlogReadTime';
+import SEO from '../components/seo';
 
 export default function Template({ data }) {
     const post = data.thisPost;
@@ -13,12 +14,13 @@ export default function Template({ data }) {
         <Layout>
             <InViewAnimation>
                 <div className="container">
+                   <SEO title={post.frontmatter.title} />
                     <div className="col-md-9">
                         <div className="blog-small-text-spacing">
                            <FullDate style="left-align" date={post.frontmatter.date} />
                            <BlogReadTime wordCount={post.wordCount.words} />
                         </div>
-                        
+
                         <div className="page-header">
                             <h1 className="left-align blog-title">{post.frontmatter.title}</h1>
                         </div>
