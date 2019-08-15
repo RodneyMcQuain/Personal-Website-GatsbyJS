@@ -9,8 +9,16 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-catch-links`,
+    `gatsby-transformer-json`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+        name: `data`
+      }
+    },
+    `gatsby-plugin-catch-links`,
+    { 
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,

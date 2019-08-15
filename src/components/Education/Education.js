@@ -1,9 +1,9 @@
 import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 import Institution from './Institution';
-import institutions from '../../data/institutions';
 import InViewAnimation from '../InViewAnimation';
 
-const Education = () => (
+const Education = ({institutions}) => (
     <InViewAnimation>
         <div className="dark-section">
             <div className="container">
@@ -11,10 +11,31 @@ const Education = () => (
                     <h1><span id="education"></span>Education</h1>
                 </div>
 
-                {institutions.map(institution => <Institution key={institution} institution={institution} />)}
+                {institutions.map(institution => <Institution key={institution.node.id} institution={institution.node} />)}
             </div>
         </div>
     </InViewAnimation>
 );
 
-export default Education;
+export default () => (
+    <StaticQuery
+        query={graphql`
+            query {    
+                allInstitutionsJson {
+                    edges {
+                        node {
+                            id
+                            institution
+                            imageUrl
+                            location
+                            degree
+                            graduationDate
+                            gpa
+                        }
+                    }
+                }
+            }
+        `}
+        render={data => <Education institutions={data.allInstitutionsJson.edges} />}
+    />
+);

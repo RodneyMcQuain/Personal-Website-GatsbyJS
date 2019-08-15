@@ -1,9 +1,9 @@
 import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 import Project from './Project';
-import projects from '../../data/projects';
 import InViewAnimation from '../InViewAnimation';
 
-const Projects = () => (
+const Projects = ({projects}) => (
     <InViewAnimation>
         <div className="container">
             <div className="page-header">
@@ -11,10 +11,30 @@ const Projects = () => (
             </div>
 
             <div className="row display-flex">
-                {projects.map(project => <Project key={project.title} project={project} />)}
+                {projects.map(project => <Project key={project.node.id} project={project.node} />)}
             </div>
         </div>
     </InViewAnimation>
 );
 
-export default Projects;
+export default () => (
+    <StaticQuery
+        query={graphql`
+            query {    
+                allProjectsJson {
+                    edges {
+                        node {
+                            id
+                            title
+                            imageUrl
+                            technologies
+                            description
+                            gitHubUrl
+                        }
+                    }
+                }
+            }
+        `}
+        render={data => <Projects projects={data.allProjectsJson.edges} />}
+    />
+);
