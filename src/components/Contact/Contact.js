@@ -29,7 +29,9 @@ const Contact = () => {
                 <div className="col-xs-12">
                     <div className="center-container contact-container -curved-border">
                         <ValidationText formElements={formElements} setIsError={setIsError} isDisplayed={isValidationTextDisplayed} />
-                        <form name="contact-form" id="contact-form" data-netlify="true" method="POST">
+                        <form name="contact-form" id="contact-form" data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
+                            <input type="hidden" name="bot-field" />
+                            <input type="hidden" name="form-name" value="contact-form" />
                             <FormField 
                                 name={"name"} 
                                 placeholder={"Name"}
