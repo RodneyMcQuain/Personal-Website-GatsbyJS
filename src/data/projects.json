@@ -29,5 +29,47 @@
         ],
         "description": "The main purpose of this app is to keep track of rental property. A client's property position, contact information, bills, and payment status (based on weekly or monthly periods); as well as the general upkeep and utility bills for the property as a whole are recorded.",
         "gitHubUrl": "https://github.com/RodneyMcQuain/West-Virginia-RV"
+    },
+    {
+        "title": "Fast Twitch Games",
+        "imageUrl": "fastTwitchGames.jpg",
+        "technologies": [
+            "JavaScript",
+            "ReactJS",
+            "Redux"
+        ],
+        "description": "A chrome extension using Twitch API that quickly links to people streaming your favorite video games. The extension stores your games in local storage for easy access and displays the twitch user, stream title, view count, and stream thumbnail for each stream of a specified game.",
+        "gitHubUrl": "https://github.com/RodneyMcQuain/Fast-Twitch-Games-ReactJS-with-Redux"
+    },
+    {
+        "title": "Melee CSS Color Changer",
+        "imageUrl": "meleeCssColorChanger.jpg",
+        "technologies": [
+            "Java",
+            "JavaFX"
+        ],
+        "description": "Melee CSS Color Changer is used to change various colors on the character select screen of Super Smash Bros. Melee. The user just provides the appropriate MnSlChr.usd and adjusts the colors for background, top frame, bottom frame, rules, cursor, and the many \"selects\" in the background.",
+        "gitHubUrl": "https://github.com/RodneyMcQuain/Melee-CSS-Color-Changer"
+    },
+    {
+        "title": "Melee Notes - Desktop App",
+        "imageUrl": "meleeNotes.jpg",
+        "technologies": [
+            "Java",
+            "JavaFX",
+            "JUnit",
+            "SQLite"
+        ],
+        "description": "Melee Notes is a note app for competitive Super Smash Bros. Melee players. It lets users record tournaments, sets, and games taking data from these records to query statistics based on user specifications for more than 5 different fields. The app also allows for notes to be taken about players, characters, analysis, and mentality alongside reports on tournaments and money earned.",
+        "gitHubUrl": "https://github.com/RodneyMcQuain/Melee-Notes"
+    },
+    {
+        "title": "Basic Search Engine",
+        "imageUrl": "searchEngine.jpg",
+        "technologies": [
+            "C"
+        ],
+        "description": "This program crawls web pages given in a .txt file and indexes them. Then the user can add terms to search for and the top 3 most relevant pages are displayed, according to their tf-idf score.",
+        "gitHubUrl": "https://github.com/RodneyMcQuain/Search-Engine"
     }
 ]

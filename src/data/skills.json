@@ -8,5 +8,36 @@
             "C#",
             "C"
         ]
+    },
+    {
+        "title": "Other Languages",
+        "skills": [
+            "HTML",
+            "FXML",
+            "CSS",
+            "SCSS",
+            "SQL"
+        ]
+    },
+    {
+        "title": "Frameworks/Libraries",
+        "skills": [
+            "ReactJS",
+            "ASP.NET Core",
+            "JavaFX",
+            "Bootstrap",
+            "Swing",
+            "Entity Framework Core"
+        ]
+    },
+    {
+        "title": "Database Management",
+        "skills": [
+            "SQLite",
+            "MySQL",
+            "PostgreSQL",
+            "SQL Server",
+            "Microsoft Access"
+        ]
     }
 ]
