@@ -27,7 +27,7 @@ const Navbar = () => (
                         items={['about-me', 'education', 'projects', 'skills', 'contact']} 
                         currentClassName='active'
                     >
-                        <li><Link className="anchor" to={'/blog-posts'}>
+                        <li><Link className="anchor" to={'/blog-posts'} getProps={isPartiallyActive}>
                             <span className="fa fa-pencil"><span> Blog</span></span>
                         </Link></li>
                         <li><Link className="anchor" to={'/#about-me'}>About Me</Link></li>
@@ -43,6 +43,12 @@ const Navbar = () => (
             </div>
         </div>
     </nav>
+);
+
+const isPartiallyActive = ({isPartiallyCurrent}) => (
+    isPartiallyCurrent
+    ? { className: "active" }
+    : null
 );
 
 export default Navbar;
