@@ -1,21 +1,21 @@
 .project-container {
-  max-height: 100%;
+    max-height: 100%;
 
-  p, span, a {
-    font-size: 16rem;
-  }
+    p, span, a {
+        font-size: 16rem;
+    }
 }
 
 .language-tag {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  li {
-    margin: 2px;
-    display: inline-block;
-    padding: 4px;
-    border-radius: 5px;
-    border: 1px solid $darker-white;
-    font-size: 12rem;
-  }
+    li {
+        margin: $spacing-between-elements;
+        display: inline-block;
+        padding: 4px;
+        border-radius: 5px;
+        border: 1px solid $darker-white;
+        font-size: 12rem;
+    }
 }
