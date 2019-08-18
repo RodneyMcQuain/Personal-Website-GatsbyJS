@@ -3,11 +3,11 @@ import React from 'react';
 const Footer = () => (
     <footer className="dark-section">
         <div className="row">
-            <div className="col-md-6">
+            <div className="col-sm-6">
                 <p>© {new Date().getFullYear()} Copyright: Rodney McQuain</p>
             </div>
 
-            <div className="col-md-6">
+            <div className="col-sm-6">
                 <a className="btn" href="https://github.com/RodneyMcQuain/" aria-label="Go to my GitHub">
                     <span className="fa fa-github"><span> My GitHub</span></span>
                 </a>
