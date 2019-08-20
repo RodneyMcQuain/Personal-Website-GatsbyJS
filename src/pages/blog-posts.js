@@ -5,25 +5,27 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import FullDate from '../components/FullDate';
 import InViewAnimation from '../components/InViewAnimation';
+import Img from 'gatsby-image';
 
-const BlogPage = ({ data }) => {
-    return (
-        <Layout>
-            <InViewAnimation>
-                <div className="container">
-                    <SEO title="Rodney McQuain - Blog" />
-                    <div className="page-header">
-                        <h1>Latest Posts</h1>
-                    </div>
-                            
-                    <div className="margin-container upscale-container project-container col-xs-6 col-sm-4 col-md-3">
-                        <div className="-curved-border padding-container">
-                            {data.allMarkdownRemark.edges.map(post => {
-                                const { node } = post;
-                                const { title, date, path } = node.frontmatter;
+const BlogPage = ({ data }) => (
+    <Layout>
+        <InViewAnimation>
+            <div className="container">
+                <SEO title="Rodney McQuain - Blog" />
+                <div className="page-header">
+                    <h1>Latest Posts</h1>
+                </div>
+                        
+                <div className="margin-container upscale-container project-container col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                    <div className="-curved-border">
+                        {data.allMarkdownRemark.edges.map(post => {
+                            const { node } = post;
+                            const { title, date, path, featuredImage } = node.frontmatter;
 
-                                return (
-                                    <div key={node.id}>
+                            return (
+                                <div key={node.id}>
+                                    <Img className="container-top-image" fluid={featuredImage.childImageSharp.fluid} />
+                                    <div className="padding-container">
                                         <h2>{title}</h2>
                                         <FullDate date={date} />
                                         <p>{node.excerpt}</p>
@@ -31,15 +33,15 @@ const BlogPage = ({ data }) => {
                                             <span>Read More</span>
                                         </Link>
                                     </div>
-                                );
-                            })}
-                        </div>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
-            </InViewAnimation>
-        </Layout>     
-    )
-};
+            </div>
+        </InViewAnimation>
+    </Layout>     
+);
 
 export const pageQuery = graphql`
     query BlogIndexQuery {
@@ -52,7 +54,13 @@ export const pageQuery = graphql`
                         path
                         title
                         date
-                        author
+                        featuredImage {
+                            childImageSharp {
+                                fluid(maxWidth: 800) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
                     }
                 }
             }

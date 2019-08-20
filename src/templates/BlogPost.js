@@ -6,6 +6,7 @@ import InViewAnimation from '../components/InViewAnimation';
 import BlogSidebar from '../components/BlogSidebar';
 import BlogReadTime from '../components/BlogReadTime';
 import SEO from '../components/seo';
+import Img from 'gatsby-image';
 
 export default function Template({ data }) {
     const post = data.thisPost;
@@ -13,6 +14,7 @@ export default function Template({ data }) {
     return (
         <Layout>
             <InViewAnimation>
+                <Img className="blog-featured-img" fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
                 <div className="container">
                    <SEO title={post.frontmatter.title} />
                     <div className="col-md-9">
@@ -20,6 +22,7 @@ export default function Template({ data }) {
                            <FullDate style="left-align" date={post.frontmatter.date} />
                            <BlogReadTime wordCount={post.wordCount.words} />
                         </div>
+
 
                         <div className="page-header">
                             <h1 className="left-align blog-title">{post.frontmatter.title}</h1>
@@ -43,6 +46,13 @@ export const pageQuery = graphql`
                 path
                 title
                 date
+                featuredImage {
+                    childImageSharp {
+                        fluid {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
             }
             wordCount {
                 words
