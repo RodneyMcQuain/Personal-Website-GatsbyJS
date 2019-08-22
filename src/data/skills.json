@@ -24,10 +24,11 @@
         "skills": [
             "ReactJS",
             "ASP.NET Core",
+            "GatsbyJS",
             "JavaFX",
             "Bootstrap",
-            "Swing",
-            "Entity Framework Core"
+            "Entity Framework Core",
+            "Swing"
         ]
     },
     {
