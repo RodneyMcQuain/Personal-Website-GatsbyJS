@@ -35,9 +35,9 @@ const Navbar = () => (
                         <li><Link className="anchor" to={'/#projects'}>Projects</Link></li>
                         <li><Link className="anchor" to={'/#skills'}>Skills</Link></li>
                         <li><Link className="anchor" to={'/#contact'}>Contact</Link></li>
-                        <li><a className="anchor" href="documents/Rodney McQuain - Resume.pdf" download>
-                            <span className="fa fa-download"><span> Resume</span></span>
-                        </a></li>
+                        <li><Link className="anchor" to={'/resume'} getProps={isPartiallyActive}>
+                            <span className="fa fa-file-pdf-o"><span> Resume</span></span>
+                        </Link></li>
                     </Scrollspy>
                 </div>
             </div>
