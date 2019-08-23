@@ -16,7 +16,8 @@
             "FXML",
             "CSS",
             "SCSS",
-            "SQL"
+            "SQL",
+            "GraphQL"
         ]
     },
     {
