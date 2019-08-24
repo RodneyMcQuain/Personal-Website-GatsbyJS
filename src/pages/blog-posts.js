@@ -13,7 +13,7 @@ const BlogPage = ({ data }) => (
             <div className="container">
                 <SEO title="Rodney McQuain - Blog" />
                 <div className="page-header">
-                    <h1>Latest Posts</h1>
+                    <h1>Blog Posts</h1>
                 </div>
                         
                 <div className="margin-container upscale-container project-container col-xs-6 col-sm-6 col-md-4 col-lg-3">
