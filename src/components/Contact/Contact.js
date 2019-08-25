@@ -3,8 +3,10 @@ import InViewAnimation from '../InViewAnimation';
 import ValidationText from './ValidationText';
 import SuccessText from './SuccessText';
 
+const THIS_PAGE = "/";
+
 const Contact = () => {
-    const [formElements, setFormElements] = useState({
+    const [formData, setformData] = useState({
         name: "", 
         email: "",
         subject: "",
@@ -16,25 +18,31 @@ const Contact = () => {
     
     const handleOnChange = event => {
         const key = event.target.name;
-        const updatedValue = event.target.value;
-        const newFormElements = {...formElements, [key]: updatedValue};
-        setFormElements(newFormElements);
+        const updatedFieldValue = event.target.value;
+        const newformData = {...formData, [key]: updatedFieldValue};
+        setformData(newformData);
     }
     
     const handleSubmit = event => {
         event.preventDefault();
-        fetch('/', {
-           method: 'POST',
-           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-           body: JSON.stringify(formElements) 
+
+        const form = event.target;
+        fetch(THIS_PAGE, {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({
+                "form-name": form.getAttribute('name'),
+                ...formData
+            })
+                .toString() 
         })
-        .then(() => {
-            const emptyForm = createEmptyForm(formElements);
-            setFormElements(emptyForm);
-            setIsSuccess(true);
-            setIsValidationTextDisplayed(false);
-        })
-        .catch(() => setIsSuccess(false));
+            .then(() => {
+                const emptyForm = createEmptyForm(formData);
+                setformData(emptyForm);
+                setIsSuccess(true);
+                setIsValidationTextDisplayed(false);
+            })
+            .catch(() => setIsSuccess(false));
     };
 
     return (
@@ -46,21 +54,22 @@ const Contact = () => {
 
                 <div className="col-xs-12">
                     <div className="center-container contact-container -curved-border">
-                        <ValidationText formElements={formElements} setIsError={setIsError} isDisplayed={isValidationTextDisplayed} />
+                        <ValidationText formData={formData} setIsError={setIsError} isDisplayed={isValidationTextDisplayed} />
                         <form 
                             name="contact-form" 
                             id="contact-form" 
-                            data-netlify="true" 
-                            data-netlify-honeypot="bot-field" 
                             method="POST" 
                             onSubmit={e => handleSubmit(e)}
+                            action={THIS_PAGE}
+                            data-netlify="true" 
+                            data-netlify-honeypot="bot-field" 
                         >
                             <input type="hidden" name="bot-field" />
                             <input type="hidden" name="form-name" value="contact-form" />
                             <FormField 
                                 name={"name"} 
                                 placeholder={"Name"}
-                                value={formElements.name}                                     
+                                value={formData.name}                                     
                                 handleOnChange={handleOnChange}
                                 setIsValidationTextDisplayed={setIsValidationTextDisplayed}
                             />
@@ -68,7 +77,7 @@ const Contact = () => {
                             <FormField 
                                 name={"email"} 
                                 placeholder={"Email"}
-                                value={formElements.email}                                     
+                                value={formData.email}                                     
                                 handleOnChange={handleOnChange}
                                 setIsValidationTextDisplayed={setIsValidationTextDisplayed}
                             />
@@ -76,7 +85,7 @@ const Contact = () => {
                             <FormField 
                                 name={"subject"} 
                                 placeholder={"Subject"}
-                                value={formElements.subject}                                     
+                                value={formData.subject}                                     
                                 handleOnChange={handleOnChange}
                                 setIsValidationTextDisplayed={setIsValidationTextDisplayed}
                             />
@@ -88,7 +97,7 @@ const Contact = () => {
                                     name="message" 
                                     className="form-control input-lg" 
                                     placeholder="Message"
-                                    value={formElements.message}
+                                    value={formData.message}
                                     onChange={e => handleOnChange(e)}
                                     onFocus={() => setIsValidationTextDisplayed(true)}
                                     required 
@@ -132,8 +141,8 @@ const FormField = ({name, placeholder, value, handleOnChange, setIsValidationTex
     </div>
 );
 
-const createEmptyForm = formElements => {
-    let emptyForm = {...formElements};
+const createEmptyForm = formData => {
+    let emptyForm = {...formData};
     Object.keys(emptyForm)
         .forEach(key => emptyForm[key] = "");
     return emptyForm;

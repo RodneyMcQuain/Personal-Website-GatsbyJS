@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from "prop-types"
 
-const ValidationText = ({formElements, setIsError, isDisplayed}) => {
+const ValidationText = ({formData, setIsError, isDisplayed}) => {
     const [validationText, setValidationText] = useState("");
 
     useEffect(() => {
-        const atLeastOneEmpty = formElements => {
-            for (const key in formElements)
-                if (formElements[key].trim() === "")
+        const atLeastOneEmpty = formData => {
+            for (const key in formData)
+                if (formData[key].trim() === "")
                     return true;
             
             return false;
@@ -17,19 +17,19 @@ const ValidationText = ({formElements, setIsError, isDisplayed}) => {
             return email && email.match(EMAIL_REGEX);
         }
     
-        let newValidationText = !isValidEmail(formElements.email) ? "Please provide a valid email." : "";
-        newValidationText = atLeastOneEmpty(formElements) ? "Please fill in empty fields." : newValidationText;
+        let newValidationText = !isValidEmail(formData.email) ? "Please provide a valid email." : "";
+        newValidationText = atLeastOneEmpty(formData) ? "Please fill in empty fields." : newValidationText;
         setValidationText(newValidationText);
     
-        const isError = atLeastOneEmpty(formElements) || !isValidEmail(formElements.email); 
+        const isError = atLeastOneEmpty(formData) || !isValidEmail(formData.email); 
         setIsError(isError);
-    }, [formElements]);
+    }, [formData]);
 
     return <p id="validation-text" style={{display: isDisplayed && validationText ? 'block' : 'none'}}>{validationText}</p>;
 };
 
 ValidationText.propTypes = {
-    formElements: PropTypes.object.isRequired,
+    formData: PropTypes.object.isRequired,
     setIsError: PropTypes.func.isRequired,
     isDisplayed: PropTypes.bool.isRequired,
 }
