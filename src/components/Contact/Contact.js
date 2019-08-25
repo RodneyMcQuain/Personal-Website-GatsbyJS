@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import InViewAnimation from '../InViewAnimation';
 import ValidationText from './ValidationText';
+import SuccessText from './SuccessText';
 
 const Contact = () => {
     const [formElements, setFormElements] = useState({
@@ -10,14 +11,31 @@ const Contact = () => {
         message: "", 
     });
     const [isError, setIsError] = useState(true);
+    const [isSuccess, setIsSuccess] = useState(false);
     const [isValidationTextDisplayed, setIsValidationTextDisplayed] = useState(false);
-
+    
     const handleOnChange = event => {
         const key = event.target.name;
         const updatedValue = event.target.value;
         const newFormElements = {...formElements, [key]: updatedValue};
         setFormElements(newFormElements);
     }
+    
+    const handleSubmit = event => {
+        event.preventDefault();
+        fetch('/', {
+           method: 'POST',
+           headers: { "Content-Type": "application/x-www-form-urlencoded" },
+           body: JSON.stringify(formElements) 
+        })
+        .then(() => {
+            const emptyForm = createEmptyForm(formElements);
+            setFormElements(emptyForm);
+            setIsSuccess(true);
+            setIsValidationTextDisplayed(false);
+        })
+        .catch(() => setIsSuccess(false));
+    };
 
     return (
         <InViewAnimation>
@@ -29,7 +47,14 @@ const Contact = () => {
                 <div className="col-xs-12">
                     <div className="center-container contact-container -curved-border">
                         <ValidationText formElements={formElements} setIsError={setIsError} isDisplayed={isValidationTextDisplayed} />
-                        <form name="contact-form" id="contact-form" data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
+                        <form 
+                            name="contact-form" 
+                            id="contact-form" 
+                            data-netlify="true" 
+                            data-netlify-honeypot="bot-field" 
+                            method="POST" 
+                            onSubmit={e => handleSubmit(e)}
+                        >
                             <input type="hidden" name="bot-field" />
                             <input type="hidden" name="form-name" value="contact-form" />
                             <FormField 
@@ -82,6 +107,8 @@ const Contact = () => {
                                 </button>
                             </div>
                         </form>
+                        <br />
+                        <SuccessText isSuccess={isSuccess} isValidationTextDisplayed={isValidationTextDisplayed} />
                     </div>
                 </div>
             </div>
@@ -104,5 +131,12 @@ const FormField = ({name, placeholder, value, handleOnChange, setIsValidationTex
         />
     </div>
 );
+
+const createEmptyForm = formElements => {
+    let emptyForm = {...formElements};
+    Object.keys(emptyForm)
+        .forEach(key => emptyForm[key] = "");
+    return emptyForm;
+};
 
 export default Contact;

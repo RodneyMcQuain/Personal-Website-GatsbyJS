@@ -39,10 +39,17 @@ body.modal-open {
     overflow: visible;
 }
 
-#validation-text {
+#validation-text, #success-text {
   display: none;
-  color: red;
+}
+
+#validation-text {
   font-size: 12rem;
+  color: red;
+}
+
+#success-text {
+  color: green;
 }
 
 label {
