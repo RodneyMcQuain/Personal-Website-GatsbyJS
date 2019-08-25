@@ -15,14 +15,14 @@ const BlogPage = ({ data }) => (
                 <div className="page-header">
                     <h1>Blog Posts</h1>
                 </div>
-                        
-                <div className="margin-container upscale-container project-container col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                    <div className="-curved-border">
-                        {data.allMarkdownRemark.edges.map(post => {
-                            const { node } = post;
-                            const { title, date, path, featuredImage } = node.frontmatter;
 
-                            return (
+                {data.allMarkdownRemark.edges.map(post => {
+                    const { node } = post;
+                    const { title, date, path, featuredImage } = node.frontmatter;
+
+                    return (
+                        <div className="margin-container upscale-container project-container col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                            <div className="-curved-border">
                                 <div key={node.id}>
                                     <Img className="container-top-image" fluid={featuredImage.childImageSharp.fluid} />
                                     <div className="padding-container">
@@ -34,10 +34,10 @@ const BlogPage = ({ data }) => (
                                         </Link>
                                     </div>
                                 </div>
-                            );
-                        })}
-                    </div>
-                </div>
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
         </InViewAnimation>
     </Layout>     
