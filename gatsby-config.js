@@ -3,7 +3,7 @@ module.exports = {
         title: `Rodney McQuain`,
         description: `Yet another computer science student, come learn about me.`,
         author: `Rodney McQuain`,
-        url: `https://rodney-mcquain.netlify.com`,
+        siteUrl: `https://rodney-mcquain.netlify.com`,
         image: `/code.jpg`,
     },
     plugins: [
