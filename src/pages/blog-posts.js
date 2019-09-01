@@ -11,7 +11,7 @@ const BlogPage = ({ data }) => (
     <Layout>
         <InViewAnimation>
             <div className="container">
-                <SEO title="Rodney McQuain - Blog" />
+                <SEO title="Blog" />
                 <div className="page-header">
                     <h1>Blog Posts</h1>
                 </div>

@@ -5,7 +5,7 @@ import Portfolio from "../components/Portfolio";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Rodney McQuain" />
+    <SEO title="Portfolio" />
     <Portfolio />
   </Layout>
 )

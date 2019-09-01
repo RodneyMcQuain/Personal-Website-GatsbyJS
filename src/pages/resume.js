@@ -10,7 +10,7 @@ const RESUME_FILE_NAME = "documents/Rodney McQuain - Resume 12-10-2018.pdf";
 const Resume = () => (
     <Layout>
         <InViewAnimation>
-            <SEO title="Rodney McQuain - Resume" />
+            <SEO title="Resume" />
             <div className="container">
                 <div className="page-header">
                     <h1>Resume</h1>
