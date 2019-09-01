@@ -128,7 +128,8 @@ const Contact = () => {
 const FormField = ({name, placeholder, value, handleOnChange, setIsValidationTextDisplayed}) => (
     <div>
         <label htmlFor={name}>{placeholder}</label>
-        <input 
+        <input
+            id={name}
             type="text" 
             name={name} 
             className="form-control input-lg"
