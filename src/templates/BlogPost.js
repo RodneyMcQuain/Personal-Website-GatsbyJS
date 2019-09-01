@@ -10,22 +10,27 @@ import Img from 'gatsby-image';
 
 export default function Template({ data }) {
     const post = data.thisPost;
+    const frontmatter = post.frontmatter;
+    const featuredFluidImage = frontmatter.featuredImage.childImageSharp.fluid;
 
     return (
         <Layout>
             <InViewAnimation>
-                <Img className="blog-featured-img" fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
+                <Img className="blog-featured-img" fluid={featuredFluidImage} />
                 <div className="container">
-                   <SEO title={post.frontmatter.title} />
+                    <SEO 
+                        title={frontmatter.title} 
+                        image={featuredFluidImage} 
+                        description={post.excerpt}
+                    />
                     <div className="col-md-9">
                         <div className="blog-small-text-spacing">
-                           <FullDate style="left-align" date={post.frontmatter.date} />
+                           <FullDate style="left-align" date={frontmatter.date} />
                            <BlogReadTime wordCount={post.wordCount.words} />
                         </div>
 
-
                         <div className="page-header">
-                            <h1 className="left-align blog-title">{post.frontmatter.title}</h1>
+                            <h1 className="left-align blog-title">{frontmatter.title}</h1>
                         </div>
                         <div className="markdown-body" dangerouslySetInnerHTML={{ __html: post.html }} />
                     </div>
@@ -57,6 +62,7 @@ export const pageQuery = graphql`
             wordCount {
                 words
             }
+            excerpt
         }
         recentPosts: allMarkdownRemark(limit: 5) {
             edges {
