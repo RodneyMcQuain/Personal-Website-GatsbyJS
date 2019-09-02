@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
+import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
-import FullDate from '../components/FullDate';
+import FullDate from '../components/Blog/FullDate';
 import InViewAnimation from '../components/InViewAnimation';
 import Img from 'gatsby-image';
 

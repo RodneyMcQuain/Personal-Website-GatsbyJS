@@ -1,6 +1,6 @@
 import React from 'react';
-import { Document, Page } from "react-pdf";
-import Layout from '../components/layout';
+import { Document, Page } from 'react-pdf';
+import Layout from '../components/Layout/layout';
 import InViewAnimation from '../components/InViewAnimation';
 import SEO from '../components/seo';
 import { SizeMe } from 'react-sizeme';

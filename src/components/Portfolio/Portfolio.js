@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import Banner from './Banner';
 import AboutMe from './AboutMe';
-import Education from '../components/Education/Education';
-import Projects from '../components/Projects/Projects';
-import Skills from '../components/Skills/Skills';
+import Education from './Education/Education';
+import Projects from './Projects/Projects';
+import Skills from './Skills/Skills';
 import Contact from './Contact/Contact';
 
 const Portfolio = () => {

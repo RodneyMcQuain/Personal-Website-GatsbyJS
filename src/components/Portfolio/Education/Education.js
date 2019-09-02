@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Institution from './Institution';
-import InViewAnimation from '../InViewAnimation';
+import InViewAnimation from '../../InViewAnimation';
 
 const Education = ({institutions}) => (
     <InViewAnimation>

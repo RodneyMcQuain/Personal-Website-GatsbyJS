@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import FullDate from '../components/FullDate';
+import Layout from '../components/Layout/layout';
+import FullDate from '../components/Blog/FullDate';
 import InViewAnimation from '../components/InViewAnimation';
-import BlogSidebar from '../components/BlogSidebar';
-import BlogReadTime from '../components/BlogReadTime';
+import BlogSidebar from '../components/Blog/BlogSidebar';
+import BlogReadTime from '../components/Blog/BlogReadTime';
 import SEO from '../components/seo';
 import Img from 'gatsby-image';
 

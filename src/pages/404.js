@@ -1,6 +1,6 @@
-import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from 'react';
+import Layout from '../components/Layout/layout';
+import SEO from '../components/seo';
 import InViewAnimation from '../components/InViewAnimation';
 
 const NotFoundPage = () => (

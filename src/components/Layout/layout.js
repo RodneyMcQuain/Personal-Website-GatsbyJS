@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import Preloader from './Preloader';
-import '../styles/stylesheet.scss';
+import '../../styles/stylesheet.scss';
 
 const Layout = ({children}) => {
     const [isLoading, setIsLoading] = useState(true);

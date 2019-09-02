@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import InViewAnimation from '../InViewAnimation';
+import InViewAnimation from '../../InViewAnimation';
 import ValidationText from './ValidationText';
 import SuccessText from './SuccessText';
 
