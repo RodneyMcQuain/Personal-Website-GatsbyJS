@@ -13,6 +13,8 @@ $unhide-transition: opacity 1s ease-in-out; //transition for appearing
 $dark-gradient: linear-gradient(to bottom right, $darker-black, #333, $darker-black); //Gradient used in every other section
 
 $navbar-height: 50px;
+$footer-height: 50px;
+$footer-sm-height: 75px;
 
 $xs-breakpoint: 480px;
 $sm-breakpoint: 768px;

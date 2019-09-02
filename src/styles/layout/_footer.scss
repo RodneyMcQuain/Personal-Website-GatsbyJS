@@ -1,16 +1,17 @@
 footer {
-  margin-top: 10px;
-  width: 100%;
-  background: $black !important;
-  padding: 10px;
-  padding-bottom: 0 !important;
-  overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: $black !important;
+    padding: 10px;
+    padding-bottom: 0 !important;
+    overflow: hidden;
 
-  p {
-    color: $white;
-  }
+    p {
+        color: $white;
+    }
 
-  a {
-    margin: 0 $spacing-between-elements;
-  }
+    a {
+        margin: 0 $spacing-between-elements;
+    }
 }

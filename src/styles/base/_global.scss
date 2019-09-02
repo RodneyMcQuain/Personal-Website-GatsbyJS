@@ -7,10 +7,17 @@ html {
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    min-height: calc(100vh - #{$footer-height});
+    padding-bottom: $footer-height * 2;
     margin-top: $navbar-height;
+}
+
+@media (max-width: $sm-breakpoint - 1px) {
+    body {
+        min-height: calc(100vh - #{$footer-sm-height});        
+        padding-bottom: $footer-sm-height * 2;
+    }
 }
 
 main {
