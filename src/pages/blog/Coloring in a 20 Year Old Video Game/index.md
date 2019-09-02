@@ -177,4 +177,4 @@ Here are some CSSs that can be made using the program:
 
 In general there's still much that can be done with Melee modding, more color offsets, tools for competitive players, features for casual play, animations, models, and more.  If you're interested in getting started or seeing what's already been done head over to the [Melee Workshop](<https://smashboards.com/forums/melee-workshop.271/>). 
 
-If you want to see the full code for this project you can take a look at it on [here](<https://github.com/RodneyMcQuain/Melee-CSS-Color-Changer>) on GitHub.  
+If you want to see the full code for this project you can take a look at it on [here on GitHub](<https://github.com/RodneyMcQuain/Melee-CSS-Color-Changer>).  
