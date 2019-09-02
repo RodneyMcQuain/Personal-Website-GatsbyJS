@@ -96,7 +96,7 @@ To have this behavior we need to add some attributes to our form:
 >
 ~~~
 
-The action attribute must be set to the target of the AJAX request. THIS_PAGE is just a string that represents your current URL, my form is at the base URL and I want to stay there so THIS_PAGE would be '/' for me. The handleSubmit function would look something like this: 
+The action attribute must be set to the target of the AJAX request. THIS\_PAGE is just a string that represents your current URL, my form is at the base URL and I want to stay there so THIS\_PAGE would be '/' for me. The handleSubmit function would look something like this: 
 
 ~~~javascript
 const handleSubmit = event => {
