@@ -21,7 +21,7 @@ const BlogPage = ({ data }) => (
                     const { title, date, path, featuredImage } = node.frontmatter;
 
                     return (
-                        <div className="margin-container upscale-container project-container col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                        <div className="margin-container upscale-container project-container col-xs-12 col-sm-6 col-md-4 col-lg-3">
                             <div className="-curved-border">
                                 <div key={node.id}>
                                     <Img className="container-top-image" fluid={featuredImage.childImageSharp.fluid} />
