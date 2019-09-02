@@ -6,13 +6,13 @@ const BlogSidebar = ({posts}) => (
         <li><Link to={'blog-posts'}>
             <span>All Posts</span>
         </Link></li>
+
         {posts.map(post => {
                 const { node } = post;
                 const { title, path } = node.frontmatter;
 
                 return (
                     <>
-                        <hr />
                         <li><Link to={path}>
                             <span>{title}</span>
                         </Link></li>

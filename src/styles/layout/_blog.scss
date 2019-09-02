@@ -20,6 +20,16 @@
 
     li {
         text-align: left;
+        border-bottom: 2px solid $darker-white;
+        margin-bottom: 20px;
+    
+        &:first-child {
+            border-bottom: 2px solid $black;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     span {
