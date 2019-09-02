@@ -4,29 +4,23 @@ module.exports = {
         description: `Yet another computer science student, come learn about me.`,
         author: `Rodney McQuain`,
         siteUrl: `https://rodney-mcquain.netlify.com`,
-        image: `/code.jpg`,
+        image: `code.jpg`,
     },
     plugins: [
-        `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
-        `gatsby-plugin-sass`,
-        `gatsby-plugin-react-helmet`,
+        `gatsby-transformer-sharp`,
         `gatsby-transformer-remark`,
-        {
-        resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/src/pages`,
-            },
-        },
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-sass`,
         `gatsby-transformer-json`,
+        `gatsby-plugin-catch-links`,
         {
-        resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/src/data`,
                 name: `data`
             },
         },
-        `gatsby-plugin-catch-links`,
         { 
         resolve: `gatsby-source-filesystem`,
             options: {
@@ -38,7 +32,7 @@ module.exports = {
         resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
-                `gatsby-remark-prismjs`,
+                    `gatsby-remark-prismjs`,
                 ]
             },
         },

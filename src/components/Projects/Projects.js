@@ -26,7 +26,13 @@ export default () => (
                         node {
                             id
                             title
-                            imageUrl
+                            image {
+                                childImageSharp {
+                                    fluid {
+                                        ...GatsbyImageSharpFluid
+                                    }
+                                }
+                            }
                             technologies
                             description
                             gitHubUrl

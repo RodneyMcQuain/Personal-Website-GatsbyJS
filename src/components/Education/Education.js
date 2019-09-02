@@ -26,7 +26,13 @@ export default () => (
                         node {
                             id
                             institution
-                            imageUrl
+                            image {
+                                childImageSharp {
+                                    fluid {
+                                        ...GatsbyImageSharpFluid
+                                    }
+                                }
+                            }
                             location
                             degree
                             graduationDate

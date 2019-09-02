@@ -1,9 +1,10 @@
 import React from 'react';
+import Img from "gatsby-image";
 
 const Project = ({project}) => (
     <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-container margin-container upscale-container">
         <div className="-curved-border">
-            <img src={project.imageUrl} className="container-top-image" alt="Melee Notes Web App project" />
+            <Img fluid={project.image.childImageSharp.fluid} className="container-top-image" alt={`${project.title} project`} />
             <div className="padding-container">
                 <ul className="language-tag">
                     {project.technologies.map(technology => <li key={technology}>{technology}</li>)}

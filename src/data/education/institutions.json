@@ -1,7 +1,7 @@
 [
     {
         "institution": "Purdue University Fort Wayne",
-        "imageUrl": "pufw.jpg",
+        "image": "pufw.jpg",
         "location": "Fort Wayne, Indiana",
         "degree": "BS in Computer Science",
         "graduationDate": "Expected Graduation Date: 12/2020",
@@ -9,7 +9,7 @@
     },
     {
         "institution": "Ivy Tech Community College",
-        "imageUrl": "ivyTech.jpg",
+        "image": "ivyTech.jpg",
         "location": "Fort Wayne, Indiana",
         "degree": "AS in Software Development",
         "graduationDate": "Graduation Date: 12/2017",

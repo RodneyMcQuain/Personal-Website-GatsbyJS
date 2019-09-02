@@ -1,7 +1,7 @@
 [
     {
         "title": "Melee Notes Web App",
-        "imageUrl": "meleeNotesWeb.jpg",
+        "image": "meleeNotesWeb.jpg",
         "technologies": [
             "C#",
             "TypeScript",
@@ -21,7 +21,7 @@
     },
     {
         "title": "West Virginia RV",
-        "imageUrl": "westVirginiaRV.jpg",
+        "image": "westVirginiaRV.jpg",
         "technologies": [
             "Java",
             "FXML",
@@ -32,7 +32,7 @@
     },
     {
         "title": "Fast Twitch Games",
-        "imageUrl": "fastTwitchGames.jpg",
+        "image": "fastTwitchGames.jpg",
         "technologies": [
             "JavaScript",
             "ReactJS",
@@ -43,7 +43,7 @@
     },
     {
         "title": "Melee CSS Color Changer",
-        "imageUrl": "meleeCssColorChanger.jpg",
+        "image": "meleeCssColorChanger.jpg",
         "technologies": [
             "Java",
             "JavaFX"
@@ -53,7 +53,7 @@
     },
     {
         "title": "Melee Notes - Desktop App",
-        "imageUrl": "meleeNotes.jpg",
+        "image": "meleeNotes.jpg",
         "technologies": [
             "Java",
             "JavaFX",
@@ -65,7 +65,7 @@
     },
     {
         "title": "Basic Search Engine",
-        "imageUrl": "searchEngine.jpg",
+        "image": "searchEngine.jpg",
         "technologies": [
             "C"
         ],
