@@ -8,6 +8,8 @@ import BlogReadTime from '../components/Blog/BlogReadTime';
 import SEO from '../components/seo';
 import Img from 'gatsby-image';
 
+export const FEATURED_IMG_VIEWPORT_HEIGHT = 40;
+
 export default function Template({ data }) {
     const post = data.thisPost;
     const frontmatter = post.frontmatter;
@@ -16,7 +18,7 @@ export default function Template({ data }) {
     return (
         <Layout>
             <InViewAnimation>
-                <Img className="blog-featured-img" fluid={featuredFluidImage} />
+                <Img style={{height: `${FEATURED_IMG_VIEWPORT_HEIGHT}vh`}} fluid={featuredFluidImage} />
                 <div className="container">
                     <SEO 
                         title={frontmatter.title} 

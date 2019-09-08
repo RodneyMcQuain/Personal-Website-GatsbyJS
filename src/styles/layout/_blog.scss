@@ -35,8 +35,8 @@
     span {
         font-size: 18rem;
     }
-}
 
-.blog-featured-img {
-    height: 40vh;
+    &.blog-sidebar-offset-top {
+        top: $navbar-height;
+    }
 }
