@@ -9,23 +9,12 @@ const backgroundImage = `
 `;
 
 const Banner = () => {
-    const [fadeHeader, setFadeHeader] = useState("banner-hide");
-    const [fadeTextAndButton, setFadeTextAndButton] = useState("banner-hide");
-
-    useEffect(() => {
-        const fadeHeaderTimer = setTimeout(() => setFadeHeader("banner-appear"), 250);
-        const fadeTextAndButtonTimer = setTimeout(() => setFadeTextAndButton("banner-appear"), 1500);
-  
-        return () => {
-            clearTimeout(fadeHeaderTimer);
-            clearTimeout(fadeTextAndButtonTimer);        
-        }
-    }, []);
+    const [fadeHeader, fadeTextAndButton] = useBannerFade();
 
     return (
         <header 
-        style={{ backgroundImage: backgroundImage }} 
-        id="banner-img"
+            style={{ backgroundImage: backgroundImage }} 
+            id="banner-img"
         >
             <div className="col-xl-12 col-md-12 col-sm-12 col-xs-12" id="banner-container">
                 <h1 id="banner-header" className={fadeHeader}>Rodney McQuain</h1>
@@ -41,6 +30,23 @@ const Banner = () => {
             </div>
         </header>
     )
+};
+
+const useBannerFade = () => {
+    const [fadeHeader, setFadeHeader] = useState("banner-hide");
+    const [fadeTextAndButton, setFadeTextAndButton] = useState("banner-hide");
+
+    useEffect(() => {
+        const fadeHeaderTimer = setTimeout(() => setFadeHeader("banner-appear"), 250);
+        const fadeTextAndButtonTimer = setTimeout(() => setFadeTextAndButton("banner-appear"), 1500);
+  
+        return () => {
+            clearTimeout(fadeHeaderTimer);
+            clearTimeout(fadeTextAndButtonTimer);        
+        }
+    }, []);
+
+    return [fadeHeader, fadeTextAndButton];
 };
 
 export default Banner;
