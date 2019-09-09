@@ -1,13 +1,11 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
-import FullDate from '../components/Blog/FullDate';
 import InViewAnimation from '../components/InViewAnimation';
-import Img from 'gatsby-image';
+import BlogCard from '../components/Blog/BlogCard';
 
-const BlogPage = ({ data }) => (
+const BlogPosts = ({ data }) => (
     <Layout>
         <InViewAnimation>
             <div className="container">
@@ -16,28 +14,7 @@ const BlogPage = ({ data }) => (
                     <h1>Blog Posts</h1>
                 </div>
 
-                {data.allMarkdownRemark.edges.map(post => {
-                    const { node } = post;
-                    const { title, date, path, featuredImage } = node.frontmatter;
-
-                    return (
-                        <div className="margin-container upscale-container project-container col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            <div className="-curved-border">
-                                <div key={node.id}>
-                                    <Img className="container-top-image" fluid={featuredImage.childImageSharp.fluid} />
-                                    <div className="padding-container">
-                                        <h2>{title}</h2>
-                                        <FullDate date={date} />
-                                        <p>{node.excerpt}</p>
-                                        <Link className="btn" to={path}>
-                                            <span>Read More</span>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
+                {data.allMarkdownRemark.edges.map(post => <BlogCard post={post} />)}
             </div>
         </InViewAnimation>
     </Layout>     
@@ -68,4 +45,4 @@ export const pageQuery = graphql`
     }
 `
 
-export default BlogPage;
+export default BlogPosts;
