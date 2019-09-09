@@ -1,35 +1,42 @@
 import React, { useState, useEffect, useRef } from "react"
 
 const InViewAnimation = props => {
-    const container = useRef();
-    const [inViewAppear, setInViewAppear] = useState("");
-
-    const isElementInViewport = () => {
-        const rect = container ? container.current.getBoundingClientRect() : false;
-
-        return (
-            (rect) &&
-            (rect.top > -1 * container.current.offsetHeight) &&
-            (rect.top < window.innerHeight)
-        );
-    }
-    
-    const scrollContainerEvent = () => {
-        const className = isElementInViewport() ? "in-view-appear" : "";
-        setInViewAppear(className);
-    }
-    
-    useEffect(() => {
-        window.addEventListener("scroll", scrollContainerEvent);
-        window.dispatchEvent(new Event("scroll"));
-
-        return () => window.removeEventListener("scroll", scrollContainerEvent);
-    }, []);
+    const containerRef = useRef();
+    const inViewAppear = useScrollAnimation(containerRef);
 
     return (
-        <section ref={container} className={`in-view-hide ${inViewAppear}`}>
+        <section ref={containerRef} className={`in-view-hide ${inViewAppear}`}>
             {props.children}
         </section>
+    );
+};
+
+const useScrollAnimation = containerRef => {
+    const [inViewAppear, setInViewAppear] = useState("");
+
+    useEffect(() => {
+        const wrappedScrollContainerEvent = () => scrollContainerEvent(containerRef, setInViewAppear);
+        window.addEventListener("scroll", wrappedScrollContainerEvent);
+        window.dispatchEvent(new Event("scroll"));
+
+        return () => window.removeEventListener("scroll", wrappedScrollContainerEvent);
+    }, []);
+
+    return inViewAppear;
+};
+
+const scrollContainerEvent = (containerRef, setInViewAppear) => {
+    const className = isElementInViewport(containerRef) ? "in-view-appear" : "";
+    setInViewAppear(className);
+};
+
+const isElementInViewport = containerRef => {
+    const rect = containerRef ? containerRef.current.getBoundingClientRect() : false;
+
+    return (
+        (rect) &&
+        (rect.top > -1 * containerRef.current.offsetHeight) &&
+        (rect.top < window.innerHeight)
     );
 };
 
