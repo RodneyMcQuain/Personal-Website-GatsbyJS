@@ -12,13 +12,18 @@
     text-align: left;
 }
 
+.blog-featured-image {
+    height: $blog-featured-image-height;
+    z-index: 10;
+}
+
 .blog-sidebar {
+    z-index: 9;
     list-style-type: none;
     margin: 20px 20px 0 50px;
     position: fixed;
     width: auto;
     top: calc(#{$blog-featured-image-height} + #{$navbar-height});
-    z-index: -1;
     transition: all .5s ease-in;
 
     li {
@@ -43,8 +48,4 @@
         top: $navbar-height;
         transition: $ease-in-transition;
     }
-}
-
-.blog-featured-image {
-    height: $blog-featured-image-height;
 }
