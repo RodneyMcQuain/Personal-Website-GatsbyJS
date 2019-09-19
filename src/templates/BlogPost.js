@@ -35,7 +35,7 @@ export default function Template({ data }) {
                         <div className="markdown-body" dangerouslySetInnerHTML={{ __html: post.html }} />
                     </div>
                     <div className="hidden-xs hidden-sm col-md-3">
-                        <BlogSidebar posts={data.recentPosts.edges} />
+                        <BlogSidebar posts={data.recentPosts.edges} currentPostName={frontmatter.title} />
                     </div>
                 </div>
             </InViewAnimation>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'gatsby-link';
 import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../styles/helpers/_variables.scss';
 
-const BlogSidebar = ({posts}) => {
+const BlogSidebar = ({posts, currentPostName}) => {
     const sidebarOffsetTopClass = useSidebar();
 
     return (
@@ -15,11 +15,13 @@ const BlogSidebar = ({posts}) => {
                 const { node } = post;
                 const { title, path } = node.frontmatter;
 
-                return (
-                    <li key={node.id}><Link to={path}>
-                        <span>{title}</span>
-                    </Link></li>
-                );
+                return title === currentPostName 
+                    ? null
+                    : (
+                        <li key={node.id}><Link to={path}>
+                            <span>{title}</span>
+                        </Link></li>
+                    );
             })}
         </ul>
     )
