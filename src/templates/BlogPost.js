@@ -34,7 +34,7 @@ export default function Template({ data }) {
                         </div>
                         <div className="markdown-body" dangerouslySetInnerHTML={{ __html: post.html }} />
                     </div>
-                    <div className="hidden-sm col-md-3">
+                    <div className="hidden-xs hidden-sm col-md-3">
                         <BlogSidebar posts={data.recentPosts.edges} />
                     </div>
                 </div>
