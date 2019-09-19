@@ -17,6 +17,9 @@
     margin: 20px 20px 0 50px;
     position: fixed;
     width: auto;
+    top: calc(#{$blog-featured-image-height} + #{$navbar-height});
+    z-index: -1;
+    transition: all .5s ease-in;
 
     li {
         text-align: left;
@@ -38,5 +41,10 @@
 
     &.blog-sidebar-offset-top {
         top: $navbar-height;
+        transition: $ease-in-transition;
     }
+}
+
+.blog-featured-image {
+    height: $blog-featured-image-height;
 }

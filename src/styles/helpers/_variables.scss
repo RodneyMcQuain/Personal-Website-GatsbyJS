@@ -4,13 +4,14 @@ $black: #222; //Black color used for navbar, footer, and more
 $darker-black: #111; //Slightly darker than $black
 $lighter-black: #444; //Used for dark section borders
 
-$minor-scale: scale(1.02); //minor transform scale
-$major-scale: scale(1.2); //major transform scale
+$minor-scale: scale(1.02);
+$major-scale: scale(1.2);
 
-$hide-transition: all .5s ease-in-out; //transition for hiding
-$unhide-transition: opacity 1s ease-in-out; //transition for appearing
+$hide-transition: all .5s ease-in-out;
+$unhide-transition: opacity 1s ease-in-out;
+$ease-in-transition: all .5s ease-in;
 
-$dark-gradient: linear-gradient(to bottom right, $darker-black, #333, $darker-black); //Gradient used in every other section
+$dark-gradient: linear-gradient(to bottom right, $darker-black, #333, $darker-black);
 
 $navbar-height: 50px;
 $footer-height: 50px;
@@ -22,3 +23,8 @@ $md-breakpoint: 992px;
 $lg-breakpoint: 1200px;
 
 $spacing-between-elements: 2px;
+$blog-featured-image-height: 40vh;
+
+:export {
+    FEATURED_IMG_VIEWPORT_HEIGHT: $blog-featured-image-height;
+}

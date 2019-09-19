@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'gatsby-link';
-import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../templates/BlogPost';
+import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../styles/helpers/_variables.scss';
 
 const BlogSidebar = ({posts}) => {
     const sidebarOffsetTopClass = useSidebar();
@@ -30,7 +30,8 @@ const useSidebar = () => {
 
     useEffect(() => {
         const setSidebarHeightOffset = () => {
-            const FEATURED_IMG_PIXEL_HEIGHT = document.body.clientHeight * (FEATURED_IMG_VIEWPORT_HEIGHT / window.innerHeight);
+            const FEATURED_IMG_VIEWPORT_HEIGHT_NUMBER = FEATURED_IMG_VIEWPORT_HEIGHT.replace("vh", "");
+            const FEATURED_IMG_PIXEL_HEIGHT = document.body.clientHeight * (FEATURED_IMG_VIEWPORT_HEIGHT_NUMBER / window.innerHeight);
             const sidebarClassName = window.pageYOffset > FEATURED_IMG_PIXEL_HEIGHT ? "blog-sidebar-offset-top" : ""
             setSidebarOffsetTopClass(sidebarClassName);
         }
