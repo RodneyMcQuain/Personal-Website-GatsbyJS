@@ -22,18 +22,30 @@ module.exports = {
             },
         },
         { 
-        resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/src/pages`,
                 name: `pages`,
             },
         },
         {
-        resolve: `gatsby-transformer-remark`,
+            resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
                     `gatsby-remark-prismjs`,
-                ]
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 1200,
+                        },
+                    },
+                    {
+                        resolve: `gatsby-remark-copy-linked-files`,
+                        options: {
+                            ignoreFileExtensions: [`png`, `jpg`, `jpeg`],
+                        },
+                    },
+                ],
             },
         },
     ],

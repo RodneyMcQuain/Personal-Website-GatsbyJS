@@ -8,7 +8,7 @@ featuredImage: ./index.png
 
 I was looking into projects I could do for my favorite game, Super Smash Bros. Melee that wouldn't be invasive to the actual gameplay.  So, I had the idea to modify the character select screen (CSS) which included things like character portraits, colors, and music.  The most interesting portion of this to me was changing the colors, so that's what this post will be covering.  For reference here is what the original CSS looks like:
 
-![vanilla Super Smash Bros. Melee CSS](<https://thumbs.gfycat.com/DetailedTanFlounder.webp>)
+![vanilla Super Smash Bros. Melee CSS](./vCss.gif)
 
 
 
@@ -30,7 +30,7 @@ Formats can indicate other things, but that's out of the scope of this post as m
 
 The 07 07 07 format identifier **precedes** the data.
 
-![07 07 07 format offset explanation](https://i.imgur.com/ML5OqKH.png)
+![07 07 07 format offset explanation](./070707OffsetExplanation.png)
 
 The transparency value for 07 07 07 format rarely ever does anything and in this project has no effect at all.
 
@@ -38,7 +38,7 @@ The transparency value for 07 07 07 format rarely ever does anything and in this
 
 The 42 48 format identifier **follows after** the data.
 
-![42 48 format offset explanation](https://imgur.com/iSSWjyO.png)
+![42 48 format offset explanation](./4248OffsetExplanation.png)
 
 This format can be made transparent by setting the 4 transparency bytes to 00 00 00 00, which can lead to some interesting visuals, which we'll get into later.
 
@@ -74,9 +74,9 @@ Here's a table of offsets that were used in the project:
 
 Here's some input and output from the program I made, *Melee CSS Color Changer*, to show what these offsets control:
 
-![Input of Melee CSS Color Changer](https://imgur.com/e6IcL6A.png)
+![Input of Melee CSS Color Changer](./programInput.png)
 
-![Output of Melee CSS Color Changer](https://i.imgur.com/rtecYi0.png)
+![Output of Melee CSS Color Changer](./programOutput.png)
 
 The "Selects in Background" aren't shown here because the "Background" masks them pretty well.  In the next section we'll see how to get around that.
 
@@ -117,7 +117,7 @@ raf.write(0x00);
 raf.write(0x00);
 ~~~
 
-![vanilla CSS with a transparent background](https://media.giphy.com/media/YmaxEUjhXJQU5jHanY/giphy.gif)
+![vanilla CSS with a transparent background](./vTransparentCss.gif)
 
 Now that our background is transparent we can see the once practically hidden selects in the background.  There's 16 of them and each character ("S", "e", "l", "e", "c", "t") has it's own offset, so there's 96 offsets in total.  Here's an algorithm to change all 96 of them with random colors:
 
@@ -151,7 +151,7 @@ for (int currentOffset = SELECT_BACKGROUND_OFFSET_START; currentOffset <= SELECT
 
 Here's a possible result of running this:
 
-![Random background color CSS](https://media.giphy.com/media/iDrXnNjYRIvDYh5bmO/giphy.gif)
+![Random background color CSS](./randomColorCss.gif)
 
 
 
@@ -159,17 +159,17 @@ Here's a possible result of running this:
 
 Here are some CSSs that can be made using the program:
 
-![White diamond CSS](https://thumbs.gfycat.com/HideousParallelAruanas.webp)
+![White diamond CSS](./whiteDiamondCss.gif)
 
-![Yellow tri CSS](https://media.giphy.com/media/jsCGchgNEuuDRfAKEa/giphy.gif)
+![Yellow tri CSS](./yellowTriCss.gif)
 
-![Red and white CSS](https://media.giphy.com/media/kboTn0eF0dPeaGM6zL/giphy.gif)
+![Red and white CSS](./redAndWhiteCss.gif)
 
-![Random color diamond CSS](https://media.giphy.com/media/mDT65dpD2ZenaZzB6G/giphy.gif)
+![Random color diamond CSS](./randomColorDiamondCss.gif)
 
-![Purple CSS](https://media.giphy.com/media/cJSerfJeOrSXpMIapF/giphy.gif)
+![Purple CSS](./purpleCss.gif)
 
-![White tri CSS](https://thumbs.gfycat.com/UniqueOddballBrontosaurus.webp)
+![White tri CSS](./whiteTriCss.gif)
 
 
 
