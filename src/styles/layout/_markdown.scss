@@ -72,6 +72,15 @@
         }
     }
 
+    a {
+        text-decoration: underline;
+        display:inline-block;
+
+        &:hover {
+            @include transform($minor-scale);
+        }
+    }
+
     .gatsby-highlight {
         position: relative;
         margin: 10px
