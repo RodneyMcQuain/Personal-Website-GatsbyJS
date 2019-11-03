@@ -29,7 +29,7 @@ function SEO({ description, lang, meta, title, image }) {
             htmlAttributes={{
                 lang,
             }}
-            title={title}
+            title={`${title} | ${site.siteMetadata.title}`}
             titleTemplate={`%s | ${site.siteMetadata.title}`}
             meta={[
                 {
@@ -78,16 +78,16 @@ function SEO({ description, lang, meta, title, image }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
+    lang: `en`,
+    meta: [],
+    description: ``,
 }
 
 SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    lang: PropTypes.string,
+    meta: PropTypes.arrayOf(PropTypes.object),
+    title: PropTypes.string.isRequired,
 }
 
-export default SEO
+export default SEO;
