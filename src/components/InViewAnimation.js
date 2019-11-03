@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useEffect, useRef } from "react"
+import { useAddCssClass } from "../services/useAddCssClass";
 
 const InViewAnimation = props => {
     const containerRef = useRef();
@@ -12,22 +13,20 @@ const InViewAnimation = props => {
 };
 
 const useScrollAnimation = containerRef => {
-    const [inViewAppear, setInViewAppear] = useState("");
+    const [mightBeInViewAppear, shouldAddInViewAppear] = useAddCssClass("in-view-appear");
 
     useEffect(() => {
-        const wrappedScrollContainerEvent = () => scrollContainerEvent(containerRef, setInViewAppear);
-        window.addEventListener("scroll", wrappedScrollContainerEvent);
+        const scrollContainerEvent = () => {
+            const className = isElementInViewport(containerRef);
+            shouldAddInViewAppear(className);
+        };        
+        window.addEventListener("scroll", scrollContainerEvent);
         window.dispatchEvent(new Event("scroll"));
 
-        return () => window.removeEventListener("scroll", wrappedScrollContainerEvent);
+        return () => window.removeEventListener("scroll", scrollContainerEvent);
     }, []);
 
-    return inViewAppear;
-};
-
-const scrollContainerEvent = (containerRef, setInViewAppear) => {
-    const className = isElementInViewport(containerRef) ? "in-view-appear" : "";
-    setInViewAppear(className);
+    return mightBeInViewAppear;
 };
 
 const isElementInViewport = containerRef => {
