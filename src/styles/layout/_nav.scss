@@ -13,7 +13,15 @@
             font-family: 'Roboto', sans-serif;
             color: $white;
         }
-    
+
+        li a:hover {
+            color: $darker-white;
+
+            span span {
+                color: $darker-white;
+            }
+        }
+
         li:first-child {
             margin-right: auto;
             
