@@ -19,24 +19,53 @@
 
 .blog-sidebar {
     z-index: 9;
-    list-style-type: none;
-    margin: 20px 20px 0 50px;
+    margin: 20px 20px 0 0;
     position: fixed;
     width: auto;
     top: calc(#{$blog-featured-image-height} + #{$navbar-height});
     transition: all .5s ease-in;
-
+    background: $white;
+    
     li {
         text-align: left;
-        border-bottom: 2px solid $darker-white;
-        margin-bottom: 20px;
-    
-        &:first-child {
-            border-bottom: 2px solid $black;
+        padding: $default-spacing 0;
+        
+        a {
+            text-decoration: none;
+        }
+        
+        &:not(:first-child) {
+            padding-left: 1em;
+            text-indent: -1em;
+            transition: background-color .25s ease-in;
+
+            &:before {
+                content: "\00a0\00a0\00a0 ";
+                opacity: 0;
+            }
+
+            &:hover {
+                background: $darker-white;
+                padding-left: $default-spacing;
+                padding-right: $default-spacing;
+                margin-left: -$default-spacing;
+                margin-right: -$default-spacing;
+                text-indent: -$default-spacing;
+                transition: background-color .25s ease-in;
+
+                &:before {
+                    content: "\00a0\00a0\00a0• ";
+                    opacity: 1;
+                    transition: opacity .5s ease-in;
+                }
+            }
         }
 
-        &:last-child {
-            margin-bottom: 0;
+        &:first-child {
+            padding-top: 0;
+            margin-bottom: $default-spacing;
+            border-bottom: 2px solid $darker-white;
+            font-size: 22rem;
         }
     }
 
@@ -47,5 +76,52 @@
     &.offset-by-featured-image {
         top: $navbar-height;
         transition: $ease-in-transition;
+    }
+}
+
+@media (max-width: $md-breakpoint - 1px) {
+    .blog-sidebar {
+        position: none;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+
+        z-index: 100;
+        top: $navbar-height;
+        left: 0;
+        width: 100vw;
+        transition: all .5 ease-in-out;
+        transform: scaleY(0);
+        transform-origin: top;
+        
+        li {
+            border-bottom: none;
+
+            &:first-child {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .open-blog-menu {
+        max-height: 100vh;
+        transform: scaleY(1);
+        transition: all .5 ease-in-out;
+    }
+    
+    .blog-menu-btn {
+        position: fixed;
+        top: 92vh;
+        left: 91vw;
+        border: $lighter-black solid 2px;
+        z-index: 1000;
+    }
+}
+
+@media (max-width: $xs-breakpoint - 1px) {
+    .blog-menu-btn {
+        top: 90vh;
+        left: 80vw;
     }
 }

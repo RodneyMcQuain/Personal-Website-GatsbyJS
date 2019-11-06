@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 import FullDate from '../components/Blog/FullDate';
 import InViewAnimation from '../components/InViewAnimation';
-import BlogSidebar from '../components/Blog/BlogSidebar';
+import ResponsiveBlogMenu from '../components/Blog/ResponsiveBlogMenu';
 import BlogReadTime from '../components/Blog/BlogReadTime';
 import SEO from '../components/seo';
 import Img from 'gatsby-image';
@@ -34,8 +34,8 @@ export default function Template({ data }) {
                         </div>
                         <div className="markdown-body" dangerouslySetInnerHTML={{ __html: post.html }} />
                     </div>
-                    <div className="hidden-xs hidden-sm col-md-3">
-                        <BlogSidebar posts={data.recentPosts.edges} currentPostName={frontmatter.title} />
+                    <div className="col-md-3">
+                        <ResponsiveBlogMenu posts={data.recentPosts.edges} currentPostName={frontmatter.title} />
                     </div>
                 </div>
             </InViewAnimation>

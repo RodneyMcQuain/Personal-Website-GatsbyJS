@@ -25,6 +25,8 @@ $lg-breakpoint: 1200px;
 $spacing-between-elements: 2px;
 $blog-featured-image-height: 40vh;
 
+$default-spacing: 10px;
+
 :export {
     FEATURED_IMG_VIEWPORT_HEIGHT: $blog-featured-image-height;
 }

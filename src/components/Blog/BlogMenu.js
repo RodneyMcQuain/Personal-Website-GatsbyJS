@@ -3,11 +3,13 @@ import Link from 'gatsby-link';
 import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../styles/helpers/_variables.scss';
 import { useAddCssClass } from '../../services/useAddCssClass';
 
-const BlogSidebar = ({posts, currentPostName}) => {
+const BlogMenu = ({posts, currentPostName, isOpen}) => {
     const sidebarOffsetTopClass = useSidebar();
+    const mightOpenMenu = isOpen ? "open-blog-menu" : "";
 
     return (
-        <ul className={"blog-sidebar -curved-border padding-container " + sidebarOffsetTopClass}>
+        <ul className={`blog-sidebar -curved-border padding-container ${sidebarOffsetTopClass} ${mightOpenMenu}`}>
+            <li>Blog Menu</li> {/*move out of ul*/}
             <li key={0}><Link to={'blog-posts'}>
                 <span>All Posts</span>
             </Link></li>
@@ -48,4 +50,4 @@ const useSidebar = () => {
 
 const isFeaturedImageNotInViewport = FEATURED_IMG_PIXEL_HEIGHT => window.pageYOffset > FEATURED_IMG_PIXEL_HEIGHT;
 
-export default BlogSidebar;
+export default BlogMenu;
