@@ -17,7 +17,7 @@
     z-index: 10;
 }
 
-.blog-sidebar {
+.blog-menu {
     z-index: 9;
     margin: 20px 20px 0 0;
     position: fixed;
@@ -26,52 +26,58 @@
     transition: all .5s ease-in;
     background: $white;
     
+    ul {
+        padding-inline-start: 0;
+        margin: 0;
+    }
+
+    h1 {
+        padding: $default-spacing;
+        padding-top: 0;
+        margin-bottom: $default-spacing;
+        border-bottom: 2px solid $darker-white;
+        font-size: 22rem;
+        text-align: left;
+    }
+
     li {
         text-align: left;
         padding: $default-spacing 0;
+        padding-left: 1em;
+        text-indent: -1em;
+        transition: background-color .25s ease-in;
+        list-style-type: none;
         
         a {
             text-decoration: none;
         }
         
-        &:not(:first-child) {
-            padding-left: 1em;
-            text-indent: -1em;
+        span {
+            font-size: 18rem;
+        }
+
+        &:before {
+            content: "\00a0\00a0\00a0 ";
+            opacity: 0;
+        }
+
+        &:hover {
+            background: $darker-white;
+            padding-left: $default-spacing;
+            padding-right: $default-spacing;
+            margin-left: -$default-spacing;
+            margin-right: -$default-spacing;
+            text-indent: -$default-spacing;
             transition: background-color .25s ease-in;
 
             &:before {
-                content: "\00a0\00a0\00a0 ";
-                opacity: 0;
+                content: "\00a0\00a0\00a0• ";
+                opacity: 1;
+                transition: opacity .5s ease-in;
             }
-
-            &:hover {
-                background: $darker-white;
-                padding-left: $default-spacing;
-                padding-right: $default-spacing;
-                margin-left: -$default-spacing;
-                margin-right: -$default-spacing;
-                text-indent: -$default-spacing;
-                transition: background-color .25s ease-in;
-
-                &:before {
-                    content: "\00a0\00a0\00a0• ";
-                    opacity: 1;
-                    transition: opacity .5s ease-in;
-                }
-            }
-        }
-
-        &:first-child {
-            padding-top: 0;
-            margin-bottom: $default-spacing;
-            border-bottom: 2px solid $darker-white;
-            font-size: 22rem;
         }
     }
 
-    span {
-        font-size: 18rem;
-    }
 
     &.offset-by-featured-image {
         top: $navbar-height;
@@ -80,7 +86,7 @@
 }
 
 @media (max-width: $md-breakpoint - 1px) {
-    .blog-sidebar {
+    .blog-menu {
         position: none;
         margin: 0;
         box-shadow: none;
@@ -94,13 +100,10 @@
         transition: all .5 ease-in-out;
         transform: scaleY(0);
         transform-origin: top;
-        
-        li {
-            border-bottom: none;
+        padding-top: 20px;
 
-            &:first-child {
-                padding-top: 20px;
-            }
+        h1 {
+           padding-top: 20px;
         }
     }
 

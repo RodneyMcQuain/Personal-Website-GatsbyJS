@@ -1,32 +1,17 @@
 import React, { useEffect } from 'react';
-import Link from 'gatsby-link';
 import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../styles/helpers/_variables.scss';
 import { useAddCssClass } from '../../services/useAddCssClass';
+import BlogPostsList from './BlogPostsList';
 
 const BlogMenu = ({posts, currentPostName, isOpen}) => {
     const sidebarOffsetTopClass = useSidebar();
     const mightOpenMenu = isOpen ? "open-blog-menu" : "";
 
     return (
-        <ul className={`blog-sidebar -curved-border padding-container ${sidebarOffsetTopClass} ${mightOpenMenu}`}>
-            <li>Blog Menu</li> {/*move out of ul*/}
-            <li key={0}><Link to={'blog-posts'}>
-                <span>All Posts</span>
-            </Link></li>
-
-            {posts.map(post => {
-                const { node } = post;
-                const { title, path } = node.frontmatter;
-
-                return title === currentPostName 
-                    ? null
-                    : (
-                        <li key={node.id}><Link to={path}>
-                            <span>{title}</span>
-                        </Link></li>
-                    );
-            })}
-        </ul>
+        <div className={`blog-menu -curved-border padding-container ${sidebarOffsetTopClass} ${mightOpenMenu}`}>
+            <h1>Blog Menu</h1>
+            <BlogPostsList posts={posts} currentPostName={currentPostName} />
+        </div>
     );
 };
 
