@@ -18,7 +18,11 @@
     pre {
         text-align: left;
     }
-  
+
+    pre, code span {
+        font-size: 16rem;
+    }
+
     h1, h2 {
         border-bottom: 1px solid #eee;
     }
