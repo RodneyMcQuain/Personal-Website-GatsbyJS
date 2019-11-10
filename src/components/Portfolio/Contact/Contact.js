@@ -49,7 +49,7 @@ const Contact = () => {
         <InViewAnimation>
             <div className="container">
                 <div className="page-header">
-                    <h1><span id="contact"></span>Contact</h1>
+                    <h1 id="contact">Contact</h1>
                 </div>
 
                 <div className="col-xs-12">

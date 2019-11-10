@@ -8,7 +8,7 @@ const Education = ({institutions}) => (
         <div className="dark-section">
             <div className="container">
                 <div className="page-header">
-                    <h1><span id="education"></span>Education</h1>
+                    <h1 id="education">Education</h1>
                 </div>
 
                 {institutions.map(institution => <Institution key={institution.node.id} institution={institution.node} />)}

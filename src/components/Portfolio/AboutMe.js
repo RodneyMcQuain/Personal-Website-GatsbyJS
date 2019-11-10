@@ -5,7 +5,7 @@ const AboutMe = () => (
     <InViewAnimation>
         <div className="container">
             <div className="page-header">
-                <h1><span id="about-me"></span>About Me</h1>
+                <h1 id="about-me">About Me</h1>
             </div>
             <img src="me.jpg" className="img-rounded" id="me-img" alt="Rodney McQuain" />
             <p id="about-me-text">

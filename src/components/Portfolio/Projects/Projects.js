@@ -7,7 +7,7 @@ const Projects = ({projects}) => (
     <InViewAnimation>
         <div className="container">
             <div className="page-header">
-                <h1><span id="projects"></span>Projects</h1>
+                <h1 id="projects">Projects</h1>
             </div>
 
             <div className="row display-flex">
