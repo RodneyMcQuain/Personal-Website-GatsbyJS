@@ -3,13 +3,16 @@ import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../styles/helpers/_variables.sc
 import { useAddCssClass } from '../../services/useAddCssClass';
 import BlogPostsList from './BlogPostsList';
 
-const BlogMenu = ({posts, currentPostName, isOpen}) => {
+const BlogMenu = ({posts, currentPostName, isOpen, tableOfContents}) => {
     const sidebarOffsetTopClass = useSidebar();
     const mightOpenMenu = isOpen ? "open-blog-menu" : "";
 
     return (
         <div className={`blog-menu -curved-border padding-container ${sidebarOffsetTopClass} ${mightOpenMenu}`}>
-            <h1>Blog Menu</h1>
+            <h1>Table of Contents</h1>
+            <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
+            <br />
+            <h1>More Blog Posts</h1>
             <BlogPostsList posts={posts} currentPostName={currentPostName} />
         </div>
     );

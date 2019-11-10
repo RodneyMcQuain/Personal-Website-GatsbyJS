@@ -23,7 +23,7 @@ export default function Template({ data }) {
                         image={featuredFluidImage} 
                         description={post.excerpt}
                     />
-                    <div className="col-md-9">
+                    <div className="col-xs-12 col-sm-12 col-md-9">
                         <div className="blog-small-text-spacing">
                            <FullDate style="left-align" date={frontmatter.date} />
                            <BlogReadTime wordCount={post.wordCount.words} />
@@ -35,7 +35,7 @@ export default function Template({ data }) {
                         <div className="markdown-body" dangerouslySetInnerHTML={{ __html: post.html }} />
                     </div>
                     <div className="col-md-3">
-                        <ResponsiveBlogMenu posts={data.recentPosts.edges} currentPostName={frontmatter.title} />
+                        <ResponsiveBlogMenu posts={data.recentPosts.edges} currentPostName={frontmatter.title} tableOfContents={post.tableOfContents} />
                     </div>
                 </div>
             </InViewAnimation>
@@ -63,6 +63,7 @@ export const pageQuery = graphql`
                 words
             }
             excerpt
+            tableOfContents(pathToSlugField: "frontmatter.path")
         }
         recentPosts: allMarkdownRemark(limit: 5) {
             edges {

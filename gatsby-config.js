@@ -32,6 +32,7 @@ module.exports = {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
+                    `gatsby-remark-autolink-headers`,
                     `gatsby-remark-prismjs`,
                     {
                         resolve: `gatsby-remark-images`,
