@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
-import FullDate from './FullDate';
+import PublishedOnDate from './PublishedOnDate';
 
 const BlogCard = ({ post }) => {
     const { node } = post;
@@ -14,7 +14,7 @@ const BlogCard = ({ post }) => {
                     <Img className="container-top-image" fluid={featuredImage.childImageSharp.fluid} />
                     <div className="padding-container">
                         <h2>{title}</h2>
-                        <FullDate date={date} />
+                        <PublishedOnDate date={date} />
                         <p>{node.excerpt}</p>
                         <Link className="btn" to={path}>
                             <span>Read More</span>
