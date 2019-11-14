@@ -1,14 +1,21 @@
-.blog-small-text {
+.blog-header-icons div {
+    text-align: left;
+    
+    &:first-child {
+        margin-top: 20px;
+    }
+
+    &:last-child {
+        margin-bottom: -20px;
+    }
+}
+
+.-small-text {
     font-size: 16rem;
+    padding: 5px;
 }
 
-.blog-small-text-spacing {
-    display: block;
-    margin: 20px 0 -20px 0;
-}
-
-.left-align {
-    display: block;
+.-left-align {
     text-align: left;
 }
 

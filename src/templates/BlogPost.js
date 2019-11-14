@@ -1,17 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
-import FullDate from '../components/Blog/FullDate';
 import InViewAnimation from '../components/InViewAnimation';
 import ResponsiveBlogMenu from '../components/Blog/ResponsiveBlogMenu';
 import BlogReadTime from '../components/Blog/BlogReadTime';
 import SEO from '../components/seo';
 import Img from 'gatsby-image';
+import PublishedOnDate from '../components/Blog/PublishedOnDate';
+import UpdatedOnDate from '../components/Blog/UpdatedOnDate';
 
 export default function Template({ data }) {
-    const post = data.thisPost;
-    const frontmatter = post.frontmatter;
-    const featuredFluidImage = frontmatter.featuredImage.childImageSharp.fluid;
+    const { html, excerpt, tableOfContents, wordCount } = data.thisPost;
+    const { title, date, lastUpdatedDate } = data.thisPost.frontmatter;
+    const featuredFluidImage = data.thisPost.frontmatter.featuredImage.childImageSharp.fluid;
 
     return (
         <Layout>
@@ -19,23 +20,24 @@ export default function Template({ data }) {
                 <Img className="blog-featured-image" fluid={featuredFluidImage} />
                 <div className="container">
                     <SEO 
-                        title={frontmatter.title} 
+                        title={title} 
                         image={featuredFluidImage} 
-                        description={post.excerpt}
+                        description={excerpt}
                     />
                     <div className="col-xs-12 col-sm-12 col-md-9">
-                        <div className="blog-small-text-spacing">
-                           <FullDate style="left-align" date={frontmatter.date} />
-                           <BlogReadTime wordCount={post.wordCount.words} />
+                        <div className="blog-header-icons">
+                            <PublishedOnDate date={date} />
+                            <UpdatedOnDate date={lastUpdatedDate} />
+                            <BlogReadTime wordCount={wordCount.words} />
                         </div>
 
                         <div className="page-header">
-                            <h1 className="left-align blog-title">{frontmatter.title}</h1>
+                            <h1 className="-left-align">{title}</h1>
                         </div>
-                        <div className="markdown-body" dangerouslySetInnerHTML={{ __html: post.html }} />
+                        <div className="markdown-body" dangerouslySetInnerHTML={{ __html: html }} />
                     </div>
                     <div className="col-md-3">
-                        <ResponsiveBlogMenu posts={data.recentPosts.edges} currentPostName={frontmatter.title} tableOfContents={post.tableOfContents} />
+                        <ResponsiveBlogMenu posts={data.recentPosts.edges} currentPostName={title} tableOfContents={tableOfContents} />
                     </div>
                 </div>
             </InViewAnimation>
@@ -50,7 +52,7 @@ export const pageQuery = graphql`
             frontmatter {
                 path
                 title
-                date
+                date(formatString: "MMMM DD, YYYY")
                 featuredImage {
                     childImageSharp {
                         fluid {
@@ -58,6 +60,7 @@ export const pageQuery = graphql`
                         }
                     }
                 }
+                lastUpdatedDate(formatString: "MMMM DD, YYYY")
             }
             wordCount {
                 words

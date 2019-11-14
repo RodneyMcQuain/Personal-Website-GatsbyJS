@@ -4,6 +4,7 @@ date: "2019-05-31"
 title: "Coloring in a 20 Year Old Video Game"
 author: "Rodney McQuain"
 featuredImage: ./index.png
+lastUpdatedDate: "2019-11-11"
 ---
 
 I was looking into projects I could do for my favorite game, Super Smash Bros. Melee that wouldn't be invasive to the actual gameplay.  So, I had the idea to modify the character select screen (CSS) which included things like character portraits, colors, and music.  The most interesting portion of this to me was changing the colors, so that's what this post will be covering.  For reference here is what the original CSS looks like:
@@ -157,7 +158,7 @@ Here's a possible result of running this:
 
 ## Example Character Select Screens
 
-Here are some CSSs that can be made using the program:
+Now that we know some of the algorithms that can be used to modify the CSS, here are some other examples that can be made using the program:
 
 ![White diamond CSS](./whiteDiamondCss.gif)
 

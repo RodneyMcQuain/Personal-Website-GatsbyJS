@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from "prop-types"
 
-const BlogReadTime = ({wordCount}) => {
-    const AVERAGE_READ_PER_MINUTE = 225;
-    const MINUTES = Math.round(wordCount / AVERAGE_READ_PER_MINUTE); 
+const BlogReadTime = ({ wordCount }) => {
+    const AVERAGE_WORDS_READ_PER_MINUTE = 225;
+    const MINUTES = Math.round(wordCount / AVERAGE_WORDS_READ_PER_MINUTE); 
 
     return (
-        <p className="fa fa-clock-o blog-small-text left-align">
-            <span className="blog-small-text"> {MINUTES} Minute Read</span>
-        </p>
+        <div className="-small-text">
+            <span className="fa fa-clock-o" /> {MINUTES} Minute Read
+        </div>
     );
 }
 
