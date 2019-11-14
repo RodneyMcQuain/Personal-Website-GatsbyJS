@@ -33,7 +33,8 @@ const useMenu = () => {
 
 const setSidebarHeightOffset = shouldAddSidebarOffsetTop => {
     const FEATURED_IMG_VIEWPORT_HEIGHT_NUMBER = FEATURED_IMG_VIEWPORT_HEIGHT.replace("vh", "");
-    const FEATURED_IMG_PIXEL_HEIGHT = document.body.clientHeight * (FEATURED_IMG_VIEWPORT_HEIGHT_NUMBER / window.innerHeight);
+    const CLIENT_HEIGHT = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    const FEATURED_IMG_PIXEL_HEIGHT = (CLIENT_HEIGHT * FEATURED_IMG_VIEWPORT_HEIGHT_NUMBER) / 100;
     const isInViewport = isFeaturedImageNotInViewport(FEATURED_IMG_PIXEL_HEIGHT);
     shouldAddSidebarOffsetTop(isInViewport);
 }
