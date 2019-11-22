@@ -20,6 +20,22 @@ body {
     }
 }
 
+::-webkit-scrollbar-thumb {
+    background-color: #bfbfbf;
+    border-color: #bababa;
+    border-width: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b0b0b0;
+}
+
+::-webkit-scrollbar {
+    background-color: white;
+    width: 8px;
+    height: 8px;
+}
+
 main {
     flex: 1;
 }
