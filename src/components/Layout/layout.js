@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Footer from './Footer';
-import Navbar from './Navbar';
+import Navbar from './Navbar/Navbar';
 import Preloader from './Preloader';
 import '../../styles/stylesheet.scss';
 
