@@ -6,6 +6,7 @@ const NavButton = ({isOpen, setIsOpen, openIcon = "fa-times", closedIcon, extraC
         className={`btn ${extraClasses}`} 
         onClick={() => setIsOpen(!isOpen)}
         aria-label={`Show ${ariaLabel}`}
+        aria-expanded={isOpen}
     >
         <span className={`fa ${isOpen ? openIcon : closedIcon}`}></span>
     </button>
