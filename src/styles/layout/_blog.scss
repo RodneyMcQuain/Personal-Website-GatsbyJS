@@ -102,6 +102,15 @@
         transition: $ease-in-transition;
         max-height: calc(100vh - #{$navbar-height});
     }
+
+}
+
+.blog-menu-btn {
+    position: fixed;
+    right: $navbar-right-alignment;
+    bottom: $navbar-right-alignment;
+    border: $lighter-black solid 2px;
+    z-index: 1000;
 }
 
 @media (max-width: $md-breakpoint - 1px) {
@@ -130,20 +139,5 @@
         max-height: calc(100vh - #{$navbar-height});
         transform: scaleY(1);
         transition: all .5 ease-in-out;
-    }
-    
-    .blog-menu-btn {
-        position: fixed;
-        top: 92vh;
-        left: 91vw;
-        border: $lighter-black solid 2px;
-        z-index: 1000;
-    }
-}
-
-@media (max-width: $xs-breakpoint - 1px) {
-    .blog-menu-btn {
-        top: 90vh;
-        left: 80vw;
     }
 }
