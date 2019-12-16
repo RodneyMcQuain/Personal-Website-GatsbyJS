@@ -4,7 +4,7 @@
     min-height: $navbar-height;
     top: 0;
     width: 100vw;
-    z-index: 9999;
+    z-index: $navbar-z-index;
     
     .nav-contents {
         list-style-type: none;

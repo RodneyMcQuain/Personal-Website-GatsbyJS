@@ -21,11 +21,11 @@
 
 .blog-featured-image {
     height: $blog-featured-image-height;
-    z-index: 10;
+    z-index: $blog-featured-image-z-index;
 }
 
 .blog-menu {
-    z-index: 9;
+    z-index: $blog-menu-z-index;
     margin: 20px 20px 0 0;
     position: fixed;
     width: auto;
@@ -91,7 +91,7 @@
             a:hover:before {
                 content: "\00a0\00a0\00a0\00a0• ";
                 background: $darker-white;
-                z-index: -1;
+                z-index: $blog-menu-highlight-z-index;
                 opacity: 1;
             }
         }
@@ -110,7 +110,7 @@
     right: $navbar-right-alignment;
     bottom: $navbar-right-alignment;
     border: $lighter-black solid 2px;
-    z-index: 1000;
+    z-index: $blog-menu-btn-z-index;
 }
 
 @media (max-width: $md-breakpoint - 1px) {
@@ -120,7 +120,7 @@
         border: none;
         border-radius: 0;
         max-width: 100%;
-        z-index: 100;
+        z-index: $blog-menu-sm-z-index;
         top: $navbar-height;
         width: 100vw;
 
