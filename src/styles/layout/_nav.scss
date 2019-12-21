@@ -58,6 +58,10 @@
         margin: 8px $navbar-right-alignment 8px 0;
         border: #333 1px solid;
     }
+
+    .active {
+        border-bottom: 3px solid $white;
+    }
 }
 
 @media (max-width: $sm-breakpoint - 1px) {
@@ -89,7 +93,7 @@
     }
 }
 
-@media (max-width: $md-breakpoint) {
+@media (max-width: $md-breakpoint - 1px) {
     .my-nav {
         .nav-contents {
             li a, li a span span {
@@ -97,8 +101,4 @@
             }
         }
     }
-}
-
-.active {
-    border-bottom: 3px solid $white;
 }
