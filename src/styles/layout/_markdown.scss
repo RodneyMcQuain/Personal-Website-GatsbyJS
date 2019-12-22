@@ -30,6 +30,7 @@
     h1, h2, h3, h4 {
         padding-bottom: 9px;
         margin: 40px 0 20px;
+        font-weight: bold;
     }
   
     h2 {
@@ -38,7 +39,10 @@
 
     h3 {
         font-size: 30rem;
-        font-weight: bold;
+    }
+
+    h4 {
+        font-size: 25rem;
     }
   
     h2, h3, h4 {
