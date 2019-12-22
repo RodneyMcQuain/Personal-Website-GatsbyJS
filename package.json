@@ -18,6 +18,8 @@
     "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-sharp": "^2.2.36",
+    "gatsby-plugin-tslint": "^0.0.2",
+    "gatsby-plugin-typescript": "^2.1.23",
     "gatsby-remark-autolink-headers": "^2.1.16",
     "gatsby-remark-copy-linked-files": "^2.1.28",
     "gatsby-remark-images": "^3.1.28",
@@ -39,7 +41,15 @@
     "webpack": "^4.39.1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "prettier": "^1.18.2",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-plugin-prettier": "^2.1.0",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.7.4"
   },
   "keywords": [
     "gatsby"
@@ -51,7 +61,9 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "type-check": "tsc --noEmit",
+    "lint": "tslint --project ."
   },
   "repository": {
     "type": "git",
