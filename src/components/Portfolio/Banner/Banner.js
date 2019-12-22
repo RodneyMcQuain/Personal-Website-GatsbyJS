@@ -1,22 +1,12 @@
 import React, { useEffect } from 'react';
-import { useAddCssClass } from '../../services/useAddCssClass';
-
-const backgroundImage = `
-    linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-    ), 
-    url(code.jpg)
-`;
+import { useAddCssClass } from '../../../services/useAddCssClass';
+import ParametricCurves from './ParametricCurves';
 
 const Banner = () => {
     const [fadeHeader, fadeTextAndButton] = useBannerFade();
 
     return (
-        <header 
-            style={{ backgroundImage: backgroundImage }} 
-            id="banner-img"
-        >
+        <header id="banner">
             <div className="col-xl-12 col-md-12 col-sm-12 col-xs-12" id="banner-container">
                 <h1 id="banner-header" className={`banner-hide ${fadeHeader}`}>Rodney McQuain</h1>
                 <p id="banner-text" className={`banner-hide ${fadeTextAndButton}`}>
@@ -29,6 +19,7 @@ const Banner = () => {
                     </a>
                 </div>
             </div>
+            <ParametricCurves />
         </header>
     )
 };

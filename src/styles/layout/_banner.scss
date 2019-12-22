@@ -1,18 +1,18 @@
-#banner-img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+#banner {
     height: calc(100vh - #{$navbar-height});
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 $default-spacing;
 }
 
 #banner-container {
     margin-top: -25vh;
-    padding: 40px;
+    padding: 20px;
+    background: black;
+    z-index: 1;
+    box-shadow: 0 0 15px 10px #020202;
+    opacity: .85;
 }
 
 #banner-header {
@@ -75,4 +75,14 @@
 .banner-appear {
     opacity: 1;
     transition: opacity 2s ease-in-out;
+}
+
+canvas.banner-animation {
+    position: absolute;
+    left: 50%;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    background: black;
+    margin-top: -25px; // I have no idea why this works
 }
