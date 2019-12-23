@@ -12,7 +12,7 @@ interface IDimensions {
     width: number;
 }
 
-const NAVBAR_HEIGHT: number = Number(styles.NAVBAR_HEIGHT.replace("px", ""));
+const NAVBAR_HEIGHT: number = Number(styles.NAVBAR_HEIGHT?.replace("px", ""));
 
 const ParametricCurves = () => {
     const canvas = useParametricCurves();
