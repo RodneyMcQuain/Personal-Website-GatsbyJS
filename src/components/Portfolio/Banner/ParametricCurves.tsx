@@ -26,19 +26,15 @@ function useParametricCurves() {
     useEffect(() => {
         setDimensions(canvasRef.current);
         const ctx: CanvasRenderingContext2D = canvasRef.current.getContext('2d');
-        const dimensions = getDimensions(canvasRef.current);
         const vectors: IVector[] = getVectors();
 
-        const resize = () => {
-            setDimensions(canvasRef.current);
-            ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
-        }
+        const resize = () => setDimensions(canvasRef.current);
         
-        const interval = setInterval(() => { parametricCurves(ctx, vectors, dimensions); }, 1);
+        const drawInterval = setInterval(() => { parametricCurves(ctx, vectors, getDimensions(canvasRef.current)); }, 1);
         window.addEventListener('resize', resize);
 
         return () => {
-            clearInterval(interval);
+            clearInterval(drawInterval);
             window.removeEventListener('resize', resize);
         }
     }, []);
