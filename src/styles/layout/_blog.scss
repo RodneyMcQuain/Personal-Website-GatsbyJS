@@ -1,3 +1,5 @@
+$extra-blog-menu-space-to-remove: 40px;
+
 .blog-header-icons div {
     text-align: left;
     
@@ -33,7 +35,7 @@
     transition: all .5s ease-in;
     background: $white;
     max-width: 25%;
-    max-height: calc(100vh - #{$blog-featured-image-height} - #{$navbar-height} - 40px);
+    max-height: calc(100vh - #{$blog-featured-image-height} - #{$navbar-height} - #{$extra-blog-menu-space-to-remove});
     overflow-y: auto;
 
     h1 {
@@ -100,9 +102,8 @@
     &.offset-by-featured-image {
         top: $navbar-height;
         transition: $ease-in-transition;
-        max-height: calc(100vh - #{$navbar-height});
+        max-height: calc(100vh - #{$navbar-height} - #{$footer-height} - #{$extra-blog-menu-space-to-remove});
     }
-
 }
 
 .blog-menu-btn {
