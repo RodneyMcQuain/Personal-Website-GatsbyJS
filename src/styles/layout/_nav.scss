@@ -57,6 +57,10 @@
         float: right;
         margin: 8px $navbar-right-alignment 8px 0;
         border: #333 1px solid;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     .active {
