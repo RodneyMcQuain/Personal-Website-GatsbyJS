@@ -1,0 +1,9 @@
+.nav-btn {
+    span {
+        transition: all .5s ease-in-out;
+    
+        &.clicked {
+            transform: rotate(180deg);
+        }
+    }
+}

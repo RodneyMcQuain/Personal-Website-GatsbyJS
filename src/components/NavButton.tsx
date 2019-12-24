@@ -18,12 +18,15 @@ const NavButton = ({
     ariaLabel
 }: INavButtonProps) => (
     <button 
-        className={`btn ${extraClasses}`} 
+        className={`btn nav-btn ${extraClasses}`} 
         onClick={() => setIsOpen(!isOpen)}
         aria-label={`Show ${ariaLabel}`}
         aria-expanded={isOpen}
     >
-        <span className={`fa ${isOpen ? openIcon : closedIcon}`}></span>
+        <span className={`
+            fa ${isOpen ? openIcon : closedIcon}
+            ${isOpen ? 'clicked' : ''}
+        `}></span>
     </button>
 );
 
