@@ -5,11 +5,17 @@ interface IVector {
     n: number;
     r: number;
     s: number;
+    color: string;
 }
 
 interface IDimensions {
     height: number;
     width: number;
+}
+
+interface ISum {
+    x: number;
+    y: number;
 }
 
 const NAVBAR_HEIGHT: number = Number(styles.NAVBAR_HEIGHT?.replace("px", ""));
@@ -30,7 +36,9 @@ function useParametricCurves() {
 
         const resize = () => setDimensions(canvasRef.current);
         
-        const drawInterval = setInterval(() => { parametricCurves(ctx, vectors, getDimensions(canvasRef.current)); }, 1);
+        const drawInterval = setInterval(() => { 
+            drawParametricCurves(ctx, vectors, getDimensions(canvasRef.current)); 
+        }, 1);
         window.addEventListener('resize', resize);
 
         return () => {
@@ -59,7 +67,10 @@ function getVectors(): IVector[] {
     const vectors: IVector[] = new Array(NUMBER_OF_VECTORS);
 
     for (let i = 0; i < vectors.length; i++) {
+        const rand = getRandomByRange(200, 255);
+
         vectors[i] = {
+            color: `rgba(${rand}, ${rand}, ${rand})`,
             n: 0,
             r: Math.random() * 100 + 100,
             s: Math.random() * 5 + 50,
@@ -69,28 +80,35 @@ function getVectors(): IVector[] {
     return vectors;
 }
 
-function parametricCurves(ctx: CanvasRenderingContext2D, vectors: IVector[], dimensions: IDimensions) {
+function getRandomByRange(min: number, max: number): number {
+    return Math.floor((Math.random() * (max - min + 1)) + min);
+}
+
+function drawParametricCurves(ctx: CanvasRenderingContext2D, vectors: IVector[], dimensions: IDimensions) {
     const sum = { x: 0, y: 0 };
 
     for (let i = 0; i < vectors.length; i++) {
-        const { s, n, r } = vectors[i];
         vectors[i].n += .01;
+        const { color, n, r, s } = vectors[i];
         sum.x += Math.cos(s * n) * r;
         sum.y += Math.sin(s * n) * r;
-
-        ctx.beginPath();
-        ctx.ellipse(
-            sum.x + (dimensions.width / 2),
-            sum.y + (dimensions.height / 2),
-            1,
-            1,
-            Math.PI / 4, 
-            0, 
-            2 * Math.PI
-        );
-        ctx.strokeStyle = '#FFFFFF';
-        ctx.stroke();
+        drawEllipse(ctx, sum, dimensions, color);
     }
+}
+
+function drawEllipse(ctx: CanvasRenderingContext2D, sum: ISum, dimensions: IDimensions, color: string) {
+    ctx.beginPath();
+    ctx.ellipse(
+        sum.x + (dimensions.width / 2),
+        sum.y + (dimensions.height / 2),
+        1,
+        1,
+        Math.PI / 4, 
+        0, 
+        2 * Math.PI
+    );
+    ctx.strokeStyle = color;
+    ctx.stroke();
 }
 
 export default ParametricCurves;
