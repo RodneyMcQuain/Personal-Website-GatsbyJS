@@ -3,16 +3,25 @@ footer {
     bottom: 0;
     width: 100%;
     background: $black !important;
-    padding: 10px;
-    padding-bottom: 0 !important;
-    overflow: hidden;
+    padding: 10px 0 !important;
     z-index: $footer-z-index;
+    
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-    p {
-        color: $white;
-    }
-
-    a {
-        margin: 0 $spacing-between-elements;
+        > .footer-copyright {
+            margin: 0;
+            color: $white;
+            font-size: 16rem;
+            margin-right: $default-spacing;
+        }
+    
+        > .footer-icon {
+            margin: $spacing-between-elements;
+            margin-bottom: 0;
+            border-radius: 50%;
+        }
     }
 }
