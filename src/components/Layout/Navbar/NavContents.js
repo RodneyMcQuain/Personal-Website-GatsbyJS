@@ -15,8 +15,10 @@ const NavContents = ({isOpen}) => (
         <li><Link to={'#education'}>Education</Link></li>
         <li><Link to={'#projects'}>Projects</Link></li>
         <li><Link to={'#skills'}>Skills</Link></li>
-        <li><Link to={'#contact'}>Contact</Link></li>
-        <li><Link to={'resume'} getProps={isPartiallyActive}>
+        <li><Link to={'/contact'} getProps={isPartiallyActive}>
+            <span className="fa fa-envelope"><span> Contact</span></span>
+        </Link></li>
+        <li><Link to={'/resume'} getProps={isPartiallyActive}>
             <span className="fa fa-file-pdf-o"><span> Resume</span></span>
         </Link></li>
     </Scrollspy>
