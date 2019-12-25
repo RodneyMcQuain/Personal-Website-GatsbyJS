@@ -23,7 +23,7 @@
         }
         
         li a, li a span span {
-            font-size: 22rem;
+            font-size: 16rem;
             font-family: 'Roboto', sans-serif;
             color: $white;
             text-decoration: none;
@@ -39,10 +39,33 @@
 
         li:first-child {
             margin-right: auto;
-            
-            //hack to stop react scroll spy from setting it as active
-            &.active {
-                border-bottom: none;
+
+            span, a { 
+                font-size: 20rem;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+            }
+
+            a {
+                margin-bottom: 2px; //align brand border bottom with rest of navbar's border bottoms
+            }
+
+            .logo {
+                &:before {
+                    display: inline-block;
+                    content: ' ';
+                    background: url('../assets/svg/logo.svg') no-repeat;
+                    width: 25px;
+                    height: 25px;
+                    background-size: 25px 25px;
+                    transition: all 3s ease-out;
+                    margin-right: $default-spacing;
+                }
+
+                &:hover:before {
+                    animation: rotate360 1s infinite;
+                }
             }
         }
         
@@ -92,16 +115,6 @@
                 max-height: calc(100vh - #{$navbar-height});
                 transform: scaleY(1);
                 transition: transform .5 ease-in-out;
-            }
-        }
-    }
-}
-
-@media (max-width: $md-breakpoint - 1px) {
-    .my-nav {
-        .nav-contents {
-            li a, li a span span {
-                font-size: 16rem;
             }
         }
     }

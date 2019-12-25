@@ -1,13 +1,17 @@
 import React from 'react';
 import Scrollspy from 'react-scrollspy';
 import NavItem from './NavItem';
+import NavBrand from './NavBrand';
+
+export const ACTIVE_CLASS_NAME = 'active';
 
 const NavContents = ({isOpen}) => (
     <Scrollspy 
         className={`nav-contents${isOpen ? " open-navbar" : ""}`}
         items={['about-me', 'education', 'projects', 'skills', 'contact']} 
-        currentClassName='active'
+        currentClassName={ACTIVE_CLASS_NAME}
     >
+        <NavBrand />
         <NavItem text="Blog" url="/blog-posts" icon="fa fa-pencil" isSeparatePage={true} />
         <NavItem text="About Me" url="#about-me" />
         <NavItem text="Education" url="#education" />
