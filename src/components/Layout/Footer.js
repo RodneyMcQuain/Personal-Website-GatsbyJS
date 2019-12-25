@@ -5,7 +5,7 @@ const Footer = () => (
         <div className="container">
             <p className="footer-copyright">© {new Date().getFullYear()} Copyright: Rodney McQuain</p>
 
-            <div>
+            <div className="footer-icons">
                 <a className="btn footer-icon" href="https://github.com/RodneyMcQuain/" aria-label="Go to my GitHub" title="My GitHub">
                     <span className="fa fa-github"></span>
                 </a>

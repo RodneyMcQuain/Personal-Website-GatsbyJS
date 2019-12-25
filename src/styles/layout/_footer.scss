@@ -6,17 +6,21 @@ footer {
     padding: 10px 0 !important;
     z-index: $footer-z-index;
     
-    div {
+    .container, .footer-icons {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+    }
 
-        > .footer-copyright {
-            margin: 0;
-            color: $white;
-            font-size: 16rem;
-            margin-right: $default-spacing;
-        }
+    .footer-copyright {
+        margin-right: auto;
+        margin: 0;
+        color: $white;
+        font-size: 16rem;
+        margin-right: $default-spacing;
+    }
+
+    .footer-icons {
+        margin-left: auto;
     
         > .footer-icon {
             margin: $spacing-between-elements;
