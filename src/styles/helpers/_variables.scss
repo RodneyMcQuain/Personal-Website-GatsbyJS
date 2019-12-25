@@ -16,7 +16,8 @@ $dark-gradient: linear-gradient(to bottom right, $darker-black, #333, $darker-bl
 
 $navbar-height: 50px;
 $footer-height: 50px;
-$footer-sm-height: 75px;
+$footer-xs-height: 64px;
+$footer-xs-breakpoint: 385px;
 
 $xs-breakpoint: 480px;
 $sm-breakpoint: 768px;
