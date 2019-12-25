@@ -1,6 +1,6 @@
 import React from 'react';
 import Scrollspy from 'react-scrollspy';
-import { Link } from 'gatsby';
+import NavItem from './NavItem';
 
 const NavContents = ({isOpen}) => (
     <Scrollspy 
@@ -8,26 +8,14 @@ const NavContents = ({isOpen}) => (
         items={['about-me', 'education', 'projects', 'skills', 'contact']} 
         currentClassName='active'
     >
-        <li><Link to={'/blog-posts'} getProps={isPartiallyActive}>
-            <span className="fa fa-pencil"><span> Blog</span></span>
-        </Link></li>
-        <li><Link to={'#about-me'} getProps={isPartiallyActive}>About Me</Link></li>
-        <li><Link to={'#education'}>Education</Link></li>
-        <li><Link to={'#projects'}>Projects</Link></li>
-        <li><Link to={'#skills'}>Skills</Link></li>
-        <li><Link to={'/contact'} getProps={isPartiallyActive}>
-            <span className="fa fa-envelope"><span> Contact</span></span>
-        </Link></li>
-        <li><Link to={'/resume'} getProps={isPartiallyActive}>
-            <span className="fa fa-file-pdf-o"><span> Resume</span></span>
-        </Link></li>
+        <NavItem text="Blog" url="/blog-posts" icon="fa fa-pencil" isSeparatePage={true} />
+        <NavItem text="About Me" url="#about-me" />
+        <NavItem text="Education" url="#education" />
+        <NavItem text="Projects" url="#projects" />
+        <NavItem text="Skills" url="#skills" />
+        <NavItem text="Contact" url="/contact" icon="fa fa-envelope" isSeparatePage={true} />
+        <NavItem text="Resume" url="/resume" icon="fa fa-file-pdf-o" isSeparatePage={true} />
     </Scrollspy>
-);
-
-const isPartiallyActive = ({isPartiallyCurrent}) => (
-    isPartiallyCurrent
-    ? { className: "active" }
-    : null
 );
 
 export default NavContents;
