@@ -5,14 +5,12 @@ import InViewAnimation from '../../InViewAnimation';
 
 const Skills = ({skills}) => (
     <InViewAnimation>    
-        <div className="dark-section">
-            <div className="container">
-                <div className="page-header">
-                    <h1 id="skills">Skills</h1>
-                </div>
-
-                {skills.map(skillSection => <SkillSection key={skillSection.node.id} skillSection={skillSection.node} />)} 
+        <div className="container">
+            <div className="page-header">
+                <h1 id="skills">Skills</h1>
             </div>
+
+            {skills.map(skillSection => <SkillSection key={skillSection.node.id} skillSection={skillSection.node} />)} 
         </div>
     </InViewAnimation>
 );

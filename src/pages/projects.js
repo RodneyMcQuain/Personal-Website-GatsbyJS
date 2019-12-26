@@ -1,20 +1,25 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Project from './Project';
-import InViewAnimation from '../../InViewAnimation';
+import Project from '../components/Projects/Project';
+import InViewAnimation from '../components/InViewAnimation';
+import Layout from '../components/Layout/layout';
+import SEO from '../components/seo';
 
 const Projects = ({projects}) => (
-    <InViewAnimation>
-        <div className="container">
-            <div className="page-header">
-                <h1 id="projects">Projects</h1>
-            </div>
+    <Layout>
+        <InViewAnimation>
+            <SEO title="Projects" />
+            <div className="container">
+                <div className="page-header">
+                    <h1 id="projects">Projects</h1>
+                </div>
 
-            <div className="row display-flex">
-                {projects.map(project => <Project key={project.node.id} project={project.node} />)}
+                <div className="row display-flex">
+                    {projects.map(project => <Project key={project.node.id} project={project.node} />)}
+                </div>
             </div>
-        </div>
-    </InViewAnimation>
+        </InViewAnimation>
+    </Layout>
 );
 
 export default () => (
