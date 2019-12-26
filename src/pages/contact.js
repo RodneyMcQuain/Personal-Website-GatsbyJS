@@ -3,6 +3,7 @@ import InViewAnimation from '../components/InViewAnimation';
 import ValidationText from '../components/Contact/ValidationText';
 import SuccessText from '../components/Contact/SuccessText';
 import Layout from '../components/Layout/layout';
+import SEO from '../components/seo';
 
 const THIS_PAGE = "/";
 
@@ -49,6 +50,7 @@ const Contact = () => {
     return (
         <Layout>
             <InViewAnimation>
+                <SEO title="Contact" />
                 <div className="container">
                     <div className="page-header">
                         <h1 id="contact">Contact</h1>
