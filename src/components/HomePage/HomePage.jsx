@@ -4,7 +4,7 @@ import AboutMe from './AboutMe';
 import Education from './Education/Education';
 import Skills from './Skills/Skills';
 
-const Portfolio = () => {
+const HomePage = () => {
     useEffect(scrollToCurrentHash, []);
 
     return (
@@ -26,4 +26,4 @@ const scrollToCurrentHash = () => {
     }
 };
 
-export default Portfolio;
+export default HomePage;
