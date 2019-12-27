@@ -13,7 +13,7 @@ $extra-blog-menu-space-to-remove: 40px;
 }
 
 .-small-text {
-    font-size: 16rem;
+    font-size: $secondary-text-size;
     padding: 5px;
 }
 
@@ -73,7 +73,7 @@ $extra-blog-menu-space-to-remove: 40px;
             }
             
             span, a {
-                font-size: 16rem;
+                font-size: $secondary-text-size;
             }
     
             p {

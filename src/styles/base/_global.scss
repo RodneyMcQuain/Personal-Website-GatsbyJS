@@ -85,7 +85,7 @@ ul {
     transition: all .5s ease-in-out;
 
     a, span {
-        font-size: 16rem;
+        font-size: $secondary-text-size;
         color: $white;
     }
 

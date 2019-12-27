@@ -22,7 +22,7 @@
         }
         
         li a, li a span span {
-            font-size: 16rem;
+            font-size: $secondary-text-size;
             font-family: 'Roboto', sans-serif;
             color: $white;
             text-decoration: none;
@@ -57,7 +57,7 @@
                 border-radius: 0 0 4px 4px;
 
                 span, a {
-                    font-size: 16rem;
+                    font-size: $secondary-text-size;
                     font-weight: normal;
                 }
 
