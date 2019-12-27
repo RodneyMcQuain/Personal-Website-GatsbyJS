@@ -32,7 +32,7 @@ $extra-blog-menu-space-to-remove: 40px;
     position: fixed;
     width: auto;
     top: calc(#{$blog-featured-image-height} + #{$navbar-height});
-    transition: all .5s ease-in;
+    transition: all 0.5s ease-in;
     background: $white;
     max-width: 25%;
     max-height: calc(100vh - #{$blog-featured-image-height} - #{$navbar-height} - #{$extra-blog-menu-space-to-remove});
@@ -126,7 +126,6 @@ $extra-blog-menu-space-to-remove: 40px;
         width: 100vw;
 
         left: 0;
-        transition: all .5 ease-in-out;
         transform: scaleY(0);
         transform-origin: top;
         padding-top: 20px;
@@ -139,6 +138,5 @@ $extra-blog-menu-space-to-remove: 40px;
     .open-blog-menu {
         max-height: calc(100vh - #{$navbar-height});
         transform: scaleY(1);
-        transition: all .5 ease-in-out;
     }
 }
