@@ -6,7 +6,7 @@ const NavItem = ({text, url, icon, isSeparatePage}) => (
     <li>
         <Link to={url} getProps={isSeparatePage ? isPartiallyActive : undefined}>
             {icon 
-                ? <span className={icon}><span> {text}</span></span>  
+                ? <span className={icon}><span>&nbsp;{text}</span></span>  
                 : text
             }
         </Link>

@@ -11,7 +11,7 @@ const ResponsiveBlogMenu = ({posts, currentPostName, tableOfContents}) => {
             <NavButton
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
-                extraClasses="blog-menu-btn hidden-md hidden-lg"
+                extraClasses="btn blog-menu-btn hidden-md hidden-lg"
                 closedIcon="fa-ellipsis-h"
                 ariaLabel="Blog Menu"
             />

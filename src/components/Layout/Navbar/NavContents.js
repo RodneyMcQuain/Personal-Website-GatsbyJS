@@ -12,9 +12,6 @@ const NavContents = ({isOpen}) => (
         currentClassName={ACTIVE_CLASS_NAME}
     >
         <NavBrand />
-        <NavItem text="About Me" url="#about-me" icon="fa fa-user" />
-        <NavItem text="Education" url="#education" icon="fa fa-graduation-cap" />
-        <NavItem text="Skills" url="#skills" icon="fa fa-list-alt" />
         <NavItem text="Projects" url="/projects" icon="fa fa-briefcase" isSeparatePage={true} />
         <NavItem text="Blog" url="/blog-posts" icon="fa fa-pencil" isSeparatePage={true} />
         <NavItem text="Resume" url="/resume" icon="fa fa-file-pdf-o" isSeparatePage={true} />

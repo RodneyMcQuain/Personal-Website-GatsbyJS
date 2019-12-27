@@ -18,7 +18,7 @@ const NavButton = ({
     ariaLabel
 }: INavButtonProps) => (
     <button 
-        className={`btn nav-btn ${extraClasses}`} 
+        className={`nav-btn ${extraClasses}`} 
         onClick={() => setIsOpen(!isOpen)}
         aria-label={`Show ${ariaLabel}`}
         aria-expanded={isOpen}

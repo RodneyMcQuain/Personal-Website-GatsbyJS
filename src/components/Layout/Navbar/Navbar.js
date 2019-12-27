@@ -12,7 +12,7 @@ const Navbar = () => {
             <NavButton
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
-                extraClasses="toggle hidden-sm hidden-md hidden-lg"
+                extraClasses="btn toggle hidden-sm hidden-md hidden-lg"
                 closedIcon="fa-bars"
                 ariaLabel="Main Navigation"
             />

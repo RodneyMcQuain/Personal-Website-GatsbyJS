@@ -3,7 +3,7 @@
         transition: all .5s ease-in-out;
     
         &.clicked {
-            transform: rotate(180deg);
+            transform: rotate(360deg);
         }
     }
 }
