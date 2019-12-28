@@ -16,16 +16,12 @@ const CloseOnOutsideClick = (
     return <div ref={wrapperRef} className={className}>{children}</div>;
 }
 
-function useOutsideClick(ref: React.RefObject<HTMLDivElement>, setIsOpen: SetIsOpen) {
-    function handleClickOutside(event: MouseEvent | any) {
+const useOutsideClick = (ref: React.RefObject<HTMLDivElement>, setIsOpen: SetIsOpen) => {
+    const handleClickOutside = (event: MouseEvent | any): void => {
         event.stopPropagation();
 
-        if (!ref?.current.contains(event.target)) {
-            for (const element of ref.current.children)
-                element.classList.remove('open-navbar');
-        
+        if (!ref?.current.contains(event.target))
             setIsOpen(false);
-        }
     }
 
     useEffect(() => {
