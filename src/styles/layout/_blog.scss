@@ -112,6 +112,10 @@ $extra-blog-menu-space-to-remove: 40px;
     bottom: $navbar-right-alignment;
     border: $lighter-black solid 2px;
     z-index: $blog-menu-btn-z-index;
+
+    &.footer-in-view {
+        bottom: $navbar-right-alignment + $footer-height;
+    }
 }
 
 @media (max-width: $md-breakpoint - 1px) {
@@ -138,5 +142,13 @@ $extra-blog-menu-space-to-remove: 40px;
     .open-blog-menu {
         max-height: calc(100vh - #{$navbar-height});
         transform: scaleY(1);
+    }
+}
+
+@media (max-width: $footer-xs-breakpoint - 1px) {
+    .blog-menu-btn {
+        &.footer-in-view {
+            bottom: $navbar-right-alignment + $footer-xs-height;
+        }
     }
 }
