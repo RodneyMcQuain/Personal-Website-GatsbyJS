@@ -1,8 +1,9 @@
 import React from 'react';
+import { SetIsOpen } from '../types/SetIsOpen';
 
 interface INavButtonProps {
     isOpen: boolean;
-    setIsOpen: (isOpen: boolean) => void;
+    setIsOpen: SetIsOpen;
     openIcon?: string;
     closedIcon: string;
     extraClasses: string;

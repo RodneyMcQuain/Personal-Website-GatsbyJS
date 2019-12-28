@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { ACTIVE_CLASS_NAME } from './NavContents';
 import NavBrandContents from './NavBrandContents';
 import NavButton from '../../NavButton';
+import CloseOnOutsideClick from '../../CloseOnOutsideClick';
 
 const NavBrand = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,14 +14,16 @@ const NavBrand = () => {
                 <span className="logo">Rodney McQuain</span> 
             </Link>
             <NavBrandContents isOpen={isOpen} />
-            <NavButton 
-                isOpen={isOpen}
-                setIsOpen={setIsOpen}
-                openIcon="fa-caret-up"
-                closedIcon="fa-caret-down"
-                extraClasses="brand-dropdown-btn"
-                ariaLabel="Dropdown for Links of Home Page"
-            />
+            <CloseOnOutsideClick className="on-click-outside" setIsOpen={setIsOpen}>
+                <NavButton 
+                    isOpen={isOpen}
+                    setIsOpen={setIsOpen}
+                    openIcon="fa-caret-up"
+                    closedIcon="fa-caret-down"
+                    extraClasses="brand-dropdown-btn"
+                    ariaLabel="Dropdown for Links of Home Page"
+                />
+            </CloseOnOutsideClick>
         </li>
     );
 };

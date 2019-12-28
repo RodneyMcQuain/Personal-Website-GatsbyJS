@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import BlogMenu from './BlogMenu';
 import NavButton from '../NavButton';
+import CloseOnOutsideClick from '../CloseOnOutsideClick';
 
 const ResponsiveBlogMenu = ({posts, currentPostName, tableOfContents}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <> 
+        <CloseOnOutsideClick setIsOpen={setIsOpen}> 
             <BlogMenu posts={posts} currentPostName={currentPostName} isOpen={isOpen} tableOfContents={tableOfContents} />
             <NavButton
                 isOpen={isOpen}
@@ -15,7 +16,7 @@ const ResponsiveBlogMenu = ({posts, currentPostName, tableOfContents}) => {
                 closedIcon="fa-ellipsis-h"
                 ariaLabel="Blog Menu"
             />
-        </>
+        </CloseOnOutsideClick>
     );
 };
 

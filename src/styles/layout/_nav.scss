@@ -92,6 +92,7 @@
                 background: transparent;
                 border: none;
                 
+                display: flex;
                 color: $white !important;
 
                 &:hover {
@@ -101,6 +102,10 @@
                 &:focus {
                     outline: none;
                 }
+            }
+            
+            .on-click-outside {
+                display: flex;
             }
         }
     }
