@@ -26,6 +26,7 @@
             font-family: 'Roboto', sans-serif;
             color: $white;
             text-decoration: none;
+            transition: color 0.5s ease-in-out;
         }
 
         li a:hover {
