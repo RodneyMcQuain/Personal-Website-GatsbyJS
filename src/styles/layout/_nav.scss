@@ -54,7 +54,7 @@
                 transform-origin: top;
                 transition: transform .5s ease-in-out;
                 top: $navbar-height;
-                border-radius: 0 0 4px 4px;
+                border-radius: 0 0 $minor-border-radius $minor-border-radius;
 
                 span, a {
                     font-size: $secondary-text-size;

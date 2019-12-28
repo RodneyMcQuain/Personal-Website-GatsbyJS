@@ -14,7 +14,7 @@
         margin: $spacing-between-elements;
         display: inline-block;
         padding: 4px;
-        border-radius: 5px;
+        border-radius: $minor-border-radius;
         border: 1px solid $darker-white;
         font-size: 12rem;
     }
