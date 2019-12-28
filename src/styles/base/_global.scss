@@ -8,16 +8,9 @@ html {
 
 body {
     position: relative;
-    min-height: calc(100vh - #{$footer-height});
+    min-height: calc(100vh - #{$navbar-height});
     padding-bottom: $footer-height * 2;
     margin-top: $navbar-height;
-}
-
-@media (max-width: $footer-xs-breakpoint - 1px) {
-    body {
-        min-height: calc(100vh - #{$footer-xs-height});
-        padding-bottom: $footer-xs-height * 2;
-    }
 }
 
 ::-webkit-scrollbar-thumb {
