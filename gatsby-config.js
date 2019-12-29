@@ -18,6 +18,12 @@ module.exports = {
         `gatsby-plugin-tslint`,
         `gatsby-plugin-sitemap`,
         {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: "UA-155137763-1",
+            },
+        },
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/src/data`,
