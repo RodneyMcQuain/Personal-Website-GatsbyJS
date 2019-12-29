@@ -16,6 +16,7 @@ module.exports = {
         `gatsby-plugin-catch-links`,
         `gatsby-plugin-typescript`,
         `gatsby-plugin-tslint`,
+        `gatsby-plugin-sitemap`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
