@@ -56,14 +56,18 @@ body.modal-open {
 
 #success-text {
     color: green;
+
+    * {
+        font-size: $secondary-text-size;
+    }
 }
 
 label {
-  font-size: 20rem;
-  float: left;
-  margin-bottom: 4px;
+    font-size: $secondary-text-size;
+    float: left;
+    margin-bottom: 4px;
 }
 
 .form-control {
-  font-size: 20rem;
+    font-size: $secondary-text-size;
 }
