@@ -1,68 +1,70 @@
-#message {
-    height: 200px;
-}
-
-@media (min-width: $lg-breakpoint) {
-    div.contact-container {
-        width: 55%;
-    }
-}
-
-@media (max-width: $lg-breakpoint - 1) {
-    div.contact-container {
-        width: 75%;
-    }
-}
-
-@media (max-width: $md-breakpoint - 1) {
-    div.contact-container {
-        width: 80%;
-    }
-}
-
-@media (max-width: $sm-breakpoint - 1) {
-    div.contact-container {
-        width: 90%;
-    }
-}
-
-@media (max-width: $xs-breakpoint - 1) {
-    div.contact-container {
-        width: 100%;
-    }
-}
-
 .contact-container {
     padding: 20px;
 
     .input-lg {
         margin-bottom: 15px;
     }
-}
-
-#validation-text, #success-text {
-    display: none;
-}
-
-#validation-text {
-    font-size: 12rem;
-    color: red;
-}
-
-#success-text {
-    color: green;
-
-    * {
+    
+    .form-control {
         font-size: $secondary-text-size;
+    }
+
+    #message {
+        height: 200px;
+    }
+
+    #validation-text, #success-text {
+        display: none;
+    }
+
+    
+    #validation-text {
+        font-size: 12rem;
+        color: red;
+    }
+
+    #success-text {
+        color: green;
+
+        * {
+            font-size: $secondary-text-size;
+        }
+    }
+
+    label {
+        font-size: $secondary-text-size;
+        float: left;
+        margin-bottom: 4px;
     }
 }
 
-label {
-    font-size: $secondary-text-size;
-    float: left;
-    margin-bottom: 4px;
+
+@media (min-width: $lg-breakpoint) {
+    .contact-container {
+        width: 55%;
+    }
 }
 
-.form-control {
-    font-size: $secondary-text-size;
+@media (max-width: $lg-breakpoint - 1) {
+    .contact-container {
+        width: 75%;
+    }
+}
+
+@media (max-width: $md-breakpoint - 1) {
+    .contact-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: $sm-breakpoint - 1) {
+    .contact-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: $xs-breakpoint - 1) {
+    .contact-container {
+        width: 100%;
+    }
 }
