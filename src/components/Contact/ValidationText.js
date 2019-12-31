@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from "prop-types"
 
-const ValidationText = ({formData, setIsError, isDisplayed}) => {
+const ValidationText = ({ formData, setIsError, isDisplayed }) => {
     const validationText = useContactFormValidation(formData, setIsError);
 
-    return <p id="validation-text" style={{display: isDisplayed && validationText ? 'block' : 'none'}}>{validationText}</p>;
+    return <p id="validation-text" className={isDisplayed && validationText ? 'show-text' : ''}>{validationText}</p>;
 };
 
 const useContactFormValidation = (formData, setIsError) => {

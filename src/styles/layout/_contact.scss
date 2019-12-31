@@ -14,9 +14,16 @@
     }
 
     #validation-text, #success-text {
-        display: none;
-    }
+        max-height: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s ease-in-out;
 
+        &.show-text {
+            max-height: 100%;
+            transform: scaleY(1);
+        }
+    }
     
     #validation-text {
         font-size: 12rem;
