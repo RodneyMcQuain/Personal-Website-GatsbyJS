@@ -8,6 +8,7 @@ import SEO from '../components/seo';
 import Img from 'gatsby-image';
 import PublishedOnDate from '../components/Blog/PublishedOnDate';
 import UpdatedOnDate from '../components/Blog/UpdatedOnDate';
+import ContactMe from '../components/Contact/ContactMe';
 
 export default function Template({ data }) {
     const { html, excerpt, tableOfContents, wordCount } = data.thisPost;
@@ -35,6 +36,7 @@ export default function Template({ data }) {
                             <h1 className="-left-align">{title}</h1>
                         </div>
                         <div className="markdown-body" dangerouslySetInnerHTML={{ __html: html }} />
+                        <ContactMe />
                     </div>
                     <div className="col-md-3">
                         <ResponsiveBlogMenu posts={data.recentPosts.edges} currentPostName={title} tableOfContents={tableOfContents} />

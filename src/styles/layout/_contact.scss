@@ -75,3 +75,42 @@
         width: 100%;
     }
 }
+
+.contact-me {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: $default-spacing; 
+
+    hr {
+        width: 100%;
+    }
+
+    > div {
+        max-width: 300px;
+        margin: 0 auto;
+
+        .contact-me-text-wrapper {
+            padding: $default-spacing; 
+            
+            .contact-me-text {
+                font-size: 20rem;
+            }
+        }
+
+        .contact-me-btn {
+            font-size: 22rem;
+            animation: contact-btn-pulse 2s infinite;
+            
+            span {
+                font-size: 22rem;
+            }
+        }
+    }
+
+    @keyframes contact-btn-pulse {
+        0% { @include transform(scale(1)); }
+        50% { @include transform(scale(1.05)); }
+        100% { @include transform(scale(1)); }
+    }
+}

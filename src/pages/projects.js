@@ -4,6 +4,7 @@ import Project from '../components/Projects/Project';
 import InViewAnimation from '../components/InViewAnimation';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
+import ContactMe from '../components/Contact/ContactMe';
 
 const Projects = ({projects}) => (
     <Layout>
@@ -17,6 +18,7 @@ const Projects = ({projects}) => (
                 <div className="row display-flex">
                     {projects.map(project => <Project key={project.node.id} project={project.node} />)}
                 </div>
+                <ContactMe />
             </div>
         </InViewAnimation>
     </Layout>

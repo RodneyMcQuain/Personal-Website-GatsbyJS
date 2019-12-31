@@ -4,6 +4,7 @@ import ValidationText from '../components/Contact/ValidationText';
 import SuccessText from '../components/Contact/SuccessText';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
+import ContactIcon from '../components/Contact/ContactIcon';
 
 const THIS_PAGE = "/";
 
@@ -116,7 +117,7 @@ const Contact = () => {
                                         aria-label="Send Email" 
                                         disabled={isError}
                                     >
-                                        <span className="fa fa-envelope" aria-hidden="true"></span> Send Email
+                                        <ContactIcon /> Send Email
                                     </button>
                                 </div>
                             </form>

@@ -3,6 +3,7 @@ import Banner from './Banner/Banner';
 import AboutMe from './AboutMe';
 import Education from './Education/Education';
 import Skills from './Skills/Skills';
+import ContactMe from '../Contact/ContactMe';
 
 const HomePage = () => {
     useEffect(scrollToCurrentHash, []);
@@ -13,6 +14,9 @@ const HomePage = () => {
             <AboutMe />
             <Education />
             <Skills />
+            <div className="container">
+                <ContactMe />
+            </div>
         </>
     );
 };
