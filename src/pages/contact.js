@@ -120,7 +120,6 @@ const Contact = () => {
                                     </button>
                                 </div>
                             </form>
-                            <br />
                             <SuccessText isSuccess={isSuccess} isValidationTextDisplayed={isValidationTextDisplayed} />
                         </div>
                     </div>
