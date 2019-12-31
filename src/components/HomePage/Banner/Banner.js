@@ -13,7 +13,7 @@ const Banner = () => {
                     Hello, I am a computer science major looking for an opportunity
                     to test my skills and grow as a developer.
                 </p>
-                <div id="banner-btn-container" className={`banner-hide ${fadeTextAndButton}`}>
+                <div id="banner-btn-container" className={`minor-pulse banner-hide ${fadeTextAndButton}`}>
                     <a id="banner-btn" className="-curved-border" href="#about-me">
                         Learn About Me
                     </a>

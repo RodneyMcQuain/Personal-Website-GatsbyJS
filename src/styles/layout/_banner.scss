@@ -61,11 +61,6 @@
 #banner-btn-container {
     display: inline-block;
     padding: $default-spacing;
-    @include animation(minor-pulse 2s infinite);
-
-    &:hover {
-        @include animation(none);
-    }
 }
 
 .banner-hide {

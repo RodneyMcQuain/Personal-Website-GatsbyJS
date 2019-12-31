@@ -100,17 +100,10 @@
 
         .contact-me-btn {
             font-size: 22rem;
-            animation: contact-btn-pulse 2s infinite;
             
             span {
                 font-size: 22rem;
             }
         }
-    }
-
-    @keyframes contact-btn-pulse {
-        0% { @include transform(scale(1)); }
-        50% { @include transform(scale(1.05)); }
-        100% { @include transform(scale(1)); }
     }
 }

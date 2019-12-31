@@ -187,7 +187,16 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
+
 .row.display-flex > [class*='col-'] {
     display: flex;
     flex-direction: column;
+}
+
+.minor-pulse {
+    animation: minor-pulse 2s infinite;
+
+    &:hover {
+        animation-play-state: paused;
+    }
 }
