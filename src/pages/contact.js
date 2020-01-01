@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import InViewAnimation from '../components/InViewAnimation';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
