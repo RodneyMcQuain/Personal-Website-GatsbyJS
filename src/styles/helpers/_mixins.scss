@@ -1,29 +1,44 @@
 @mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
 }
 
 @mixin animation($property) {
-  -webkit-animation: $property;
-  animation: $property;
+    -webkit-animation: $property;
+    animation: $property;
 }
 
 @mixin filter($property) {
-  -webkit-filter: $property;
-  filter: $property;
+    -webkit-filter: $property;
+    filter: $property;
 }
 
 @mixin hide() {
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: $hide-transition;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: $hide-transition;
 }
 
 @mixin unhide() {
-  height: 100%;
-  opacity: 1;
-  visibility: visible;
-  transition: $unhide-transition;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: $unhide-transition;
+}
+
+@mixin responsive-nav-menu() {
+    width: 100vw;
+    top: $navbar-height;
+    left: 0;
+    max-height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin responsive-nav-menu-open() {
+    max-height: calc(100vh - #{$navbar-height});
+    transform: scaleY(1);
 }

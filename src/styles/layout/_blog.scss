@@ -120,28 +120,24 @@ $extra-blog-menu-space-to-remove: 40px;
 
 @media (max-width: $md-breakpoint - 1px) {
     .blog-menu {
+        @include responsive-nav-menu();
+
         position: none;
         margin: 0;
         border: none;
         border-radius: 0;
         max-width: 100%;
         z-index: $blog-menu-sm-z-index;
-        top: $navbar-height;
-        width: 100vw;
 
-        left: 0;
-        transform: scaleY(0);
-        transform-origin: top;
         padding-top: 20px;
         
+        &.open {
+            @include responsive-nav-menu-open();
+        }
+
         h1 {
             padding-top: 20px;
         }
-    }
-    
-    .open-blog-menu {
-        max-height: calc(100vh - #{$navbar-height});
-        transform: scaleY(1);
     }
 }
 

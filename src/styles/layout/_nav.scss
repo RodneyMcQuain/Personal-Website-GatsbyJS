@@ -131,26 +131,21 @@
 @media (max-width: $sm-breakpoint - 1px) {
     .my-nav {
         .nav-contents {
+            @include responsive-nav-menu();
+
             margin: 0;
-            width: 100vw;
             
             border-top: 1px solid $darker-white;
             display: flex;
             flex-direction: column;
-            top: $navbar-height;
-            max-height: 0;
-            transform: scaleY(0);
-            transform-origin: top;
             background: $black;
-            transition: all 0.5s ease-in-out;
+
+            &.open {
+                @include responsive-nav-menu-open();
+            }
 
             li:first-child, li:last-child {
                 margin: 0;
-            }
-
-            &.open-navbar {
-                max-height: calc(100vh - #{$navbar-height});
-                transform: scaleY(1);
             }
 
             .brand-dropdown {

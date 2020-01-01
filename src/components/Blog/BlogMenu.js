@@ -7,7 +7,7 @@ import { getViewportSize } from '../../services/getViewportSize';
 
 const BlogMenu = ({posts, currentPostName, isOpen, tableOfContents}) => {
     const sidebarOffsetTopClass = useMenu();
-    const mightOpenMenu = isOpen ? "open-blog-menu" : "";
+    const mightOpenMenu = isOpen ? "open" : "";
 
     return (
         <div className={`blog-menu -curved-border padding-container ${sidebarOffsetTopClass} ${mightOpenMenu}`}>

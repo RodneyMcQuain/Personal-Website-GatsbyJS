@@ -7,7 +7,7 @@ export const ACTIVE_CLASS_NAME = 'active';
 
 const NavContents = ({isOpen}) => (
     <Scrollspy 
-        className={`nav-contents${isOpen ? " open-navbar" : ""}`}
+        className={`nav-contents${isOpen ? " open" : ""}`}
         items={['about-me', 'education', 'projects', 'skills', 'contact']} 
         currentClassName={ACTIVE_CLASS_NAME}
     >
