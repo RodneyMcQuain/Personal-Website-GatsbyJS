@@ -11,7 +11,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 module.exports = {
     siteMetadata: {
         title: `Rodney McQuain`,
-        description: `Yet another computer science student, come learn about me.`,
+        description: `Computer science student, software engineer, and competitive Super Smash Bros. Melee player.`,
         author: `Rodney McQuain`,
         siteUrl: siteUrl,
         image: `code.jpg`,
