@@ -5,6 +5,7 @@ title: "Coloring in a 20 Year Old Video Game"
 author: "Rodney McQuain"
 featuredImage: ./index.png
 lastUpdatedDate: "2019-11-11"
+category: "Computer Science"
 ---
 
 I was looking into projects I could do for my favorite game, Super Smash Bros. Melee that wouldn't be invasive to the actual gameplay.  So, I had the idea to modify the character select screen (CSS) which included things like character portraits, colors, and music.  The most interesting portion of this to me was changing the colors, so that's what this post will be covering.  For reference here is what the original CSS looks like:

@@ -1,24 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
 import InViewAnimation from '../components/InViewAnimation';
 import BlogCard from '../components/Blog/BlogCard';
+import BlogCategoryDropdown from '../components/Blog/BlogCategoryDropdown';
+import { ALL_FILTER } from '../components/Blog/ALL_FILTER';
 
-const BlogPosts = ({ data }) => (
-    <Layout>
-        <InViewAnimation>
-            <div className="container">
-                <SEO title="Blog" />
-                <div className="page-header">
-                    <h1>Blog Posts</h1>
+const BlogPosts = ({ data }) => {
+    const { edges } = data.allMarkdownRemark;
+    const [currentCategory, setCurrentCategory] = useState(ALL_FILTER);
+
+    return (
+        <Layout>
+            <InViewAnimation>
+                <div className="container">
+                    <SEO title="Blog" />
+                    <div className="page-header">
+                        <h1>Blog Posts</h1>
+                    </div>
+
+                    <BlogCategoryDropdown 
+                        categories={getDistinctCategories(edges)} 
+                        filter={currentCategory} 
+                        setFilter={setCurrentCategory} 
+                    />
+
+                    {edges.map(post => <BlogCard post={post} categoryFilter={currentCategory} />)}
                 </div>
+            </InViewAnimation>
+        </Layout>     
+    );
+}
 
-                {data.allMarkdownRemark.edges.map(post => <BlogCard post={post} />)}
-            </div>
-        </InViewAnimation>
-    </Layout>     
-);
+const getDistinctCategories = edges => [...new Set(edges.map(edge => edge.node.frontmatter.category))];
 
 export const pageQuery = graphql`
     query BlogIndexQuery {
@@ -38,6 +53,7 @@ export const pageQuery = graphql`
                                 }
                             }
                         }
+                        category
                     }
                 }
             }

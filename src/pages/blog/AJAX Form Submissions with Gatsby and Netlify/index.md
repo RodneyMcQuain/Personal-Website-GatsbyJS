@@ -4,6 +4,7 @@ date: "2019-08-25"
 title: "AJAX Form Submissions with Gatsby and Netlify"
 author: "Rodney McQuain"
 featuredImage: ./index.png
+category: "Computer Science"
 ---
 
 I've really enjoyed working with [Gatsby](https://www.gatsbyjs.org/) and [Netlify](https://www.netlify.com/) over the past few weeks, but I struggled to find good information regarding how to do AJAX form submissions with these 2 technologies and I mostly had to go through a process of trial and error. So, I'm going to hopefully remedy that.

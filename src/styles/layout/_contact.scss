@@ -39,9 +39,8 @@
     }
 
     label {
-        font-size: $secondary-text-size;
+        @include label-text();
         float: left;
-        margin-bottom: 4px;
     }
 }
 
