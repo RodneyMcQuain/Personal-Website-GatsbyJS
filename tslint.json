@@ -11,7 +11,8 @@
         "jsx-no-lambda": false,
         "import-name": false,
         "no-boolean-literal-compare": false,
-        "curly": [true, "as-needed"]
+        "curly": [true, "as-needed"],
+        "ordered-imports": false
     },
     "rulesDirectory": []
 }
