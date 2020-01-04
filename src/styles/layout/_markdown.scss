@@ -87,13 +87,20 @@
 
     a {
         text-decoration: underline;
-        display:inline-block;
+        display: inline-block;
         transition: $minor-scale-transition;
 
         &:hover {
             @include transform($minor-scale);
             transition: $minor-scale-transition;
         }
+    }
+
+    .language-text {
+        background-color: $white;
+        color: $black;
+        border-radius: $minor-border-radius;
+        border: $black solid 1px;
     }
 
     .gatsby-highlight {

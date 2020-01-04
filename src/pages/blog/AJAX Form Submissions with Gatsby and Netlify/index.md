@@ -77,9 +77,9 @@ const handleChange = event => {
 };
 ~~~
 
-In this example formData uses React Hook, [useState](https://reactjs.org/docs/hooks-intro.html) and handleChange just updates our formData for a specific field every time a user types in one of our form fields. 
+In this example `formData` uses React Hook, [useState](https://reactjs.org/docs/hooks-intro.html) and `handleChange` just updates our `formData` for a specific field every time a user types in one of our form fields. 
 
-When the form in its current state is submitted the user will be brought to the page in src/pages/success.js of your Gatsby project or Netlify's default page if one does not exist. We instead want to stay on our current page and maybe provide some information to the user that the submission did or didn't go through.
+When the form in its current state is submitted the user will be brought to the page in `src/pages/success.js` of your Gatsby project or Netlify's default page if one does not exist. We instead want to stay on our current page and maybe provide some information to the user that the submission did or didn't go through.
 
 ## The Solution
 
@@ -97,7 +97,7 @@ To have this behavior we need to add some attributes to our form:
 >
 ~~~
 
-The action attribute must be set to the target of the AJAX request. THIS\_PAGE is just a string that represents your current URL, my form is at the base URL and I want to stay there so THIS\_PAGE would be '/' for me. The handleSubmit function would look something like this: 
+The action attribute must be set to the target of the AJAX request. `THIS_PAGE` is just a string that represents your current URL, my form is at the base URL and I want to stay there so `THIS_PAGE` would be '/' for me. The `handleSubmit` function would look something like this: 
 
 ~~~javascript
 const handleSubmit = event => {
@@ -126,7 +126,7 @@ const handleSubmit = event => {
 };
 ~~~
 
-The body of the fetch POST request must be an object that contains a key "form-name" with the respective form name as the value (in this example it would be "contact-form"). This is necessary so Netlify knows which form it's getting data from. Your form name and data must also be encoded with something like [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams). 
+The body of the fetch POST request must be an object that contains a key `"form-name"` with the respective form name as the value (in this example it would be `"contact-form"`). This is necessary so Netlify knows which form it's getting data from. Your form name and data must also be encoded with something like [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams). 
 
 ~~~javascript
 new URLSearchParams({
@@ -139,7 +139,7 @@ new URLSearchParams({
 //"form-name=contact-form&name=Anonymous&email=aperson%40somewhere.com&message=your+site+sucks"
 ~~~
 
-Inside the "then", after the fetch promise resolves is probably where you want the logic to re-render your component. This code is ran after your form is submitted to Netlify, so some basic things that would make sense to do here are checking the response status code to make sure it's valid, setting all the form fields to be empty strings, or setting a flag which renders a thank you or error message.
+Inside the `then`, after the `fetch` promise resolves is probably where you want the logic to re-render your component. This code is ran after your form is submitted to Netlify, so some basic things that would make sense to do here are checking the response status code to make sure it's valid, setting all the form fields to be empty strings, or setting a flag which renders a thank you or error message.
 
 That's it, here's the full code for a basic Gatsby/Netlify contact form:
 
