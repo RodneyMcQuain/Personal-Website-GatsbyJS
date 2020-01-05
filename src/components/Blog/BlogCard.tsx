@@ -25,7 +25,7 @@ const BlogCard = ({ post, categoryFilter }: IBlogCardProps) => {
                         <PublishedOnDate date={date} />
                         <p>{node.excerpt}</p>
                         <Link className="btn" to={path}>
-                            <span>Read More</span>
+                            <span className="fa fa-book" /> Read More
                         </Link>
                     </div>
                 </div>
