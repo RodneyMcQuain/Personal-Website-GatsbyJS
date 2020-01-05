@@ -37,7 +37,10 @@ interface IDropdownItemProps {
 const DropdownItem = ({ category, filter, setFilter }: IDropdownItemProps) => (
     <li 
         className={getIsActive(category, filter)} 
-        onClick={() => setFilter(category)} 
+        onClick={() => {
+            setFilter(category);
+            setCategoryFilterQueryString(category);
+        }} 
         key={category}
     >
         {category}
@@ -47,5 +50,11 @@ const DropdownItem = ({ category, filter, setFilter }: IDropdownItemProps) => (
 const getIsActive = (category: string, filter: string): string => (
     filter === category ? ACTIVE_CLASS : ''
 );
+
+const setCategoryFilterQueryString = (category: string) => {
+    const categoryQueryString = new URLSearchParams(window.location.search);
+    categoryQueryString.set('category', category)
+    window.history.pushState(null, document.title, window.location.pathname + '?' + categoryQueryString.toString());
+}
 
 export default BlogCategoryDropdown;

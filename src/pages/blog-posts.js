@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
@@ -9,7 +9,7 @@ import { ALL_FILTER } from '../components/Blog/ALL_FILTER';
 
 const BlogPosts = ({ data }) => {
     const { edges } = data.allMarkdownRemark;
-    const [currentCategory, setCurrentCategory] = useState(ALL_FILTER);
+    const [currentCategory, setCurrentCategory] = useState(getInitialCategoryFilter());
 
     return (
         <Layout>
@@ -33,7 +33,12 @@ const BlogPosts = ({ data }) => {
     );
 }
 
-const getDistinctCategories = edges => [...new Set(edges.map(edge => edge.node.frontmatter.category))];
+const getDistinctCategories = (edges) => [...new Set(edges.map(edge => edge.node.frontmatter.category))];
+const getInitialCategoryFilter = () => {
+    const locationSearch = typeof window !== 'undefined' && window.location.search; // Needs window type check to pass Gatsby build
+    const queryStringCategoryOrAll = new URLSearchParams(locationSearch).get('category') || ALL_FILTER;
+    return queryStringCategoryOrAll;
+};
 
 export const pageQuery = graphql`
     query BlogIndexQuery {
