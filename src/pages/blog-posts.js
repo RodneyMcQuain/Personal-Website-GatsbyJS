@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
@@ -8,7 +8,7 @@ import BlogCategoryDropdown from '../components/Blog/BlogCategoryDropdown';
 import { ALL_FILTER } from '../components/Blog/ALL_FILTER';
 
 const BlogPosts = ({ data }) => {
-    const { edges } = data.allMarkdownRemark;
+    const { edges, categories } = data.allMarkdownRemark;
     const [currentCategory, setCurrentCategory] = useState(getInitialCategoryFilter());
 
     return (
@@ -21,7 +21,7 @@ const BlogPosts = ({ data }) => {
                     </div>
 
                     <BlogCategoryDropdown 
-                        categories={getDistinctCategories(edges)} 
+                        categories={categories.map(category => category.category)} 
                         filter={currentCategory} 
                         setFilter={setCurrentCategory} 
                     />
@@ -33,7 +33,6 @@ const BlogPosts = ({ data }) => {
     );
 }
 
-const getDistinctCategories = (edges) => [...new Set(edges.map(edge => edge.node.frontmatter.category))];
 const getInitialCategoryFilter = () => {
     const locationSearch = typeof window !== 'undefined' && window.location.search; // Needs window type check to pass Gatsby build
     const queryStringCategoryOrAll = new URLSearchParams(locationSearch).get('category') || ALL_FILTER;
@@ -43,6 +42,9 @@ const getInitialCategoryFilter = () => {
 export const pageQuery = graphql`
     query BlogIndexQuery {
         allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+            categories: group(field: frontmatter___category) {
+                category: fieldValue
+            }
             edges {
                 node {
                     id
