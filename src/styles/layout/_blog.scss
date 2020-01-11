@@ -270,6 +270,23 @@ $extra-blog-menu-space-to-remove: 40px;
     justify-content: space-between;
 }
 
-.go-right {
+.tag-dropdown {
     position: relative;
+}
+
+@media (max-width: $md-breakpoint - 1px) {
+    .tag-dropdown, .category-dropdown {
+        width: 100%;
+    }
+
+    .tag-contents {
+        left: 0;
+        right: auto;
+    }
+
+    .blog-filters {
+        flex-direction: column;
+        justify-content: left;
+        margin-bottom: 40px;
+    }
 }

@@ -12,28 +12,26 @@ const TagDropdown = ({ tags, tagFilters, setTagFilters }: ITagDropdownProps) => 
     const [isOpen, setIsOpen] = useState(false);
     
     return (
-        <div>
-            <CloseOnOutsideClick className="go-right" setIsOpen={setIsOpen}>
-                <NavButton
-                    isOpen={isOpen}
-                    setIsOpen={setIsOpen}
-                    text='Tags'
-                    openIcon='fa-caret-up'
-                    closedIcon='fa-caret-down'
-                    extraClasses='tag-dropdown-text'
-                    ariaLabel='Tags'
-                />
-                <ul className={`tag-contents ${isOpen ? 'open' : ''}`}>
-                    {tags.map(tag => (
-                        <DropdownItem 
-                            tag={tag} 
-                            tagFilters={tagFilters} 
-                            setTagFilters={setTagFilters} 
-                        />
-                    ))}
-                </ul>
-            </CloseOnOutsideClick>
-        </div>
+        <CloseOnOutsideClick className="tag-dropdown" setIsOpen={setIsOpen}>
+            <NavButton
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
+                text='Tags'
+                openIcon='fa-caret-up'
+                closedIcon='fa-caret-down'
+                extraClasses='tag-dropdown-text'
+                ariaLabel='Tags'
+            />
+            <ul className={`tag-contents ${isOpen ? 'open' : ''}`}>
+                {tags.map(tag => (
+                    <DropdownItem 
+                        tag={tag} 
+                        tagFilters={tagFilters} 
+                        setTagFilters={setTagFilters} 
+                    />
+                ))}
+            </ul>
+        </CloseOnOutsideClick>
     );
 }
 
