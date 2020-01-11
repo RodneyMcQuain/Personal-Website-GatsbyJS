@@ -6,6 +6,7 @@ interface INavButtonProps {
     setIsOpen: SetIsOpen;
     openIcon?: string;
     closedIcon: string;
+    text: string;
     extraClasses: string;
     ariaLabel: string;
 }
@@ -14,7 +15,8 @@ const NavButton = ({
     isOpen, 
     setIsOpen, 
     openIcon = "fa-times", 
-    closedIcon, 
+    closedIcon,
+    text,
     extraClasses, 
     ariaLabel
 }: INavButtonProps) => (
@@ -24,7 +26,7 @@ const NavButton = ({
         aria-label={`Show ${ariaLabel}`}
         aria-expanded={isOpen}
     >
-        <span className={`
+        {text}<span className={`
             fa ${isOpen ? openIcon : closedIcon}
             ${isOpen ? 'clicked' : ''}
         `}></span>

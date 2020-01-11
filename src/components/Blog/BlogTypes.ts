@@ -14,5 +14,6 @@ interface IFrontmatter {
     date: Date;
     featuredImage: any; // Don't know the type of gatsby-image
     category: string;
+    tags: string[];
     lastUpdated: Date;
 }

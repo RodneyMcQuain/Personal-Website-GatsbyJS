@@ -12,7 +12,7 @@ interface IBlogCategoryDropdownProps {
 const ACTIVE_CLASS = 'active';
 
 const BlogCategoryDropdown = ({ categories, filter, setFilter }: IBlogCategoryDropdownProps) => (
-    <ul title="Filter" className="category-dropdown">
+    <ul title="Categories" className="category-dropdown">
         <DropdownItem
             category={ALL_FILTER}
             filter={filter}    

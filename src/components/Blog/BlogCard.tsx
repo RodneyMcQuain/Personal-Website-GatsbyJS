@@ -8,12 +8,13 @@ import { IBlogPost } from './BlogTypes';
 interface IBlogCardProps {
     post: IBlogPost;
     categoryFilter: string;
+    tagFilters: string[];
 }
 
-const BlogCard = ({ post, categoryFilter }: IBlogCardProps) => {
+const BlogCard = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
     const { node } = post;
-    const { title, date, path, featuredImage, category } = node.frontmatter;
-    const mightHideCard = isShown(categoryFilter, category) ? '' : 'hide-card';
+    const { title, date, path, featuredImage, category, tags } = node.frontmatter;
+    const mightHideCard = isShown(categoryFilter, category, tagFilters, tags) ? '' : 'hide-card';
 
     return (
         <div className={`margin-container upscale-container project-container blog-card col-xs-12 col-sm-6 col-md-4 col-lg-3 ${mightHideCard}`}>
@@ -34,8 +35,26 @@ const BlogCard = ({ post, categoryFilter }: IBlogCardProps) => {
     );
 }
 
-const isShown = (categoryFilter: string, currentCategory: string): boolean => (
-    categoryFilter === ALL_FILTER || currentCategory === categoryFilter
+const isShown = (
+    categoryFilter: string, 
+    currentCategory: string, 
+    tagFilters: string[], 
+    currentTags: string[]
+): boolean => ( 
+    (categoryFilter === ALL_FILTER || currentCategory === categoryFilter) 
+    && hasTag(tagFilters, currentTags)
 );
+
+const hasTag = (tagFilters: string[], currentTags: string[]): boolean => {
+    if (tagFilters === [])
+        return true;    
+
+    for (const currentTag of currentTags)
+        for (const tagFilter of tagFilters)
+            if (tagFilter === currentTag)
+                return true;  
+
+    return false;
+}
 
 export default BlogCard;

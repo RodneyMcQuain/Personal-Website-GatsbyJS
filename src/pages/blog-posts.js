@@ -5,11 +5,13 @@ import SEO from '../components/seo';
 import InViewAnimation from '../components/InViewAnimation';
 import BlogCard from '../components/Blog/BlogCard';
 import BlogCategoryDropdown from '../components/Blog/BlogCategoryDropdown';
+import TagDropdown from '../components/Blog/TagDropdown';
 import { ALL_FILTER } from '../components/Blog/ALL_FILTER';
 
 const BlogPosts = ({ data }) => {
-    const { edges, categories } = data.allMarkdownRemark;
+    const { edges, categories, tags } = data.allMarkdownRemark;
     const [currentCategory, setCurrentCategory] = useState(getInitialCategoryFilter());
+    const [currentTags, setCurrentTags] = useState([]);
 
     return (
         <Layout>
@@ -20,13 +22,22 @@ const BlogPosts = ({ data }) => {
                         <h1>Blog Posts</h1>
                     </div>
 
-                    <BlogCategoryDropdown 
-                        categories={categories.map(category => category.category)} 
-                        filter={currentCategory} 
-                        setFilter={setCurrentCategory} 
-                    />
+                    <div className='blog-filters'>
+                        <BlogCategoryDropdown 
+                            categories={categories.map(category => category.category)} 
+                            filter={currentCategory} 
+                            setFilter={setCurrentCategory} 
+                        />
 
-                    {edges.map(post => <BlogCard post={post} categoryFilter={currentCategory} />)}
+                        <TagDropdown
+                            tags={tags.map(tag => tag.tag)}
+                            categoryFilter={currentCategory}
+                            tagFilters={currentTags}
+                            setTagFilters={setCurrentTags}
+                        />
+                    </div>
+
+                    {edges.map(post => <BlogCard post={post} categoryFilter={currentCategory} tagFilters={currentTags} />)}
                 </div>
             </InViewAnimation>
         </Layout>     
@@ -45,6 +56,9 @@ export const pageQuery = graphql`
             categories: group(field: frontmatter___category) {
                 category: fieldValue
             }
+            tags: group(field: frontmatter___tags) {
+                tag: fieldValue
+            }
             edges {
                 node {
                     id
@@ -61,6 +75,7 @@ export const pageQuery = graphql`
                             }
                         }
                         category
+                        tags
                     }
                 }
             }
