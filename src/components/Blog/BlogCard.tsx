@@ -46,8 +46,8 @@ const isShown = (
 );
 
 const hasTag = (tagFilters: string[], currentTags: string[]): boolean => {
-    if (tagFilters === [])
-        return true;    
+    if (tagFilters.length === 0)
+        return true;
 
     for (const currentTag of currentTags)
         for (const tagFilter of tagFilters)
