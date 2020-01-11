@@ -4,7 +4,7 @@ import { SetIsOpen } from '../types/SetIsOpen';
 interface ICloseOnOutsideClickProps {
     children: ReactNode;
     setIsOpen: SetIsOpen;
-    className: string;
+    className?: string;
 }
 
 const CloseOnOutsideClick = (
