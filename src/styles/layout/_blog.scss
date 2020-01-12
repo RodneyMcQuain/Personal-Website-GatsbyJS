@@ -303,13 +303,10 @@ $extra-blog-menu-space-to-remove: 40px;
     li {
         margin-top: 5px;
         cursor: pointer;
-        transition: $minor-scale-transition;
 
         > span {
             padding: $default-spacing 15px;
             border-radius: 20px;
-            background-color: $white;
-            color: $black;
             font-size: $secondary-text-size - 2rem;
             display: flex;
             align-items: center;
@@ -319,10 +316,6 @@ $extra-blog-menu-space-to-remove: 40px;
                 font-size: 20rem;
                 margin-left: 5px;
             }
-        }
-
-        &:hover {
-            transform: $minor-scale;
         }
     }
 }
