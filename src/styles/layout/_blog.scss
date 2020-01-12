@@ -302,6 +302,8 @@ $extra-blog-menu-space-to-remove: 40px;
 
     li {
         margin-top: 5px;
+        cursor: pointer;
+        transition: $minor-scale-transition;
 
         > span {
             padding: $default-spacing 15px;
@@ -312,12 +314,15 @@ $extra-blog-menu-space-to-remove: 40px;
             display: flex;
             align-items: center;
             margin-right: 5px;
-            cursor: pointer;
 
             span {
                 font-size: 20rem;
                 margin-left: 5px;
             }
+        }
+
+        &:hover {
+            transform: $minor-scale;
         }
     }
 }
