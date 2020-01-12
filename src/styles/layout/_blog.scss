@@ -149,12 +149,15 @@ $extra-blog-menu-space-to-remove: 40px;
     }
 }
 
+.category-dropdown, .tag-dropdown {
+    margin-bottom: $default-spacing;
+}
+
 .category-dropdown {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: $default-spacing;
 
     &:before {
         content: attr(title);
@@ -269,6 +272,7 @@ $extra-blog-menu-space-to-remove: 40px;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .tag-dropdown {
@@ -288,5 +292,29 @@ $extra-blog-menu-space-to-remove: 40px;
     .blog-filters {
         flex-direction: column;
         justify-content: left;
+    }
+}
+
+.pills {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    margin-top: 5px;
+
+    .pill {
+        padding: $default-spacing 15px;
+        border-radius: 20px;
+        background-color: $white;
+        color: $black;
+        font-size: $secondary-text-size - 2rem;
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+        cursor: pointer;
+
+        span {
+            font-size: 20rem;
+            margin-left: 5px;
+        }
     }
 }

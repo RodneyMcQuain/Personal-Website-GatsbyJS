@@ -42,7 +42,7 @@ interface IDropdownItemProps {
 }
 
 const DropdownItem = ({ tag, tagFilters, setTagFilters}: IDropdownItemProps) => {
-    const [isChecked, setIsChecked] = useState(false);
+    const isChecked = tagFilters.includes(tag);
 
     return (
         <li>
@@ -50,10 +50,8 @@ const DropdownItem = ({ tag, tagFilters, setTagFilters}: IDropdownItemProps) => 
                 isChecked 
                     ? setTagFilters(tagFilters.filter(tagFilter => tagFilter !== tag)) 
                     : setTagFilters([...tagFilters, tag]); 
-                
-                setIsChecked(!isChecked);
             }}>
-                <input id={tag} type="checkbox" />
+                <input id={tag} type="checkbox" checked={isChecked} />
                 <span></span>
                 {tag}
             </label>

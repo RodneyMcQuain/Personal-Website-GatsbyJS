@@ -7,6 +7,7 @@ import BlogCard from '../components/Blog/BlogCard';
 import BlogCategoryDropdown from '../components/Blog/BlogCategoryDropdown';
 import TagDropdown from '../components/Blog/TagDropdown';
 import { ALL_FILTER } from '../components/Blog/ALL_FILTER';
+import TagPills from '../components/Blog/TagPills';
 
 const BlogPosts = ({ data }) => {
     const { edges, categories, tags } = data.allMarkdownRemark;
@@ -35,6 +36,8 @@ const BlogPosts = ({ data }) => {
                             tagFilters={currentTags}
                             setTagFilters={setCurrentTags}
                         />
+
+                        <TagPills tagFilters={currentTags} setTagFilters={setCurrentTags} />
                     </div>
 
                     {edges.map(post => <BlogCard post={post} categoryFilter={currentCategory} tagFilters={currentTags} />)}
