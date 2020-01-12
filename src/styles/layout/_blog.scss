@@ -297,24 +297,29 @@ $extra-blog-menu-space-to-remove: 40px;
 
 .pills {
     display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     width: 100%;
     margin-top: 5px;
 
-    .pill {
-        padding: $default-spacing 15px;
-        border-radius: 20px;
-        background-color: $white;
-        color: $black;
-        font-size: $secondary-text-size - 2rem;
-        display: flex;
-        align-items: center;
-        margin-right: 5px;
-        cursor: pointer;
+    li {
+        margin-top: 5px;
 
-        span {
-            font-size: 20rem;
-            margin-left: 5px;
+        > span {
+            padding: $default-spacing 15px;
+            border-radius: 20px;
+            background-color: $white;
+            color: $black;
+            font-size: $secondary-text-size - 2rem;
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+            cursor: pointer;
+
+            span {
+                font-size: 20rem;
+                margin-left: 5px;
+            }
         }
     }
 }
