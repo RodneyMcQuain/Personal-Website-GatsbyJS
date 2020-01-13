@@ -21,9 +21,9 @@ const BlogCard = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
             <div className="-curved-border">
                 <div key={node.id}>
                     <Img className="container-top-image" fluid={featuredImage.childImageSharp.fluid} />
-                    <div className="padding-container">
-                        <h2>{title}</h2>
+                    <div className="content">
                         <PublishedOnDate date={date} />
+                        <h2>{title}</h2>
                         <p>{node.excerpt}</p>
                         <Link className="btn" to={path}>
                             <span className="fa fa-book" /> Read More
