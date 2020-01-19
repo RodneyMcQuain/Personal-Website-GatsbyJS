@@ -6,6 +6,7 @@ import Tags from './Tags';
 import { ALL_FILTER } from './ALL_FILTER';
 import { IBlogPost } from './BlogTypes';
 import Icon from '../Icon';
+import Category from './Category';
 
 interface IBlogCardProps {
     post: IBlogPost;
@@ -26,6 +27,7 @@ const BlogCard = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
                     <div className="content">
                         <div className="icons">
                             <PublishedOnDate date={date} />
+                            <Category category={category} />
                             <Tags tags={tags} />
                         </div>
                         <h2>{title}</h2>

@@ -10,10 +10,11 @@ import PublishedOnDate from '../components/Blog/PublishedOnDate';
 import UpdatedOnDate from '../components/Blog/UpdatedOnDate';
 import ContactMe from '../components/Contact/ContactMe';
 import Tags from '../components/Blog/Tags';
+import Category from '../components/Blog/Category';
 
 export default function Template({ data }) {
     const { html, excerpt, tableOfContents, wordCount } = data.thisPost;
-    const { title, date, lastUpdatedDate, tags } = data.thisPost.frontmatter;
+    const { title, date, lastUpdatedDate, category, tags } = data.thisPost.frontmatter;
     const featuredFluidImage = data.thisPost.frontmatter.featuredImage.childImageSharp.fluid;
 
     return (
@@ -31,6 +32,7 @@ export default function Template({ data }) {
                             <PublishedOnDate date={date} />
                             <UpdatedOnDate date={lastUpdatedDate} />
                             <BlogReadTime wordCount={wordCount.words} />
+                            <Category category={category} />
                             <Tags tags={tags} />
                         </div>
 
@@ -65,6 +67,7 @@ export const pageQuery = graphql`
                     }
                 }
                 lastUpdatedDate(formatString: "MMMM DD, YYYY")
+                category
                 tags
             }
             wordCount {
