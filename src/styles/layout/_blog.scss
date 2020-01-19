@@ -14,7 +14,7 @@ $extra-blog-menu-space-to-remove: 40px;
 
 .-small-text {
     font-size: $secondary-text-size;
-    padding: 5px;
+    padding: 5px 0;
 }
 
 .-left-align {
@@ -213,6 +213,10 @@ $extra-blog-menu-space-to-remove: 40px;
         div {
             height: 0;
         }
+    }
+
+    .icons {
+        color: #808080;
     }
 }
 

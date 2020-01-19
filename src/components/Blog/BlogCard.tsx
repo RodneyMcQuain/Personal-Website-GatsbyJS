@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import PublishedOnDate from './PublishedOnDate';
+import Tags from './Tags';
 import { ALL_FILTER } from './ALL_FILTER';
 import { IBlogPost } from './BlogTypes';
 
@@ -22,7 +23,10 @@ const BlogCard = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
                 <div key={node.id}>
                     <Img className="container-top-image" fluid={featuredImage.childImageSharp.fluid} />
                     <div className="content">
-                        <PublishedOnDate date={date} />
+                        <div className="icons">
+                            <PublishedOnDate date={date} />
+                            <Tags tags={tags} />
+                        </div>
                         <h2>{title}</h2>
                         <p>{node.excerpt}</p>
                         <Link className="btn" to={path}>
