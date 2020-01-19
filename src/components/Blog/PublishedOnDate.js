@@ -1,8 +1,9 @@
 import React from "react";
+import Icon from '../Icon';
 
 const PublishedOnDate = ({date}) => (
     <div title={`Published on: ${date}`} className="-small-text">
-        <span className="fa fa-calendar" /> {date}
+        <Icon icon="fa fa-calendar" /> {date}
     </div>
 );
 

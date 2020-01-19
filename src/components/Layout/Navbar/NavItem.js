@@ -1,12 +1,13 @@
 import React from 'react';
+import Icon from '../../Icon';
 import { Link } from 'gatsby';
 import { ACTIVE_CLASS_NAME } from './NavContents';
 
-const NavItem = ({text, url, icon, isSeparatePage}) => (
+const NavItem = ({ text, url, icon, isSeparatePage }) => (
     <li>
         <Link to={url} getProps={isSeparatePage ? isPartiallyActive : undefined}>
             {icon 
-                ? <span className={icon}><span>&nbsp;{text}</span></span>  
+                ? <span><Icon icon={icon} />&nbsp;{text}</span>  
                 : text
             }
         </Link>

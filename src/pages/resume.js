@@ -4,6 +4,7 @@ import Layout from '../components/Layout/layout';
 import InViewAnimation from '../components/InViewAnimation';
 import SEO from '../components/seo';
 import { SizeMe } from 'react-sizeme';
+import Icon from '../components/Icon';
 
 const RESUME_FILE_NAME = "documents/Rodney McQuain - Resume 12-10-2018.pdf";
 
@@ -29,8 +30,8 @@ const Resume = () => (
 
                 <button className="btn">
                     <a href={RESUME_FILE_NAME} download>
-                        <span className="fa fa-download">
-                            <span> Download My Resume</span>
+                        <span> 
+                            <Icon icon="fa fa-download" /> Download My Resume
                         </span>
                     </a>
                 </button>

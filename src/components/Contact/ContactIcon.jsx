@@ -1,5 +1,6 @@
 import React from 'react';
+import Icon from '../Icon';
 
-const ContactIcon = () => <span className="fa fa-envelope" aria-hidden="true" />;
+const ContactIcon = () => <Icon icon="fa fa-envelope" />;
 
 export default ContactIcon;

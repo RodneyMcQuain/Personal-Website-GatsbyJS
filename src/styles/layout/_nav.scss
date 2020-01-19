@@ -21,7 +21,7 @@
             line-height: 20px;
         }
         
-        li a, li a span span {
+        li a, li a > span {
             font-size: $secondary-text-size;
             font-family: 'Roboto', sans-serif;
             color: $white;

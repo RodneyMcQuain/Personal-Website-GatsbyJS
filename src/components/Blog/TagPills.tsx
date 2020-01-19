@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '../Icon';
 
 interface IPillsProps {
     tagFilters: string[];
@@ -10,7 +11,7 @@ const TagPills = ({ tagFilters, setTagFilters }: IPillsProps) => (
         {tagFilters.map(thisTag => (            
             <li onClick={() => setTagFilters(tagFilters.filter(tagFilter => thisTag !== tagFilter))}>
                 <span className="btn" aria-label={`Remove ${thisTag} tag filter`}>
-                    {thisTag} <span className="fa fa-times-circle"></span>
+                    {thisTag} <Icon icon="fa fa-times-circle" />
                 </span>
             </li>
         ))}

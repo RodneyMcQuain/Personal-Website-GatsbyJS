@@ -5,6 +5,7 @@ import PublishedOnDate from './PublishedOnDate';
 import Tags from './Tags';
 import { ALL_FILTER } from './ALL_FILTER';
 import { IBlogPost } from './BlogTypes';
+import Icon from '../Icon';
 
 interface IBlogCardProps {
     post: IBlogPost;
@@ -30,7 +31,7 @@ const BlogCard = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
                         <h2>{title}</h2>
                         <p>{node.excerpt}</p>
                         <Link className="btn" to={path}>
-                            <span className="fa fa-book" /> Read More
+                            <Icon icon="fa fa-book" /> Read More
                         </Link>
                     </div>
                 </div>

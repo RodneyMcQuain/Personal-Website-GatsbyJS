@@ -1,5 +1,6 @@
 import React from 'react';
 import Img from "gatsby-image";
+import Icon from '../Icon';
 
 const Project = ({project}) => (
     <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-container margin-container upscale-container">
@@ -12,7 +13,7 @@ const Project = ({project}) => (
                 <h2 className="-top-margin">{project.title}</h2>
                 <p>{project.description}</p>
                 <a className="btn" href={project.gitHubUrl} aria-label="Go to GitHub">
-                    <span className="fa fa-github" aria-hidden="true"><span> GitHub</span></span>
+                    <span><Icon icon="fa fa-github" /> GitHub</span>
                 </a>
             </div>
         </div>

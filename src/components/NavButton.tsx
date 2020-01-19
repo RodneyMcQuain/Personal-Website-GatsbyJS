@@ -26,10 +26,14 @@ const NavButton = ({
         aria-label={`Show ${ariaLabel}`}
         aria-expanded={isOpen}
     >
-        {text}<span className={`
-            fa ${isOpen ? openIcon : closedIcon}
-            ${isOpen ? 'clicked' : ''}
-        `}></span>
+        {text}
+        <span 
+            className={`
+                fa ${isOpen ? openIcon : closedIcon}
+                ${isOpen ? 'clicked' : ''}
+            `}
+            aria-hidden='true'
+        />
     </button>
 );
 

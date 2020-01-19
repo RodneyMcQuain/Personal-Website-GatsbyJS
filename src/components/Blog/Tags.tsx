@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '../Icon';
 
 interface ITagsProps {
     tags: string[];
@@ -6,7 +7,7 @@ interface ITagsProps {
 
 const Tags = ({ tags }: ITagsProps) => (
     <div className="-small-text">
-        <span className="fa fa-tag" /> {tags.join(", ")}
+        <Icon icon="fa fa-tag" /> {tags.join(", ")}
     </div>
 );
 

@@ -1,10 +1,11 @@
 import React from "react";
+import Icon from '../Icon';
 
 const UpdatedOnDate = ({date}) => (
     date 
         ? (
             <div title={`Updated on: ${date}`} className="-small-text">
-                <span className="fa fa-edit" /> {date}
+                <Icon icon="fa fa-edit" /> {date}
             </div>
         )
         : null

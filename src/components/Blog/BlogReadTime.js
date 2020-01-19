@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types"
+import Icon from '../Icon';
 
 const BlogReadTime = ({ wordCount }) => {
     const AVERAGE_WORDS_READ_PER_MINUTE = 225;
@@ -7,7 +8,7 @@ const BlogReadTime = ({ wordCount }) => {
 
     return (
         <div className="-small-text">
-            <span className="fa fa-clock-o" /> {MINUTES} Minute Read
+            <Icon icon="fa fa-clock-o" /> {MINUTES} Minute Read
         </div>
     );
 }
