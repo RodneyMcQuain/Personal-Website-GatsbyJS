@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
-import PublishedOnDate from './PublishedOnDate';
-import Tags from './Tags';
-import { ALL_FILTER } from './ALL_FILTER';
-import { IBlogPost } from './BlogTypes';
-import Icon from '../Icon';
-import Category from './Category';
+import PublishedOnDate from '../PublishedOnDate';
+import Tags from '../Tags';
+import { ALL_FILTER } from '../ALL_FILTER';
+import { IBlogPost } from '../BlogTypes';
+import Icon from '../../Icon';
+import Category from '../Category';
 
 interface IBlogCardProps {
     post: IBlogPost;
@@ -14,7 +14,7 @@ interface IBlogCardProps {
     tagFilters: string[];
 }
 
-const BlogCard = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
+const Card = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
     const { node } = post;
     const { title, date, path, featuredImage, category, tags } = node.frontmatter;
     const mightHideCard = isShown(categoryFilter, category, tagFilters, tags) ? '' : 'hide-card';
@@ -64,4 +64,4 @@ const hasTag = (tagFilters: string[], currentTags: string[]): boolean => {
     return false;
 }
 
-export default BlogCard;
+export default Card;

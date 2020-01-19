@@ -1,5 +1,5 @@
 import React from 'react';
-import { ALL_FILTER } from './ALL_FILTER';
+import { ALL_FILTER } from '../ALL_FILTER';
 
 type SetFilter = (filter: string) => void;
 
@@ -11,7 +11,7 @@ interface IBlogCategoryDropdownProps {
 
 const ACTIVE_CLASS = 'active';
 
-const BlogCategoryDropdown = ({ categories, filter, setFilter }: IBlogCategoryDropdownProps) => (
+const CategoryDropdown = ({ categories, filter, setFilter }: IBlogCategoryDropdownProps) => (
     <ul title="Categories" className="category-dropdown">
         <DropdownItem
             category={ALL_FILTER}
@@ -57,4 +57,4 @@ const setCategoryFilterQueryString = (category: string) => {
     window.history.pushState(null, document.title, window.location.pathname + '?' + categoryQueryString.toString());
 }
 
-export default BlogCategoryDropdown;
+export default CategoryDropdown;

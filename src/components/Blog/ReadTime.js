@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types"
 import Icon from '../Icon';
 
-const BlogReadTime = ({ wordCount }) => {
+const ReadTime = ({ wordCount }) => {
     const AVERAGE_WORDS_READ_PER_MINUTE = 225;
     const MINUTES = Math.round(wordCount / AVERAGE_WORDS_READ_PER_MINUTE); 
 
@@ -13,8 +13,8 @@ const BlogReadTime = ({ wordCount }) => {
     );
 }
 
-BlogReadTime.propTypes = {
+ReadTime.propTypes = {
     wordCount: PropTypes.number
 }
 
-export default BlogReadTime;
+export default ReadTime;

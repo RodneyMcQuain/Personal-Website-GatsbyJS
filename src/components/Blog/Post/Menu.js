@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../styles/helpers/_variables.scss';
-import { useAddCssClass } from '../../services/useAddCssClass';
-import BlogPostsList from './BlogPostsList';
-import { useFunctionThrottle } from '../../services/useFunctionThrottle';
-import { getViewportSize } from '../../services/getViewportSize';
+import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../../styles/helpers/_variables.scss';
+import { useAddCssClass } from '../../../services/useAddCssClass';
+import BlogPostsList from './PostsList';
+import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
+import { getViewportSize } from '../../../services/getViewportSize';
 
-const BlogMenu = ({posts, currentPostName, isOpen, tableOfContents}) => {
+const Menu = ({posts, currentPostName, isOpen, tableOfContents}) => {
     const sidebarOffsetTopClass = useMenu();
     const mightOpenMenu = isOpen ? "open" : "";
 
@@ -42,4 +42,4 @@ const setSidebarHeightOffset = shouldAddSidebarOffsetTop => {
 
 const isFeaturedImageNotInViewport = FEATURED_IMG_PIXEL_HEIGHT => window.pageYOffset > FEATURED_IMG_PIXEL_HEIGHT;
 
-export default BlogMenu;
+export default Menu;

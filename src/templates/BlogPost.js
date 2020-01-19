@@ -2,15 +2,15 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 import InViewAnimation from '../components/InViewAnimation';
-import ResponsiveBlogMenu from '../components/Blog/ResponsiveBlogMenu';
-import BlogReadTime from '../components/Blog/BlogReadTime';
+import ResponsiveBlogMenu from '../components/Blog/Post/ResponsiveMenu';
 import SEO from '../components/seo';
 import Img from 'gatsby-image';
+import BlogReadTime from '../components/Blog/ReadTime';
 import PublishedOnDate from '../components/Blog/PublishedOnDate';
 import UpdatedOnDate from '../components/Blog/UpdatedOnDate';
-import ContactMe from '../components/Contact/ContactMe';
-import Tags from '../components/Blog/Tags';
 import Category from '../components/Blog/Category';
+import Tags from '../components/Blog/Tags';
+import ContactMe from '../components/Contact/ContactMe';
 
 export default function Template({ data }) {
     const { html, excerpt, tableOfContents, wordCount } = data.thisPost;

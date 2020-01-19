@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-const BlogPostsList = ({posts, currentPostName}) => (
+const PostsList = ({posts, currentPostName}) => (
     <ul>
         <li key={0}><Link to={'blog-posts'}>
             <span>All Posts</span>
@@ -22,4 +22,4 @@ const BlogPostsList = ({posts, currentPostName}) => (
     </ul>
 );
 
-export default BlogPostsList;
+export default PostsList;

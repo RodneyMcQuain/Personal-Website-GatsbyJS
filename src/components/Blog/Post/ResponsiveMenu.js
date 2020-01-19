@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import BlogMenu from './BlogMenu';
-import NavButton from '../NavButton';
-import CloseOnOutsideClick from '../CloseOnOutsideClick';
-import { MAX_FOOTER_HEIGHT } from '../../styles/helpers/_variables.scss';
-import { useAddCssClass } from '../../services/useAddCssClass';
-import { useFunctionThrottle } from '../../services/useFunctionThrottle';
-import { getViewportSize } from '../../services/getViewportSize';
+import BlogMenu from './Menu';
+import NavButton from '../../NavButton';
+import CloseOnOutsideClick from '../../CloseOnOutsideClick';
+import { MAX_FOOTER_HEIGHT } from '../../../styles/helpers/_variables.scss';
+import { useAddCssClass } from '../../../services/useAddCssClass';
+import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
+import { getViewportSize } from '../../../services/getViewportSize';
 
-const ResponsiveBlogMenu = ({posts, currentPostName, tableOfContents}) => {
+const ResponsiveMenu = ({posts, currentPostName, tableOfContents}) => {
     const [isOpen, setIsOpen] = useState(false);
     const mightBeFooterInView = useOffsetByFooter();
 
@@ -43,4 +43,4 @@ const setMenuButtonHeightOffset = shouldAddFooterInView => {
 }
 const getFooterInViewportStartingPixel = () => document.body.offsetHeight - getViewportSize() - MAX_FOOTER_HEIGHT.replace("px", "");
 
-export default ResponsiveBlogMenu;
+export default ResponsiveMenu;

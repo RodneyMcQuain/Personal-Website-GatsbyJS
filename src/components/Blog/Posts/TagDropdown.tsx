@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import CloseOnOutsideClick from '../CloseOnOutsideClick';
-import NavButton from '../NavButton';
+import CloseOnOutsideClick from '../../CloseOnOutsideClick';
+import NavButton from '../../NavButton';
 
 interface ITagDropdownProps {
     tags: string[];

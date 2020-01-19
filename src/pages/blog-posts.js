@@ -3,11 +3,11 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
 import InViewAnimation from '../components/InViewAnimation';
-import BlogCard from '../components/Blog/BlogCard';
-import BlogCategoryDropdown from '../components/Blog/BlogCategoryDropdown';
-import TagDropdown from '../components/Blog/TagDropdown';
+import BlogCard from '../components/Blog/Posts/Card';
+import BlogCategoryDropdown from '../components/Blog/Posts/CategoryDropdown';
+import TagDropdown from '../components/Blog/Posts/TagDropdown';
 import { ALL_FILTER } from '../components/Blog/ALL_FILTER';
-import TagPills from '../components/Blog/TagPills';
+import TagPills from '../components/Blog/Posts/TagPills';
 
 const BlogPosts = ({ data }) => {
     const { edges, categories, tags } = data.allMarkdownRemark;
