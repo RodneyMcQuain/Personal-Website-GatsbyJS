@@ -105,52 +105,60 @@
 
     .gatsby-highlight {
         position: relative;
-        margin: 10px
-    }
+        margin: 10px;
 
-    .gatsby-highlight pre[class*="language-"] {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
+        pre {
+            &[class*="language-"] {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
 
-    .gatsby-highlight pre[class*="language-"]::before {
-        background: white;
-        color: black;
-        position: absolute;
-        top: 0;
-        right: 20px;
-        padding: 5px;
-        border-radius: 0 0 $minor-border-radius $minor-border-radius;
-        font-size: 16px;
-    }
+            &[class*="language-"]::before {
+                background: white;
+                color: black;
+                position: absolute;
+                top: 0;
+                right: 20px;
+                padding: 5px;
+                border-radius: 0 0 $minor-border-radius $minor-border-radius;
+                font-size: 16px;
+            }
 
-    .gatsby-highlight pre[class="language-java"]::before {
-        content: "Java";
-        background: #5283A2;
-        color: black;
-    }
+            @mixin language($language) {
+                &[class="language-#{$language}"]::before {
+                    @content;
+                }
+            }
 
-    .gatsby-highlight pre[class="language-javascript"]::before {
-        content: "JavaScript";
-        background: #F0DB4F;
-        color: black;
-    }
+            @include language("java") {
+                content: "Java";
+                background: #5283A2;
+                color: black;
+            }
 
-    .gatsby-highlight pre[class="language-css"]::before {
-        content: "CSS";
-        background: #33A9DC;
-        color: black;
-    }
+            @include language("javascript") {
+                content: "JavaScript";
+                background: #F0DB4F;
+                color: black;
+            }
 
-    .gatsby-highlight pre[class="language-html"]::before {
-        content: "HTML";
-        background: #F1662A;
-        color: black;
-    }
+            @include language("css") {
+                content: "CSS";
+                background: #33A9DC;
+                color: black;
+            }
 
-    .gatsby-highlight pre[class="language-jsx"]::before {
-        content: "JSX";
-        background: #00D8FF;
-        color: black;
+            @include language("html") {
+                content: "HTML";
+                background: #F1662A;
+                color: black;
+            }
+
+            @include language("jsx") {
+                content: "JSX";
+                background: #00D8FF;
+                color: black;
+            }
+        }
     }
 }
