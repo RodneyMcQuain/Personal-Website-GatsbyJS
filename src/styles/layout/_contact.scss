@@ -15,13 +15,11 @@
 
     #validation-text, #success-text {
         max-height: 0;
-        transform: scaleY(0);
-        transform-origin: top;
-        transition: transform 0.5s ease-in-out;
-
+        @include height-transition-initial();
+        
         &.show-text {
             max-height: 100%;
-            transform: scaleY(1);
+            @include height-transition-open();
         }
     }
     

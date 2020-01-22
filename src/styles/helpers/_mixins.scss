@@ -28,19 +28,30 @@
     transition: $unhide-transition;
 }
 
+@mixin height-transition-initial() {
+    transform: scaleY(0);
+    transform-origin: top;
+    visibility: hidden;
+    transition: visibility 0s 0.5s, max-height 1s 0s, transform 0.5s 0s ease-in-out;
+}
+
+@mixin height-transition-open() {
+    transform: scaleY(1);
+    visibility: visible;
+    transition: visibility 0s 0s, max-height 1s 0s, transform 0.5s 0s ease-in-out;
+}
+
 @mixin responsive-nav-menu() {
     width: 100vw;
     top: $navbar-height;
     left: 0;
     max-height: 0;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: all 0.5s ease-in-out;
+    @include height-transition-initial();
 }
 
 @mixin responsive-nav-menu-open() {
     max-height: calc(100vh - #{$navbar-height});
-    transform: scaleY(1);
+    @include height-transition-open();
 }
 
 @mixin label-text() {

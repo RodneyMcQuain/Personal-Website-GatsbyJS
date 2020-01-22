@@ -83,9 +83,6 @@
 }
 
 .tag-contents {
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.5s ease-in-out;
     position: absolute;
     right: 0;
     left: auto;
@@ -94,6 +91,7 @@
     background-color: white;
     padding: $default-spacing;
     min-width: 200px;
+    @include height-transition-initial();
 
     label {
         font-weight: normal;
@@ -130,7 +128,7 @@
     }
 
     &.open {
-        transform: scaleY(1);
+        @include height-transition-open();
     }
 }
 
