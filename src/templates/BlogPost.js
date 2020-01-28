@@ -11,8 +11,10 @@ import UpdatedOnDate from '../components/Blog/UpdatedOnDate';
 import Category from '../components/Blog/Category';
 import Tags from '../components/Blog/Tags';
 import ContactMe from '../components/Contact/ContactMe';
+import AdjacentPostNavigation from '../components/Blog/Post/AdjacentPostNavigation';
 
-export default function Template({ data }) {
+export default function Template({ data, pageContext }) {
+    console.log(pageContext);
     const { html, excerpt, tableOfContents, wordCount } = data.thisPost;
     const { title, date, lastUpdatedDate, category, tags } = data.thisPost.frontmatter;
     const featuredFluidImage = data.thisPost.frontmatter.featuredImage.childImageSharp.fluid;
@@ -40,6 +42,10 @@ export default function Template({ data }) {
                             <h1 className="-left-align">{title}</h1>
                         </div>
                         <div className="markdown-body" dangerouslySetInnerHTML={{ __html: html }} />
+                        <AdjacentPostNavigation 
+                            previous={pageContext.previous ? pageContext.previous.frontmatter : null} 
+                            next={pageContext.next ? pageContext.next.frontmatter : null} 
+                        />
                         <ContactMe />
                     </div>
                     <div className="col-md-3">

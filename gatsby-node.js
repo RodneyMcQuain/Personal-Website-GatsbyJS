@@ -1,36 +1,50 @@
-const path = require('path')
+const path = require('path');
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = (({ actions, graphql }) => {
     const { createPage } = actions;
 
-    const postTemplate = path.resolve('src/templates/BlogPost.js');
+    return new Promise((resolve, reject) => {
+        const postTemplate = path.resolve('src/templates/BlogPost.js');
 
-    return graphql(`
-        {
-            allMarkdownRemark {
-                edges {
-                    node {
-                        html
-                        id
-                        frontmatter {
-                            path
-                            title
-                            date
-                            author
+        resolve(
+            graphql(`
+                {
+                    allMarkdownRemark (
+                        sort: { order: ASC, fields: [frontmatter___date]}
+                    ) {
+                        edges {
+                            node {
+                                html
+                                id
+                                frontmatter {
+                                    path
+                                    title
+                                    date
+                                    author
+                                }
+                            }
                         }
                     }
                 }
-            }
-        }
-    `).then(res => {
-        if (res.errors)
-            return Promise.reject(res.errors);
+            `).then(result => {
+                if (result.errors)
+                    return Promise.reject(res.errors);
 
-        res.data.allMarkdownRemark.edges.forEach(({ node }) => {
-            createPage({
-                path: node.frontmatter.path,
-                component: postTemplate,
-            });
-        });
+                const posts = result.data.allMarkdownRemark.edges;
+
+                posts.forEach(({ node }, index) => {
+                    createPage({
+                        path: node.frontmatter.path,
+                        component: postTemplate,
+                        context: {
+                            previous: index === 0 ? null : posts[index - 1].node,
+                            next: index === (posts.length - 1) ? null : posts[index + 1].node,
+                        },
+                    });
+
+                    resolve();
+                });
+            })
+        );
     });
-}
+});

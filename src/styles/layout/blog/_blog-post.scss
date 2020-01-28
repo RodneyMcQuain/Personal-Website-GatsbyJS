@@ -148,3 +148,27 @@ $extra-blog-menu-space-to-remove: 40px;
         }
     }
 }
+
+.adjacent-navigation-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    a:first-child {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: $xs-breakpoint - 1px) {
+    .adjacent-navigation-container {
+        flex-direction: column;
+
+        a:first-child {
+            margin-right: 0;
+        }
+
+        a:last-child {
+            margin-top: 20px;
+        }
+    }
+}
