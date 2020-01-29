@@ -13,8 +13,7 @@ import Tags from '../components/Blog/Tags';
 import ContactMe from '../components/Contact/ContactMe';
 import AdjacentPostNavigation from '../components/Blog/Post/AdjacentPostNavigation';
 
-export default function Template({ data, pageContext }) {
-    console.log(pageContext);
+const BlogPostTemplate = ({ data, pageContext }) => {
     const { html, excerpt, tableOfContents, wordCount } = data.thisPost;
     const { title, date, lastUpdatedDate, category, tags } = data.thisPost.frontmatter;
     const featuredFluidImage = data.thisPost.frontmatter.featuredImage.childImageSharp.fluid;
@@ -54,7 +53,7 @@ export default function Template({ data, pageContext }) {
                 </div>
             </InViewAnimation>
         </Layout>
-  );
+    );
 }
 
 export const pageQuery = graphql`
@@ -94,4 +93,6 @@ export const pageQuery = graphql`
             }
         }
     }
-`
+`;
+
+export default BlogPostTemplate;
