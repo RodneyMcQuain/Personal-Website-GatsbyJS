@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types"
-import Icon from '../Icon';
-import AriaText from '../AriaText';
+import Icon from '../../Icon';
+import AriaText from '../../AriaText';
 
 const ReadTime = ({ wordCount }) => {
     const AVERAGE_WORDS_READ_PER_MINUTE = 225;

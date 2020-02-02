@@ -1,6 +1,6 @@
 import React from "react";
-import Icon from '../Icon';
-import AriaText from "../AriaText";
+import Icon from '../../Icon';
+import AriaText from "../../AriaText";
 
 const UpdatedOnDate = ({ date }) => (
     date 
