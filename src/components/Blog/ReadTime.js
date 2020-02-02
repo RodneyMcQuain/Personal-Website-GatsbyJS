@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types"
 import Icon from '../Icon';
+import AriaText from '../AriaText';
 
 const ReadTime = ({ wordCount }) => {
     const AVERAGE_WORDS_READ_PER_MINUTE = 225;
@@ -9,9 +10,9 @@ const ReadTime = ({ wordCount }) => {
     const displayMinutes = `${MINUTES} ${MINUTES_OR_MINUTE}`;
 
     return (
-        <div data-title={`Time to read: ${displayMinutes}`} className="-small-text">
+        <AriaText altText={`Time to read: ${displayMinutes}`} className="-small-text">
             <Icon icon="fa fa-clock-o" /> {displayMinutes} 
-        </div>
+        </AriaText>
     );
 }
 

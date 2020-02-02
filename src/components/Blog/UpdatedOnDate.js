@@ -1,12 +1,13 @@
 import React from "react";
 import Icon from '../Icon';
+import AriaText from "../AriaText";
 
 const UpdatedOnDate = ({ date }) => (
     date 
         ? (
-            <div data-title={`Updated on: ${date}`} className="-small-text">
+            <AriaText altText={`Updated on: ${date}`} className="-small-text">
                 <Icon icon="fa fa-edit" /> {date}
-            </div>
+            </AriaText>
         )
         : null
 );

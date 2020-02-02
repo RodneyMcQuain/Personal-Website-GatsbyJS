@@ -1,14 +1,15 @@
 import React from 'react';
 import Icon from '../Icon';
+import AriaText from '../AriaText';
 
 interface ICategoryProps {
     category: string;
 }
 
 const Category = ({ category }: ICategoryProps) => (
-    <div className="-small-text" data-title={`Category: ${category}`}>
+    <AriaText altText={`Category: ${category}`} className="-small-text">
         <Icon icon="fa fa-sitemap" /> {category}
-    </div>
+    </AriaText>
 );
 
 export default Category;
