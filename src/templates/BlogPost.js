@@ -5,11 +5,11 @@ import InViewAnimation from '../components/InViewAnimation';
 import ResponsiveBlogMenu from '../components/Blog/Post/ResponsiveMenu';
 import SEO from '../components/seo';
 import Img from 'gatsby-image';
-import BlogReadTime from '../components/Blog/ReadTime';
-import PublishedOnDate from '../components/Blog/PublishedOnDate';
-import UpdatedOnDate from '../components/Blog/UpdatedOnDate';
-import Category from '../components/Blog/Category';
-import Tags from '../components/Blog/Tags';
+import BlogReadTime from '../components/Blog/Icons/ReadTime';
+import PublishedOnDate from '../components/Blog/Icons/PublishedOnDate';
+import UpdatedOnDate from '../components/Blog/Icons/UpdatedOnDate';
+import Category from '../components/Blog/Icons/Category';
+import Tags from '../components/Blog/Icons/Tags';
 import ContactMe from '../components/Contact/ContactMe';
 import AdjacentPostNavigation from '../components/Blog/Post/AdjacentPostNavigation';
 

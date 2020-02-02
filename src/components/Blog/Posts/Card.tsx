@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
-import PublishedOnDate from '../PublishedOnDate';
-import Tags from '../Tags';
+import PublishedOnDate from '../Icons/PublishedOnDate';
+import Tags from '../Icons/Tags';
+import Category from '../Icons/Category';
 import { ALL_FILTER } from '../ALL_FILTER';
 import { IBlogPost } from '../BlogTypes';
 import Icon from '../../Icon';
-import Category from '../Category';
 
 interface IBlogCardProps {
     post: IBlogPost;
