@@ -1,7 +1,11 @@
 import React from 'react';
 import Icon from '../Icon';
 
-const Category = ({ category }) => (
+interface ICategoryProps {
+    category: string;
+}
+
+const Category = ({ category }: ICategoryProps) => (
     <div className="-small-text">
         <Icon icon="fa fa-sitemap" /> {category}
     </div>
