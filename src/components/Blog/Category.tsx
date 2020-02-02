@@ -6,7 +6,7 @@ interface ICategoryProps {
 }
 
 const Category = ({ category }: ICategoryProps) => (
-    <div className="-small-text">
+    <div className="-small-text" data-title={`Category: ${category}`}>
         <Icon icon="fa fa-sitemap" /> {category}
     </div>
 );

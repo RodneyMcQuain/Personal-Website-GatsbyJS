@@ -5,10 +5,14 @@ interface ITagsProps {
     tags: string[];
 }
 
-const Tags = ({ tags }: ITagsProps) => (
-    <div className="-small-text">
-        <Icon icon="fa fa-tag" /> {tags.join(", ")}
-    </div>
-);
+const Tags = ({ tags }: ITagsProps) => {
+    const delimetedTags = tags.join(', ');
+    
+    return (
+        <div data-title={`Tags: ${delimetedTags}`} className="-small-text">
+                <Icon icon="fa fa-tag" /> {delimetedTags}
+        </div>
+    );
+}
 
 export default Tags;
