@@ -27,13 +27,13 @@
         font-size: 12rem;
         white-space: pre-wrap;
         left: 0;
-        margin-top: 2.5em;
+        margin-top: 2.75em;
     }
 
     &:after {
         content: '';
         left: 8px;
-        margin-top: 1em;
+        margin-top: 1.25em;
         border: 8px solid transparent;	
         border-bottom: 8px solid $black;
     }
