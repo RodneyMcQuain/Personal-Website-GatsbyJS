@@ -7,7 +7,6 @@ const AboutMe = () => (
             <div className="page-header">
                 <h1 id="about-me">About Me</h1>
             </div>
-            <img src="me.jpg" className="img-rounded" id="me-img" alt="Rodney McQuain" />
             <p id="about-me-text">
                 &nbsp;&nbsp;&nbsp;&nbsp;I recently received my AS in software development from Ivy Tech Community College and I currently attend
                 Purdue University Fort Wayne, looking to get my BS in computer science with a software engineering focus.
