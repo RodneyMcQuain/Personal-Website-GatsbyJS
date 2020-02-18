@@ -38,7 +38,14 @@ module.exports = {
                 icon: `src/assets/svg/logo.svg`,
             }
         },
-        `gatsby-plugin-offline`,
+        {
+            resolve: `gatsby-plugin-offline`,
+            options: {
+                precachePages: [
+                    `*/blog-posts/*`
+                ]
+            }
+        },
         `gatsby-plugin-sitemap`,
         {
             resolve: `gatsby-plugin-robots-txt`,
