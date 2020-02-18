@@ -26,6 +26,19 @@ module.exports = {
         `gatsby-plugin-catch-links`,
         `gatsby-plugin-typescript`,
         `gatsby-plugin-tslint`,
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Rodney McQuain: Personal Site`,
+                short_name: `Rodney McQuain`,
+                start_url: `/`,
+                background_color: `#222`,
+                theme_color: `#222`,
+                display: `standalone`,
+                icon: `src/assets/svg/logo.svg`,
+            }
+        },
+        `gatsby-plugin-offline`,
         `gatsby-plugin-sitemap`,
         {
             resolve: `gatsby-plugin-robots-txt`,
