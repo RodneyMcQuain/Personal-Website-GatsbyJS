@@ -15,28 +15,31 @@
         justify-content: center;
         align-items: center;
 
-        li > a {
+        li a {
             display: block;
             padding: $default-spacing 15px;
             line-height: 20px;
-        }
-        
-        li a, li a > span {
-            font-size: $secondary-text-size;
-            font-family: 'Roboto', sans-serif;
-            color: $white;
-            text-decoration: none;
-            transition: color 0.5s ease-in-out;
-        }
 
-        li a:hover {
-            color: $darker-white;
+            &, > span {
+                font-size: $secondary-text-size;
+                font-family: 'Roboto', sans-serif;
+                color: $white;
+                text-decoration: none;
+            }
 
-            span span {
+            span {
+                transition: color 0.5s ease-in-out;
+            }
+            
+            &:hover {
                 color: $darker-white;
+
+                span {
+                    color: $darker-white;
+                }
             }
         }
-
+        
         .brand {
             margin-right: auto;
             display: flex;
