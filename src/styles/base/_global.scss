@@ -200,3 +200,12 @@ a {
         animation-play-state: paused;
     }
 }
+
+.-small-text {
+    font-size: $tertiary-text-size;
+    padding: 5px 0;
+}
+
+.-gray-text {
+    color: $light-gray;
+}

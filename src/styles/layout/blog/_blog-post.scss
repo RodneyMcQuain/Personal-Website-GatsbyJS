@@ -12,11 +12,6 @@ $extra-blog-menu-space-to-remove: 40px;
     }
 }
 
-.-small-text {
-    font-size: $tertiary-text-size;
-    padding: 5px 0;
-}
-
 .-left-align {
     text-align: left;
 }
@@ -153,6 +148,22 @@ $extra-blog-menu-space-to-remove: 40px;
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+
+    .adjacent-navigation {
+        display: flex;
+    }
+
+    .previous {
+        p, div {
+            text-align: right;
+        }
+    }
+
+    .next {
+        p, div {
+            text-align: left;
+        }
+    }
 
     a:first-child {
         margin-right: 50px;
