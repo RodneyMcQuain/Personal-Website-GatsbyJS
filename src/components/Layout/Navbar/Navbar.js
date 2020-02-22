@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <nav className="my-nav">
             <ScrollIndicator />
-            <CloseOnOutsideClick setIsOpen={setIsOpen}>
+            <CloseOnOutsideClick className="-layered-box-shadow" setIsOpen={setIsOpen}>
                 <NavButton
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}

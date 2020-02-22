@@ -5,9 +5,9 @@ import NavBrand from './NavBrand';
 
 export const ACTIVE_CLASS_NAME = 'active';
 
-const NavContents = ({isOpen}) => (
+const NavContents = ({ isOpen }) => (
     <Scrollspy 
-        className={`nav-contents -layered-box-shadow${isOpen ? " open" : ""}`}
+        className={`nav-contents${isOpen ? " open" : ""}`}
         items={['about-me', 'education', 'projects', 'skills', 'contact']} 
         currentClassName={ACTIVE_CLASS_NAME}
     >
