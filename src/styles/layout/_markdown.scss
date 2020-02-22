@@ -90,7 +90,7 @@
         display: inline-block;
         transition: $minor-scale-transition;
 
-        &:hover {
+        &:hover(:not(.before.anchor)) {
             @include transform($minor-scale);
             transition: $minor-scale-transition;
         }
