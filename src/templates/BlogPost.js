@@ -17,6 +17,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     const { html, excerpt, tableOfContents, wordCount } = data.thisPost;
     const { title, date, lastUpdatedDate, category, tags } = data.thisPost.frontmatter;
     const featuredFluidImage = data.thisPost.frontmatter.featuredImage.childImageSharp.fluid;
+    const blogPostGridClasses = "col-xs-12 col-sm-12 col-md-9";
 
     return (
         <Layout>
@@ -28,7 +29,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                         image={featuredFluidImage} 
                         description={excerpt}
                     />
-                    <div className="col-xs-12 col-sm-12 col-md-9">
+                    <div className={`${blogPostGridClasses} -layered-box-shadow blog-post-content`}>
                         <div className="blog-header-icons">
                             <PublishedOnDate date={date} />
                             <UpdatedOnDate date={lastUpdatedDate} />
@@ -45,10 +46,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                             previous={pageContext.previous ? pageContext.previous.frontmatter : null} 
                             next={pageContext.next ? pageContext.next.frontmatter : null} 
                         />
-                        <ContactMe />
                     </div>
                     <div className="col-md-3">
                         <ResponsiveBlogMenu posts={data.recentPosts.edges} currentPostName={title} tableOfContents={tableOfContents} />
+                    </div>
+                    <div className={blogPostGridClasses}>
+                        <ContactMe />
                     </div>
                 </div>
             </InViewAnimation>
