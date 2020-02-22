@@ -5,13 +5,9 @@ import InViewAnimation from '../components/InViewAnimation';
 import ResponsiveBlogMenu from '../components/Blog/Post/ResponsiveMenu';
 import SEO from '../components/seo';
 import Img from 'gatsby-image';
-import BlogReadTime from '../components/Blog/Icons/ReadTime';
-import PublishedOnDate from '../components/Blog/Icons/PublishedOnDate';
-import UpdatedOnDate from '../components/Blog/Icons/UpdatedOnDate';
-import Category from '../components/Blog/Icons/Category';
-import Tags from '../components/Blog/Icons/Tags';
 import ContactMe from '../components/Contact/ContactMe';
 import AdjacentPostNavigation from '../components/Blog/Post/AdjacentPostNavigation';
+import HeaderIcons from '../components/Blog/Post/HeaderIcons';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const { html, excerpt, tableOfContents, wordCount } = data.thisPost;
@@ -30,13 +26,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                         description={excerpt}
                     />
                     <div className={`${blogPostGridClasses} -layered-box-shadow blog-post-content`}>
-                        <div className="blog-header-icons">
-                            <PublishedOnDate date={date} />
-                            <UpdatedOnDate date={lastUpdatedDate} />
-                            <BlogReadTime wordCount={wordCount.words} />
-                            <Category category={category} />
-                            <Tags tags={tags} />
-                        </div>
+                        <HeaderIcons 
+                            date={date} 
+                            lastUpdatedDate={lastUpdatedDate}
+                            wordCount={wordCount.words}
+                            category={category} 
+                            tags={tags} 
+                        />
 
                         <div className="page-header">
                             <h1 className="-left-align">{title}</h1>
