@@ -3,10 +3,10 @@ footer {
     bottom: 0;
     width: 100%;
     background: $black !important;
-    padding: 10px 0 !important;
+    padding: $default-spacing $end-margin-spacing !important;
     z-index: $footer-z-index;
-    
-    .container, .footer-icons {
+
+    &, .footer-icons {
         display: flex;
         align-items: center;
     }

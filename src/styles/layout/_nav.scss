@@ -9,7 +9,7 @@
     .nav-contents {
         list-style-type: none;
         padding: 0;
-        margin: 0 15px;
+        margin: 0 $end-margin-spacing;
         display: flex;
         flex-direction: row;
         justify-content: center;
