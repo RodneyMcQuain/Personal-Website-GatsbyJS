@@ -39,7 +39,7 @@ const ContactForm = () => {
 
     return (
         <div className="col-xs-12">
-            <div className="center-container contact-container -curved-border">
+            <div className="center-container contact-container -curved-border -layered-box-shadow">
                 <ValidationText formData={formData} setIsError={setIsError} isDisplayed={isValidationTextDisplayed} />
                 <form 
                     name={CONTACT_FORM_NAME}

@@ -22,7 +22,7 @@ const TagDropdown = ({ tags, tagFilters, setTagFilters }: ITagDropdownProps) => 
                 extraClasses='tag-dropdown-text'
                 ariaLabel='Tags'
             />
-            <ul className={`tag-contents -curved-border ${isOpen ? 'open' : ''}`}>
+            <ul className={`tag-contents -curved-border -layered-box-shadow ${isOpen ? 'open' : ''}`}>
                 {tags.map(tag => (
                     <DropdownItem 
                         tag={tag} 

@@ -4,7 +4,7 @@ import Icon from '../Icon';
 
 const Project = ({project}) => (
     <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-container margin-container upscale-container">
-        <div className="-curved-border">
+        <div className="-curved-border -layered-box-shadow">
             <Img fluid={project.image.childImageSharp.fluid} className="container-top-image" alt={`${project.title} project`} />
             <div className="padding-container">
                 <ul className="language-tag">

@@ -21,7 +21,7 @@ const Card = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
 
     return (
         <div className={`margin-container upscale-container project-container blog-card col-xs-12 col-sm-6 col-md-4 col-lg-4 ${mightHideCard}`}>
-            <div className="-curved-border">
+            <div className="-curved-border -layered-box-shadow">
                 <div key={node.id}>
                     <Img className="container-top-image" fluid={featuredImage.childImageSharp.fluid} />
                     <div className="content">

@@ -10,7 +10,7 @@ const Menu = ({posts, currentPostName, isOpen, tableOfContents}) => {
     const mightOpenMenu = isOpen ? "open" : "";
 
     return (
-        <div className={`blog-menu -curved-border padding-container ${sidebarOffsetTopClass} ${mightOpenMenu}`}>
+        <div className={`blog-menu -curved-border -layered-box-shadow padding-container ${sidebarOffsetTopClass} ${mightOpenMenu}`}>
             <h1>Table of Contents</h1>
             <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
             <br />
