@@ -32,7 +32,7 @@ const Card = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
                         </div>
                         <h2>{title}</h2>
                         <p>{node.excerpt}</p>
-                        <Link className="btn" to={path}>
+                        <Link className="btn" to={path} aria-label={`Read more about ${title}`}>
                             <Icon icon="fa fa-book" /> Read More
                         </Link>
                     </div>
