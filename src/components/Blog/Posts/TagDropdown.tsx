@@ -22,7 +22,10 @@ const TagDropdown = ({ tags, tagFilters, setTagFilters }: ITagDropdownProps) => 
                 extraClasses='tag-dropdown-text'
                 ariaLabel='Tags'
             />
-            <ul className={`tag-contents -curved-border -layered-box-shadow ${isOpen ? 'open' : ''}`}>
+            <ul 
+                role="listbox" 
+                className={`tag-contents -curved-border -layered-box-shadow ${isOpen ? 'open' : ''}`}
+            >
                 {tags.map(tag => (
                     <DropdownItem 
                         tag={tag} 
@@ -45,7 +48,7 @@ const DropdownItem = ({ tag, tagFilters, setTagFilters}: IDropdownItemProps) => 
     const isChecked = tagFilters.includes(tag);
 
     return (
-        <li>
+        <li role="option">
             <label htmlFor={tag} onChange={() => {
                 isChecked 
                     ? setTagFilters(tagFilters.filter(tagFilter => tagFilter !== tag)) 
