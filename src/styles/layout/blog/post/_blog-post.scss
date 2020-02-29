@@ -1,0 +1,37 @@
+.blog-header-icons div {
+    text-align: left;
+    
+    &:last-child {
+        margin-bottom: -20px;
+    }
+}
+
+.-left-align {
+    text-align: left;
+}
+
+.blog-featured-image {
+    height: $blog-featured-image-height;
+    z-index: $blog-featured-image-z-index;
+}
+
+.blog-post-content {
+    margin-top: -30px;
+    padding: 25px;
+    
+    background: white;
+    border-radius: $minor-border-radius;
+    z-index: $blog-post-content-z-index;
+}
+
+@media (max-width: $xs-breakpoint - 1px) {
+    .blog-post-content {
+        margin-top: 0;
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .blog-header-icons {
+        margin-top: 20px;
+    }
+}

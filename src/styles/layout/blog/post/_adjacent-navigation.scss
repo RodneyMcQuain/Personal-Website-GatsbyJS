@@ -1,0 +1,39 @@
+.adjacent-navigation-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    .adjacent-navigation {
+        display: flex;
+    }
+
+    .previous {
+        p, div {
+            text-align: right;
+        }
+    }
+
+    .next {
+        p, div {
+            text-align: left;
+        }
+    }
+
+    a:first-child {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: $xs-breakpoint - 1px) {
+    .adjacent-navigation-container {
+        flex-direction: column;
+
+        a:first-child {
+            margin-right: 0;
+        }
+
+        a:last-child {
+            margin-top: 20px;
+        }
+    }
+}
