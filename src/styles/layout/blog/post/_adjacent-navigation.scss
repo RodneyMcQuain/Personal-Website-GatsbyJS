@@ -35,5 +35,9 @@
         a:last-child {
             margin-top: 20px;
         }
+
+        .previous .adjacent-navigation {
+            justify-content: flex-end;
+        }
     }
 }
