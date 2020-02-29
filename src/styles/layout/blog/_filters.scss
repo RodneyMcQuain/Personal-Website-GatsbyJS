@@ -1,0 +1,14 @@
+.blog-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: $md-breakpoint - 1px) {
+    .blog-filters {
+        flex-direction: column;
+        justify-content: left;
+    }
+}
