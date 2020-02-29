@@ -48,12 +48,15 @@ const DropdownItem = ({ tag, tagFilters, setTagFilters}: IDropdownItemProps) => 
     const isChecked = tagFilters.includes(tag);
 
     return (
-        <li role="option">
-            <label htmlFor={tag} onChange={() => {
-                isChecked 
-                    ? setTagFilters(tagFilters.filter(tagFilter => tagFilter !== tag)) 
-                    : setTagFilters([...tagFilters, tag]); 
-            }}>
+        <li role="option" data-checked={isChecked}>
+            <label 
+                htmlFor={tag} 
+                onChange={() => {
+                    isChecked 
+                        ? setTagFilters(tagFilters.filter(tagFilter => tagFilter !== tag)) 
+                        : setTagFilters([...tagFilters, tag]); 
+                }}
+            >
                 <input id={tag} type="checkbox" checked={isChecked} />
                 <span></span>
                 {tag}

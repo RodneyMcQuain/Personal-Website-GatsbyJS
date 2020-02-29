@@ -93,15 +93,51 @@
     min-width: 200px;
     @include height-transition-initial();
 
+    li {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: $default-spacing;
+        }
+
+        &:first-child:before {
+            top: -$default-spacing;
+        }
+
+        &:last-child:before {
+            bottom: -$default-spacing;
+        }
+
+        &:before {
+            content: ' ';
+            position: absolute;
+            top: -5px;
+            bottom: -5px;
+            left: -$default-spacing;
+            right: -$default-spacing;
+            z-index: -1;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        &[data-checked=true]:before {
+            background: $darker-white;
+        }
+
+        &:hover:before {
+            background: $white;
+        }
+    }
+
     label {
         font-weight: normal;
         font-size: $secondary-text-size;
         cursor: pointer;
         display: flex;
         align-items: center;
+        margin: 0;
 
         > input, > span {
-            margin-right: 10px;
+            margin-right: $default-spacing;
             height: 20px;
             width: 20px;
             min-width: 20px;
