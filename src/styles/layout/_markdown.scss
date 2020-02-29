@@ -108,6 +108,10 @@
         margin: 10px;
 
         pre {
+            code {
+                white-space: pre-wrap;
+            }
+
             &[class*="language-"] {
                 padding-top: 30px;
                 padding-bottom: 30px;
