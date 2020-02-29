@@ -5,7 +5,7 @@ import { ACTIVE_CLASS_NAME } from './NavContents';
 
 const NavItem = ({ text, url, icon, isSeparatePage }) => (
     <li>
-        <Link to={url} getProps={isSeparatePage ? isPartiallyActive : undefined}>
+        <Link to={url} role="menuitem" getProps={isSeparatePage ? isPartiallyActive : undefined}>
             {icon 
                 ? <span><Icon icon={icon} />&nbsp;{text}</span>  
                 : text
