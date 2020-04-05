@@ -35,10 +35,10 @@
     {
         "title": "Database Management",
         "skills": [
+            "SQL Server",
+            "PostgreSQL",
             "SQLite",
             "MySQL",
-            "PostgreSQL",
-            "SQL Server",
             "Microsoft Access"
         ]
     }
