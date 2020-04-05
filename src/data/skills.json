@@ -42,6 +42,16 @@
         ]
     },
     {
+        "title": "Testing",
+        "skills": [
+            "Test-Driven Development",
+            "Cypress",
+            "Jasmine",
+            "NUnit",
+            "Jest"
+        ]
+    },
+    {
         "title": "Database Management",
         "skills": [
             "SQL Server",
