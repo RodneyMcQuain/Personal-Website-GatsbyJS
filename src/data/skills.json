@@ -2,10 +2,10 @@
     {
         "title": "Programming Languages",
         "skills": [
-            "Java",
             "JavaScript",
-            "TypeScript",
             "C#",
+            "TypeScript",
+            "Java",
             "C"
         ]
     },
