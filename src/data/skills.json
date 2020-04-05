@@ -38,8 +38,7 @@
             "SQL Server",
             "PostgreSQL",
             "SQLite",
-            "MySQL",
-            "Microsoft Access"
+            "MySQL"
         ]
     }
 ]
