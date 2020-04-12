@@ -86,6 +86,10 @@
                 &:hover:before {
                     animation: rotate360 1s infinite;
                 }
+
+                .animate-letter {
+                    animation: spin $letter-animation-duration 1;
+                }
             }
 
             .brand-dropdown-btn {
@@ -157,4 +161,8 @@
             }
         }
     }
+}
+
+@keyframes spin {
+	50% { transform: rotate(180deg) }
 }

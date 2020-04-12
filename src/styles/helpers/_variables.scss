@@ -49,9 +49,11 @@ $blog-featured-image-z-index: 10;
 $blog-menu-z-index: 9;
 $blog-menu-highlight-z-index: -1;
 
+$letter-animation-duration: 500ms;
 
 :export {
     FEATURED_IMG_VIEWPORT_HEIGHT: $blog-featured-image-height;
     NAVBAR_HEIGHT: $navbar-height;
     MAX_FOOTER_HEIGHT: $footer-xs-height;
+    LETTER_ANIMATION_DURATION: $letter-animation-duration;
 }

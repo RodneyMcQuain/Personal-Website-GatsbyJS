@@ -1,5 +1,5 @@
 import React from 'react';
-import NavItem from './NavItem';
+import NavItem from '../NavItem';
 
 const NavBrandContents = ({ isOpen }) => (
     <ul className={`brand-dropdown -layered-box-shadow${isOpen ? ' open-dropdown' : ''}`}>

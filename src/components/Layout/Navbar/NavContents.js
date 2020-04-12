@@ -1,7 +1,7 @@
 import React from 'react';
 import Scrollspy from 'react-scrollspy';
 import NavItem from './NavItem';
-import NavBrand from './NavBrand';
+import NavBrand from './Brand/NavBrand';
 
 export const ACTIVE_CLASS_NAME = 'active';
 
