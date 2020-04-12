@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { LETTER_ANIMATION_DURATION } from '../../../../styles/helpers/_variables.scss';
 
 const LETTER_ANIMATION_DURATION_MS = Number(LETTER_ANIMATION_DURATION.replace("ms", ""));
-const letters = ['R', 'o', 'd', 'n', 'e', 'y', ' ', 'M', 'c', 'Q', 'u', 'a', 'i', 'n'];
+const name = "Rodney McQuain";
+const letters = name.split("");
 const ANIMATION_DELAY = 50;
 
 interface INameAndLogoProps {
@@ -10,7 +11,7 @@ interface INameAndLogoProps {
 }
 
 const NameAndLogo = ({ isHovered }: INameAndLogoProps) => (
-    <span className="logo">
+    <span className="logo" aria-label={name}>
         {letters.map((letter, i) => (
             <Letter letter={letter} animationDelay={i * ANIMATION_DELAY} isHovered={isHovered} />
         ))}
@@ -34,8 +35,8 @@ const Letter = ({ letter, animationDelay, isHovered }: ILetterProps) => {
     }, [isHovered, animationDelay]);
 
     return letter === ' '
-        ? <span>&nbsp;</span>
-        : <span className={isAnimated ? 'animate-letter' : ''}>{letter}</span>;
+        ? <span aria-hidden="true">&nbsp;</span>
+        : <span className={isAnimated ? 'animate-letter' : ''} aria-hidden="true">{letter}</span>;
 };
 
 export default NameAndLogo;
