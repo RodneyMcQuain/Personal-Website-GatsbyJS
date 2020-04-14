@@ -205,7 +205,7 @@ a {
 }
 
 .minor-pulse {
-    animation: minor-pulse 2s infinite;
+    animation: minor-pulse $minor-pulse-animation-duration ease-in-out infinite;
 
     &:hover {
         animation-play-state: paused;

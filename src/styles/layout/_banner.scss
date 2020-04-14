@@ -38,12 +38,29 @@
     padding: $default-spacing;
     background: none;
     transition: all .5s ease-in-out;
+    position: relative;
+
+    &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        animation: shadow-pulse $minor-pulse-animation-duration ease-in-out infinite;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 10px;
+    }
 
     &:hover {
         background: $white;
         color: $black;
         @include transform($minor-scale);
         transition: all .5s ease-in-out;
+        
+        &:before {
+            animation-play-state: paused;
+        }
     }
 }
 

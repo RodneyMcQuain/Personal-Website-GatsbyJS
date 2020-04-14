@@ -8,3 +8,30 @@
     50% { @include transform(scale(1.05)); }
     100% { @include transform(scale(1)); }
 }
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 0 0px $white;
+        opacity: 0;
+    }
+
+    30% {
+        box-shadow: 0 0 0 4.5px $white;
+        opacity: 0.2;        
+    }
+
+    50% {
+        box-shadow: 0 0 0 5px $white;
+        opacity: 0.4;        
+    }
+
+    70% {
+        box-shadow: 0 0 0 4.5px $white;
+        opacity: 0.2;        
+    }
+
+    100% {
+        box-shadow: 0 0 0 0px $white;
+        opacity: 0;
+    }
+}
