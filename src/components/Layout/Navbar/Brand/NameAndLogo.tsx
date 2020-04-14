@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { LETTER_ANIMATION_DURATION } from '../../../../styles/helpers/_variables.scss';
+import { LETTER_ANIMATION_DURATION_MS } from '../../../../styles/helpers/variables';
 
-const LETTER_ANIMATION_DURATION_MS = Number(LETTER_ANIMATION_DURATION?.replace("ms", ""));
 const name = "Rodney McQuain";
 const letters = name.split("");
 const ANIMATION_DELAY = 50;

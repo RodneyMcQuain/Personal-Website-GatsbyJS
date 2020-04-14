@@ -1,10 +1,4 @@
-export interface IExportedSCSS {
-    NAVBAR_HEIGHT: string;
-    LETTER_ANIMATION_DURATION: string;
-}
-
-export const styles: IExportedSCSS;
-
+export const FEATURED_IMG_HEIGHT: string;
 export const LETTER_ANIMATION_DURATION: string;
-
-export default styles;
+export const NAVBAR_HEIGHT: string;
+export const MAX_FOOTER_HEIGHT: string;

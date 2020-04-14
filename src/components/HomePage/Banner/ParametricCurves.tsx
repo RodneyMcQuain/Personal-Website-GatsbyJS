@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import styles from '../../../styles/helpers/_variables.scss';
+import { NAVBAR_HEIGHT_PIXELS } from '../../../styles/helpers/variables';
 
 interface IVector {
     n: number;
@@ -17,8 +17,6 @@ interface ISum {
     x: number;
     y: number;
 }
-
-const NAVBAR_HEIGHT: number = Number(styles.NAVBAR_HEIGHT?.replace("px", ""));
 
 const ParametricCurves = () => {
     const canvas = useParametricCurves();
@@ -51,7 +49,7 @@ function useParametricCurves() {
 }
 
 function setDimensions(canvas: HTMLCanvasElement) {
-    canvas.height = Math.min(window.innerHeight, window.outerHeight) - NAVBAR_HEIGHT;
+    canvas.height = Math.min(window.innerHeight, window.outerHeight) - NAVBAR_HEIGHT_PIXELS;
     canvas.width = Math.min(window.outerWidth, window.innerWidth, document.body.scrollWidth, document.body.clientWidth);
 }
 

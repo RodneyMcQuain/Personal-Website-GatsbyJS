@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../../styles/helpers/_variables.scss';
+import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../../styles/helpers/variables';
 import { useAddCssClass } from '../../../services/useAddCssClass';
 import BlogPostsList from './PostsList';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
@@ -33,9 +33,8 @@ const useMenu = () => {
 };
 
 const setSidebarHeightOffset = shouldAddSidebarOffsetTop => {
-    const FEATURED_IMG_VIEWPORT_HEIGHT_NUMBER = FEATURED_IMG_VIEWPORT_HEIGHT.replace("vh", "");
     const CLIENT_HEIGHT = getViewportSize();
-    const FEATURED_IMG_PIXEL_HEIGHT = (CLIENT_HEIGHT * FEATURED_IMG_VIEWPORT_HEIGHT_NUMBER) / 100;
+    const FEATURED_IMG_PIXEL_HEIGHT = (CLIENT_HEIGHT * FEATURED_IMG_VIEWPORT_HEIGHT) / 100;
     const isInViewport = isFeaturedImageNotInViewport(FEATURED_IMG_PIXEL_HEIGHT);
     shouldAddSidebarOffsetTop(isInViewport);
 }
