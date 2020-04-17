@@ -1,3 +1,5 @@
+$navbar-item-border-bottom-height: 2px;
+
 .my-nav { //to avoid bootstrap naming conflicts
     position: fixed;
     background-color: $black;
@@ -18,6 +20,7 @@
             display: block;
             padding: $default-spacing 15px;
             line-height: 20px;
+            position: relative;
 
             &, > span {
                 font-size: $secondary-text-size;
@@ -30,11 +33,30 @@
                 transition: color 0.5s ease-in-out;
             }
             
+            &:after {
+                content: ' ';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: -1px;
+                display: block;
+                z-index: -1;
+
+                border-bottom: $navbar-item-border-bottom-height $darker-white solid;
+                transform: scaleX(0);
+                transition: transform 0.5s ease-in-out;
+            }
+
             &:hover {
                 color: $darker-white;
 
                 span {
                     color: $darker-white;
+                }
+
+                &:not(.active):after {
+                    transform: scaleX(1);
                 }
             }
         }
@@ -52,6 +74,7 @@
 
             ul.brand-dropdown {
                 position: absolute;
+                z-index: $navbar-sub-menu-z-index;
                 background: $black;
                 top: $navbar-height;
                 border-radius: 0 0 $minor-border-radius $minor-border-radius;
@@ -60,6 +83,11 @@
                 span, a {
                     font-size: $secondary-text-size;
                     font-weight: normal;
+                }
+
+                li a:after {
+                    left: $default-spacing;
+                    right: $default-spacing;
                 }
 
                 &.open-dropdown {
@@ -128,7 +156,7 @@
     }
 
     .active {
-        border-bottom: 2px solid $white;
+        border-bottom: $navbar-item-border-bottom-height solid $white;
     }
 }
 
@@ -154,9 +182,25 @@
 
             .brand-dropdown {
                 background: $white !important;
-                
-                li a , li span {
+
+                li a {
                     color: $black;
+
+                    span {
+                        color: $black;
+                    }
+
+                    &:hover {
+                        color: $lighter-black;
+
+                        span {
+                            color: $lighter-black;
+                        }
+                    }
+                }
+
+                li a:after {
+                    border-bottom: $navbar-item-border-bottom-height $lighter-black solid;
                 }
             }
         }
