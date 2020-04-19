@@ -49,8 +49,8 @@ function useParametricCurves() {
 }
 
 function setDimensions(canvas: HTMLCanvasElement) {
-    canvas.height = Math.min(window.innerHeight, window.outerHeight) - NAVBAR_HEIGHT_PIXELS;
-    canvas.width = Math.min(window.outerWidth, window.innerWidth, document.body.scrollWidth, document.body.clientWidth);
+    canvas.height = window.innerHeight - NAVBAR_HEIGHT_PIXELS;
+    canvas.width = document.body.clientWidth;
 }
 
 function getDimensions(canvas: HTMLCanvasElement): IDimensions {
