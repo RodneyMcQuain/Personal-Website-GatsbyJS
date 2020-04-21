@@ -107,7 +107,6 @@ $navbar-item-border-bottom-height: 2px;
                     width: 25px;
                     height: 25px;
                     background-size: 25px 25px;
-                    transition: all 3s ease-out;
                     margin-right: $default-spacing;
                 }
 
@@ -116,7 +115,8 @@ $navbar-item-border-bottom-height: 2px;
                 }
 
                 .animate-letter {
-                    animation: spin $letter-animation-duration 1;
+                    animation: bulge $letter-animation-duration 1;
+                    color: $white;
                 }
             }
 
@@ -207,6 +207,4 @@ $navbar-item-border-bottom-height: 2px;
     }
 }
 
-@keyframes spin {
-	50% { transform: rotate(180deg) }
-}
+@keyframes bulge { 50% { transform: scale(1.5) } }
