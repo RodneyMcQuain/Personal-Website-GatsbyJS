@@ -184,16 +184,12 @@ $navbar-item-border-bottom-height: 2px;
                 background: $white !important;
 
                 li a {
-                    color: $black;
-
-                    span {
+                    &, span {
                         color: $black;
                     }
 
                     &:hover {
-                        color: $lighter-black;
-
-                        span {
+                        &, span {
                             color: $lighter-black;
                         }
                     }
