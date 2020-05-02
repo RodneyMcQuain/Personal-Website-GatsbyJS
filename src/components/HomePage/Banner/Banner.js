@@ -15,7 +15,7 @@ const Banner = () => {
                 </p>
                 <div id="banner-btn-container" className={`minor-pulse banner-hide ${fadeTextAndButton}`}>
                     <a id="banner-btn" className="-curved-border" href="#about-me">
-                        Learn About Me
+                        Learn About Me <span className="fa fa-chevron-down bounce" />
                     </a>
                 </div>
             </div>

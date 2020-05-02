@@ -95,3 +95,7 @@ canvas.banner-animation {
     z-index: 0;
     background: black;
 }
+
+.bounce {
+    animation: bounce $minor-pulse-animation-duration infinite ease-in-out;
+}
