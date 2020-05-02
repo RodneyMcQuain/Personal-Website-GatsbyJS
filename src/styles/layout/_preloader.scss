@@ -30,6 +30,11 @@
     width: calc(100% * 0.57735);
     display: inline-block;
   
+    &, &:before, &:after {
+        border-top: 15px solid $white;
+        border-bottom: 15px solid $white;
+    }
+
     &:before, &:after {
         content: '';
         position: absolute;
@@ -49,11 +54,6 @@
     }
 }
 
-#preloader-spinner:after, #preloader-spinner:before, #preloader-spinner {
-    border-top: 15px solid $white;
-    border-bottom: 15px solid $white;
-}
-  
 @keyframes pulse {
     0% {
         transform: scale(1.5);
