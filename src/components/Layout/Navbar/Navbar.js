@@ -3,6 +3,7 @@ import NavContents from './NavContents';
 import ScrollIndicator from './ScrollIndicator';
 import NavButton from '../../NavButton';
 import CloseOnOutsideClick from '../../CloseOnOutsideClick';
+import '../../../styles/layout/_nav.scss';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

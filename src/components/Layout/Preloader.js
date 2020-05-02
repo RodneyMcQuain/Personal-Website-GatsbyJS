@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/layout/_preloader';
+import '../../styles/layout/_preloader.scss';
 
 const Preloader = () => (
     <div id="preloader-overlay">

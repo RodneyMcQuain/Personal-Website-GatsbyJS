@@ -3,6 +3,7 @@ import InViewAnimation from '../components/InViewAnimation';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
 import ContactForm from '../components/Contact/ContactForm';
+import '../styles/layout/_contact.scss';
 
 const Contact = () => (
     <Layout>

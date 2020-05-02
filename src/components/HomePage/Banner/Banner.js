@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAddCssClass } from '../../../services/useAddCssClass';
 import ParametricCurves from './ParametricCurves';
+import '../../../styles/layout/_banner.scss';
 
 const Banner = () => {
     const [fadeHeader, fadeTextAndButton] = useBannerFade();

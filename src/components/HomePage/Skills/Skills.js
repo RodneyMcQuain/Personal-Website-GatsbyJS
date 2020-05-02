@@ -2,6 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import SkillSection from './SkillSection';
 import InViewAnimation from '../../InViewAnimation';
+import '../../../styles/layout/_technologies.scss';
 
 const Skills = ({skills}) => (
     <InViewAnimation>    

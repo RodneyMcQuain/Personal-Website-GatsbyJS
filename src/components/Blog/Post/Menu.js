@@ -4,6 +4,7 @@ import { useAddCssClass } from '../../../services/useAddCssClass';
 import BlogPostsList from './PostsList';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
 import { getViewportSize } from '../../../services/getViewportSize';
+import '../../../styles/layout/blog/post/_menu.scss';
 
 const Menu = ({posts, currentPostName, isOpen, tableOfContents}) => {
     const sidebarOffsetTopClass = useMenu();

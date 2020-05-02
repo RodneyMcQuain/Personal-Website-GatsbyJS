@@ -1,5 +1,6 @@
 import React from 'react';
 import InViewAnimation from '../InViewAnimation';
+import '../../styles/layout/_about-me.scss';
 
 const AboutMe = () => (
     <InViewAnimation>

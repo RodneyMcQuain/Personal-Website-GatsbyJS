@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Icon from '../../Icon';
+import '../../../styles/layout/blog/post/_adjacent-navigation.scss';
 
 const AdjacentPostNavigation = ({ previous, next }) => (
     <nav className="adjacent-navigation-container">

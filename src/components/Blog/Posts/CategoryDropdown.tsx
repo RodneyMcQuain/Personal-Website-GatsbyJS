@@ -1,5 +1,6 @@
 import React from 'react';
 import { ALL_FILTER } from '../ALL_FILTER';
+import '../../../styles/layout/blog/posts/_category-dropdown.scss';
 
 type SetFilter = (filter: string) => void;
 

@@ -1,3 +1,5 @@
+@import '../helpers/variables';
+
 .markdown-body {
     ul {
         list-style-type: disc;
@@ -91,7 +93,7 @@
         transition: $minor-scale-transition;
 
         &:hover(:not(.before.anchor)) {
-            @include transform($minor-scale);
+            transform: $minor-scale;
             transition: $minor-scale-transition;
         }
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '../Icon';
+import '../../styles/layout/_footer.scss';
 
 const Footer = () => (
     <footer className="dark-section">

@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '../../Icon';
+import '../../../styles/layout/blog/posts/_pills.scss';
 
 interface IPillsProps {
     tagFilters: string[];

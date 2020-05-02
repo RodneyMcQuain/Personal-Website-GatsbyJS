@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import '../../../styles/layout/_scroll-indicator.scss';
 
 const ScrollIndicator = () => {
     const [width, setWidth] = useState("0%");

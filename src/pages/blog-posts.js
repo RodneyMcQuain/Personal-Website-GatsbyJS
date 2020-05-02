@@ -8,6 +8,7 @@ import BlogCategoryDropdown from '../components/Blog/Posts/CategoryDropdown';
 import TagDropdown from '../components/Blog/Posts/TagDropdown';
 import { ALL_FILTER } from '../components/Blog/ALL_FILTER';
 import TagPills from '../components/Blog/Posts/TagPills';
+import '../styles/layout/blog/posts/_filters.scss';
 
 const BlogPosts = ({ data }) => {
     const { edges, categories, tags } = data.allMarkdownRemark;

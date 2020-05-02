@@ -1,3 +1,5 @@
+@import '../helpers/variables';
+
 #banner {
     height: calc(100vh - #{$navbar-height});
     display: flex;
@@ -55,7 +57,7 @@
     &:hover {
         background: $white;
         color: $black;
-        @include transform($minor-scale);
+        transform: $minor-scale;
         transition: all .5s ease-in-out;
         
         &:before {

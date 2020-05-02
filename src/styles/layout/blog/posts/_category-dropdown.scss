@@ -1,3 +1,6 @@
+@import '../../../helpers/variables';
+@import '../../../helpers/mixins';
+
 .category-dropdown {
     display: flex;
     flex-direction: row;

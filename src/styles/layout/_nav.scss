@@ -1,4 +1,8 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
 $navbar-item-border-bottom-height: 2px;
+$logo-location: '../../assets/svg/logo.svg'; //relative to navbar component
 
 .my-nav { //to avoid bootstrap naming conflicts
     position: fixed;
@@ -103,7 +107,7 @@ $navbar-item-border-bottom-height: 2px;
                 &:before {
                     display: inline-block;
                     content: ' ';
-                    background: url('../assets/svg/logo.svg') no-repeat;
+                    background: url($logo-location) no-repeat;
                     width: 25px;
                     height: 25px;
                     background-size: 25px 25px;

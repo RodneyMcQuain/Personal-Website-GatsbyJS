@@ -8,6 +8,8 @@ import Img from 'gatsby-image';
 import ContactMe from '../components/Contact/ContactMe';
 import AdjacentPostNavigation from '../components/Blog/Post/AdjacentPostNavigation';
 import HeaderIcons from '../components/Blog/Post/HeaderIcons';
+import Markdown from '../components/Markdown';
+import '../styles/layout/blog/post/_blog-post.scss';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const { html, excerpt, tableOfContents, wordCount } = data.thisPost;
@@ -37,7 +39,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                         <div className="page-header">
                             <h1 className="-left-align">{title}</h1>
                         </div>
-                        <div className="markdown-body" dangerouslySetInnerHTML={{ __html: html }} />
+                        <Markdown html={html} />
                         <AdjacentPostNavigation 
                             previous={pageContext.previous ? pageContext.previous.frontmatter : null} 
                             next={pageContext.next ? pageContext.next.frontmatter : null} 
