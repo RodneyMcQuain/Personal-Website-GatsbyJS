@@ -103,6 +103,10 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to navbar component
                 margin-bottom: 2px; //align brand border bottom with rest of navbar's border bottoms
             }
 
+            &:hover .logo:before {
+                animation: rotate360 1s infinite;
+            }
+
             .logo {
                 &:before {
                     display: inline-block;
@@ -112,10 +116,6 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to navbar component
                     height: 25px;
                     background-size: 25px 25px;
                     margin-right: $default-spacing;
-                }
-
-                &:hover:before {
-                    animation: rotate360 1s infinite;
                 }
 
                 .animate-letter {
