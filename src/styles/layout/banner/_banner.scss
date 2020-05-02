@@ -1,4 +1,4 @@
-@import '../helpers/variables';
+@import '../../helpers/variables';
 
 #banner {
     height: calc(100vh - #{$navbar-height});
@@ -88,14 +88,6 @@
 .banner-appear {
     opacity: 1;
     transition: opacity 2s ease-in-out;
-}
-
-canvas.banner-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background: black;
 }
 
 .bounce {

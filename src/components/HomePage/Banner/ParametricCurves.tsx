@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { NAVBAR_HEIGHT_PIXELS } from '../../../styles/helpers/variables';
+import '../../../styles/layout/banner/_banner-animation.scss';
 
 interface IVector {
     n: number;
