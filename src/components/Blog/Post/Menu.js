@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../../styles/helpers/variables';
+import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../../styles/helpers/variables/variables';
 import { useAddCssClass } from '../../../services/useAddCssClass';
 import BlogPostsList from './PostsList';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';

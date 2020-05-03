@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LETTER_ANIMATION_DURATION_MS } from '../../../../styles/helpers/variables';
+import { LETTER_ANIMATION_DURATION_MS } from '../../../../styles/helpers/variables/variables';
 
 const name = "Rodney McQuain";
 const letters = name.split("");
