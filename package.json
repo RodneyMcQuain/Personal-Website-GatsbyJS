@@ -37,16 +37,19 @@
     "react-pdf": "^4.1.0",
     "react-scrollspy": "^3.4.0",
     "react-sizeme": "^2.6.7",
+    "reason-react": "^0.7.1",
     "webpack": "^4.39.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
+    "bs-platform": "^7.2.2",
     "gatsby-plugin-google-analytics": "^2.1.31",
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-offline": "^3.0.35",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sitemap": "^2.2.24",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
@@ -60,14 +63,16 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "type-check": "tsc --noEmit",
-    "lint": "tslint --project ."
+    "lint": "tslint --project .",
+    "gatsby:build": "gatsby build",
+    "gatsby:develop": "gatsby develop",
+    "re:build": "bsb -make-world -clean-world",
+    "re:develop": "bsb -make-world -clean-world -w",
+    "dev": "npm-run-all --parallel gatsby:develop re:develop",
+    "build": "npm-run-all --parallel gatsby:build re:build",
+    "serve": "gatsby serve"
   },
   "repository": {
     "type": "git",
