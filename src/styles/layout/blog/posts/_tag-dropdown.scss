@@ -10,7 +10,7 @@
         align-items: center;
         background: transparent;
         border: none;
-        font-size: 20rem;
+        font-size: $medium-text-size;
 
         :before {
             margin-left: 5px;
@@ -93,7 +93,7 @@
                 content: '\2714';
                 position: absolute;
                 color: $black;
-                font-size: 20rem;
+                font-size: $medium-text-size;
                 top: -4px;
             }
         }

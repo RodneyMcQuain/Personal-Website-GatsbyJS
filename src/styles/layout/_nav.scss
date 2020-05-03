@@ -70,7 +70,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to navbar component
             display: flex;
 
             span, a { 
-                font-size: 20rem;
+                font-size: $medium-text-size;
                 font-weight: bold;
                 display: flex;
                 align-items: center;
