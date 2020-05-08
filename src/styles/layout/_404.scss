@@ -1,0 +1,64 @@
+@import '../helpers/variables/colors';
+
+$glitch-red: #c36b93;
+$glitch-blue: #0ffbf9;
+$offset: 2px;
+
+.glitch {
+    position: relative;
+    color: $black;
+    font-size: 4em;
+    letter-spacing: 0.4em;
+    font-weight: bold;
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+
+    &::before {
+        left: $offset;
+        text-shadow: -$offset 0 $glitch-red;
+        animation: glitch-red 5s infinite linear alternate-reverse;
+    }
+
+    &::after {
+        left: -$offset;
+        text-shadow: -$offset 0 $glitch-blue, $offset $offset $glitch-red;
+        animation: glitch-blue 1.5s infinite linear alternate-reverse;
+    }
+
+    &::before, &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes glitch-skew {
+    $frames: 10;
+    @for $i from 0 through $frames {
+        #{percentage($i*(1/$frames))} {
+            transform: skew((random(10) - 5) + deg);
+        }
+    }
+}
+
+$frames: 20;
+
+@keyframes glitch-blue {
+    @for $i from 0 through $frames {
+        #{percentage($i*(1/$frames))} {
+            clip: rect(random(150) + px, 9999px, random(150) + px, 30px);
+            transform: skew((random(100) / 100) + deg);
+        }
+    }
+}
+
+@keyframes glitch-red {
+    @for $i from 0 through $frames {
+        #{percentage($i*(1/$frames))} {
+            clip: rect(random(150) + px, 9999px, random(150) + px, 30px);
+            transform: skew((random(100) / 100) + deg);
+        }
+    }
+}
