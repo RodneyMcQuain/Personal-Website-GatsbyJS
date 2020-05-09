@@ -12,7 +12,7 @@ html {
 body {
     position: relative;
     min-height: calc(100vh - #{$navbar-height});
-    padding-bottom: $footer-height * 2;
+    padding-bottom: $body-bottom-padding;
     margin-top: $navbar-height;
 }
 
