@@ -23,7 +23,7 @@ const ResponsiveMenu = ({ posts, currentPostName, tableOfContents }) => {
             <NavButton
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
-                extraClasses={`btn blog-menu-btn hidden-md hidden-lg ${mightBeFooterInView}`}
+                extraClasses={`btn blog-menu-btn hidden-md hidden-lg -layered-box-shadow ${mightBeFooterInView}`}
                 closedIcon="fa-ellipsis-h"
                 ariaLabel="Blog Menu"
             />
