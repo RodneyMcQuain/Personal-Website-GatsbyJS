@@ -3,10 +3,10 @@ import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../../styles/helpers/variables/
 import { useAddCssClass } from '../../../services/useAddCssClass';
 import BlogPostsList from './PostsList';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
-import { getViewportSize } from '../../../services/getViewportSize';
+import { getViewportHeight } from '../../../services/dimensions';
 import '../../../styles/layout/blog/post/_menu.scss';
 
-const Menu = ({posts, currentPostName, isOpen, tableOfContents}) => {
+const Menu = ({ posts, currentPostName, isOpen, tableOfContents }) => {
     const sidebarOffsetTopClass = useMenu();
     const mightOpenMenu = isOpen ? "open" : "";
 
@@ -29,12 +29,12 @@ const useMenu = () => {
         window.addEventListener("scroll", debouncedSetMenuHeightOffset);
         return () => window.removeEventListener("scroll", debouncedSetMenuHeightOffset);
     }, []);
-    
+
     return mightBeSidebarOffsetTop;
 };
 
 const setSidebarHeightOffset = shouldAddSidebarOffsetTop => {
-    const CLIENT_HEIGHT = getViewportSize();
+    const CLIENT_HEIGHT = getViewportHeight();
     const FEATURED_IMG_PIXEL_HEIGHT = (CLIENT_HEIGHT * FEATURED_IMG_VIEWPORT_HEIGHT) / 100;
     const isInViewport = isFeaturedImageNotInViewport(FEATURED_IMG_PIXEL_HEIGHT);
     shouldAddSidebarOffsetTop(isInViewport);
