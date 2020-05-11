@@ -112,6 +112,10 @@ $extra-blog-menu-space-to-remove: 40px;
             @include responsive-nav-menu-open();
         }
 
+        &.footer-in-view {
+            max-height: calc(100vh - #{$navbar-height} - #{$footer-height});
+        }
+
         h1 {
             padding-top: 20px;
         }
@@ -119,9 +123,11 @@ $extra-blog-menu-space-to-remove: 40px;
 }
 
 @media (max-width: $footer-xs-breakpoint - 1px) {
-    .blog-menu-btn {
-        &.footer-in-view {
-            bottom: $navbar-right-alignment + $footer-xs-height;
-        }
+    .blog-menu-btn.footer-in-view {
+        bottom: $navbar-right-alignment + $footer-xs-height;
+    }
+
+    .blog-menu-btn.footer-in-view {
+        max-height: calc(100vh - #{$navbar-height} - #{$footer-xs-height});
     }
 }

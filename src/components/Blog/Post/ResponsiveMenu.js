@@ -13,7 +13,13 @@ const ResponsiveMenu = ({ posts, currentPostName, tableOfContents }) => {
 
     return (
         <CloseOnOutsideClick setIsOpen={setIsOpen}>
-            <BlogMenu posts={posts} currentPostName={currentPostName} isOpen={isOpen} tableOfContents={tableOfContents} />
+            <BlogMenu 
+                posts={posts} 
+                currentPostName={currentPostName} 
+                isOpen={isOpen} 
+                tableOfContents={tableOfContents} 
+                mightBeFooterInView={mightBeFooterInView} 
+            />
             <NavButton
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}

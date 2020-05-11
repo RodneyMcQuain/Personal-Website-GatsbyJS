@@ -6,12 +6,15 @@ import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
 import { getViewportHeight } from '../../../services/dimensions';
 import '../../../styles/layout/blog/post/_menu.scss';
 
-const Menu = ({ posts, currentPostName, isOpen, tableOfContents }) => {
+const Menu = ({ posts, currentPostName, isOpen, tableOfContents, mightBeFooterInView }) => {
     const sidebarOffsetTopClass = useMenu();
     const mightOpenMenu = isOpen ? "open" : "";
 
     return (
-        <div className={`blog-menu -curved-border -layered-box-shadow padding-container ${sidebarOffsetTopClass} ${mightOpenMenu}`}>
+        <div className={
+            `blog-menu -curved-border -layered-box-shadow padding-container 
+            ${sidebarOffsetTopClass} ${mightOpenMenu} ${mightBeFooterInView}`
+        }>
             <h1>Table of Contents</h1>
             <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
             <br />
