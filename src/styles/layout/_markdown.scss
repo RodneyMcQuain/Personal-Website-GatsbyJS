@@ -88,13 +88,24 @@
     }
 
     a {
-        text-decoration: underline;
+        text-decoration: none !important;
         display: inline-block;
-        transition: $minor-scale-transition;
 
-        &:hover(:not(.before.anchor)) {
-            transform: $minor-scale;
-            transition: $minor-scale-transition;
+        &:not(.anchor) {
+            background: linear-gradient(
+                to bottom,
+                #777 0%,
+                $darker-black 100%
+            );
+            background-position: 0 100%;
+            background-repeat: repeat-x;
+            background-size: 4px 2px;
+            transition: color 0.5s ease-in-out, background-size 0.5s ease-in-out;
+
+            &:hover {
+                color: $white;
+                background-size: 4px 50px;
+            }
         }
     }
 
