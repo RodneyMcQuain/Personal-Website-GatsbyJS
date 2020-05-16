@@ -4,7 +4,7 @@ import Institution from './Institution';
 import InViewAnimation from '../../InViewAnimation';
 import '../../../styles/layout/_education.scss';
 
-const Education = ({institutions}) => (
+const Education = ({ institutions }) => (
     <InViewAnimation>
         <div className="dark-section">
             <div className="container">
@@ -18,7 +18,7 @@ const Education = ({institutions}) => (
     </InViewAnimation>
 );
 
-export default () => (
+const EducationStaticQuery = () => (
     <StaticQuery
         query={graphql`
             query {    
@@ -46,3 +46,5 @@ export default () => (
         render={data => <Education institutions={data.allInstitutionsJson.edges} />}
     />
 );
+
+export default EducationStaticQuery;

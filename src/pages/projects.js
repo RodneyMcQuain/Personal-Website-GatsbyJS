@@ -6,7 +6,7 @@ import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
 import ContactMe from '../components/Contact/ContactMe';
 
-const Projects = ({projects}) => (
+const Projects = ({ projects }) => (
     <Layout>
         <InViewAnimation>
             <SEO title="Projects" />
@@ -24,7 +24,7 @@ const Projects = ({projects}) => (
     </Layout>
 );
 
-export default () => (
+const ProjectsStaticQuery = () => (
     <StaticQuery
         query={graphql`
             query {    
@@ -51,3 +51,5 @@ export default () => (
         render={data => <Projects projects={data.allProjectsJson.edges} />}
     />
 );
+
+export default ProjectsStaticQuery;
