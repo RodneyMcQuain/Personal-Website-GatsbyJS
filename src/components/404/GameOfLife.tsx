@@ -40,7 +40,7 @@ function useGameOfLife() {
             try {
                 drawGrid(ctx, board, ROWS, COLUMNS);
                 gameOfLife(board, ROWS, COLUMNS);
-            } catch (e) {
+            } catch {
                 board = getRandomGrid(ROWS, COLUMNS);
             }
 
