@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { NAVBAR_HEIGHT_PIXELS } from '../../../styles/helpers/variables/variables';
+import { getViewportHeightExcludingNavbar, getViewportWidth } from '../../../services/dimensions';
 import '../../../styles/layout/banner/_banner-animation.scss';
 
 interface IVector {
@@ -54,8 +54,8 @@ function useParametricCurves() {
 }
 
 function setDimensions(canvas: HTMLCanvasElement) {
-    canvas.height = (document.documentElement.clientHeight || window.innerHeight) - NAVBAR_HEIGHT_PIXELS;
-    canvas.width = document.body.clientWidth || window.innerWidth;
+    canvas.height = getViewportHeightExcludingNavbar();
+    canvas.width = getViewportWidth();
 }
 
 function getDimensions(canvas: HTMLCanvasElement): IDimensions {
