@@ -20,6 +20,9 @@ interface ISum {
 }
 
 const NUMBER_OF_VECTORS = 3;
+const MIN_RGB_VALUE = 200;
+const MAX_RGB_VALUE = 255;
+const OPACITY_VARIATION = 0.15;
 
 const ParametricCurves = () => {
     const canvas = useParametricCurves();
@@ -70,8 +73,8 @@ function getVectors(): IVector[] {
     const opacityIncrement = 1 / vectors.length;
 
     for (let i = 0; i < vectors.length; i++) {
-        const rand = getRandomIntByRange(200, 255);
-        const opacity = (opacityIncrement * (i + 1)) - getRandomByRange(0, 0.15);
+        const rand = getRandomIntByRange(MIN_RGB_VALUE, MAX_RGB_VALUE);
+        const opacity = (opacityIncrement * (i + 1)) - getRandomByRange(0, OPACITY_VARIATION);
 
         vectors[i] = {
             color: `rgba(${rand}, ${rand}, ${rand}, ${opacity})`,
