@@ -19,6 +19,8 @@ interface ISum {
     y: number;
 }
 
+const NUMBER_OF_VECTORS = 3;
+
 const ParametricCurves = () => {
     const canvas = useParametricCurves();
 
@@ -64,14 +66,15 @@ function getDimensions(canvas: HTMLCanvasElement): IDimensions {
 }
 
 function getVectors(): IVector[] {
-    const NUMBER_OF_VECTORS = 3;
     const vectors: IVector[] = new Array(NUMBER_OF_VECTORS);
+    const opacityIncrement = 1 / vectors.length;
 
     for (let i = 0; i < vectors.length; i++) {
-        const rand = getRandomByRange(200, 255);
+        const rand = getRandomIntByRange(200, 255);
+        const opacity = (opacityIncrement * (i + 1)) - getRandomByRange(0, 0.15);
 
         vectors[i] = {
-            color: `rgba(${rand}, ${rand}, ${rand})`,
+            color: `rgba(${rand}, ${rand}, ${rand}, ${opacity})`,
             n: 0,
             r: Math.random() * 100 + 100,
             s: Math.random() * 5 + 50,
@@ -81,9 +84,8 @@ function getVectors(): IVector[] {
     return vectors;
 }
 
-function getRandomByRange(min: number, max: number): number {
-    return Math.floor((Math.random() * (max - min + 1)) + min);
-}
+const getRandomIntByRange = (min: number, max: number): number => Math.floor((Math.random() * (max - min + 1)) + min);
+const getRandomByRange = (min: number, max: number): number => (Math.random() * (max - min)) + min;
 
 function drawParametricCurves(ctx: CanvasRenderingContext2D, vectors: IVector[], dimensions: IDimensions) {
     const sum = { x: 0, y: 0 };
@@ -102,8 +104,8 @@ function drawEllipse(ctx: CanvasRenderingContext2D, sum: ISum, dimensions: IDime
     ctx.ellipse(
         sum.x + (dimensions.width / 2),
         sum.y + (dimensions.height / 2),
-        1,
-        1,
+        0.5,
+        0.5,
         Math.PI / 4, 
         0, 
         2 * Math.PI
