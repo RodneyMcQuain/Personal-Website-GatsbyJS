@@ -20,5 +20,8 @@
         "reason-react"
     ],
     "ppx-flags": [],
-    "refmt": 3
-  }
+    "refmt": 3,
+    "gentypeconfig": {
+        "language": "typescript"
+    }
+}
