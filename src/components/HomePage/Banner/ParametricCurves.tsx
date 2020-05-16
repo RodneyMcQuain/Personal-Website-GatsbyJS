@@ -33,15 +33,17 @@ function useParametricCurves() {
         const ctx: CanvasRenderingContext2D = canvasRef.current.getContext('2d');
         const vectors: IVector[] = getVectors();
 
+        let animationFrameId: number;
+        (function draw() {
+            drawParametricCurves(ctx, vectors, getDimensions(canvasRef.current));
+            animationFrameId = requestAnimationFrame(draw);
+        })();
+
         const resize = () => setDimensions(canvasRef.current);
-        
-        const drawInterval = setInterval(() => { 
-            drawParametricCurves(ctx, vectors, getDimensions(canvasRef.current)); 
-        }, 1);
         window.addEventListener('resize', resize);
 
         return () => {
-            clearInterval(drawInterval);
+            cancelAnimationFrame(animationFrameId);
             window.removeEventListener('resize', resize);
         }
     }, []);
