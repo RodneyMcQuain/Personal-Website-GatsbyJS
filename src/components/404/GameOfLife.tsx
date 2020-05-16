@@ -13,7 +13,6 @@ const ALIVE_COLOR = '#FFFFFF';
 const DEAD_COLOR = '#111';
 const CELL_SIZE_PX = 5;
 const IS_INITIALLY_ALIVE_PROBABILITY = 0.5;
-const DRAW_INTERVAL_MS = 50;
 
 const GameOfLife = () => {
     const canvas = useGameOfLife();
@@ -35,21 +34,24 @@ function useGameOfLife() {
             COLUMNS = getColumnLength();
             board = getRandomGrid(ROWS, COLUMNS);
         }
-        const draw = () => {
+
+        let animationFrameId: number;
+        (function draw(): void {
             try {
                 drawGrid(ctx, board, ROWS, COLUMNS);
                 gameOfLife(board, ROWS, COLUMNS);
             } catch (e) {
                 board = getRandomGrid(ROWS, COLUMNS);
             }
-        }
-        
+
+            animationFrameId = window.requestAnimationFrame(draw);
+        })();
+
         const ctx: CanvasRenderingContext2D = canvasRef.current.getContext('2d');
-        const drawInterval = setInterval(draw, DRAW_INTERVAL_MS);
         window.addEventListener('resize', resize);
 
         return () => {
-            clearInterval(drawInterval);
+            window.cancelAnimationFrame(animationFrameId);
             window.removeEventListener('resize', resize);
         }
     }, []);
@@ -72,7 +74,7 @@ function getRandomGrid(rowLength: number, columnLength: number): Board {
         board[i] = new Array(rowLength);
 
         for (let j = 0; j < board[0].length; j++) {
-            const isAlive = Math.random() > IS_INITIALLY_ALIVE_PROBABILITY ? true : false;
+            const isAlive = Math.random() > IS_INITIALLY_ALIVE_PROBABILITY;
             board[i][j] = { isAlive };
         }
     }
