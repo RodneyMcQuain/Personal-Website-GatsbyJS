@@ -2,9 +2,11 @@ import React from 'react';
 import IconText from '../../../IconText';
 
 const NavBrandItem = ({ text, url, icon }) => (
-    <a href={`#${url}`}>
-        <IconText text={text} icon={icon} />
-    </a>
+    <li>
+        <a href={`#${url}`} role="menuitem">
+            <IconText text={text} icon={icon} />
+        </a>
+    </li>
 );
 
 export default NavBrandItem;
