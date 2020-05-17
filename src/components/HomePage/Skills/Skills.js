@@ -6,12 +6,14 @@ import '../../../styles/layout/_technologies.scss';
 
 const Skills = ({ skills }) => (
     <InViewAnimation>
-        <div className="container">
-            <div className="page-header">
-                <h1 id="skills">Skills</h1>
-            </div>
+        <div className="dark-section">
+            <div className="container">
+                <div className="page-header">
+                    <h1 id="skills">Skills</h1>
+                </div>
 
-            {skills.map(skillSection => <SkillSection key={skillSection.node.id} skillSection={skillSection.node} />)}
+                {skills.map(skillSection => <SkillSection key={skillSection.node.id} skillSection={skillSection.node} />)}
+            </div>
         </div>
     </InViewAnimation>
 );
