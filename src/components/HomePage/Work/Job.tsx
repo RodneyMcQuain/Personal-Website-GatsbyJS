@@ -1,8 +1,8 @@
 import React from 'react';
-import { IWork } from './IWork';
+import { IJob } from './IJob';
 
 interface IJobProps {
-    work: IWork;
+    work: IJob;
 }
 
 const Job = ({ work: { title, company, city, state, startDate, endDate } }: IJobProps) => (

@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import InViewAnimation from '../../InViewAnimation';
 import Job from './Job';
-import { IWork } from './IWork';
+import { IJob } from './IJob';
 import '../../../styles/layout/_timeline.scss';
 
 interface IWorkTimelineProps {
@@ -10,7 +10,7 @@ interface IWorkTimelineProps {
 }
 
 interface INode {
-    node: IWork;
+    node: IJob;
 }
 
 const Timeline = ({ work }: IWorkTimelineProps) => (
