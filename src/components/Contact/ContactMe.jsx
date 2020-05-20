@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import InViewAnimation from '../InViewAnimation';
 import ContactIcon from './ContactIcon';
+import '../../styles/layout/_contact-me.scss';
 
 const ContactMe = () => (
     <InViewAnimation>

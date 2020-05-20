@@ -1,0 +1,31 @@
+@import '../helpers/variables/_variables';
+
+.contact-me {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: $default-spacing; 
+
+    hr {
+        width: 100%;
+    }
+
+    > div {
+        max-width: 300px;
+        margin: 0 auto;
+
+        .contact-me-text-wrapper {
+            padding: $default-spacing; 
+            
+            .contact-me-text {
+                font-size: $medium-text-size;
+            }
+        }
+
+        .contact-me-btn {
+            &, span {
+                font-size: 22rem;
+            }
+        }
+    }
+}
