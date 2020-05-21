@@ -144,7 +144,7 @@ Inside the `then`, after the `fetch` promise resolves is probably where you want
 
 That's it, here's the full code for a basic Gatsby/Netlify contact form:
 
-~~~javascript
+~~~jsx
 import React, { useState } from 'react';
 
 const THIS_PAGE = "/";
