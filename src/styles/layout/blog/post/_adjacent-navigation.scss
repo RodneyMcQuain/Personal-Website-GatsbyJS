@@ -9,6 +9,16 @@
         display: flex;
     }
 
+    .previous, .next {
+        &:hover, &:focus {
+            text-decoration: none;
+            
+            .adjacent-navigation {
+                text-decoration: underline;
+            }
+        }
+    }
+
     .previous {
         p, div {
             text-align: right;
