@@ -2,7 +2,7 @@
 @import '../helpers/mixins';
 
 $navbar-item-border-bottom-height: 2px;
-$logo-location: '../../assets/svg/logo.svg'; //relative to navbar component
+$logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
 
 .my-nav { //to avoid bootstrap naming conflicts
     position: fixed;
@@ -130,6 +130,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to navbar component
                 border: none;
                 
                 display: flex;
+                align-items: center;
                 color: $white !important;
 
                 &:hover {
