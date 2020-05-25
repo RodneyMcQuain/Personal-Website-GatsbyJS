@@ -4,6 +4,7 @@ import InViewAnimation from '../../InViewAnimation';
 import Job from './Job';
 import { IJob } from './IJob';
 import '../../../styles/layout/_timeline.scss';
+import { WORK_HASH } from '../../../services/homePageHashes';
 
 interface IWorkTimelineProps {
     work: INode[];
@@ -17,7 +18,7 @@ const Timeline = ({ work }: IWorkTimelineProps) => (
     <InViewAnimation>
         <div className="container">
             <div className="page-header">
-                <h1 id="work-experience">Work Experience</h1>
+                <h1 id={WORK_HASH}>Work Experience</h1>
             </div>
 
             <div className="timeline">

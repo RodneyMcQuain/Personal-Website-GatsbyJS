@@ -1,12 +1,13 @@
 import React from 'react';
 import InViewAnimation from '../InViewAnimation';
 import '../../styles/layout/_about-me.scss';
+import { ABOUT_ME_HASH } from '../../services/homePageHashes';
 
 const AboutMe = () => (
     <InViewAnimation>
         <div className="container">
             <div className="page-header">
-                <h1 id="about-me">About Me</h1>
+                <h1 id={ABOUT_ME_HASH}>About Me</h1>
             </div>
             <p id="about-me-text">
                 &nbsp;&nbsp;&nbsp;&nbsp;I recently received my AS in software development from Ivy Tech Community College and I currently attend
