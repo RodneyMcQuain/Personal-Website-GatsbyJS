@@ -14,7 +14,7 @@ const ContactMe = () => (
                     <div className="contact-me-text">Like what you see?</div>
                     <div className="contact-me-text">Have any advice or questions?</div>
                 </div>
-                <Link to={`/${CONTACT_ROUTE}`} className="btn contact-me-btn minor-pulse">
+                <Link to={`/${CONTACT_ROUTE}`} className="btn contact-me-btn -layered-box-shadow">
                     <ContactIcon /> Contact Me
                 </Link>
             </div>

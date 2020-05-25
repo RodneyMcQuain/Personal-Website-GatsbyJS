@@ -30,6 +30,7 @@ $body-bottom-padding: $footer-height * 2;
 
 $letter-animation-duration: 500ms;
 $minor-pulse-animation-duration: 2s;
+$minor-pulse-animation: minor-pulse $minor-pulse-animation-duration ease-in-out infinite;
 
 :export {
     FEATURED_IMG_HEIGHT: $blog-featured-image-height;
