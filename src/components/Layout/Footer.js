@@ -4,7 +4,7 @@ import '../../styles/layout/_footer.scss';
 
 const Footer = () => (
     <footer className="dark-section">
-        <p className="footer-copyright">© {new Date().getFullYear()} Copyright: Rodney McQuain</p>
+        <p className="footer-copyright">© 2018-{new Date().getFullYear()} Rodney McQuain</p>
 
         <div className="footer-icons">
             <a className="btn footer-icon" href="https://github.com/RodneyMcQuain/" aria-label="Go to my GitHub" title="My GitHub">
