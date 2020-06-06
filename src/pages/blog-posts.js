@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
-import InViewAnimation from '../components/InViewAnimation';
 import BlogCard from '../components/Blog/Posts/Card';
 import BlogCategoryDropdown from '../components/Blog/Posts/CategoryDropdown';
 import TagDropdown from '../components/Blog/Posts/TagDropdown';
 import { ALL_FILTER } from '../components/Blog/ALL_FILTER';
 import TagPills from '../components/Blog/Posts/TagPills';
 import '../styles/layout/blog/posts/_filters.scss';
+import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
 
 const BlogPosts = ({ data }) => {
     const { edges, categories, tags } = data.allMarkdownRemark;
@@ -17,34 +17,28 @@ const BlogPosts = ({ data }) => {
 
     return (
         <Layout>
-            <InViewAnimation>
-                <div className="container">
-                    <SEO title="Blog" />
-                    <div className="page-header">
-                        <h1>Blog Posts</h1>
-                    </div>
+            <SEO title="Blog" />
+            <HeaderContentLayout title="Blog Posts">
+                <div className='blog-filters'>
+                    <BlogCategoryDropdown
+                        categories={categories.map(category => category.category)}
+                        filter={currentCategory}
+                        setFilter={setCurrentCategory}
+                    />
 
-                    <div className='blog-filters'>
-                        <BlogCategoryDropdown 
-                            categories={categories.map(category => category.category)} 
-                            filter={currentCategory} 
-                            setFilter={setCurrentCategory} 
-                        />
+                    <TagDropdown
+                        tags={tags.map(tag => tag.tag)}
+                        categoryFilter={currentCategory}
+                        tagFilters={currentTags}
+                        setTagFilters={setCurrentTags}
+                    />
 
-                        <TagDropdown
-                            tags={tags.map(tag => tag.tag)}
-                            categoryFilter={currentCategory}
-                            tagFilters={currentTags}
-                            setTagFilters={setCurrentTags}
-                        />
-
-                        <TagPills tagFilters={currentTags} setTagFilters={setCurrentTags} />
-                    </div>
-
-                    {edges.map(post => <BlogCard post={post} categoryFilter={currentCategory} tagFilters={currentTags} />)}
+                    <TagPills tagFilters={currentTags} setTagFilters={setCurrentTags} />
                 </div>
-            </InViewAnimation>
-        </Layout>     
+
+                {edges.map(post => <BlogCard post={post} categoryFilter={currentCategory} tagFilters={currentTags} />)}
+            </HeaderContentLayout>
+        </Layout>
     );
 }
 

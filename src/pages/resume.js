@@ -1,42 +1,36 @@
 import React from 'react';
 import { Document, Page } from 'react-pdf';
 import Layout from '../components/Layout/layout';
-import InViewAnimation from '../components/InViewAnimation';
 import SEO from '../components/seo';
 import { SizeMe } from 'react-sizeme';
 import Icon from '../components/Icon';
+import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
 
 const RESUME_FILE_NAME = "documents/Rodney McQuain - Resume 12-10-2018.pdf";
 
 const Resume = () => (
     <Layout>
-        <InViewAnimation>
-            <SEO title="Resume" />
-            <div className="container">
-                <div className="page-header">
-                    <h1>Resume</h1>
-                </div>
+        <SEO title="Resume" />
+        <HeaderContentLayout title="Resume">
+            <SizeMe>
+                {({ size }) => (
+                    <Document file={RESUME_FILE_NAME}>
+                        <Page
+                            pageNumber={1}
+                            width={size.width}
+                        />
+                    </Document>
+                )}
+            </SizeMe>
 
-                <SizeMe>
-                    {({size}) => (
-                        <Document file={RESUME_FILE_NAME}>
-                            <Page 
-                                pageNumber={1}
-                                width={size.width}
-                            />
-                        </Document>
-                    )}
-                </SizeMe>
-
-                <button className="btn">
-                    <a href={RESUME_FILE_NAME} download>
-                        <span> 
-                            <Icon icon="fa fa-download" /> Download My Resume
-                        </span>
-                    </a>
-                </button>
-            </div>
-        </InViewAnimation>
+            <button className="btn">
+                <a href={RESUME_FILE_NAME} download>
+                    <span>
+                        <Icon icon="fa fa-download" /> Download My Resume
+                    </span>
+                </a>
+            </button>
+        </HeaderContentLayout>
     </Layout>
 );
 

@@ -1,22 +1,16 @@
 import React from 'react';
-import InViewAnimation from '../components/InViewAnimation';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
 import ContactForm from '../components/Contact/ContactForm';
 import '../styles/layout/_contact.scss';
+import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
 
 const Contact = () => (
     <Layout>
-        <InViewAnimation>
-            <SEO title="Contact" />
-            <div className="container">
-                <div className="page-header">
-                    <h1 id="contact">Contact</h1>
-                </div>
-
-                <ContactForm />
-            </div>
-        </InViewAnimation>
+        <SEO title="Contact" />
+        <HeaderContentLayout title="Contact">
+            <ContactForm />
+        </HeaderContentLayout>
     </Layout>
 );
 

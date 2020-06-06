@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react"
 import { useAddCssClass } from "../services/useAddCssClass";
 
-const InViewAnimation = props => {
+const InViewAnimation = ({ children, className }) => {
     const containerRef = useRef();
     const inViewAppear = useScrollAnimation(containerRef);
 
     return (
-        <section ref={containerRef} className={`in-view-hide ${inViewAppear}`}>
-            {props.children}
+        <section ref={containerRef} className={`${className} in-view-hide ${inViewAppear}`}>
+            {children}
         </section>
     );
 };

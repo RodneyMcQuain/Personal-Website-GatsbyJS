@@ -1,10 +1,10 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import InViewAnimation from '../../InViewAnimation';
 import Job from './Job';
 import { IJob } from './IJob';
 import '../../../styles/layout/_timeline.scss';
 import { WORK_HASH } from '../../../services/homePageHashes';
+import HeaderContentLayout from '../../Layout/HeaderContentLayout';
 
 interface IWorkTimelineProps {
     work: INode[];
@@ -15,17 +15,11 @@ interface INode {
 }
 
 const Timeline = ({ work }: IWorkTimelineProps) => (
-    <InViewAnimation>
-        <div className="container">
-            <div className="page-header">
-                <h1 id={WORK_HASH}>Work Experience</h1>
-            </div>
-
-            <div className="timeline">
-                {work.map(({ node }) => <Job work={node} />)}
-            </div>
+    <HeaderContentLayout title="Work Experience" id={WORK_HASH}>
+        <div className="timeline">
+            {work.map(({ node }) => <Job work={node} />)}
         </div>
-    </InViewAnimation>
+    </HeaderContentLayout>
 );
 
 const WorkTimelineStaticQuery = () => (

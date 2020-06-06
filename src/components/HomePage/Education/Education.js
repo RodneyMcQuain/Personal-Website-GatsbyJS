@@ -1,22 +1,14 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Institution from './Institution';
-import InViewAnimation from '../../InViewAnimation';
 import '../../../styles/layout/_education.scss';
 import { EDUCATION_HASH } from '../../../services/homePageHashes';
+import HeaderContentLayout from '../../Layout/HeaderContentLayout';
 
 const Education = ({ institutions }) => (
-    <InViewAnimation>
-        <div className="dark-section">
-            <div className="container">
-                <div className="page-header">
-                    <h1 id={EDUCATION_HASH}>Education</h1>
-                </div>
-
-                {institutions.map(institution => <Institution key={institution.node.id} institution={institution.node} />)}
-            </div>
-        </div>
-    </InViewAnimation>
+    <HeaderContentLayout title="Education" id={EDUCATION_HASH} isDark={true}>
+        {institutions.map(institution => <Institution key={institution.node.id} institution={institution.node} />)}
+    </HeaderContentLayout>
 );
 
 const EducationStaticQuery = () => (
