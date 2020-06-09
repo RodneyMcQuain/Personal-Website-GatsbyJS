@@ -13,11 +13,11 @@
         "title": "Other Languages",
         "skills": [
             "HTML",
-            "FXML",
             "CSS",
             "SCSS",
             "SQL",
-            "GraphQL"
+            "GraphQL",
+            "FXML"
         ]
     },
     {
