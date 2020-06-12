@@ -35,7 +35,7 @@ module.exports = {
                 background_color: `#222`,
                 theme_color: `#222`,
                 display: `standalone`,
-                icon: `src/assets/svg/logo.svg`,
+                icon: `src/assets/svg/round-square-logo.svg`,
             }
         },
         {
