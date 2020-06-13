@@ -12,9 +12,9 @@ const HeaderContentLayout = ({ title, id, isDark = false, children }: IHeaderCon
     <ConditionalDarkContainer isDark={isDark}>
         <InViewAnimation>
             <div className="container">
-                <div className="page-header">
+                <header className="page-header">
                     <h1 id={id}>{title}</h1>
-                </div>
+                </header>
 
                 {children}
             </div>
