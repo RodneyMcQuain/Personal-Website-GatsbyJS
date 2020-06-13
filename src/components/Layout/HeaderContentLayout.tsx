@@ -9,15 +9,23 @@ interface IHeaderContentLayoutProps {
 }
 
 const HeaderContentLayout = ({ title, id, isDark = false, children }: IHeaderContentLayoutProps) => (
-    <InViewAnimation className={isDark ? "dark-section" : ""}>
-        <div className="container">
-            <div className="page-header">
-                <h1 id={id}>{title}</h1>
-            </div>
+    <ConditionalDarkContainer isDark={isDark}>
+        <InViewAnimation>
+            <div className="container">
+                <div className="page-header">
+                    <h1 id={id}>{title}</h1>
+                </div>
 
-            {children}
-        </div>
-    </InViewAnimation>
+                {children}
+            </div>
+        </InViewAnimation>
+    </ConditionalDarkContainer>
+);
+
+const ConditionalDarkContainer = ({ isDark, children }) => (
+    isDark
+        ? <div className="dark-section">{children}</div>
+        : children
 );
 
 export default HeaderContentLayout;
