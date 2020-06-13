@@ -1,5 +1,5 @@
 import React from 'react';
-import { SetIsOpen } from '../types/SetIsOpen';
+import { SetIsOpen } from '../../types/SetIsOpen';
 import '../styles/layout/_nav-button.scss';
 
 interface INavButtonProps {

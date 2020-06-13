@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect, useRef } from 'react';
-import { SetIsOpen } from '../types/SetIsOpen';
+import { SetIsOpen } from '../../types/SetIsOpen';
 
 interface ICloseOnOutsideClickProps {
     children: ReactNode;

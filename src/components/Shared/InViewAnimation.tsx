@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, RefObject } from "react"
-import { useAddCssClass } from "../services/useAddCssClass";
+import React, { useEffect, useRef, RefObject } from 'react'
+import { useAddCssClass } from '../../services/useAddCssClass';
 
 interface IInViewAnimationProps {
     children: JSX.Element;
