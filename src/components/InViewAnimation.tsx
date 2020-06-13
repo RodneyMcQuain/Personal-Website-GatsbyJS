@@ -8,7 +8,7 @@ interface IInViewAnimationProps {
 
 type ContainerElement = HTMLElement;
 
-const InViewAnimation = ({ children, className }: IInViewAnimationProps) => {
+const InViewAnimation = ({ children, className = "" }: IInViewAnimationProps) => {
     const containerRef = useRef<ContainerElement>();
     const inViewAppear = useScrollAnimation(containerRef);
 
