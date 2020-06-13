@@ -1,8 +1,15 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, RefObject } from "react"
 import { useAddCssClass } from "../services/useAddCssClass";
 
-const InViewAnimation = ({ children, className }) => {
-    const containerRef = useRef();
+interface IInViewAnimationProps {
+    children: JSX.Element;
+    className?: string;
+}
+
+type ContainerElement = HTMLElement;
+
+const InViewAnimation = ({ children, className }: IInViewAnimationProps) => {
+    const containerRef = useRef<ContainerElement>();
     const inViewAppear = useScrollAnimation(containerRef);
 
     return (
@@ -12,13 +19,13 @@ const InViewAnimation = ({ children, className }) => {
     );
 };
 
-const useScrollAnimation = containerRef => {
+const useScrollAnimation = (containerRef: RefObject<ContainerElement>): string => {
     const [mightBeInViewAppear, shouldAddInViewAppear] = useAddCssClass("in-view-appear");
 
     useEffect(() => {
         const scrollContainerEvent = () => {
-            const className = isElementInViewport(containerRef);
-            shouldAddInViewAppear(className);
+            const isInViewport = isElementInViewport(containerRef.current);
+            shouldAddInViewAppear(isInViewport);
         };        
         window.addEventListener("scroll", scrollContainerEvent);
         window.dispatchEvent(new Event("scroll"));
@@ -29,13 +36,12 @@ const useScrollAnimation = containerRef => {
     return mightBeInViewAppear;
 };
 
-const isElementInViewport = containerRef => {
-    const rect = containerRef ? containerRef.current.getBoundingClientRect() : false;
+const isElementInViewport = (containerElement: ContainerElement): boolean => {
+    const rect = containerElement.getBoundingClientRect();
 
     return (
-        (rect) &&
-        (rect.top > -1 * containerRef.current.offsetHeight) &&
-        (rect.top < window.innerHeight)
+        rect.top > -1 * containerElement.offsetHeight 
+        && rect.top < window.innerHeight
     );
 };
 
