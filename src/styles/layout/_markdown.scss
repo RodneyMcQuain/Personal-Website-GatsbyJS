@@ -1,13 +1,12 @@
 @import '../helpers/variables/variables';
 
 .markdown-body {
-    ul {
-        list-style-type: disc;
-        padding-left: 40px;
+    p, ol, ul, pre, h1, h2, h3, h4, h5, h6 {
+        text-align: left;
     }
 
-    p, ol, ul {
-        text-align: left;
+    ul {
+        list-style-type: disc;
     }
   
     p > img {
@@ -21,25 +20,30 @@
             width: 100%;
         }
     }
-  
-    pre {
-        text-align: left;
+
+    ul, ol {
+        padding-left: 40px;
+    }
+    
+    h1, h2 {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+
+    $content-spacing: $default-spacing;
+    h1, h2, h3, h4, h5, h6 {
+        margin: 70px 0 $content-spacing 0;
+        font-weight: bold;
+    }
+
+    p, ol, ul, table, .gatsby-highlight {
+        margin-bottom: $content-spacing;
     }
 
     pre, code span {
         font-size: $secondary-text-size;
     }
 
-    h1, h2 {
-        border-bottom: 1px solid #eee;
-    }
-
-    h1, h2, h3, h4 {
-        padding-bottom: 9px;
-        margin: 40px 0 20px;
-        font-weight: bold;
-    }
-  
     h2 {
         font-size: 35rem;
     }
@@ -52,17 +56,11 @@
         font-size: 25rem;
     }
   
-    h2, h3, h4 {
-        margin-top: 40px;
-        text-align: left;
-    }
-  
     img {
         text-align: center;
     }
   
     table {
-        margin: 10px 10px 10px 0;
         display: block;
         overflow: auto;
         width: 100%;
@@ -118,7 +116,6 @@
 
     .gatsby-highlight {
         position: relative;
-        margin: 10px;
 
         pre {
             code {
