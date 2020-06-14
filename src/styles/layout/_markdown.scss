@@ -142,6 +142,7 @@
                 padding: $code-block-language-padding;
                 border-radius: 0 0 $minor-border-radius $minor-border-radius;
                 font-size: $code-block-language-text-font-size;
+                line-height: $code-block-language-text-font-size;
             }
 
             @mixin language($language) {
