@@ -29,18 +29,20 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                         description={excerpt}
                     />
                     <div className={`${blogPostGridClasses} -layered-box-shadow blog-post-content`}>
-                        <header>
-                            <HeaderIcons
-                                date={date}
-                                lastUpdatedDate={lastUpdatedDate}
-                                wordCount={wordCount.words}
-                                category={category}
-                                tags={tags}
-                            />
-                            <HeaderTitle title={title} className="-left-align" isHeaderElement={false} />
-                        </header>
+                        <article>
+                            <header>
+                                <HeaderIcons
+                                    date={date}
+                                    lastUpdatedDate={lastUpdatedDate}
+                                    wordCount={wordCount.words}
+                                    category={category}
+                                    tags={tags}
+                                    />
+                                <HeaderTitle title={title} className="-left-align" isHeaderElement={false} />
+                            </header>
 
-                        <Markdown html={html} />
+                            <Markdown html={html} />
+                        </article>
                         <AdjacentPostNavigation
                             previous={pageContext.previous ? pageContext.previous.frontmatter : null}
                             next={pageContext.next ? pageContext.next.frontmatter : null}
