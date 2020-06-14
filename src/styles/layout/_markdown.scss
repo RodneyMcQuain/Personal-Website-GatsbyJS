@@ -119,14 +119,18 @@
         border-radius: $minor-border-radius;
         padding: 2.5px 5px;
     }
-
+    
     .gatsby-highlight {
         position: relative;
-
+        
         pre {
+            $code-block-language-padding: 5rem;
+            $code-block-language-text-font-size: 16rem;
+
             &[class*="language-"] {
-                padding-top: 30px;
-                padding-bottom: 30px;
+                $code-block-vertical-padding: $code-block-language-text-font-size + ($code-block-language-padding * 2) + 5rem;
+                padding-top: $code-block-vertical-padding;
+                padding-bottom: $code-block-vertical-padding;
             }
 
             &[class*="language-"]::before {
@@ -135,9 +139,9 @@
                 position: absolute;
                 top: 0;
                 right: 20px;
-                padding: 5px;
+                padding: $code-block-language-padding;
                 border-radius: 0 0 $minor-border-radius $minor-border-radius;
-                font-size: 16rem;
+                font-size: $code-block-language-text-font-size;
             }
 
             @mixin language($language) {
