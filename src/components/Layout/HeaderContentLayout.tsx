@@ -1,5 +1,6 @@
 import React from 'react';
 import InViewAnimation from '../Shared/InViewAnimation';
+import HeaderTitle from '../Shared/HeaderTitle';
 
 interface IHeaderContentLayoutProps {
     title: string;
@@ -12,9 +13,7 @@ const HeaderContentLayout = ({ title, id, isDark = false, children }: IHeaderCon
     <ConditionalDarkContainer isDark={isDark}>
         <InViewAnimation>
             <div className="container">
-                <header className="page-header">
-                    <h1 id={id}>{title}</h1>
-                </header>
+                <HeaderTitle title={title} id={id} />
 
                 {children}
             </div>

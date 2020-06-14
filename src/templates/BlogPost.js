@@ -9,6 +9,7 @@ import ContactMe from '../components/Contact/ContactMe';
 import AdjacentPostNavigation from '../components/Blog/Post/AdjacentPostNavigation';
 import HeaderIcons from '../components/Blog/Post/HeaderIcons';
 import Markdown from '../components/Shared/Markdown';
+import HeaderTitle from '../components/Shared/HeaderTitle';
 import '../styles/layout/blog/post/_blog-post.scss';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
@@ -35,10 +36,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                             category={category} 
                             tags={tags} 
                         />
-
-                        <div className="page-header">
-                            <h1 className="-left-align">{title}</h1>
-                        </div>
+                        <HeaderTitle title={title} className="-left-align" isHeaderElement={false} />
+                        
                         <Markdown html={html} />
                         <AdjacentPostNavigation 
                             previous={pageContext.previous ? pageContext.previous.frontmatter : null} 
