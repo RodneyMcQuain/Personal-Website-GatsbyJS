@@ -44,16 +44,22 @@
         font-size: $secondary-text-size;
     }
 
+    p, a, li, td {
+        $content-font-size: 18rem;
+        font-size: $content-font-size;
+        line-height: ceil($content-font-size * 1.4);
+    }
+
     h2 {
-        font-size: 35rem;
+        font-size: 32rem;
     }
 
     h3 {
-        font-size: 30rem;
+        font-size: 28rem;
     }
 
     h4 {
-        font-size: 25rem;
+        font-size: 24rem;
     }
   
     img {
@@ -118,10 +124,6 @@
         position: relative;
 
         pre {
-            code {
-                white-space: pre-wrap;
-            }
-
             &[class*="language-"] {
                 padding-top: 30px;
                 padding-bottom: 30px;
@@ -135,7 +137,7 @@
                 right: 20px;
                 padding: 5px;
                 border-radius: 0 0 $minor-border-radius $minor-border-radius;
-                font-size: 16px;
+                font-size: 16rem;
             }
 
             @mixin language($language) {

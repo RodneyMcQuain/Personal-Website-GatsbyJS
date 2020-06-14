@@ -11,7 +11,6 @@ $extra-blog-menu-space-to-remove: 40px;
     top: calc(#{$blog-featured-image-height} + #{$navbar-height});
     transition: all 0.5s ease-in;
     background: white;
-    max-width: 25%;
     max-height: calc(100vh - #{$blog-featured-image-height} - #{$navbar-height} - #{$extra-blog-menu-space-to-remove});
     overflow-y: auto;
 

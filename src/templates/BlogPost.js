@@ -16,7 +16,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     const { html, excerpt, tableOfContents, wordCount } = data.thisPost;
     const { title, date, lastUpdatedDate, category, tags } = data.thisPost.frontmatter;
     const featuredFluidImage = data.thisPost.frontmatter.featuredImage.childImageSharp.fluid;
-    const blogPostGridClasses = "col-xs-12 col-sm-12 col-md-9";
+    const blogPostGridClasses = "col-xs-12 col-sm-12 col-md-7";
 
     return (
         <Layout>
@@ -38,7 +38,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                                     category={category}
                                     tags={tags}
                                     />
-                                <HeaderTitle title={title} className="-left-align" isHeaderElement={false} />
+                                <HeaderTitle title={title} className="-left-align blog-post-title" isHeaderElement={false} />
                             </header>
 
                             <Markdown html={html} />
@@ -48,7 +48,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                             next={pageContext.next ? pageContext.next.frontmatter : null}
                         />
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-5">
                         <ResponsiveBlogMenu posts={data.recentPosts.edges} currentPostName={title} tableOfContents={tableOfContents} />
                     </div>
                     <div className={blogPostGridClasses}>
