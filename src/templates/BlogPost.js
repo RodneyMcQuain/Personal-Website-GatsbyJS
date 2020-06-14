@@ -1,14 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
-import InViewAnimation from '../components/InViewAnimation';
+import InViewAnimation from '../components/Shared/InViewAnimation';
 import ResponsiveBlogMenu from '../components/Blog/Post/ResponsiveMenu';
-import SEO from '../components/seo';
+import SEO from '../components/Shared/seo';
 import Img from 'gatsby-image';
 import ContactMe from '../components/Contact/ContactMe';
 import AdjacentPostNavigation from '../components/Blog/Post/AdjacentPostNavigation';
 import HeaderIcons from '../components/Blog/Post/HeaderIcons';
-import Markdown from '../components/Markdown';
+import Markdown from '../components/Shared/Markdown';
 import '../styles/layout/blog/post/_blog-post.scss';
 
 const BlogPostTemplate = ({ data, pageContext }) => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from '../../Icon';
-import AriaText from '../../AriaText';
+import Icon from '../../Shared/Icon';
+import AriaText from '../../Shared/AriaText';
 
 interface ITagsProps {
     tags: string[];

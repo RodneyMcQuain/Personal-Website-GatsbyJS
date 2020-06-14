@@ -6,7 +6,7 @@ import Tags from '../Icons/Tags';
 import Category from '../Icons/Category';
 import { ALL_FILTER } from '../ALL_FILTER';
 import { IBlogPost } from '../BlogTypes';
-import Icon from '../../Icon';
+import Icon from '../../Shared/Icon';
 import '../../../styles/layout/blog/posts/_card.scss';
 
 interface IBlogCardProps {

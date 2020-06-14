@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
-import SEO from '../components/seo';
+import SEO from '../components/Shared/seo';
 import BlogCard from '../components/Blog/Posts/Card';
 import BlogCategoryDropdown from '../components/Blog/Posts/CategoryDropdown';
 import TagDropdown from '../components/Blog/Posts/TagDropdown';

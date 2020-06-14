@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import BlogMenu from './Menu';
-import NavButton from '../../NavButton';
-import CloseOnOutsideClick from '../../CloseOnOutsideClick';
+import NavButton from '../../Shared/NavButton';
+import CloseOnOutsideClick from '../../Shared/CloseOnOutsideClick';
 import { MAX_FOOTER_HEIGHT_PIXELS } from '../../../styles/helpers/variables/variables';
 import { useAddCssClass } from '../../../services/useAddCssClass';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';

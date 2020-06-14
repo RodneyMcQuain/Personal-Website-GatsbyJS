@@ -1,5 +1,5 @@
 import React from 'react';
-import IconText from '../../../IconText';
+import IconText from '../../../Shared/IconText';
 import { HOME_ROUTE } from '../../../../services/routes';
 
 const NavBrandItem = ({ text, url, icon }) => (

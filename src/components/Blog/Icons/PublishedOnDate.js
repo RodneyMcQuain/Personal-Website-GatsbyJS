@@ -1,6 +1,6 @@
 import React from "react";
-import Icon from '../../Icon';
-import AriaText from "../../AriaText";
+import Icon from '../../Shared/Icon';
+import AriaText from "../../Shared/AriaText";
 
 const PublishedOnDate = ({ date }) => (
     <AriaText altText={`Published on: ${date}`} className="-small-text">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import InViewAnimation from '../InViewAnimation';
+import InViewAnimation from '../Shared/InViewAnimation';
 import ContactIcon from './ContactIcon';
 import '../../styles/layout/_contact-me.scss';
 import { CONTACT_ROUTE } from '../../services/routes';

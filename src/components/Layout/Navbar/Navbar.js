@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import NavContents from './NavContents';
 import ScrollIndicator from './ScrollIndicator';
-import NavButton from '../../NavButton';
-import CloseOnOutsideClick from '../../CloseOnOutsideClick';
+import NavButton from '../../Shared/NavButton';
+import CloseOnOutsideClick from '../../Shared/CloseOnOutsideClick';
 import '../../../styles/layout/_nav.scss';
 
 const Navbar = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from "gatsby-image";
-import Icon from '../Icon';
+import Icon from '../Shared/Icon';
 import '../../styles/layout/_project.scss';
 
 const Project = ({ project }) => (

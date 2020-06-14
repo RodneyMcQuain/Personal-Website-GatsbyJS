@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/layout/_markdown.scss';
+import '../../styles/layout/_markdown.scss';
 
 interface IMarkdownProps {
     html: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import IconText from '../../IconText';
+import IconText from '../../Shared/IconText';
 import { Link } from 'gatsby';
 import { ACTIVE_CLASS_NAME } from './NavContents';
 

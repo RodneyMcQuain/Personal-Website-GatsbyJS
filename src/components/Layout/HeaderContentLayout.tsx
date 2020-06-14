@@ -1,5 +1,5 @@
 import React from 'react';
-import InViewAnimation from '../InViewAnimation';
+import InViewAnimation from '../Shared/InViewAnimation';
 
 interface IHeaderContentLayoutProps {
     title: string;

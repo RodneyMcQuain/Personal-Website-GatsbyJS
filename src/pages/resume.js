@@ -1,9 +1,9 @@
 import React from 'react';
 import { Document, Page } from 'react-pdf';
 import Layout from '../components/Layout/layout';
-import SEO from '../components/seo';
+import SEO from '../components/Shared/seo';
 import { SizeMe } from 'react-sizeme';
-import Icon from '../components/Icon';
+import Icon from '../components/Shared/Icon';
 import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
 
 const RESUME_FILE_NAME = "documents/Rodney McQuain - Resume 12-10-2018.pdf";

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import BrandContents from './NavBrandContents';
-import NavButton from '../../../NavButton';
-import CloseOnOutsideClick from '../../../CloseOnOutsideClick';
+import NavButton from '../../../Shared/NavButton';
+import CloseOnOutsideClick from '../../../Shared/CloseOnOutsideClick';
 import NameAndLogoLink from './NameAndLogoLink';
 
 const NavBrand = () => {

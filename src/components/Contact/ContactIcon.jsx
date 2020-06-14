@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../Icon';
+import Icon from '../Shared/Icon';
 
 const ContactIcon = () => <Icon icon="fa fa-envelope" />;
 
