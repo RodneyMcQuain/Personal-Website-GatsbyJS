@@ -1,11 +1,18 @@
-ul.technologies {
+.skill-section-title {
+    font-size: 20rem;
+    font-weight: bold;
+}
+
+.skill-section-list {
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
+    margin-bottom: 20px;
     
-    li {
-        padding: 10px;
+    .item {
         list-style: none;
-        
+        padding: 5px;
+        font-size: 18rem;
+
         &:before {
             content: "⁍ ";
         }
