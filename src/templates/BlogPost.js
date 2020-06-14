@@ -23,25 +23,27 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             <InViewAnimation>
                 <Img className="blog-featured-image" fluid={featuredFluidImage} />
                 <div className="container">
-                    <SEO 
-                        title={title} 
-                        image={featuredFluidImage} 
+                    <SEO
+                        title={title}
+                        image={featuredFluidImage}
                         description={excerpt}
                     />
                     <div className={`${blogPostGridClasses} -layered-box-shadow blog-post-content`}>
-                        <HeaderIcons 
-                            date={date} 
-                            lastUpdatedDate={lastUpdatedDate}
-                            wordCount={wordCount.words}
-                            category={category} 
-                            tags={tags} 
-                        />
-                        <HeaderTitle title={title} className="-left-align" isHeaderElement={false} />
-                        
+                        <header>
+                            <HeaderIcons
+                                date={date}
+                                lastUpdatedDate={lastUpdatedDate}
+                                wordCount={wordCount.words}
+                                category={category}
+                                tags={tags}
+                            />
+                            <HeaderTitle title={title} className="-left-align" isHeaderElement={false} />
+                        </header>
+
                         <Markdown html={html} />
-                        <AdjacentPostNavigation 
-                            previous={pageContext.previous ? pageContext.previous.frontmatter : null} 
-                            next={pageContext.next ? pageContext.next.frontmatter : null} 
+                        <AdjacentPostNavigation
+                            previous={pageContext.previous ? pageContext.previous.frontmatter : null}
+                            next={pageContext.next ? pageContext.next.frontmatter : null}
                         />
                     </div>
                     <div className="col-md-3">
