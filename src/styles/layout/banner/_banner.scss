@@ -1,6 +1,6 @@
 @import '../../helpers/variables/variables';
 
-#banner {
+.banner {
     height: calc(100vh - #{$navbar-height});
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-#banner-container {
+.banner-container {
     margin-top: -25vh;
     padding: 20px;
     background: black;
@@ -17,24 +17,24 @@
     opacity: .85;
 }
 
-#banner-header {
+.banner-header {
     font-weight: bold;
     font-size: 75rem;
     color: $white;
     text-shadow: 2px 2px black;
 }
 
-#banner-text, #banner-btn {
+.banner-text, .banner-btn {
     font-size: 22rem;
     color: $white;
 }
 
-#banner-text {
+.banner-text {
     margin: 15px auto;
     max-width: 700px;
 }
 
-#banner-btn {
+.banner-btn {
     text-decoration: none;
     font-size: 22rem;
     border: 1px solid $white;
@@ -68,16 +68,16 @@
 }
 
 @media (max-width: $xs-breakpoint - 1px) {
-    #banner-header {
+    .banner-header {
         font-size: 45rem;
     }
 
-    #banner-text, #banner-btn {
+    .banner-text, .banner-btn {
         font-size: $secondary-text-size;
     }
 }
 
-#banner-btn-container {
+.banner-btn-container {
     display: inline-block;
     padding: $default-spacing;
 }

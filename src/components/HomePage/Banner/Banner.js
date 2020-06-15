@@ -7,15 +7,15 @@ const Banner = () => {
     const [fadeHeader, fadeTextAndButton] = useBannerFade();
 
     return (
-        <header id="banner">
-            <div className="col-xl-12 col-md-12 col-sm-12 col-xs-12" id="banner-container">
-                <h1 id="banner-header" className={`banner-hide ${fadeHeader}`}>Rodney McQuain</h1>
-                <p id="banner-text" className={`banner-hide ${fadeTextAndButton}`}>
+        <header className="banner">
+            <div className="banner-container col-xl-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 className={`banner-header banner-hide ${fadeHeader}`}>Rodney McQuain</h1>
+                <p className={`banner-text banner-hide ${fadeTextAndButton}`}>
                     Hello, I am a computer science major looking for an opportunity
                     to test my skills and grow as a developer.
                 </p>
-                <div id="banner-btn-container" className={`minor-pulse banner-hide ${fadeTextAndButton}`}>
-                    <a id="banner-btn" className="-curved-border" href="#about-me">
+                <div className={`banner-btn-container minor-pulse banner-hide ${fadeTextAndButton}`}>
+                    <a className="banner-btn -curved-border" href="#about-me">
                         Learn About Me <span className="fa fa-chevron-down bounce" />
                     </a>
                 </div>
