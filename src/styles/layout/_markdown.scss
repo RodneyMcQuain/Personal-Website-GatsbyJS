@@ -1,9 +1,12 @@
 @import '../helpers/variables/variables';
+@import '../helpers/mixins/anchor-offset';
 
 .markdown-body {
     p, ol, ul, pre, h1, h2, h3, h4, h5, h6 {
         text-align: left;
     }
+
+    @include offset-markdown-anchor();
 
     ul {
         list-style-type: disc;

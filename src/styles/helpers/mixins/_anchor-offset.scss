@@ -1,0 +1,17 @@
+@mixin scroll-to-correct-anchor-position() {
+    &:before {
+        content: "";
+        display: block;
+        height: $anchor-top-offset;
+        margin-top: -$anchor-top-offset;
+        visibility: hidden;
+    }
+}
+
+@mixin offset-markdown-anchor() {
+    h1, h2, h3, h4, h5, h6 {
+        .anchor.before { // classes appended by gatsby-transformer-remark
+            top: $anchor-top-offset;
+        }
+    }
+}
