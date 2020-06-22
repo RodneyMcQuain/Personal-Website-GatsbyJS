@@ -26,6 +26,7 @@ module.exports = {
         `gatsby-plugin-catch-links`,
         `gatsby-plugin-typescript`,
         `gatsby-plugin-tslint`,
+        `gatsby-plugin-netlify`,
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
