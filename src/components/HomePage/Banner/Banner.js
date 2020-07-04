@@ -1,7 +1,14 @@
 import React, { useEffect } from 'react';
 import { useAddCssClass } from '../../../services/useAddCssClass';
 import ParametricCurves from './ParametricCurves';
+import CycleItems from './CycleItems';
 import '../../../styles/layout/banner/_banner.scss';
+
+const itemsToCycle = [
+    "Full-Stack Web Developer",
+    "Competitive Super Smash Bros. Melee Player",
+    "Computer Science Student",
+];
 
 const Banner = () => {
     const [fadeHeader, fadeTextAndButton] = useBannerFade();
@@ -11,8 +18,10 @@ const Banner = () => {
             <div className="banner-container col-xl-12 col-md-12 col-sm-12 col-xs-12">
                 <h1 className={`banner-header banner-hide ${fadeHeader}`}>Rodney McQuain</h1>
                 <p className={`banner-text banner-hide ${fadeTextAndButton}`}>
-                    Hello, I am a computer science major looking for an opportunity
-                    to test my skills and grow as a developer.
+                    Hello, I'm a <CycleItems items={itemsToCycle} />
+                    <div>
+                        Who's always looking for an opportunity to test my skills and grow
+                    </div>
                 </p>
                 <div className={`banner-btn-container minor-pulse banner-hide ${fadeTextAndButton}`}>
                     <a className="banner-btn -curved-border" href="#about-me">
@@ -22,7 +31,7 @@ const Banner = () => {
             </div>
             <ParametricCurves />
         </header>
-    )
+    );
 };
 
 const useBannerFade = () => {
@@ -31,11 +40,11 @@ const useBannerFade = () => {
 
     useEffect(() => {
         const headerTimer = setTimeout(() => shouldAddHeaderTransition(true), 250);
-        const textAndButtonTimer = setTimeout(() => shouldAddTextAndButtonTransition(true), 1500);
-  
+        const textAndButtonTimer = setTimeout(() => shouldAddTextAndButtonTransition(true), 0);
+
         return () => {
             clearTimeout(headerTimer);
-            clearTimeout(textAndButtonTimer);        
+            clearTimeout(textAndButtonTimer);
         }
     }, []);
 

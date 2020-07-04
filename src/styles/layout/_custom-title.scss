@@ -1,40 +1,5 @@
+@import '../helpers/mixins/custom-title';
+
 [data-title] {
-    position: relative;
-    
-    &:before, &:after {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        color: $white;
-        z-index: $custom-title-z-index;
-        top: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: visibility 0s 0.5s, opacity 0.5s 0s ease-in-out;
-    }
-
-    &:hover:before, &:hover:after {
-        opacity: 1;
-        visibility: visible;
-        transition: visibility 0s 0s, opacity 0.5s 0s ease-in-out;
-    }
-
-    &:before {
-        content: attr(data-title);
-        padding: 3px 6px;
-        border-radius: $minor-border-radius;
-        background: $black;
-        font-size: 12rem;
-        white-space: pre-wrap;
-        left: 0;
-        margin-top: 2.75em;
-    }
-
-    &:after {
-        content: '';
-        left: 8px;
-        margin-top: 1.25em;
-        border: 8px solid transparent;	
-        border-bottom: 8px solid $black;
-    }
+    @include custom-title(data-title);
 }

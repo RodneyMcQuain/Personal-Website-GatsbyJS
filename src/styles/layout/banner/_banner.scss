@@ -25,8 +25,10 @@
 }
 
 .banner-text, .banner-btn {
-    font-size: 22rem;
-    color: $white;
+    &, span, div {
+        font-size: 22rem;
+        color: $white;
+    }
 }
 
 .banner-text {
@@ -73,7 +75,9 @@
     }
 
     .banner-text, .banner-btn {
-        font-size: $secondary-text-size;
+        &, span, div {
+            font-size: $secondary-text-size;
+        }
     }
 }
 

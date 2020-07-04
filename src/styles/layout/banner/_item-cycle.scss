@@ -1,0 +1,48 @@
+@import '../../helpers/variables/variables';
+@import '../../helpers/mixins/custom-title';
+
+$caret-color: $white;
+
+.item-cycle-base {
+    &[data-cycle-title] {
+        @include custom-title(data-cycle-title);
+        
+        &:after {
+            display: none;
+        }
+        
+        &:before {
+            text-align: left;
+            width: 275px;
+        }
+
+        @media (max-width: $sm-breakpoint) {
+            &:before {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: $xs-breakpoint) {
+            &:before {
+                width: 150px;
+            }
+        }
+    }
+
+    span {
+        text-decoration: underline;
+
+        &:after {
+            content: '';
+            height: 100%;
+            width: 100%;
+            border-right: 0.15em solid $caret-color;
+            animation: blink-caret 0.75s step-end infinite;
+        }
+    }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: $caret-color; }
+}
