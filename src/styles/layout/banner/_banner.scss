@@ -59,10 +59,14 @@
 
     &:hover {
         background: $white;
-        color: $black;
         transform: $minor-scale;
+        text-decoration: none;
         transition: all .5s ease-in-out;
         
+        &, span:before {
+            color: $black;
+        }
+
         &:before {
             animation-play-state: paused;
         }
