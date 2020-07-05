@@ -12,7 +12,7 @@ const AdjacentPostNavigation = ({ previous, next }) => (
                         <div id="next-post" className="-small-text -gray-text">Next Post</div>
                         <div className="adjacent-navigation" aria-labelledby="next-post">
                             <div><Icon icon="fa fa-long-arrow-left" /></div> 
-                            &nbsp;<div>{next.title}</div>
+                            {'\u00A0'}<div>{next.title}</div>
                         </div>
                     </Link>
                 ) 
@@ -25,7 +25,7 @@ const AdjacentPostNavigation = ({ previous, next }) => (
                         <div id="previous-post" className="-small-text -gray-text">Previous Post</div>
                         <div className="adjacent-navigation" aria-labelledby="previous-post">
                             <div>{previous.title}</div> 
-                            &nbsp;<div><Icon icon="fa fa-long-arrow-right" /></div>
+                            {'\u00A0'}<div><Icon icon="fa fa-long-arrow-right" /></div>
                         </div>
                     </Link> 
                 )

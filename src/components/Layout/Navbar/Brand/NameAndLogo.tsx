@@ -34,7 +34,7 @@ const Letter = ({ letter, animationDelay, isHovered }: ILetterProps) => {
     }, [isHovered, animationDelay]);
 
     return letter === ' '
-        ? <span aria-hidden="true">&nbsp;</span>
+        ? <span aria-hidden="true">{'\u00A0'}</span>
         : <span className={isAnimated ? 'animate-letter' : ''} aria-hidden="true">{letter}</span>;
 };
 

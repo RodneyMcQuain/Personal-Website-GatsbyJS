@@ -8,7 +8,7 @@ interface IIconTextProps {
 
 const IconText = ({ icon, text }: IIconTextProps) => (
     <span>
-        <Icon icon={icon} />&nbsp;{text}
+        <Icon icon={icon} />{'\u00A0'}{text}
     </span>
 );
 

@@ -1,7 +1,8 @@
-@import '../helpers/variables/colors';
+@import '../helpers/variables/variables';
 
-#about-me-text {
+.about-me-text {
     text-align: left;
+    text-indent: 20rem;
 }
 
 #me-img {

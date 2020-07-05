@@ -10,7 +10,7 @@ const Job = ({ work: { title, company, city, state, startDate, endDate } }: IJob
         <div className="content -curved-border -layered-box-shadow">
             <h2>{title}</h2>
             <div className="-small-text company">
-                {company} |&nbsp;
+                {company} |{'\u00A0'}
                 <span className="-small-text -gray-text">{city}, {state}</span>
             </div>
             <div className="-small-text -gray-text">
