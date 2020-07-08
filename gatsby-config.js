@@ -21,12 +21,17 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-transformer-remark`,
         `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-sass`,
         `gatsby-transformer-json`,
         `gatsby-plugin-catch-links`,
         `gatsby-plugin-typescript`,
         `gatsby-plugin-tslint`,
         `gatsby-plugin-netlify`,
+        {
+            resolve: `gatsby-plugin-sass`,
+            postCssPlugins: [
+                require(`postcss-preset-env`)({ stage: 2 }),
+            ],
+        },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
