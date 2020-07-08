@@ -48,9 +48,8 @@
     }
 
     p, a, li, td {
-        $content-font-size: 18rem;
-        font-size: $content-font-size;
-        line-height: ceil($content-font-size * 1.4);
+        font-size: 18rem;
+        line-height: 1.45em;
     }
 
     h2 {
@@ -145,7 +144,7 @@
                 padding: $code-block-language-padding;
                 border-radius: 0 0 $minor-border-radius $minor-border-radius;
                 font-size: $code-block-language-text-font-size;
-                line-height: $code-block-language-text-font-size;
+                line-height: 1em;
             }
 
             @mixin language($language) {
