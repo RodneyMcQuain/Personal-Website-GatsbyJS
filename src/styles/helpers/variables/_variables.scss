@@ -32,7 +32,7 @@ $letter-animation-duration: 500ms;
 $minor-pulse-animation-duration: 2s;
 $minor-pulse-animation: minor-pulse $minor-pulse-animation-duration ease-in-out infinite;
 
-$anchor-top-offset: $navbar-height;
+$anchor-top-offset: $navbar-height + $default-spacing;
 
 :export {
     FEATURED_IMG_HEIGHT: $blog-featured-image-height;
