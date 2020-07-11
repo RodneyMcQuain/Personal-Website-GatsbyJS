@@ -13,17 +13,21 @@ $caret-color: $white;
         
         &:before {
             text-align: left;
+            width: 0;
+        }
+
+        &:hover:before {
             width: 275rem;
         }
 
         @media (max-width: $sm-breakpoint) {
-            &:before {
+            &:hover:before {
                 width: 200rem;
             }
         }
 
         @media (max-width: $xs-breakpoint) {
-            &:before {
+            &:hover:before {
                 width: 150rem;
             }
         }
