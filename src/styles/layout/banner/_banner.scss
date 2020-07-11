@@ -6,15 +6,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .banner-container {
-    margin-top: -25vh;
     padding: 20rem;
     background: black;
     z-index: 1;
     box-shadow: 0 0 15rem 10rem #020202;
     opacity: .85;
+
+    position: absolute;
+    $distance-from-top: 32.5%;
+    $distance-from-left: 50%;
+    top: $distance-from-top;
+    left: $distance-from-left;
+    transform: translate(-$distance-from-left, -$distance-from-top);
 }
 
 .banner-header {
