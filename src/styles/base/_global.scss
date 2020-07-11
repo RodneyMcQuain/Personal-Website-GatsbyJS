@@ -74,7 +74,7 @@ ul {
 .btn {
     background: $black;
     color: $white;
-    box-shadow: 2px 2px 5px #ccc;
+    box-shadow: 2rem 2rem 5rem #ccc;
     transition: all .5s ease-in-out;
 
     a, span {
@@ -83,7 +83,7 @@ ul {
     }
 
     &:hover {
-        border: 1px solid $black;
+        border: 1rem solid $black;
         background: $white;
         color: $black;
         -webkit-transform: translate3D(0, 0, 0);
@@ -116,11 +116,11 @@ a {
 }
 
 .-border, .-curved-border {
-    border: 1px solid $white;
+    border: 1rem solid $white;
 }
 
 .-curved-border {
-    border-radius: 10px;
+    border-radius: 10rem;
     overflow: hidden;
 }
 
@@ -129,12 +129,12 @@ a {
 }
 
 .-top-margin {
-    margin-top: 10px;
+    margin-top: 10rem;
 }
 
 .center-container {
     margin: 0 auto;
-    padding: 10px;
+    padding: 10rem;
 }
 
 .row {
@@ -162,15 +162,15 @@ a {
 .container-top-image {
     max-width: 100%;
     width: 100%;
-    border-bottom: 2px solid $darker-white;
+    border-bottom: 2rem solid $darker-white;
 }
 
 .padding-container {
-    padding: 10px;
+    padding: 10rem;
 }
 
 .padding-container-all div {
-    padding: 10px;
+    padding: 10rem;
 }
 
 .upscale-container {
@@ -183,7 +183,7 @@ a {
 }
 
 .margin-container {
-    margin: 10px 0;
+    margin: 10rem 0;
 }
 
 .row.display-flex {
@@ -206,7 +206,7 @@ a {
 
 .-small-text {
     font-size: $tertiary-text-size;
-    padding: 5px 0;
+    padding: 5rem 0;
 }
 
 .-gray-text {

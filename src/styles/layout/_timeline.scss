@@ -4,16 +4,16 @@
 @import "../helpers/functions";
 
 $timeline-color: $black;
-$content-timeline-spacing: 30px;
-$timeline-dot-size: 20px;
-$triangle-size: 10px;
+$content-timeline-spacing: 30rem;
+$timeline-dot-size: 20rem;
+$triangle-size: 10rem;
 $timeline-triangle-color: $triangle-size solid white;
-$triangle-shadow-offset: 3px;
-$dot-triangle-offset: 18px;
-$right-arrow-position: 19px;
-$left-arrow-position: 10px;
+$triangle-shadow-offset: 3rem;
+$dot-triangle-offset: 18rem;
+$right-arrow-position: 19rem;
+$left-arrow-position: 10rem;
 $triangle-box-shadow: get-layered-box-shadow(1);
-$work-card-spacing-between: 50px;
+$work-card-spacing-between: 50rem;
 
 .timeline {
     position: relative;
@@ -27,7 +27,7 @@ $work-card-spacing-between: 50px;
         transform: translateX(-50%);
 
         height: 100%;
-        width: 4px;
+        width: 4rem;
         background: linear-gradient(
             to bottom,
             rgba(0, 0, 0, 0) 0%,
@@ -51,7 +51,7 @@ $work-card-spacing-between: 50px;
             content: "";
             position: absolute;
             border-radius: 50%;
-            border: 3px solid $timeline-color;
+            border: 3rem solid $timeline-color;
             background-color: $white;
             height: $timeline-dot-size;
             width: $timeline-dot-size;
@@ -67,12 +67,12 @@ $work-card-spacing-between: 50px;
 
             .content {
                 &:before {
-                    right: 11px;
+                    right: 11rem;
                     border-left: $timeline-triangle-color;
                 }
 
                 &:after {
-                    right: $right-arrow-position + $triangle-shadow-offset + 3px;
+                    right: $right-arrow-position + $triangle-shadow-offset + 3rem;
                     transform: rotate(-135deg);
                 }
             }
@@ -92,14 +92,14 @@ $work-card-spacing-between: 50px;
                 }
 
                 &:after {
-                    right: calc(100% - #{$left-arrow-position} + 1px);
+                    right: calc(100% - #{$left-arrow-position} + 1rem);
                     transform: rotate(45deg);
                 }
             }
         }
 
         .content {
-            padding: 20px 10px;
+            padding: 20rem 10rem;
 
             h2,
             div {
@@ -168,12 +168,12 @@ $work-card-spacing-between: 50px;
                 padding: 0;
 
                 &:before {
-                    left: -38px;
+                    left: -38rem;
                 }
 
                 .content {
                     &:before {
-                        left: -20px;
+                        left: -20rem;
 
                         border: $triangle-size solid transparent;
                         border-right: $timeline-triangle-color;

@@ -1,7 +1,7 @@
 @import '../../../helpers/variables/breakpoints';
 
 .adjacent-navigation-container {
-    margin-top: 50px;
+    margin-top: 50rem;
     display: flex;
     justify-content: space-between;
 
@@ -32,7 +32,7 @@
     }
 
     a:first-child {
-        margin-right: 50px;
+        margin-right: 50rem;
     }
 }
 
@@ -45,7 +45,7 @@
         }
 
         a:last-child {
-            margin-top: 20px;
+            margin-top: 20rem;
         }
 
         .previous .adjacent-navigation {

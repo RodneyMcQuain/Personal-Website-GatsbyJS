@@ -2,7 +2,7 @@
 
 $glitch-red: #c36b93;
 $glitch-blue: #0ffbf9;
-$offset: 2px;
+$offset: 2rem;
 
 .glitch {
     position: relative;
@@ -48,7 +48,7 @@ $frames: 20;
 @keyframes glitch-blue {
     @for $i from 0 through $frames {
         #{percentage($i*(1/$frames))} {
-            clip: rect(random(150) + px, 9999px, random(150) + px, 30px);
+            clip: rect(random(150) + rem, 9999rem, random(150) + rem, 30rem);
             transform: skew((random(100) / 100) + deg);
         }
     }
@@ -57,7 +57,7 @@ $frames: 20;
 @keyframes glitch-red {
     @for $i from 0 through $frames {
         #{percentage($i*(1/$frames))} {
-            clip: rect(random(150) + px, 9999px, random(150) + px, 30px);
+            clip: rect(random(150) + rem, 9999rem, random(150) + rem, 30rem);
             transform: skew((random(100) / 100) + deg);
         }
     }

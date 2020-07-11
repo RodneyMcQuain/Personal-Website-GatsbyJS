@@ -1,7 +1,7 @@
 @import '../helpers/variables/variables';
 @import '../helpers/mixins/mixins';
 
-$navbar-item-border-bottom-height: 2px;
+$navbar-item-border-bottom-height: 2rem;
 $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
 
 .my-nav { //to avoid bootstrap naming conflicts
@@ -22,8 +22,8 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
 
         li a {
             display: block;
-            padding: $default-spacing 15px;
-            line-height: 20px;
+            padding: $default-spacing 15rem;
+            line-height: 20rem;
             position: relative;
 
             &, > span {
@@ -43,7 +43,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
                 left: 0;
                 right: 0;
                 top: 0;
-                bottom: -1px;
+                bottom: -1rem;
                 display: block;
                 z-index: -1;
 
@@ -100,7 +100,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
             }                
 
             a {
-                margin-bottom: 2px; //align brand border bottom with rest of navbar's border bottoms
+                margin-bottom: 2rem; //align brand border bottom with rest of navbar's border bottoms
             }
 
             &:hover .logo:before {
@@ -112,9 +112,9 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
                     display: inline-block;
                     content: ' ';
                     background: url($logo-location) no-repeat;
-                    width: 25px;
-                    height: 25px;
-                    background-size: 25px 25px;
+                    width: 25rem;
+                    height: 25rem;
+                    background-size: 25rem 25rem;
                     margin-right: $default-spacing;
                 }
 
@@ -152,8 +152,8 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
         box-shadow: none;
 
         float: right;
-        margin: 8px $navbar-right-alignment 8px 0;
-        border: #333 1px solid;
+        margin: 8rem $navbar-right-alignment 8rem 0;
+        border: #333 1rem solid;
         
         &:focus {
             outline: none;
@@ -172,7 +172,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
 
             margin: 0;
             
-            border-top: 1px solid $darker-white;
+            border-top: 1rem solid $darker-white;
             display: flex;
             flex-direction: column;
             background: $black;

@@ -3,8 +3,8 @@
     $current: 1;
     
     @for $i from 1 through 6 {
-        $x-offset-actual:  unquote('-' + ($current * $x-offset) + 'px');
-        $y-offset--blur-radius: unquote($current + 'px');
+        $x-offset-actual:  unquote('-' + ($current * $x-offset) + 'rem');
+        $y-offset--blur-radius: unquote($current + 'rem');
         $shadow: $x-offset-actual $y-offset--blur-radius $y-offset--blur-radius rgba(0,0,0,0.11);
         $box-shadows: $box-shadows + $shadow + ' ,';
 

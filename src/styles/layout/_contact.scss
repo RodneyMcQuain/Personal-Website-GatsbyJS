@@ -2,10 +2,10 @@
 @import '../helpers/mixins/mixins';
 
 .contact-container {
-    padding: 20px;
+    padding: 20rem;
 
     .input-lg {
-        margin-bottom: 15px;
+        margin-bottom: 15rem;
     }
     
     .form-control {
@@ -13,7 +13,7 @@
     }
 
     #message {
-        height: 200px;
+        height: 200rem;
     }
 
     #validation-text, #success-text {

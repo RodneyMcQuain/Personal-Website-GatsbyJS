@@ -8,13 +8,13 @@
 #me-img {
     float: right;
     background: $white;
-    padding: 3px;
-    margin-left: 10px;
+    padding: 3rem;
+    margin-left: 10rem;
 }
 
 @media (max-width: 325px) {
     #me-img {
         float: none;
-        margin-bottom: 10px;
+        margin-bottom: 10rem;
     }
 }

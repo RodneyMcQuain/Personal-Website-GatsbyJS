@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BlogMenu from './Menu';
 import NavButton from '../../Shared/NavButton';
 import CloseOnOutsideClick from '../../Shared/CloseOnOutsideClick';
-import { MAX_FOOTER_HEIGHT_PIXELS } from '../../../styles/helpers/variables/variables';
+import { MAX_FOOTER_HEIGHT_REM } from '../../../styles/helpers/variables/variables';
 import { useAddCssClass } from '../../../services/useAddCssClass';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
 import { getViewportHeight } from '../../../services/dimensions';
@@ -47,6 +47,6 @@ const setMenuButtonHeightOffset = shouldAddFooterInView => {
     const isFooterInViewport = document.documentElement.scrollTop >= getFooterInViewportStartingPixel();
     shouldAddFooterInView(isFooterInViewport);
 }
-const getFooterInViewportStartingPixel = () => document.body.offsetHeight - getViewportHeight() - MAX_FOOTER_HEIGHT_PIXELS;
+const getFooterInViewportStartingPixel = () => document.body.offsetHeight - getViewportHeight() - MAX_FOOTER_HEIGHT_REM;
 
 export default ResponsiveMenu;

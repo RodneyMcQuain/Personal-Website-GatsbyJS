@@ -13,18 +13,18 @@ $caret-color: $white;
         
         &:before {
             text-align: left;
-            width: 275px;
+            width: 275rem;
         }
 
         @media (max-width: $sm-breakpoint) {
             &:before {
-                width: 200px;
+                width: 200rem;
             }
         }
 
         @media (max-width: $xs-breakpoint) {
             &:before {
-                width: 150px;
+                width: 150rem;
             }
         }
     }

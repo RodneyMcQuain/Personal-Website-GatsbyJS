@@ -23,7 +23,7 @@
 
     &:before {
         content: attr($attribute-name);
-        padding: 3px 6px;
+        padding: 3rem 6rem;
         border-radius: $minor-border-radius;
         background: $black;
         font-size: 12rem;
@@ -34,9 +34,9 @@
 
     &:after {
         content: "";
-        left: 8px;
+        left: 8rem;
         margin-top: 1.25em;
-        border: 8px solid transparent;
-        border-bottom: 8px solid $black;
+        border: 8rem solid transparent;
+        border-bottom: 8rem solid $black;
     }
 }

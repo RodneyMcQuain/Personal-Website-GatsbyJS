@@ -10,10 +10,10 @@
 
 .banner-container {
     margin-top: -25vh;
-    padding: 20px;
+    padding: 20rem;
     background: black;
     z-index: 1;
-    box-shadow: 0 0 15px 10px #020202;
+    box-shadow: 0 0 15rem 10rem #020202;
     opacity: .85;
 }
 
@@ -21,7 +21,7 @@
     font-weight: bold;
     font-size: 75rem;
     color: $white;
-    text-shadow: 2px 2px black;
+    text-shadow: 2rem 2rem black;
 }
 
 .banner-text, .banner-btn {
@@ -32,14 +32,14 @@
 }
 
 .banner-text {
-    margin: 15px auto;
-    max-width: 700px;
+    margin: 15rem auto;
+    max-width: 700rem;
 }
 
 .banner-btn {
     text-decoration: none;
     font-size: 22rem;
-    border: 1px solid $white;
+    border: 1rem solid $white;
     padding: $default-spacing;
     background: none;
     transition: all .5s ease-in-out;
@@ -54,7 +54,7 @@
         right: 0;
         top: 0;
         bottom: 0;
-        border-radius: 10px;
+        border-radius: 10rem;
     }
 
     &:hover {

@@ -1,11 +1,11 @@
 @import '../../../helpers/variables/variables';
 @import '../../../helpers/mixins/mixins';
 
-$extra-blog-menu-space-to-remove: 40px;
+$extra-blog-menu-space-to-remove: 40rem;
 
 .blog-menu {
     z-index: $blog-menu-z-index;
-    margin: 20px 20px 0 20px;
+    margin: 20rem 20rem 0 20rem;
     position: fixed;
     width: auto;
     top: calc(#{$blog-featured-image-height} + #{$navbar-height});
@@ -17,8 +17,8 @@ $extra-blog-menu-space-to-remove: 40px;
     h1 {
         padding: 0;
         padding-bottom: $default-spacing;
-        margin-bottom: 15px;
-        border-bottom: 2px solid $darker-white;
+        margin-bottom: 15rem;
+        border-bottom: 2rem solid $darker-white;
         font-size: $medium-text-size;
         text-align: left;
     }
@@ -26,7 +26,7 @@ $extra-blog-menu-space-to-remove: 40px;
     ul {
         padding-inline-start: 0;
         margin: 0;
-        padding-left: 10px;
+        padding-left: 10rem;
     
         li {
             text-align: left;
@@ -43,9 +43,9 @@ $extra-blog-menu-space-to-remove: 40px;
                 text-overflow: ellipsis;
                 width: 100%;
                 text-align: left;
-                padding: 10px;
-                margin-top: -20px;
-                padding-left: 20px;
+                padding: 10rem;
+                margin-top: -20rem;
+                padding-left: 20rem;
             }
             
             span, a {
@@ -70,7 +70,7 @@ $extra-blog-menu-space-to-remove: 40px;
                 background: $white;
                 z-index: $blog-menu-highlight-z-index;
                 opacity: 1;
-                border-left: $darker-white 4px solid;
+                border-left: $darker-white 4rem solid;
             }
         }
     }
@@ -86,7 +86,7 @@ $extra-blog-menu-space-to-remove: 40px;
     position: fixed;
     right: $navbar-right-alignment;
     bottom: $navbar-right-alignment;
-    border: $lighter-black solid 2px;
+    border: $lighter-black solid 2rem;
     z-index: $blog-menu-btn-z-index;
 
     &.footer-in-view {
@@ -105,7 +105,7 @@ $extra-blog-menu-space-to-remove: 40px;
         max-width: 100%;
         z-index: $blog-menu-sm-z-index;
 
-        padding-top: 20px;
+        padding-top: 20rem;
         
         &.open {
             @include responsive-nav-menu-open();
@@ -116,7 +116,7 @@ $extra-blog-menu-space-to-remove: 40px;
         }
 
         h1 {
-            padding-top: 20px;
+            padding-top: 20rem;
         }
     }
 }
