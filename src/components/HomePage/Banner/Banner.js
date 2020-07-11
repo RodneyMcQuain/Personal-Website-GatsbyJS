@@ -40,7 +40,7 @@ const useBannerFade = () => {
 
     useEffect(() => {
         const headerTimer = setTimeout(() => shouldAddHeaderTransition(true), 250);
-        const textAndButtonTimer = setTimeout(() => shouldAddTextAndButtonTransition(true), 0);
+        const textAndButtonTimer = setTimeout(() => shouldAddTextAndButtonTransition(true), 1500);
 
         return () => {
             clearTimeout(headerTimer);
