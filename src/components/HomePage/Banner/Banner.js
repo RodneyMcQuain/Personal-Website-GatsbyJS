@@ -10,6 +10,9 @@ const itemsToCycle = [
     "Computer Science Student",
 ];
 
+const HEADER_DISPLAY_DELAY_MS = 250;
+const BUTTON_AND_TEXT_DISPLAY_DELAY_MS = HEADER_DISPLAY_DELAY_MS + 1250;
+
 const Banner = () => {
     const [fadeHeader, fadeTextAndButton] = useBannerFade();
 
@@ -18,7 +21,7 @@ const Banner = () => {
             <div className="banner-container col-xl-12 col-md-12 col-sm-12 col-xs-12">
                 <h1 className={`banner-header banner-hide ${fadeHeader}`}>Rodney McQuain</h1>
                 <p className={`banner-text banner-hide ${fadeTextAndButton}`}>
-                    Hello, I'm a <CycleItems items={itemsToCycle} />
+                    Hello, I'm a{'\u00A0'}<CycleItems items={itemsToCycle} initialDelay={BUTTON_AND_TEXT_DISPLAY_DELAY_MS} />
                     <div>
                         Who's always looking for an opportunity to test my skills and grow
                     </div>
@@ -39,8 +42,8 @@ const useBannerFade = () => {
     const [mightBeTextAndButtonTransition, shouldAddTextAndButtonTransition] = useAddCssClass("banner-appear");
 
     useEffect(() => {
-        const headerTimer = setTimeout(() => shouldAddHeaderTransition(true), 250);
-        const textAndButtonTimer = setTimeout(() => shouldAddTextAndButtonTransition(true), 1500);
+        const headerTimer = setTimeout(() => shouldAddHeaderTransition(true), HEADER_DISPLAY_DELAY_MS);
+        const textAndButtonTimer = setTimeout(() => shouldAddTextAndButtonTransition(true), BUTTON_AND_TEXT_DISPLAY_DELAY_MS);
 
         return () => {
             clearTimeout(headerTimer);
