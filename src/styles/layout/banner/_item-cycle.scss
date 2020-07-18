@@ -14,10 +14,16 @@ $caret-color: $white;
         &:before {
             text-align: left;
             width: 0;
+            transition: 
+                width 0s 0.5s, 
+                $custom-title-base-transition-in;
         }
 
         &:hover:before {
             width: 275rem;
+            transition: 
+                width 0s 0s, 
+                $custom-title-base-transition-out;
         }
 
         @media (max-width: $sm-breakpoint) {

@@ -1,0 +1,5 @@
+$visibility-custom-title-transition-in: visibility 0s 0.5s;
+$visibility-custom-title-transition-out: visibility 0s 0s;
+$opacity-custom-title-transition: opacity 0.5s 0s ease-in-out;
+$custom-title-base-transition-in: $visibility-custom-title-transition-in, $opacity-custom-title-transition;
+$custom-title-base-transition-out: $visibility-custom-title-transition-out, $opacity-custom-title-transition;

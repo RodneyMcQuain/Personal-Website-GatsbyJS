@@ -1,3 +1,5 @@
+@import '../variables/custom-title';
+
 @mixin custom-title($attribute-name) {
     position: relative;
 
@@ -10,24 +12,16 @@
         z-index: $custom-title-z-index;
         top: 0;
 
-        width: 0;
         visibility: hidden;
         opacity: 0;
-        transition: 
-            width 0s 0.5s, 
-            visibility 0s 0.5s, 
-            opacity 0.5s 0s ease-in-out;
+        transition: $custom-title-base-transition-in;
     }
 
     &:hover:before,
     &:hover:after {
-        width: 100%;
         visibility: visible;
         opacity: 1;
-        transition: 
-            width 0s 0s, 
-            visibility 0s 0s, 
-            opacity 0.5s 0s ease-in-out;
+        transition: $custom-title-base-transition-out;
     }
 
     &:before {
