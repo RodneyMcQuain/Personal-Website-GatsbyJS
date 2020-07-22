@@ -76,11 +76,17 @@ ul {
     background: $black;
     color: $white;
     box-shadow: 2rem 2rem 5rem #ccc;
-    transition: all .5s ease-in-out;
+    $btn-hover-transition: all .5s ease-in-out;
+    transition: $btn-hover-transition;
 
     a, span {
         font-size: $secondary-text-size;
         color: $white;
+    }
+
+    svg {
+        fill: $white;
+        transition: $btn-hover-transition;
     }
 
     &:hover {
@@ -92,6 +98,10 @@ ul {
 
         a, span {
             color: $black;
+        }
+
+        svg {
+            fill: $black;
         }
     }
 

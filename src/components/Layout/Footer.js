@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '../Shared/Icon';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import '../../styles/layout/_footer.scss';
 
 const Footer = () => (
@@ -8,10 +9,10 @@ const Footer = () => (
 
         <div className="footer-icons">
             <a className="btn footer-icon" href="https://github.com/RodneyMcQuain/" aria-label="Go to my GitHub" title="My GitHub">
-                <Icon icon="fa fa-github" />
+                <Icon icon={<FaGithub />} />
             </a>
             <a className="btn footer-icon" href="https://www.linkedin.com/in/rodneymcquain/" aria-label="Go to my LinkedIn" title="My LinkedIn">
-                <Icon icon="fa fa-linkedin" />
+                <Icon icon={<FaLinkedinIn />} />
             </a>
         </div>
     </footer>

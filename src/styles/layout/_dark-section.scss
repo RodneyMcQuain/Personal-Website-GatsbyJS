@@ -1,36 +1,38 @@
 .dark-section {
-  background: $black;
-  background-image: $dark-gradient;
-  padding-bottom: 30rem;
-  margin-top: 20rem;
-  color: $white;
+    background: $black;
+    background-image: $dark-gradient;
+    padding-bottom: 30rem;
+    margin-top: 20rem;
+    color: $white;
 
-  .-curved-border {
-    border: 1rem solid $lighter-black;
-    box-shadow: 4rem 4rem 10rem $darker-black;
-  }
-
-  .btn {
-    background: $white;
-    color: $black;
-    box-shadow: 2rem 2rem 5rem $darker-black;
-
-    a, span {
-      color: $black;
+    .-curved-border {
+        border: 1rem solid $lighter-black;
+        box-shadow: 4rem 4rem 10rem $darker-black;
     }
 
-    &:hover {
-      border: 1rem solid $white;
-      background: $black;
-      color: $white;
+    .btn {
+        background: $white;
+        color: $black;
+        box-shadow: 2rem 2rem 5rem $darker-black;
 
-      a, span {
-        color: $white;
-      }
+        a, span, svg {
+            color: $black;
+            fill: $black;
+        }
+
+        &:hover {
+            border: 1rem solid $white;
+            background: $black;
+            color: $white;
+
+            a, span, svg {
+                color: $white;
+                fill: $white;
+            }
+        }
     }
-  }
 
-  .container-top-image {
-    border-bottom: 2rem solid $lighter-black;
-  }
+    .container-top-image {
+        border-bottom: 2rem solid $lighter-black;
+    }
 }

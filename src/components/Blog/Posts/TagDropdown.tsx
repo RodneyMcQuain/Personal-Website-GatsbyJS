@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CloseOnOutsideClick from '../../Shared/CloseOnOutsideClick';
 import NavButton from '../../Shared/NavButton';
+import { FaCaretUp, FaCaretDown } from 'react-icons/fa';
 import '../../../styles/layout/blog/posts/_tag-dropdown.scss';
 
 interface ITagDropdownProps {
@@ -18,8 +19,8 @@ const TagDropdown = ({ tags, tagFilters, setTagFilters }: ITagDropdownProps) => 
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
                 text='Tags'
-                openIcon='fa-caret-up'
-                closedIcon='fa-caret-down'
+                openIcon={<FaCaretUp />}
+                closedIcon={<FaCaretDown />}
                 extraClasses='tag-dropdown-text'
                 ariaLabel='Tags'
             />

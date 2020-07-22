@@ -6,6 +6,7 @@ import { MAX_FOOTER_HEIGHT_REM } from '../../../styles/helpers/variables/variabl
 import { useAddCssClass } from '../../../services/useAddCssClass';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
 import { getViewportHeight } from '../../../services/dimensions';
+import { FaEllipsisH } from 'react-icons/fa';
 
 const ResponsiveMenu = ({ posts, currentPostName, tableOfContents }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,7 @@ const ResponsiveMenu = ({ posts, currentPostName, tableOfContents }) => {
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
                 extraClasses={`btn blog-menu-btn hidden-md hidden-lg -layered-box-shadow ${mightBeFooterInView}`}
-                closedIcon="fa-ellipsis-h"
+                closedIcon={<FaEllipsisH />}
                 ariaLabel="Blog Menu"
             />
         </CloseOnOutsideClick>

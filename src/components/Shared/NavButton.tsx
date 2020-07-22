@@ -1,41 +1,60 @@
 import React from 'react';
 import { SetIsOpen } from '../../types/SetIsOpen';
+import Icon from './Icon';
+import IconText from '../Shared/IconText';
+import { FaTimes } from 'react-icons/fa';
+import { IconType } from '../../types//IconType';
 import '../../styles/layout/_nav-button.scss';
 
 interface INavButtonProps {
     isOpen: boolean;
     setIsOpen: SetIsOpen;
-    openIcon?: string;
-    closedIcon: string;
-    text: string;
+    openIcon?: IconType;
+    closedIcon: IconType;
+    text?: string;
     extraClasses: string;
     ariaLabel: string;
 }
 
 const NavButton = ({
-    isOpen, 
-    setIsOpen, 
-    openIcon = "fa-times", 
+    isOpen,
+    setIsOpen,
+    openIcon = <FaTimes />,
     closedIcon,
-    text,
-    extraClasses, 
+    text = null,
+    extraClasses,
     ariaLabel
-}: INavButtonProps) => (
-    <button 
-        className={`nav-btn ${extraClasses}`} 
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label={`Show ${ariaLabel}`}
-        aria-expanded={isOpen}
-    >
-        {text}
-        <span 
-            className={`
-                fa ${isOpen ? openIcon : closedIcon}
-                ${isOpen ? 'clicked' : ''}
-            `}
-            aria-hidden='true'
-        />
-    </button>
-);
+}: INavButtonProps) => {
+    const icon = isOpen ? openIcon : closedIcon;
+    const className = isOpen ? 'clicked' : '';
+
+    return (
+        <button
+            className={`nav-btn ${extraClasses}`}
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={`Show ${ariaLabel}`}
+            aria-expanded={isOpen}
+        >
+            {
+                text
+                    ? (
+                        <IconText
+                            icon={icon}
+                            text={text}
+                            className={className}
+                            iconPosition='after'
+                        />
+                    )
+                    : (
+                        <Icon
+                            icon={icon}
+                            className={className}
+                        />
+                    )
+            }
+        </button>
+    );
+}
+
 
 export default NavButton;

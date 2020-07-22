@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Icon from '../../Shared/Icon';
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
 import '../../../styles/layout/blog/post/_adjacent-navigation.scss';
 
 const AdjacentPostNavigation = ({ previous, next }) => (
@@ -11,7 +12,7 @@ const AdjacentPostNavigation = ({ previous, next }) => (
                     <Link className="next" to={next.path}>
                         <div id="next-post" className="-small-text -gray-text">Next Post</div>
                         <div className="adjacent-navigation" aria-labelledby="next-post">
-                            <div><Icon icon="fa fa-long-arrow-left" /></div> 
+                        <div><Icon icon={<FaLongArrowAltLeft />} /></div> 
                             {'\u00A0'}<div>{next.title}</div>
                         </div>
                     </Link>
@@ -25,7 +26,7 @@ const AdjacentPostNavigation = ({ previous, next }) => (
                         <div id="previous-post" className="-small-text -gray-text">Previous Post</div>
                         <div className="adjacent-navigation" aria-labelledby="previous-post">
                             <div>{previous.title}</div> 
-                            {'\u00A0'}<div><Icon icon="fa fa-long-arrow-right" /></div>
+                            {'\u00A0'}<div><Icon icon={<FaLongArrowAltRight />} /></div>
                         </div>
                     </Link> 
                 )

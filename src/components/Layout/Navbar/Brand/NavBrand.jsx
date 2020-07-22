@@ -3,6 +3,7 @@ import BrandContents from './NavBrandContents';
 import NavButton from '../../../Shared/NavButton';
 import CloseOnOutsideClick from '../../../Shared/CloseOnOutsideClick';
 import NameAndLogoLink from './NameAndLogoLink';
+import { FaCaretUp, FaCaretDown } from 'react-icons/fa';
 
 const NavBrand = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +16,8 @@ const NavBrand = () => {
                 <NavButton 
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
-                    openIcon="fa-caret-up"
-                    closedIcon="fa-caret-down"
+                    openIcon={<FaCaretUp />}
+                    closedIcon={<FaCaretDown />}
                     extraClasses="brand-dropdown-btn"
                     ariaLabel="Dropdown for Links of Home Page"
                 />

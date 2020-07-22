@@ -1,9 +1,14 @@
 import React from 'react';
+import { IconType } from '../../types/IconType';
+import '../../styles/layout/_icon.scss';
 
 interface IIconProps {
-    icon: string;
+    icon: IconType;
+    className?: string;
 }
 
-const Icon = ({ icon }: IIconProps) => <span className={icon} aria-hidden='true' />;
+const Icon = ({ icon, className = '' }: IIconProps) => (
+    <span aria-hidden='true' className={`icon ${className}`}>{icon}</span>
+); 
 
 export default Icon;

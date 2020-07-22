@@ -1,12 +1,13 @@
-import React from "react";
-import Icon from '../../Shared/Icon';
-import AriaText from "../../Shared/AriaText";
+import React from 'react';
+import AriaText from '../../Shared/AriaText';
+import IconText from '../../Shared/IconText';
+import { FaUserEdit } from 'react-icons/fa';
 
 const UpdatedOnDate = ({ date }) => (
     date 
         ? (
             <AriaText altText={`Updated on: ${date}`} className="-small-text">
-                <Icon icon="fa fa-edit" /> {date}
+                <IconText icon={<FaUserEdit />} text={date} />
             </AriaText>
         )
         : null

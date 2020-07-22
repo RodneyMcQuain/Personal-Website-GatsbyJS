@@ -6,7 +6,8 @@ import Tags from '../Icons/Tags';
 import Category from '../Icons/Category';
 import { ALL_FILTER } from '../ALL_FILTER';
 import { IBlogPost } from '../BlogTypes';
-import Icon from '../../Shared/Icon';
+import IconText from '../../Shared/IconText';
+import { FaBook } from 'react-icons/fa';
 import '../../../styles/layout/blog/posts/_card.scss';
 
 interface IBlogCardProps {
@@ -34,7 +35,7 @@ const Card = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
                         <h2>{title}</h2>
                         <p>{node.excerpt}</p>
                         <Link className="btn" to={path} aria-label={`Read more about ${title}`}>
-                            <Icon icon="fa fa-book" /> Read More
+                            <IconText icon={<FaBook />} text="Read More" />
                         </Link>
                     </div>
                 </div>

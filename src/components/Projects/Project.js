@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from "gatsby-image";
 import Icon from '../Shared/Icon';
+import { FaGithub } from 'react-icons/fa';
 import '../../styles/layout/_project.scss';
 
 const Project = ({ project }) => (
@@ -14,7 +15,7 @@ const Project = ({ project }) => (
                 <h2 className="-top-margin">{project.title}</h2>
                 <p>{project.description}</p>
                 <a className="btn" href={project.gitHubUrl} aria-label={`Go to GitHub for my ${project.title} project`}>
-                    <Icon icon="fa fa-github" /> GitHub
+                    <Icon icon={<FaGithub />} /> GitHub
                 </a>
             </div>
         </div>

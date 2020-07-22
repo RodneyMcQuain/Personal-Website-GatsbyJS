@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useAddCssClass } from '../../../services/useAddCssClass';
 import ParametricCurves from './ParametricCurves';
 import CycleItems from './CycleItems';
+import IconText from '../../Shared/IconText';
+import { FaChevronDown } from 'react-icons/fa';
 import '../../../styles/layout/banner/_banner.scss';
 
 const itemsToCycle = [
@@ -28,7 +30,12 @@ const Banner = () => {
                 </p>
                 <div className={`banner-btn-container minor-pulse banner-hide ${fadeTextAndButton}`}>
                     <a className="banner-btn -curved-border" href="#about-me">
-                        Learn About Me <span className="fa fa-chevron-down bounce" />
+                        <IconText 
+                            text="Learn About Me" 
+                            icon={<FaChevronDown />} 
+                            className="banner-btn-icon bounce" 
+                            iconPosition="after" 
+                        />
                     </a>
                 </div>
             </div>

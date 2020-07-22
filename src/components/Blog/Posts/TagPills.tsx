@@ -1,5 +1,6 @@
 import React from 'react';
-import Icon from '../../Shared/Icon';
+import IconText from '../../Shared/IconText';
+import { FaTimesCircle } from 'react-icons/fa';
 import '../../../styles/layout/blog/posts/_pills.scss';
 
 interface IPillsProps {
@@ -12,7 +13,7 @@ const TagPills = ({ tagFilters, setTagFilters }: IPillsProps) => (
         {tagFilters.map(thisTag => (            
             <li onClick={() => setTagFilters(tagFilters.filter(tagFilter => thisTag !== tagFilter))}>
                 <span className="btn" aria-label={`Remove ${thisTag} tag filter`}>
-                    {thisTag} <Icon icon="fa fa-times-circle" />
+                    <IconText text={thisTag} icon={<FaTimesCircle />} iconPosition="after" />
                 </span>
             </li>
         ))}
