@@ -33,6 +33,7 @@
         white-space: pre-wrap;
         left: 0;
         margin-top: 2.75em;
+        box-shadow: get-layered-box-shadow(0);
     }
 
     &:after {
