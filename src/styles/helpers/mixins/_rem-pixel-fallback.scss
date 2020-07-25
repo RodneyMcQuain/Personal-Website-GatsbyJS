@@ -1,0 +1,28 @@
+$root-font-size: 1;
+
+@mixin rem($property, $values) {
+    $pxValues: null;
+    $remValues: null;
+
+    @each $value in $values {
+        $pxValue: null;
+        $remValue: null;
+
+        @if type-of($value) == "number" and ($value > 0 or $value < 0) {
+            $pxValue: ($value) + px;
+            $remValue: ($value / $root-font-size) + rem;
+        } @else {
+            $pxValue: $value;
+            $remValue: $value;
+        }
+
+        $pxValues: append($pxValues, $pxValue);
+        $remValues: append($remValues, $remValue);
+    }
+
+    // $pxValues: ($values + px) !default;
+    // $remValues: ($values / $root-font-size) + rem !default;
+
+    #{$property}: $pxValues;
+    #{$property}: $remValues;
+}

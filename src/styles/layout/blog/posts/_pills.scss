@@ -1,26 +1,27 @@
 @import '../../../helpers/variables/variables';
+@import '../../../helpers/mixins/rem-pixel-fallback';
 
 .pills {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     width: 100%;
-    margin-top: 5rem;
+    @include rem(margin-top, 5);
 
     li {
-        margin-top: 5rem;
+        @include rem(margin-top, 5);
         cursor: pointer;
 
         > span {
-            padding: $default-spacing 15rem;
-            border-radius: 20rem;
-            font-size: $secondary-text-size - 2rem;
-            margin-right: 5rem;
+            @include rem(padding, $default-spacing 15);
+            @include rem(border-radius, 20);
+            @include rem(font-size, $secondary-text-size - 2);
+            @include rem(margin-right, 5);
 
             .icon svg {
-                height: 18rem;
-                width: 18rem;
+                @include rem(height, 18);
+                @include rem(width, 18);
             }
         }
     }
-};
+}

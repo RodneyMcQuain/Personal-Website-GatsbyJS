@@ -11,20 +11,20 @@ $minor-scale-transition: transform .2s ease-in-out;
 
 $dark-gradient: linear-gradient(to bottom right, $darker-black, #333, $darker-black);
 
-$minor-border-radius: 5rem;
+$minor-border-radius: 5;
 
-$navbar-height: 50rem;
-$footer-height: 56rem;
-$footer-xs-height: 64rem;
+$navbar-height: 50;
+$footer-height: 56;
+$footer-xs-height: 64;
 $footer-xs-breakpoint: 385px;
 
-$spacing-between-elements: 2rem;
+$spacing-between-elements: 2;
 $blog-featured-image-height: 40vh;
 
-$default-spacing: 10rem;
-$end-margin-spacing: 15rem;
+$default-spacing: 10;
+$end-margin-spacing: 15;
 
-$navbar-right-alignment: 15rem;
+$navbar-right-alignment: 15;
 
 $body-bottom-padding: $footer-height * 2;
 

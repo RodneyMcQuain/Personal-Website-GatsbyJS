@@ -11,9 +11,10 @@ html {
 
 body {
     position: relative;
-    min-height: calc(100vh - #{$navbar-height});
-    padding-bottom: $body-bottom-padding;
-    margin-top: $navbar-height;
+    // min-height: calc(100vh - #{$navbar-height});
+    @include rem(min-height, calc(100vh - #{$navbar-height}));
+    @include rem(padding-bottom, $body-bottom-padding);
+    @include rem(margin-top, $navbar-height);
     font-size: 16em;
 }
 
@@ -38,7 +39,7 @@ main {
 }
 
 h1 {
-    font-size: 50rem;
+    @include rem(font-size, 50);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,12 +54,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-size: 26rem;
+    @include rem(font-size, 26);
     font-weight: bold;
 }
 
 p, span, div, a, li, button {
-    font-size: $medium-text-size;
+    @include rem(font-size, $medium-text-size);
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
@@ -75,12 +76,12 @@ ul {
 .btn {
     background: $black;
     color: $white;
-    box-shadow: 2rem 2rem 5rem #ccc;
+    @include rem(box-shadow, 2 2 5 #ccc);
     $btn-hover-transition: all .5s ease-in-out;
     transition: $btn-hover-transition;
 
     a, span {
-        font-size: $secondary-text-size;
+        @include rem(font-size, $secondary-text-size);
         color: $white;
     }
 
@@ -90,7 +91,7 @@ ul {
     }
 
     &:hover {
-        border: 1rem solid $black;
+        @include rem(border, 1 solid $black);
         background: $white;
         color: $black;
         -webkit-transform: translate3D(0, 0, 0);
@@ -127,11 +128,11 @@ a {
 }
 
 .-border, .-curved-border {
-    border: 1rem solid $white;
+    @include rem(border, 1 solid $white);
 }
 
 .-curved-border {
-    border-radius: 10rem;
+    @include rem(border-radius, 10);
     overflow: hidden;
 }
 
@@ -140,12 +141,12 @@ a {
 }
 
 .-top-margin {
-    margin-top: 10rem;
+    @include rem(margin-top, 10);
 }
 
 .center-container {
     margin: 0 auto;
-    padding: 10rem;
+    @include rem(padding, 10);
 }
 
 .row {
@@ -173,15 +174,15 @@ a {
 .container-top-image {
     max-width: 100%;
     width: 100%;
-    border-bottom: 2rem solid $darker-white;
+    @include rem(border-bottom, 2rem solid $darker-white);
 }
 
 .padding-container {
-    padding: 10rem;
+    @include rem(padding, 10);
 }
 
 .padding-container-all div {
-    padding: 10rem;
+    @include rem(padding, 10);
 }
 
 .upscale-container {
@@ -194,7 +195,7 @@ a {
 }
 
 .margin-container {
-    margin: 10rem 0;
+    @include rem(margin, 10 0);
 }
 
 .row.display-flex {
@@ -216,8 +217,8 @@ a {
 }
 
 .-small-text {
-    font-size: $tertiary-text-size;
-    padding: 5rem 0;
+    @include rem(font-size, $tertiary-text-size);
+    @include rem(padding, 5 0);
 }
 
 .-gray-text {

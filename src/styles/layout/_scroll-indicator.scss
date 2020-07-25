@@ -1,7 +1,8 @@
 @import '../helpers/variables/colors';
+@import '../helpers/mixins/rem-pixel-fallback';
 
 #scroll-indicator {
-    height: 3rem;
+    @include rem(height, 3);
     background: $white;
     width: 0%;
 }

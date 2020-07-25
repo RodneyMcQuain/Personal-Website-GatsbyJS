@@ -1,29 +1,30 @@
 @import '../../../helpers/variables/variables';
+@import '../../../helpers/mixins/rem-pixel-fallback';
 
 .blog-header-icons div {
     text-align: left;
     
     &:last-child {
-        margin-bottom: -20rem;
+        @include rem(margin-bottom, -20);
     }
 }
 
 .blog-post-title {
-    font-size: 36rem;
+    @include rem(font-size, 36);
     font-weight: bold;
 }
 
 .blog-featured-image {
-    height: $blog-featured-image-height;
+    @include rem(height, $blog-featured-image-height);
     z-index: $blog-featured-image-z-index;
 }
 
 .blog-post-content {
-    margin-top: -30rem;
-    padding: 25rem;
+    @include rem(margin-top, -30);
+    @include rem(padding, 25);
     
     background: white;
-    border-radius: $minor-border-radius;
+    @include rem(border-radius, $minor-border-radius);
     z-index: $blog-post-content-z-index;
 }
 
@@ -35,6 +36,6 @@
     }
     
     .blog-header-icons {
-        margin-top: 20rem;
+        @include rem(margin-top, 20);
     }
 }

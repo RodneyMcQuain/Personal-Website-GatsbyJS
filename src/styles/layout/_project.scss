@@ -1,10 +1,11 @@
 @import '../helpers/variables/variables';
+@import '../helpers/mixins/rem-pixel-fallback';
 
 .project-container {
     max-height: 100%;
 
     p, span, a {
-        font-size: $secondary-text-size;
+        @include rem(font-size, $secondary-text-size);
     }
 }
 
@@ -13,11 +14,11 @@
     padding: 0;
 
     li {
-        margin: $spacing-between-elements;
+        @include rem(margin, $spacing-between-elements);
         display: inline-block;
-        padding: 4rem;
-        border-radius: $minor-border-radius;
-        border: 1rem solid $darker-white;
-        font-size: 12rem;
+        @include rem(padding, 4);
+        @include rem(border-radius, $minor-border-radius);
+        @include rem(border, 1 solid $darker-white);
+        @include rem(font-size, 12);
     }
 }

@@ -1,7 +1,8 @@
 @import '../../../helpers/variables/breakpoints';
+@import '../../../helpers/mixins/rem-pixel-fallback';
 
 .adjacent-navigation-container {
-    margin-top: 50rem;
+    @include rem(margin-top, 50);
     display: flex;
     justify-content: space-between;
 
@@ -32,7 +33,7 @@
     }
 
     a:first-child {
-        margin-right: 50rem;
+        @include rem(margin-right, 50);
     }
 }
 
@@ -45,7 +46,7 @@
         }
 
         a:last-child {
-            margin-top: 20rem;
+            @include rem(margin-top, 20);
         }
 
         .previous .adjacent-navigation {

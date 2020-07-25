@@ -1,5 +1,6 @@
 @import '../helpers/variables/variables';
 @import '../helpers/mixins/anchor-offset';
+@import '../helpers/mixins/rem-pixel-fallback';
 
 .markdown-body {
     p, ol, ul, pre, h1, h2, h3, h4, h5, h6 {
@@ -25,43 +26,43 @@
     }
 
     ul, ol {
-        padding-left: 40rem;
+        @include rem(padding-left, 40);
     }
     
     h1, h2 {
-        border-bottom: 1rem solid #eee;
-        padding-bottom: 10rem;
+        @include rem(border-bottom, 1 solid #eee);
+        @include rem(padding-bottom, 10);
     }
 
     $content-spacing: $default-spacing;
     h1, h2, h3, h4, h5, h6 {
-        margin: 70rem 0 $content-spacing 0;
+        @include rem(margin, 70 0 $content-spacing 0);
         font-weight: bold;
     }
 
     p, ol, ul, table, .gatsby-highlight {
-        margin-bottom: $content-spacing;
+        @include rem(margin-bottom, $content-spacing);
     }
 
     pre, code span {
-        font-size: $secondary-text-size;
+        @include rem(font-size, $secondary-text-size);
     }
 
     p, a, li, td {
-        font-size: 18rem;
+        @include rem(font-size, 18);
         line-height: 1.45em;
     }
 
     h2 {
-        font-size: 32rem;
+        @include rem(font-size, 32);
     }
 
     h3 {
-        font-size: 28rem;
+        @include rem(font-size, 28);
     }
 
     h4 {
-        font-size: 24rem;
+        @include rem(font-size, 24);
     }
   
     img {
@@ -80,7 +81,7 @@
   
         tr {
             background-color: #fff;
-            border-top: 1rem solid #c6cbd1;
+            @include rem(border-top, 1 solid #c6cbd1);
         }
   
         tr:nth-child(2n) {
@@ -88,8 +89,8 @@
         }
   
         td, th {
-            border: 1rem solid #dfe2e5;
-            padding: 6rem 13rem;
+            @include rem(border, 1 solid #dfe2e5);
+            @include rem(padding, 6 13);
         }
     }
 
@@ -105,12 +106,12 @@
             );
             background-position: 0 100%;
             background-repeat: repeat-x;
-            background-size: 4rem 2rem;
+            @include rem(background-size, 4 2);
             transition: color 0.5s ease-in-out, background-size 0.5s ease-in-out;
 
             &:hover {
                 color: $white;
-                background-size: 4rem 50rem;
+                @include rem(background-size, 4 50);
             }
         }
     }
@@ -118,21 +119,21 @@
     .language-text {
         background-image: $dark-gradient;
         color: $white;
-        border-radius: $minor-border-radius;
-        padding: 2.5rem 5rem;
+        @include rem(border-radius, $minor-border-radius);
+        @include rem(padding, 2.5 5);
     }
     
     .gatsby-highlight {
         position: relative;
         
         pre {
-            $code-block-language-padding: 5rem;
-            $code-block-language-text-font-size: 16rem;
+            $code-block-language-padding: 5;
+            $code-block-language-text-font-size: 16;
 
             &[class*="language-"] {
-                $code-block-vertical-padding: $code-block-language-text-font-size + ($code-block-language-padding * 2) + 5rem;
-                padding-top: $code-block-vertical-padding;
-                padding-bottom: $code-block-vertical-padding;
+                $code-block-vertical-padding: $code-block-language-text-font-size + ($code-block-language-padding * 2) + 5;
+                @include rem(padding-top, $code-block-vertical-padding);
+                @include rem(padding-bottom, $code-block-vertical-padding);
             }
 
             &[class*="language-"]::before {
@@ -140,10 +141,10 @@
                 color: black;
                 position: absolute;
                 top: 0;
-                right: 20rem;
-                padding: $code-block-language-padding;
-                border-radius: 0 0 $minor-border-radius $minor-border-radius;
-                font-size: $code-block-language-text-font-size;
+                @include rem(right, 20);
+                @include rem(padding, $code-block-language-padding);
+                @include rem(border-radius, 0 0 $minor-border-radius $minor-border-radius);
+                @include rem(font-size, $code-block-language-text-font-size);
                 line-height: 1em;
             }
 

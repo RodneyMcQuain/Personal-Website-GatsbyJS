@@ -2,18 +2,18 @@
 @import '../helpers/mixins/mixins';
 
 .contact-container {
-    padding: 20rem;
+    @include rem(padding, 20);
 
     .input-lg {
-        margin-bottom: 15rem;
+        @include rem(margin-bottom, 15);
     }
     
     .form-control {
-        font-size: $secondary-text-size;
+        @include rem(font-size, $secondary-text-size);
     }
 
     #message {
-        height: 200rem;
+        @include rem(height, 200);
     }
 
     #validation-text, #success-text {
@@ -27,7 +27,7 @@
     }
     
     #validation-text {
-        font-size: 12rem;
+        @include rem(font-size, 12);
         color: red;
     }
 
@@ -35,7 +35,7 @@
         color: green;
 
         * {
-            font-size: $secondary-text-size;
+            @include rem(font-size, $secondary-text-size);
         }
     }
 

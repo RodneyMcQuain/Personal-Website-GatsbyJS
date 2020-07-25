@@ -1,4 +1,5 @@
 @import '../mixins/anchor-offset';
+@import '../mixins/rem-pixel-fallback';
 
 @mixin transform($property) {
     -webkit-transform: $property;
@@ -57,7 +58,7 @@
 }
 
 @mixin label-text() {
-    font-size: $secondary-text-size;
-    margin-bottom: 4rem;
+    @include rem(font-size, $secondary-text-size);
+    @include rem(margin-bottom, 4);
     font-weight: bold;
 }

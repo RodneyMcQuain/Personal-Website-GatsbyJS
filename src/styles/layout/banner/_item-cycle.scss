@@ -1,5 +1,6 @@
 @import '../../helpers/variables/variables';
 @import '../../helpers/mixins/custom-title';
+@import '../../helpers/mixins/rem-pixel-fallback';
 
 $caret-color: $white;
 
@@ -20,7 +21,7 @@ $caret-color: $white;
         }
 
         &:hover:before {
-            width: 275rem;
+            @include rem(width, 275);
             transition: 
                 width 0s 0s, 
                 $custom-title-base-transition-out;
@@ -28,13 +29,13 @@ $caret-color: $white;
 
         @media (max-width: $sm-breakpoint) {
             &:hover:before {
-                width: 200rem;
+                @include rem(width, 200);
             }
         }
 
         @media (max-width: $xs-breakpoint) {
             &:hover:before {
-                width: 150rem;
+                @include rem(width, 150);
             }
         }
     }

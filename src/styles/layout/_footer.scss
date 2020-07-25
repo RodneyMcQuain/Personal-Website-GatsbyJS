@@ -1,11 +1,12 @@
 @import '../helpers/variables/variables';
+@import '../helpers/mixins/rem-pixel-fallback';
 
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     background: $black !important;
-    padding: $default-spacing $end-margin-spacing !important;
+    @include rem(padding, $default-spacing $end-margin-spacing !important);
     z-index: $footer-z-index;
 
     &, .footer-icons {
@@ -16,18 +17,18 @@ footer {
     .footer-copyright {
         margin: 0;
         color: $white;
-        font-size: $secondary-text-size;
-        margin-right: $default-spacing;
+        @include rem(font-size, $secondary-text-size);
+        @include rem(margin-right, $default-spacing);
     }
 
     .footer-icons {
         margin-left: auto;
     
         > .footer-icon {
-            margin: $spacing-between-elements;
+            @include rem(margin, $spacing-between-elements);
             margin-bottom: 0;
             border-radius: 50%;
-            font-size: 14rem;
+            @include rem(font-size, 14);
         }
     }
 }

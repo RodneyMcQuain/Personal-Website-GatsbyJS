@@ -1,20 +1,20 @@
 @import '../helpers/variables/variables';
 @import '../helpers/mixins/mixins';
 
-$navbar-item-border-bottom-height: 2rem;
+$navbar-item-border-bottom-height: 2;
 $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
 
 .my-nav { //to avoid bootstrap naming conflicts
     position: fixed;
     background-color: $black;
-    min-height: $navbar-height;
+    @include rem(min-height, $navbar-height);
     top: 0;
     width: 100vw;
     z-index: $navbar-z-index;
     
     .nav-contents {
         list-style-type: none;
-        padding: 0 $end-margin-spacing;
+        @include rem(padding, 0 $end-margin-spacing);
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -22,12 +22,12 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
 
         li a {
             display: block;
-            padding: $default-spacing 15rem;
-            line-height: 20rem;
+            @include rem(padding, $default-spacing 15);
+            @include rem(line-height, 20);
             position: relative;
 
             &, > span {
-                font-size: $secondary-text-size;
+                @include rem(font-size, $secondary-text-size);
                 font-family: 'Roboto', sans-serif;
                 color: $white;
                 text-decoration: none;
@@ -43,11 +43,11 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
                 left: 0;
                 right: 0;
                 top: 0;
-                bottom: -1rem;
+                @include rem(bottom, -1);
                 display: block;
                 z-index: -1;
 
-                border-bottom: $navbar-item-border-bottom-height $darker-white solid;
+                @include rem(border-bottom, $navbar-item-border-bottom-height $darker-white solid);
                 transform: scaleX(0);
                 transition: transform 0.5s ease-in-out;
             }
@@ -70,7 +70,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
             display: flex;
 
             span, a { 
-                font-size: $medium-text-size;
+                @include rem(font-size, $medium-text-size);
                 font-weight: bold;
                 display: flex;
                 align-items: center;
@@ -80,18 +80,18 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
                 position: absolute;
                 z-index: $navbar-sub-menu-z-index;
                 background: $black;
-                top: $navbar-height;
-                border-radius: 0 0 $minor-border-radius $minor-border-radius;
+                @include rem(top, $navbar-height);
+                @include rem(border-radius, 0 0 $minor-border-radius $minor-border-radius);
                 @include height-transition-initial();
 
                 span, a {
-                    font-size: $secondary-text-size;
+                    @include rem(font-size, $secondary-text-size);
                     font-weight: normal;
                 }
 
                 li a:after {
-                    left: $default-spacing;
-                    right: $default-spacing;
+                    @include rem(left, $default-spacing);
+                    @include rem(right, $default-spacing);
                 }
 
                 &.open-dropdown {
@@ -100,7 +100,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
             }                
 
             a {
-                margin-bottom: 2rem; //align brand border bottom with rest of navbar's border bottoms
+                @include rem(margin-bottom, 2); // align brand border bottom with rest of navbar's border bottoms
             }
 
             &:hover .logo:before {
@@ -112,10 +112,10 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
                     display: inline-block;
                     content: ' ';
                     background: url($logo-location) no-repeat;
-                    width: 25rem;
-                    height: 25rem;
-                    background-size: 25rem 25rem;
-                    margin-right: $default-spacing;
+                    @include rem(width, 25);
+                    @include rem(height, 25);
+                    @include rem(background-size, 25 25);
+                    @include rem(margin-right, $default-spacing);
                 }
 
                 .animate-letter {
@@ -152,8 +152,8 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
         box-shadow: none;
 
         float: right;
-        margin: 8rem $navbar-right-alignment 8rem 0;
-        border: #333 1rem solid;
+        @include rem(margin, 8 $navbar-right-alignment 8 0);
+        @include rem(border, #333 1 solid);
         
         &:focus {
             outline: none;
@@ -161,7 +161,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
     }
 
     .active {
-        border-bottom: $navbar-item-border-bottom-height solid $white;
+        @include rem(border-bottom, $navbar-item-border-bottom-height solid $white);
     }
 }
 
@@ -172,7 +172,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
 
             margin: 0;
             
-            border-top: 1rem solid $darker-white;
+            @include rem(border-top, 1 solid $darker-white);
             display: flex;
             flex-direction: column;
             background: $black;
@@ -201,7 +201,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
                 }
 
                 li a:after {
-                    border-bottom: $navbar-item-border-bottom-height $lighter-black solid;
+                    @include rem(border-bottom, $navbar-item-border-bottom-height $lighter-black solid);
                 }
             }
         }

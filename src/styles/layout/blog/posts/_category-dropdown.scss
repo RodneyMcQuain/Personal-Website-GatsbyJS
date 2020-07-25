@@ -6,7 +6,7 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: $default-spacing;
+    @include rem(margin-bottom, $default-spacing);
 
     &:before {
         content: attr(title);
@@ -16,11 +16,11 @@
     }
 
     li {
-        border-radius: $minor-border-radius;
-        border: $darker-white solid 1rem;
-        padding: 10rem 20rem;
+        @include rem(border-radius, $minor-border-radius);
+        @include rem(border, $darker-white solid 1);
+        @include rem(padding, 10 20);
         cursor: pointer;
-        font-size: $secondary-text-size;
+        @include rem(font-size, $secondary-text-size);
         transition: background-color 0.5s ease-in-out;
 
         &:hover {
