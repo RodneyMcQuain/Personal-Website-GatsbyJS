@@ -25,18 +25,18 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
             padding: $default-spacing 15rem;
             line-height: 20rem;
             position: relative;
+            text-decoration: none;
 
             &, > span {
                 font-size: $secondary-text-size;
                 font-family: 'Roboto', sans-serif;
-                color: $white;
-                text-decoration: none;
-            }
-
-            span {
-                transition: color 0.5s ease-in-out;
             }
             
+            &, span {
+                color: $white;
+                transition: color 0.5s ease-in-out;
+            }
+
             &:after {
                 content: ' ';
                 position: absolute;
@@ -53,9 +53,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
             }
 
             &:hover {
-                color: $darker-white;
-
-                span {
+                &, span {
                     color: $darker-white;
                 }
 
