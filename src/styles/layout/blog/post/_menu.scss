@@ -2,6 +2,7 @@
 @import '../../../helpers/mixins/mixins';
 
 $extra-blog-menu-space-to-remove: 40rem;
+$menu-background-color: white;
 
 .blog-menu {
     z-index: $blog-menu-z-index;
@@ -10,7 +11,7 @@ $extra-blog-menu-space-to-remove: 40rem;
     width: auto;
     top: calc(#{$blog-featured-image-height} + #{$navbar-height});
     transition: all 0.5s ease-in;
-    background: white;
+    background: $menu-background-color;
     max-height: calc(100vh - #{$blog-featured-image-height} - #{$navbar-height} - #{$extra-blog-menu-space-to-remove});
     overflow-y: auto;
 
@@ -35,6 +36,7 @@ $extra-blog-menu-space-to-remove: 40rem;
             text-indent: -1em;
             list-style-type: none;
     
+            $item-padding: $default-spacing;
             a {
                 display: inline-block;
                 text-decoration: none;
@@ -43,7 +45,7 @@ $extra-blog-menu-space-to-remove: 40rem;
                 text-overflow: ellipsis;
                 width: 100%;
                 text-align: left;
-                padding: 10rem;
+                padding: $item-padding;
                 margin-top: -20rem;
                 padding-left: 20rem;
             }
@@ -57,18 +59,21 @@ $extra-blog-menu-space-to-remove: 40rem;
             }
 
             a:before {
+                content: "\00a0\00a0\00a0\00a0 ";
                 position: absolute;
                 left: 0;
                 width: 100%;
-                padding: $default-spacing;
+                z-index: $blog-menu-highlight-z-index;
+                padding: $item-padding;
                 margin-top: -$default-spacing;
+
                 opacity: 0;
+                background: $menu-background-color;
+                transition: all 0.25s ease-in-out;
             }    
             
             a:hover:before {
-                content: "\00a0\00a0\00a0\00a0 ";
                 background: $white;
-                z-index: $blog-menu-highlight-z-index;
                 opacity: 1;
                 border-left: $darker-white 4rem solid;
             }
