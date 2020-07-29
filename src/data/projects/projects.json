@@ -1,5 +1,15 @@
 [
     {
+        "title": "Melee CSS Color Changer",
+        "image": "meleeCssColorChanger.jpg",
+        "technologies": [
+            "Java",
+            "JavaFX"
+        ],
+        "description": "Melee CSS Color Changer is used to change various colors on the character select screen of Super Smash Bros. Melee. The user just provides the appropriate MnSlChr.usd and adjusts the colors for background, top frame, bottom frame, rules, cursor, and the many \"selects\" in the background.",
+        "gitHubUrl": "https://github.com/RodneyMcQuain/Melee-CSS-Color-Changer"
+    },
+    {
         "title": "Melee Notes Web App",
         "image": "meleeNotesWeb.jpg",
         "technologies": [
@@ -40,16 +50,6 @@
         ],
         "description": "A chrome extension using Twitch API that quickly links to people streaming your favorite video games. The extension stores your games in local storage for easy access and displays the twitch user, stream title, view count, and stream thumbnail for each stream of a specified game.",
         "gitHubUrl": "https://github.com/RodneyMcQuain/Fast-Twitch-Games-ReactJS-with-Redux"
-    },
-    {
-        "title": "Melee CSS Color Changer",
-        "image": "meleeCssColorChanger.jpg",
-        "technologies": [
-            "Java",
-            "JavaFX"
-        ],
-        "description": "Melee CSS Color Changer is used to change various colors on the character select screen of Super Smash Bros. Melee. The user just provides the appropriate MnSlChr.usd and adjusts the colors for background, top frame, bottom frame, rules, cursor, and the many \"selects\" in the background.",
-        "gitHubUrl": "https://github.com/RodneyMcQuain/Melee-CSS-Color-Changer"
     },
     {
         "title": "Melee Notes - Desktop App",
