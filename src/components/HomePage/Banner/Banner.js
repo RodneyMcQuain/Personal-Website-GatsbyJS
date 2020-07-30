@@ -4,6 +4,7 @@ import ParametricCurves from './ParametricCurves';
 import CycleItems from './CycleItems';
 import IconText from '../../Shared/IconText';
 import { FaChevronDown } from 'react-icons/fa';
+import SingleWhiteSpace from '../../Shared/SingleWhiteSpace';
 import '../../../styles/layout/banner/_banner.scss';
 
 const itemsToCycle = [
@@ -23,7 +24,7 @@ const Banner = () => {
             <div className="banner-container col-xl-12 col-md-12 col-sm-12 col-xs-12">
                 <h1 className={`banner-header banner-hide ${fadeHeader}`}>Rodney McQuain</h1>
                 <p className={`banner-text banner-hide ${fadeTextAndButton}`}>
-                    Hello, I'm a{'\u00A0'}<CycleItems items={itemsToCycle} initialDelay={BUTTON_AND_TEXT_DISPLAY_DELAY_MS} />
+                    Hello, I'm a<SingleWhiteSpace /><CycleItems items={itemsToCycle} initialDelay={BUTTON_AND_TEXT_DISPLAY_DELAY_MS} />
                     <div>
                         Who's always looking for an opportunity to test my skills and grow
                     </div>

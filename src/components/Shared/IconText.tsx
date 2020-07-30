@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from './Icon';
 import { IconType } from '../../types/IconType';
+import SingleWhiteSpace from './SingleWhiteSpace';
 
 type IconPosition = 'before' | 'after';
 
@@ -27,7 +28,7 @@ const IconText = ({
     </>
 );
 
-const IconBeforeText = ({ icon, text, className }) => <><Icon icon={icon} className={className} />{'\u00A0'}{text}</>
-const IconAfterText = ({ icon, text, className }) => <>{text}{'\u00A0'}<Icon icon={icon} className={className} /></>
+const IconBeforeText = ({ icon, text, className }) => <><Icon icon={icon} className={className} /><SingleWhiteSpace />{text}</>
+const IconAfterText = ({ icon, text, className }) => <>{text}<SingleWhiteSpace /><Icon icon={icon} className={className} /></>
 
 export default IconText;

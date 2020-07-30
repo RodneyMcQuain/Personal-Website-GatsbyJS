@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { LETTER_ANIMATION_DURATION_MS } from '../../../../styles/helpers/variables/variables';
+import SingleWhiteSpace from '../../../Shared/SingleWhiteSpace';
 
 const name = "Rodney McQuain";
 const letters = name.split("");
@@ -34,7 +35,7 @@ const Letter = ({ letter, animationDelay, isHovered }: ILetterProps) => {
     }, [isHovered, animationDelay]);
 
     return letter === ' '
-        ? <span aria-hidden="true">{'\u00A0'}</span>
+        ? <span aria-hidden="true"><SingleWhiteSpace /></span>
         : <span className={isAnimated ? 'animate-letter' : ''} aria-hidden="true">{letter}</span>;
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { IJob } from './IJob';
+import SingleWhiteSpace from '../../Shared/SingleWhiteSpace';
 
 interface IJobProps {
     work: IJob;
@@ -10,7 +11,7 @@ const Job = ({ work: { title, company, city, state, startDate, endDate } }: IJob
         <div className="content -curved-border -layered-box-shadow">
             <h2>{title}</h2>
             <div className="-small-text company">
-                {company} |{'\u00A0'}
+                {company} |<SingleWhiteSpace />
                 <span className="-small-text -gray-text">{city}, {state}</span>
             </div>
             <div className="-small-text -gray-text">
