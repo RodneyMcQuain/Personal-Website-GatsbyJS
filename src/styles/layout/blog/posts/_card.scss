@@ -1,8 +1,9 @@
 @import '../../../helpers/variables/colors';
 @import '../../../helpers/variables/text-size';
+@import '../../../helpers/mixins/mixins';
 
 .blog-card {
-    transition: all 0.5s ease-in-out;
+    @include card-upscale(all 0.5s ease-in-out);
     
     * {
         text-align: left;

@@ -1,4 +1,5 @@
 @import '../mixins/anchor-offset';
+@import '../../helpers/variables/variables';
 
 @mixin transform($property) {
     -webkit-transform: $property;
@@ -60,4 +61,14 @@
     font-size: $secondary-text-size;
     margin-bottom: 4rem;
     font-weight: bold;
+}
+
+@mixin card-upscale($other-transitions: null) {
+    -webkit-transform: translate3D(0, 0, 0);
+    $other-transitions: if($other-transitions, $other-transitions + unquote(','), $other-transitions);
+    transition: append($other-transitions, $card-upscale-transition);
+
+    &:hover {
+        @include transform($minor-scale);
+    }
 }
