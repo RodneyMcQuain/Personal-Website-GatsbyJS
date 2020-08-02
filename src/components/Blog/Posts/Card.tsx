@@ -22,7 +22,7 @@ const Card = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
     const mightHideCard = isShown(categoryFilter, category, tagFilters, tags) ? '' : 'hide-card';
 
     return (
-        <div className={`margin-container upscale-container project-container blog-card col-xs-12 col-sm-6 col-md-4 col-lg-4 ${mightHideCard}`}>
+        <div className={`margin-container project-container blog-card col-xs-12 col-sm-6 col-md-4 col-lg-4 ${mightHideCard}`}>
             <div className="-curved-border -layered-box-shadow">
                 <div key={node.id}>
                     <Img className="container-top-image" fluid={featuredImage.childImageSharp.fluid} />
