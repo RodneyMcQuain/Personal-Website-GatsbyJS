@@ -1,4 +1,5 @@
 @import '../../../helpers/variables/breakpoints';
+@import '../../../helpers/mixins/media-queries';
 
 .blog-filters {
     display: flex;
@@ -8,7 +9,7 @@
     flex-wrap: wrap;
 }
 
-@media (max-width: $md-breakpoint - 1px) {
+@include md-media-query() {
     .blog-filters {
         flex-direction: column;
         justify-content: left;

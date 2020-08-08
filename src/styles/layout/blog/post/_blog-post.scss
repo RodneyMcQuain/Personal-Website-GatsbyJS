@@ -1,4 +1,5 @@
 @import '../../../helpers/variables/variables';
+@import '../../../helpers/mixins/media-queries';
 
 .blog-header-icons div {
     text-align: left;
@@ -27,7 +28,7 @@
     z-index: $blog-post-content-z-index;
 }
 
-@media (max-width: $xs-breakpoint - 1px) {
+@include xs-media-query() {
     .blog-post-content {
         margin-top: 0;
         box-shadow: none;

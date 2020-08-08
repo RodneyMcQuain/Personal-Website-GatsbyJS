@@ -163,7 +163,7 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
     }
 }
 
-@media (max-width: $sm-breakpoint - 1px) {
+@include sm-media-query() {
     .my-nav {
         .nav-contents {
             @include responsive-nav-menu();

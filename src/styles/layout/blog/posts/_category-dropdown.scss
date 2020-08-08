@@ -33,7 +33,7 @@
     }
 }
 
-@media (max-width: $md-breakpoint - 1px) {
+@include md-media-query() {
     .category-dropdown {
         width: 100%;
     }

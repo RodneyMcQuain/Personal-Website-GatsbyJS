@@ -100,7 +100,7 @@
     }
 }
 
-@media (max-width: $md-breakpoint - 1px) {
+@include md-media-query() {
     .tag-dropdown {
         width: 100%;
 

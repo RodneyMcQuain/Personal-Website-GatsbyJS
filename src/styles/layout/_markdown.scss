@@ -1,5 +1,6 @@
 @import '../helpers/variables/variables';
 @import '../helpers/mixins/anchor-offset';
+@import '../helpers/mixins/media-queries';
 
 .markdown-body {
     p, ol, ul, pre, h1, h2, h3, h4, h5, h6 {
@@ -18,7 +19,7 @@
         width: 75%;
     }
 
-    @media (max-width: $sm-breakpoint - 1px) {
+    @include sm-media-query() {
         p > img {
             width: 100%;
         }

@@ -1,0 +1,25 @@
+@import '../../helpers/variables/breakpoints';
+
+@mixin lg-media-query() {
+    @media (max-width: $lg-breakpoint - 1) {
+        @content;
+    }
+}
+
+@mixin md-media-query() {
+    @media (max-width: $md-breakpoint - 1) {
+        @content;
+    }
+}
+
+@mixin sm-media-query() {
+    @media (max-width: $sm-breakpoint - 1) {
+        @content;
+    }
+}
+
+@mixin xs-media-query() {
+    @media (max-width: $xs-breakpoint - 1) {
+        @content;
+    }
+}

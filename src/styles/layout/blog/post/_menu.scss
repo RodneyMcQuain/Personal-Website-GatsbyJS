@@ -99,7 +99,7 @@ $menu-background-color: white;
     }
 }
 
-@media (max-width: $md-breakpoint - 1px) {
+@include md-media-query() {
     .blog-menu {
         @include responsive-nav-menu();
 

@@ -1,5 +1,6 @@
 @import '../mixins/anchor-offset';
 @import '../../helpers/variables/variables';
+@import '../../helpers/mixins/media-queries';
 
 @mixin transform($property) {
     -webkit-transform: $property;

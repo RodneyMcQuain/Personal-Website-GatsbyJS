@@ -1,5 +1,6 @@
 @import '../../helpers/variables/variables';
 @import '../../helpers/mixins/custom-title';
+@import '../../helpers/mixins/media-queries';
 
 $caret-color: $white;
 
@@ -26,13 +27,13 @@ $caret-color: $white;
                 $custom-title-base-transition-out;
         }
 
-        @media (max-width: $sm-breakpoint) {
+        @include sm-media-query() {
             &:hover:before {
                 width: 200rem;
             }
         }
 
-        @media (max-width: $xs-breakpoint) {
+        @include xs-media-query() {
             &:hover:before {
                 width: 150rem;
             }
