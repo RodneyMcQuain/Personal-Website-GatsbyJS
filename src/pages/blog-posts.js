@@ -36,7 +36,9 @@ const BlogPosts = ({ data }) => {
                     <TagPills tagFilters={currentTags} setTagFilters={setCurrentTags} />
                 </div>
 
-                {edges.map(post => <BlogCard post={post} categoryFilter={currentCategory} tagFilters={currentTags} />)}
+                <div className="row display-flex">
+                    {edges.map(post => <BlogCard post={post} categoryFilter={currentCategory} tagFilters={currentTags} />)}
+                </div>
             </HeaderContentLayout>
         </Layout>
     );
