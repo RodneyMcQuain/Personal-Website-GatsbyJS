@@ -27,6 +27,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                         title={title}
                         image={featuredFluidImage.src}
                         description={excerpt}
+                        type={'article'}
                     />
                     <div className={`${blogPostGridClasses} -layered-box-shadow blog-post-content`}>
                         <article>
