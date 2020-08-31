@@ -25,7 +25,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <div className="container">
                     <SEO
                         title={title}
-                        image={featuredFluidImage}
+                        image={featuredFluidImage.src}
                         description={excerpt}
                     />
                     <div className={`${blogPostGridClasses} -layered-box-shadow blog-post-content`}>
@@ -37,7 +37,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                                     wordCount={wordCount.words}
                                     category={category}
                                     tags={tags}
-                                    />
+                                />
                                 <HeaderTitle title={title} className="-left-align blog-post-title" isHeaderElement={false} />
                             </header>
 
