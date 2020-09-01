@@ -1,6 +1,5 @@
 import React from 'react';
-import AriaText from '../../Shared/AriaText';
-import IconText from '../../Shared/IconText';
+import BlogIcon from './BlogIcon';
 import { FaSitemap } from 'react-icons/fa';
 
 interface ICategoryProps {
@@ -8,9 +7,7 @@ interface ICategoryProps {
 }
 
 const Category = ({ category }: ICategoryProps) => (
-    <AriaText altText={`Category: ${category}`} className="-small-text">
-        <IconText icon={<FaSitemap />} text={category} />
-    </AriaText>
+    <BlogIcon icon={<FaSitemap />} displayText={category} altText={`Category: ${category}`} />
 );
 
 export default Category;

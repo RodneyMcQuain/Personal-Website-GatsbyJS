@@ -212,11 +212,15 @@ a {
 
 .-small-text {
     font-size: $tertiary-text-size;
-    padding: 5rem 0;
 }
 
 .-gray-text {
     color: $light-gray;
+}
+
+.-minor-vertical-padding {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 .-left-align {

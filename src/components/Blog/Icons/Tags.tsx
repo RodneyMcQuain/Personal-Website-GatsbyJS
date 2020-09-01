@@ -1,6 +1,5 @@
 import React from 'react';
-import AriaText from '../../Shared/AriaText';
-import IconText from '../../Shared/IconText';
+import BlogIcon from './BlogIcon';
 import { FaTag } from 'react-icons/fa';
 
 interface ITagsProps {
@@ -11,9 +10,7 @@ const Tags = ({ tags }: ITagsProps) => {
     const delimetedTags = tags.join(', ');
     
     return (
-        <AriaText altText={`Tags: ${delimetedTags}`} className="-small-text">
-            <IconText icon={<FaTag />} text={delimetedTags} />
-        </AriaText>
+        <BlogIcon icon={<FaTag />} displayText={delimetedTags} altText={`Tags: ${delimetedTags}`}/>
     );
 }
 

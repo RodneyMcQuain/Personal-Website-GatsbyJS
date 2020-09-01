@@ -1,15 +1,10 @@
 import React from 'react';
-import AriaText from '../../Shared/AriaText';
-import IconText from '../../Shared/IconText';
+import BlogIcon from './BlogIcon';
 import { FaUserEdit } from 'react-icons/fa';
 
 const UpdatedOnDate = ({ date }) => (
     date 
-        ? (
-            <AriaText altText={`Updated on: ${date}`} className="-small-text">
-                <IconText icon={<FaUserEdit />} text={date} />
-            </AriaText>
-        )
+        ? <BlogIcon icon={<FaUserEdit />} displayText={date} altText={`Updated on: ${date}`} />
         : null
 );
 

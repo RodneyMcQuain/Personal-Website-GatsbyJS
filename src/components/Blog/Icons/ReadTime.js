@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AriaText from '../../Shared/AriaText';
-import IconText from '../../Shared/IconText';
+import BlogIcon from './BlogIcon';
 import { FaRegClock } from 'react-icons/fa';
 
 const ReadTime = ({ wordCount }) => {
@@ -11,9 +10,7 @@ const ReadTime = ({ wordCount }) => {
     const displayMinutes = `${MINUTES} ${MINUTES_OR_MINUTE}`;
 
     return (
-        <AriaText altText={`Time to read: ${displayMinutes}`} className="-small-text">
-            <IconText icon={<FaRegClock />} text={displayMinutes} /> 
-        </AriaText>
+        <BlogIcon icon={<FaRegClock />} displayText={displayMinutes} altText={`Time to read: ${displayMinutes}`} />
     );
 }
 
