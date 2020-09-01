@@ -9,6 +9,7 @@ import { ALL_FILTER } from '../components/Blog/ALL_FILTER';
 import TagPills from '../components/Blog/Posts/TagPills';
 import '../styles/layout/blog/posts/_filters.scss';
 import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
+import { isBrowser } from '../services/browser';
 
 const BlogPosts = ({ data }) => {
     const { edges, categories, tags } = data.allMarkdownRemark;
@@ -45,7 +46,7 @@ const BlogPosts = ({ data }) => {
 }
 
 const getInitialCategoryFilter = () => {
-    const locationSearch = typeof window !== 'undefined' && window.location.search; // Needs window type check to pass Gatsby build
+    const locationSearch = isBrowser() && window.location.search;
     const queryStringCategoryOrAll = new URLSearchParams(locationSearch).get('category') || ALL_FILTER;
     return queryStringCategoryOrAll;
 };
