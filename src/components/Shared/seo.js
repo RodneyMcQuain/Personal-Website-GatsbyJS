@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from "gatsby";
+import { isBrowser } from '../../services/browser';
 
 function SEO({ description, lang, meta, title, image, type, url }) {
     const { site } = useStaticQuery(
@@ -55,7 +56,7 @@ function SEO({ description, lang, meta, title, image, type, url }) {
                 },
                 {
                     property: `og:url`,
-                    content: site.siteMetadata.siteUrl + document.location.pathname
+                    content: isBrowser() && (site.siteMetadata.siteUrl + document.location.pathname)
                 },
                 {
                     name: `twitter:card`,
