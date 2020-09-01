@@ -145,7 +145,7 @@ Unfortunately, there aren't many tools out there that allow you and your teammat
 
 [Cuckoo](https://cuckoo.team/) is an option, it's mature and provides a timer that all your teammates can see.  Though, it doesn't track who currently has what role and it can be difficult to notice when the timer goes off.  
 
-A coworker of mine recently made a distributed timer specifically for mobbing, called [Mobber](mobber.dev).  It has some important features for a mob timer, such as:
+A coworker of mine recently made a distributed timer specifically for mobbing, called [Mobber](https://mobber.dev).  It has some important features for a mob timer, such as:
 
 * designated roles
 * configurable interval for each role rotation 
