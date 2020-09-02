@@ -13,7 +13,7 @@ module.exports = {
         title: `Rodney McQuain`,
         description: `Computer science student, software engineer, and competitive Super Smash Bros. Melee player.`,
         author: `Rodney McQuain`,
-        siteUrl: siteUrl,
+        siteUrl: siteUrl, // includes a trailing forward slash
         image: `code.jpg`,
     },
     plugins: [

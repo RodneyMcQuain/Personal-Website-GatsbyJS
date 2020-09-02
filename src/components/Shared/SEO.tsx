@@ -15,7 +15,7 @@ const SEO = ({ title, description = null, lang = 'en', type = 'website', image =
     const { site: { siteMetadata } } = useStaticQuery(siteMetadataQuery);
 
     const metaDescription = description ?? siteMetadata.description;
-    const imageUrl = `${siteMetadata.siteUrl}/${image ?? siteMetadata.image}`;
+    const imageUrl = siteMetadata.siteUrl + (image ?? siteMetadata.image);
 
     return (
         <Helmet
