@@ -1,38 +1,27 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from "gatsby";
 import { isBrowser } from '../../services/browser';
 
-function SEO({ description, lang, meta, title, image, type, url }) {
-    const { site } = useStaticQuery(
-        graphql`
-            query {
-                site {
-                    siteMetadata {
-                        title
-                        description
-                        author
-                        image
-                        siteUrl
-                    }
-                }
-            }
-        `
-    );
+interface ISEO {
+    title: string;
+    description?: string;
+    lang?: string;
+    type?: 'article' | 'website';
+    image?: string;
+}
 
-    const metaDescription = description || site.siteMetadata.description;
-    const metaImage = image || site.siteMetadata.image;
-    const imageUrl = `${site.siteMetadata.siteUrl}/${metaImage}`;
-    const metaType = type || 'website';
+const SEO = ({ title, description = null, lang = 'en', type = 'website', image = null }: ISEO) => {
+    const { site: { siteMetadata } } = useStaticQuery(siteMetadataQuery);
+
+    const metaDescription = description ?? siteMetadata.description;
+    const imageUrl = `${siteMetadata.siteUrl}/${image ?? siteMetadata.image}`;
 
     return (
         <Helmet
-            htmlAttributes={{
-                lang,
-            }}
+            htmlAttributes={{ lang }}
             title={title}
-            titleTemplate={`%s | ${site.siteMetadata.title}`}
+            titleTemplate={`%s | ${siteMetadata.title}`}
             meta={[
                 {
                     name: `description`,
@@ -40,7 +29,7 @@ function SEO({ description, lang, meta, title, image, type, url }) {
                 },
                 {
                     property: `og:title`,
-                    content: `${title} | ${site.siteMetadata.title}`,
+                    content: `${title} | ${siteMetadata.title}`,
                 },
                 {
                     property: `og:description`,
@@ -52,11 +41,11 @@ function SEO({ description, lang, meta, title, image, type, url }) {
                 },
                 {
                     property: `og:type`,
-                    content: metaType,
+                    content: type,
                 },
                 {
                     property: `og:url`,
-                    content: isBrowser() && (site.siteMetadata.siteUrl + document.location.pathname)
+                    content: isBrowser() && (siteMetadata.siteUrl + document.location.pathname)
                 },
                 {
                     name: `twitter:card`,
@@ -64,7 +53,7 @@ function SEO({ description, lang, meta, title, image, type, url }) {
                 },
                 {
                     name: `twitter:creator`,
-                    content: site.siteMetadata.author,
+                    content: siteMetadata.author,
                 },
                 {
                     name: `twitter:title`,
@@ -78,23 +67,23 @@ function SEO({ description, lang, meta, title, image, type, url }) {
                     name: `twitter:image`,
                     content: imageUrl,
                 },
-            ].concat(meta)}
+            ]}
         />
     );
 }
 
-SEO.defaultProps = {
-    lang: `en`,
-    meta: [],
-    description: ``,
-    type: '',
-}
-
-SEO.propTypes = {
-    description: PropTypes.string,
-    lang: PropTypes.string,
-    meta: PropTypes.arrayOf(PropTypes.object),
-    title: PropTypes.string.isRequired,
-}
+const siteMetadataQuery = graphql`
+    query {
+        site {
+            siteMetadata {
+                title
+                description
+                author
+                image
+                siteUrl
+            }
+        }
+    }
+`;
 
 export default SEO;
