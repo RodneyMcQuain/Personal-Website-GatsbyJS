@@ -78,6 +78,8 @@ ul {
     box-shadow: 2rem 2rem 5rem #ccc;
     $btn-hover-transition: all .5s ease-in-out;
     transition: $btn-hover-transition;
+    overflow: hidden;
+    position: relative;
 
     a, span {
         font-size: $secondary-text-size;
@@ -111,6 +113,36 @@ ul {
         &:hover {
             color: $black;
         }
+    }
+
+    &:after {
+        content: "";
+        display: none;
+        position: absolute;
+        border-radius: 50%;
+        background-color: rgba(200, 200, 200, 0.4);
+
+        $size: 50rem;
+        $margin: ($size/2)*-1;
+        width: $size;
+        height: $size;
+        margin-top: $margin;
+        margin-left: $margin;
+
+        top: 50%;
+        left: 50%;
+
+        animation: ripple 1.5s;
+        opacity: 0;
+    }
+
+    &:focus:not(:active)::after {
+        display: block;
+    }
+
+    @keyframes ripple {
+        from { opacity: 1; transform: scale(0); }
+        to { opacity: 0; transform: scale(10); }
     }
 }
 
