@@ -1,20 +1,29 @@
 @import '../helpers/variables/variables';
+@import '../helpers/mixins/media-queries';
 
 .about-me-text {
     text-align: left;
     text-indent: 20rem;
 }
 
-#me-img {
+.about-me-img {
     float: right;
-    background: $white;
     padding: 3rem;
     margin-left: 10rem;
+    width: 330rem;
+    border-radius: $minor-border-radius;
 }
 
-@media (max-width: 325px) {
-    #me-img {
+@include sm-media-query() {
+    .about-me-img {
+        width: 300rem;
+    }
+}
+
+@include xs-media-query() {
+    .about-me-img {
         float: none;
-        margin-bottom: 10rem;
+        margin: 0 auto 10rem auto;
+        width: 275rem;
     }
 }
