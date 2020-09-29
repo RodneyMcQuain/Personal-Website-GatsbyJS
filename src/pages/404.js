@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout/layout';
-import SEO from '../components/Shared/seo';
+import SEO from '../components/Shared/SEO';
 import InViewAnimation from '../components/Shared/InViewAnimation';
 import '../styles/layout/_404.scss';
 import GameOfLife from '../components/404/GameOfLife';

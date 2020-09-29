@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 import InViewAnimation from '../components/Shared/InViewAnimation';
 import ResponsiveBlogMenu from '../components/Blog/Post/ResponsiveMenu';
-import SEO from '../components/Shared/seo';
+import SEO from '../components/Shared/SEO';
 import Img from 'gatsby-image';
 import ContactMe from '../components/Contact/ContactMe';
 import AdjacentPostNavigation from '../components/Blog/Post/AdjacentPostNavigation';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Document, Page } from 'react-pdf';
 import Layout from '../components/Layout/layout';
-import SEO from '../components/Shared/seo';
+import SEO from '../components/Shared/SEO';
 import { SizeMe } from 'react-sizeme';
 import Icon from '../components/Shared/Icon';
 import { FaDownload } from 'react-icons/fa';

@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Project from '../components/Projects/Project';
 import Layout from '../components/Layout/layout';
-import SEO from '../components/Shared/seo';
+import SEO from '../components/Shared/SEO';
 import ContactMe from '../components/Contact/ContactMe';
 import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
 
