@@ -8,6 +8,7 @@ import { ALL_FILTER } from '../ALL_FILTER';
 import { IBlogPost } from '../BlogTypes';
 import IconText from '../../Shared/IconText';
 import { FaBook } from 'react-icons/fa';
+import Div from '../../Shared/UnstyledDiv';
 import '../../../styles/layout/blog/posts/_card.scss';
 
 interface IBlogCardProps {
@@ -22,19 +23,19 @@ const Card = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
     const mightHideCard = isShown(categoryFilter, category, tagFilters, tags) ? '' : 'hide-card';
 
     return (
-        <div className={`margin-container project-container blog-card col-xs-12 col-sm-6 col-md-4 col-lg-4 ${mightHideCard}`}>
+        <div className={`margin-container blog-card col-xs-12 col-sm-6 col-md-4 col-lg-4 ${mightHideCard}`}>
             <div className="-curved-border -layered-box-shadow">
                 <div key={node.id}>
                     <Img className="container-top-image" fluid={featuredImage.childImageSharp.fluid} />
                     <div className="content">
                         <div className="icons">
-                            <PublishedOnDate date={date} />
-                            <Category category={category} />
-                            <Tags tags={tags} />
+                            <Div><PublishedOnDate date={date} /></Div>
+                            <Div><Category category={category} /></Div>
+                            <Div><Tags tags={tags} /></Div>
                         </div>
                         <h2>{title}</h2>
-                        <p>{node.excerpt}</p>
-                        <Link className="btn" to={path} aria-label={`Read more about ${title}`}>
+                        <p className="-secondary-text">{node.excerpt}</p>
+                        <Link className="btn -secondary-text" to={path} aria-label={`Read more about ${title}`}>
                             <IconText icon={<FaBook />} text="Read More" />
                         </Link>
                     </div>

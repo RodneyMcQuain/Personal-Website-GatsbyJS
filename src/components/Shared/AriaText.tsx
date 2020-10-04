@@ -7,14 +7,14 @@ interface IAriaTextProps {
 }
 
 const AriaText = ({ children, altText, className }: IAriaTextProps) => (
-    <div 
+    <span 
         data-title={altText}
         role="text"
         aria-label={altText}
         className={className}
     >
         {children}
-    </div>
+    </span>
 );
 
 export default AriaText;

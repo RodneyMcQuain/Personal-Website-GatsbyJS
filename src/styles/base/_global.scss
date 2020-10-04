@@ -163,8 +163,7 @@ a {
 }
 
 .-curved-border {
-    border-radius: 10rem;
-    overflow: hidden;
+    border-radius: $normal-border-radius;
 }
 
 .-layered-box-shadow {
@@ -206,10 +205,12 @@ a {
     max-width: 100%;
     width: 100%;
     border-bottom: 2rem solid $darker-white;
+    overflow: hidden;
+    border-radius: $normal-border-radius $normal-border-radius 0 0;
 }
 
 .padding-container {
-    padding: 10rem;
+    padding: $default-spacing $default-spacing * 2;
 }
 
 .padding-container-all div {
@@ -242,6 +243,10 @@ a {
     }
 }
 
+.-secondary-text {
+    font-size: $secondary-text-size;
+}
+
 .-small-text {
     font-size: $tertiary-text-size;
 }
@@ -251,8 +256,8 @@ a {
 }
 
 .-minor-vertical-padding {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .-left-align {

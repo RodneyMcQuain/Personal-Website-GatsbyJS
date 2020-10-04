@@ -5,9 +5,16 @@
     margin-top: 20rem;
     color: $white;
 
+    .-gray-text {
+        color: $darker-white;
+    }
+    
+    [data-title] {
+        @include custom-title(data-title, $white, $black);
+    }
+
     .-curved-border {
         border: 1rem solid $lighter-black;
-        box-shadow: 4rem 4rem 10rem $darker-black;
     }
 
     .btn {

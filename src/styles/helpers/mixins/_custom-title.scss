@@ -1,6 +1,6 @@
 @import '../variables/custom-title';
 
-@mixin custom-title($attribute-name) {
+@mixin custom-title($attribute-name, $background-color: $black, $font-color: $white) {
     position: relative;
 
     &:before,
@@ -8,7 +8,7 @@
         content: "";
         position: absolute;
         display: inline-block;
-        color: $white;
+        color: $font-color;
         z-index: $custom-title-z-index;
         top: 0;
 
@@ -28,12 +28,13 @@
         content: attr($attribute-name);
         padding: 3rem 6rem;
         border-radius: $minor-border-radius;
-        background: $black;
+        background: $background-color;
         font-size: 12rem;
         white-space: pre-wrap;
         left: 0;
         margin-top: 2.75em;
         box-shadow: get-layered-box-shadow(0);
+        min-width: 150rem;
     }
 
     &:after {
@@ -41,6 +42,6 @@
         left: 8rem;
         margin-top: 1.25em;
         border: 8rem solid transparent;
-        border-bottom: 8rem solid $black;
+        border-bottom: 8rem solid $background-color;
     }
 }

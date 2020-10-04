@@ -4,7 +4,7 @@
         "image": "pufw.jpg",
         "location": "Fort Wayne, Indiana",
         "degree": "BS in Computer Science",
-        "graduationDate": "Expected Graduation Date: 5/2021",
+        "graduationDate": "May 2021",
         "gpa": "4.0/4.0"
     },
     {
@@ -12,7 +12,7 @@
         "image": "ivyTech.jpg",
         "location": "Fort Wayne, Indiana",
         "degree": "AS in Software Development",
-        "graduationDate": "Graduation Date: 12/2017",
+        "graduationDate": "December 2017",
         "gpa": "3.9/4.0"
     }
 ]

@@ -1,9 +1,9 @@
 import React from 'react';
 import BlogIcon from './BlogIcon';
-import { FaCalendarAlt } from 'react-icons/fa';
+import CalendarIcon from '../../Shared/CalendarIcon';
 
 const PublishedOnDate = ({ date }) => (
-    <BlogIcon icon={<FaCalendarAlt />} displayText={date} altText={`Published on: ${date}`} />
+    <BlogIcon icon={<CalendarIcon />} displayText={date} altText={`Published on: ${date}`} />
 );
 
 export default PublishedOnDate;
