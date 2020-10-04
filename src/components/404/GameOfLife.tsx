@@ -36,6 +36,8 @@ function useGameOfLife() {
         }
 
         let animationFrameId: number;
+        const ctx: CanvasRenderingContext2D = canvasRef.current.getContext('2d');
+        
         (function draw(): void {
             try {
                 drawGrid(ctx, board, ROWS, COLUMNS);
@@ -47,7 +49,6 @@ function useGameOfLife() {
             animationFrameId = window.requestAnimationFrame(draw);
         })();
 
-        const ctx: CanvasRenderingContext2D = canvasRef.current.getContext('2d');
         window.addEventListener('resize', resize);
 
         return () => {
@@ -127,7 +128,7 @@ function gameOfLife(board: Board, ROWS: number, COLUMNS: number): void {
     }
 }
 
-const clone2DArray = (twoDArray: Board): Board => twoDArray.map(subArray => subArray.map(obj => ({ ...obj })));
+const clone2DArray = (twoDArray: Board): Board => JSON.parse(JSON.stringify(twoDArray));
 const shouldDie = (neighborCount: number): boolean => neighborCount < 2 || neighborCount > 3;
 const shouldLive = (neighborCount: number): boolean => neighborCount === 3;
 
