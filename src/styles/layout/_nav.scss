@@ -98,14 +98,15 @@ $logo-location: '../../assets/svg/logo.svg'; //relative to Navbar component
             }                
 
             a {
+                cursor: pointer;
                 margin-bottom: 2rem; //align brand border bottom with rest of navbar's border bottoms
             }
 
-            &:hover .logo:before {
-                animation: rotate360 1s infinite;
-            }
-
             .logo {
+                &.animate:before {
+                    animation: rotate360 1s infinite;
+                }
+
                 &:before {
                     display: inline-block;
                     content: ' ';
