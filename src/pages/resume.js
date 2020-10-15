@@ -24,7 +24,7 @@ const Resume = () => (
                 )}
             </SizeMe>
 
-            <a className="btn" href={RESUME_FILE_NAME} download>
+            <a className="btn -secondary-text" href={RESUME_FILE_NAME} download>
                 <IconText icon={<FaDownload />} text="Download My Resume" />
             </a>
         </HeaderContentLayout>
