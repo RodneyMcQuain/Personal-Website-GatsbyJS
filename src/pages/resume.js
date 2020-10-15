@@ -3,7 +3,7 @@ import { Document, Page } from 'react-pdf';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/Shared/SEO';
 import { SizeMe } from 'react-sizeme';
-import Icon from '../components/Shared/Icon';
+import IconText from '../components/Shared/IconText';
 import { FaDownload } from 'react-icons/fa';
 import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
 
@@ -24,13 +24,9 @@ const Resume = () => (
                 )}
             </SizeMe>
 
-            <button className="btn">
-                <a href={RESUME_FILE_NAME} download>
-                    <span>
-                        <Icon icon={<FaDownload />} /> Download My Resume
-                    </span>
-                </a>
-            </button>
+            <a className="btn" href={RESUME_FILE_NAME} download>
+                <IconText icon={<FaDownload />} text="Download My Resume" />
+            </a>
         </HeaderContentLayout>
     </Layout>
 );
