@@ -6,7 +6,7 @@ import { MAX_FOOTER_HEIGHT_REM } from '../../../styles/helpers/variables/variabl
 import { useAddCssClass } from '../../../services/useAddCssClass';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
 import { getViewportHeight } from '../../../services/dimensions';
-import { FaEllipsisH } from 'react-icons/fa';
+import { FaEllipsisH } from '@meronex/icons/fa';
 
 const ResponsiveMenu = ({ posts, currentPostName, tableOfContents }) => {
     const [isOpen, setIsOpen] = useState(false);

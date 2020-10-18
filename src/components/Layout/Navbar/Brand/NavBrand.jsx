@@ -3,7 +3,7 @@ import BrandContents from './NavBrandContents';
 import NavButton from '../../../Shared/NavButton';
 import CloseOnOutsideClick from '../../../Shared/CloseOnOutsideClick';
 import NameAndLogoLink from './NameAndLogoLink';
-import { FaCaretUp, FaCaretDown } from 'react-icons/fa';
+import { FaCaretUp, FaCaretDown } from '@meronex/icons/fa';
 
 const NavBrand = () => {
     const [isOpen, setIsOpen] = useState(false);

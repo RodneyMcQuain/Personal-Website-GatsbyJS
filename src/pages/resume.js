@@ -4,7 +4,7 @@ import Layout from '../components/Layout/layout';
 import SEO from '../components/Shared/SEO';
 import { SizeMe } from 'react-sizeme';
 import IconText from '../components/Shared/IconText';
-import { FaDownload } from 'react-icons/fa';
+import { FaDownload } from '@meronex/icons/fa';
 import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
 
 const RESUME_FILE_NAME = "documents/Rodney McQuain - Resume 12-10-2018.pdf";

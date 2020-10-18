@@ -7,7 +7,7 @@ import Category from '../Icons/Category';
 import { ALL_FILTER } from '../ALL_FILTER';
 import { IBlogPost } from '../BlogTypes';
 import IconText from '../../Shared/IconText';
-import { FaBook } from 'react-icons/fa';
+import { FaBook } from '@meronex/icons/fa';
 import Div from '../../Shared/UnstyledDiv';
 import '../../../styles/layout/blog/posts/_card.scss';
 

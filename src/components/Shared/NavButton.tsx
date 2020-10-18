@@ -2,7 +2,7 @@ import React from 'react';
 import { SetIsOpen } from '../../types/SetIsOpen';
 import Icon from './Icon';
 import IconText from '../Shared/IconText';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes } from '@meronex/icons/fa';
 import { IconType } from '../../types//IconType';
 import '../../styles/layout/_nav-button.scss';
 

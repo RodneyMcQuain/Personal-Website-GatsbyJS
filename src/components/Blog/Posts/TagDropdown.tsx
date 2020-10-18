@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CloseOnOutsideClick from '../../Shared/CloseOnOutsideClick';
 import NavButton from '../../Shared/NavButton';
-import { FaCaretUp, FaCaretDown } from 'react-icons/fa';
+import { FaCaretUp, FaCaretDown } from '@meronex/icons/fa';
 import '../../../styles/layout/blog/posts/_tag-dropdown.scss';
 
 interface ITagDropdownProps {

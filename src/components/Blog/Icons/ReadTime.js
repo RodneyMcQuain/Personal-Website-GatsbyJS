@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BlogIcon from './BlogIcon';
-import { FaRegClock } from 'react-icons/fa';
+import { FaRegClock } from '@meronex/icons/fa';
 
 const ReadTime = ({ wordCount }) => {
     const AVERAGE_WORDS_READ_PER_MINUTE = 225;

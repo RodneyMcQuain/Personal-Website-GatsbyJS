@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Icon from '../../Shared/Icon';
-import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from '@meronex/icons/fa';
 import SingleWhiteSpace from '../../Shared/SingleWhiteSpace';
 import '../../../styles/layout/blog/post/_adjacent-navigation.scss';
 

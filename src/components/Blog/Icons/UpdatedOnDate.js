@@ -1,6 +1,6 @@
 import React from 'react';
 import BlogIcon from './BlogIcon';
-import { FaUserEdit } from 'react-icons/fa';
+import { FaUserEdit } from '@meronex/icons/fa';
 
 const UpdatedOnDate = ({ date }) => (
     date 

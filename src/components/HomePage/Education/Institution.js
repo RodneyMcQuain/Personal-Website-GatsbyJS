@@ -1,9 +1,9 @@
 import React from 'react';
 import Img from "gatsby-image";
-import { FaGraduationCap } from 'react-icons/fa';
-import { RiFilePaper2Line } from 'react-icons/ri';
+import { FaGraduationCap } from '@meronex/icons/fa';
+import { RiFilePaper2Line } from '@meronex/icons/ri';
 import HoverIconText from '../../Shared/HoverIconText';
-import { GoLocation } from 'react-icons/go';
+import { GoLocation } from '@meronex/icons/go';
 
 const Institution = ({ institution: { institution, location, degree, graduationDate, gpa, image } }) => (
     <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin-container upscale-container">

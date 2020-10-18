@@ -1,6 +1,6 @@
 import React from 'react';
 import IconText from '../../Shared/IconText';
-import { FaTimesCircle } from 'react-icons/fa';
+import { FaTimesCircle } from '@meronex/icons/fa';
 import '../../../styles/layout/blog/posts/_pills.scss';
 
 interface IPillsProps {

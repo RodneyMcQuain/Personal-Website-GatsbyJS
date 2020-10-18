@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from "gatsby-image";
 import Icon from '../Shared/Icon';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub } from '@meronex/icons/fa';
 import '../../styles/layout/_project.scss';
 
 const Project = ({ project }) => (

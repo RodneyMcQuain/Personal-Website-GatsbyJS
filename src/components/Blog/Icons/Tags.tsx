@@ -1,6 +1,6 @@
 import React from 'react';
 import BlogIcon from './BlogIcon';
-import { FaTag } from 'react-icons/fa';
+import { FaTag } from '@meronex/icons/fa';
 
 interface ITagsProps {
     tags: string[];

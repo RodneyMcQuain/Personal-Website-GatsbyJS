@@ -4,7 +4,7 @@ import NavItem from './NavItem';
 import NavBrand from './Brand/NavBrand';
 import { PROJECTS_ROUTE, BLOG_ROUTE, RESUME_ROUTE, CONTACT_ROUTE } from '../../../services/routes';
 import { ABOUT_ME_HASH, EDUCATION_HASH, SKILLS_HASH, WORK_HASH } from '../../../services/homePageHashes';
-import { FaBriefcase, FaPencilAlt, FaFilePdf, FaEnvelope} from 'react-icons/fa';
+import { FaBriefcase, FaPencilAlt, FaFilePdf, FaEnvelope} from '@meronex/icons/fa';
 
 export const ACTIVE_CLASS_NAME = 'active';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCalendarAlt } from 'react-icons/fa';
+import { FaCalendarAlt } from '@meronex/icons/fa';
 
 const CalendarIcon = () => <FaCalendarAlt />;
 

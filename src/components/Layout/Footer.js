@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from '../Shared/Icon';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from '@meronex/icons/fa';
 import '../../styles/layout/_footer.scss';
 
 const Footer = () => (

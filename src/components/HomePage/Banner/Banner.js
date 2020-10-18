@@ -3,7 +3,7 @@ import { useAddCssClass } from '../../../services/useAddCssClass';
 import ParametricCurves from './ParametricCurves';
 import CycleItems from './CycleItems';
 import IconText from '../../Shared/IconText';
-import { FaChevronDown } from 'react-icons/fa';
+import { FaChevronDown } from '@meronex/icons/fa';
 import SingleWhiteSpace from '../../Shared/SingleWhiteSpace';
 import '../../../styles/layout/banner/_banner.scss';
 

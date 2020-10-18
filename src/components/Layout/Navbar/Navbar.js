@@ -3,7 +3,7 @@ import NavContents from './NavContents';
 import ScrollIndicator from './ScrollIndicator';
 import NavButton from '../../Shared/NavButton';
 import CloseOnOutsideClick from '../../Shared/CloseOnOutsideClick';
-import { FaBars } from 'react-icons/fa';
+import { FaBars } from '@meronex/icons/fa';
 import '../../../styles/layout/_nav.scss';
 
 const Navbar = () => {
