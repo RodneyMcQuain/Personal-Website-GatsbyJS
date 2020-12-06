@@ -13,6 +13,15 @@
         "title": "Associate Software Developer",
         "description": "",
         "startDate": "2020-04-15",
+        "endDate": "2021-01-01",
+        "city": "Fort Wayne",
+        "state": "IN"
+    },
+    {
+        "company": "Aptera",
+        "title": "Software Developer",
+        "description": "",
+        "startDate": "2021-01-01",
         "endDate": null,
         "city": "Fort Wayne",
         "state": "IN"
