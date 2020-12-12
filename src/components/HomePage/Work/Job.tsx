@@ -18,7 +18,7 @@ const Job = ({ work: { title, company, city, state, startDate, endDate } }: IJob
                     <span className="-small-text -gray-text">{city}, {state}</span>
                 </div>
                 <div className="-small-text -gray-text">
-                    {startDate} - {endDate ?? "Present"} ~ {monthDifference} Month{monthDifference === 1 ? '' : 's'}
+                    {startDate} – {endDate ?? "Present"} ~ {monthDifference} Month{monthDifference === 1 ? '' : 's'}
                 </div>
             </div>
         </div>
