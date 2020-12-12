@@ -6,19 +6,34 @@ interface IJobProps {
     work: IJob;
 }
 
-const Job = ({ work: { title, company, city, state, startDate, endDate } }: IJobProps) => (
-    <div className="content-container">
-        <div className="content -curved-border -layered-box-shadow">
-            <h2>{title}</h2>
-            <div className="-small-text company">
-                {company} |<SingleWhiteSpace />
-                <span className="-small-text -gray-text">{city}, {state}</span>
-            </div>
-            <div className="-small-text -gray-text">
-                {startDate} - {endDate ?? "Present"}
+const Job = ({ work: { title, company, city, state, startDate, endDate } }: IJobProps) => {
+    const monthDifference = getMonthDifference(startDate, endDate);
+
+    return (
+        <div className="content-container">
+            <div className="content -curved-border -layered-box-shadow">
+                <h2>{title}</h2>
+                <div className="-small-text company">
+                    {company} |<SingleWhiteSpace />
+                    <span className="-small-text -gray-text">{city}, {state}</span>
+                </div>
+                <div className="-small-text -gray-text">
+                    {startDate} - {endDate ?? "Present"} ~ {monthDifference} Month{monthDifference === 1 ? '' : 's'}
+                </div>
             </div>
         </div>
-    </div>
-);
+    );
+}
+
+const getMonthDifference = (from: string, to: string): number => {
+    const NUMBER_OF_MONTHS_IN_YEAR = 12;
+    const fromDate = new Date(from);
+
+    to = to ?? new Date().toString();
+    const toDate = new Date(to);
+
+    const yearDifferenceInMonths = (toDate.getFullYear() - fromDate.getFullYear()) * NUMBER_OF_MONTHS_IN_YEAR;
+    return yearDifferenceInMonths - fromDate.getMonth() + toDate.getMonth();
+};
 
 export default Job;
