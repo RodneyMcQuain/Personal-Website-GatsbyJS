@@ -1,0 +1,6 @@
+@import '../helpers/mixins/anchor-underline';
+
+.link {
+    @include anchor-underline();
+    font-size: 1em;
+}

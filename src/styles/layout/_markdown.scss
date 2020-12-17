@@ -1,6 +1,7 @@
 @import '../helpers/variables/variables';
 @import '../helpers/mixins/anchor-offset';
 @import '../helpers/mixins/media-queries';
+@import '../helpers/mixins/anchor-underline';
 
 .markdown-body {
     p, ol, ul, pre, h1, h2, h3, h4, h5, h6 {
@@ -94,32 +95,8 @@
         }
     }
 
-    $background-vertical-position: 100%;
     a {
-        text-decoration: none !important;
-
-        &:not(.anchor) {
-            background: linear-gradient(
-                -45deg,
-                $black,
-                #8e0e00,
-                $black
-            );
-            background-repeat: no-repeat;
-            background-position: 0 $background-vertical-position;
-            background-size: 300% 0.175em;
-            animation: anchor-gradient 2.5s ease infinite;
-            animation-play-state: paused;
-            
-            &:hover, &:focus {
-                animation-play-state: running;
-            }
-        }
-    }
-    @keyframes anchor-gradient {
-        0% { background-position: 0 $background-vertical-position; }
-        50% { background-position: 100% $background-vertical-position; }
-        100% { background-position: 0 $background-vertical-position; }
+        @include anchor-underline();
     }
 
     .language-text {
