@@ -12,12 +12,25 @@
 .blog-post-title {
     font-size: 36rem;
     font-weight: bold;
+    position: absolute;
+    z-index: 15;
+    color: #f2f2f2;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50rem;
 }
 
 .blog-featured-image {
     height: $blog-featured-image-height;
     z-index: $blog-featured-image-z-index;
+    filter: brightness(0.4);
 }
+
+// .blog-header {
+//     position: absolute;
+//     width: 100%;
+//     top: 50px;
+// }
 
 .blog-post-content {
     margin-top: -30rem;

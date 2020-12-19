@@ -21,7 +21,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     return (
         <Layout>
             <InViewAnimation>
-                <Img className="blog-featured-image" fluid={featuredFluidImage} />
+                <div className="featured-image-container">
+                    <header className="blog-header">
+                        <h1 className="-left-align blog-post-title">{title}</h1>
+                        <Img className="blog-featured-image" fluid={featuredFluidImage} />
+                    </header>
+                </div>
                 <div className="container">
                     <SEO
                         title={title}
@@ -31,17 +36,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                     />
                     <div className={`${blogPostGridClasses} -layered-box-shadow blog-post-content`}>
                         <article>
-                            <header>
-                                <HeaderIcons
-                                    date={date}
-                                    lastUpdatedDate={lastUpdatedDate}
-                                    wordCount={wordCount.words}
-                                    category={category}
-                                    tags={tags}
-                                />
-                                <HeaderTitle title={title} className="-left-align blog-post-title" isHeaderElement={false} />
-                            </header>
-
+                            <HeaderIcons
+                                date={date}
+                                lastUpdatedDate={lastUpdatedDate}
+                                wordCount={wordCount.words}
+                                category={category}
+                                tags={tags}
+                            />
                             <Markdown html={html} />
                         </article>
                         <AdjacentPostNavigation
