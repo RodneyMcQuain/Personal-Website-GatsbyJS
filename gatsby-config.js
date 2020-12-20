@@ -13,8 +13,8 @@ module.exports = {
         title: `Rodney McQuain`,
         description: `Computer science student, software engineer, and competitive Super Smash Bros. Melee player.`,
         author: `Rodney McQuain`,
-        siteUrl: siteUrl, // includes a trailing forward slash
-        image: `code.jpg`,
+        siteUrl: siteUrl,
+        image: `/code.jpg`,
     },
     plugins: [
         `gatsby-plugin-sharp`,
