@@ -9,7 +9,6 @@ interface IAriaTextProps {
 const AriaText = ({ children, altText, className }: IAriaTextProps) => (
     <span 
         data-title={altText}
-        role="text"
         aria-label={altText}
         className={className}
     >
