@@ -1,10 +1,6 @@
 @import '../helpers/variables/text-size';
 @import '../helpers/variables/variables';
 
-.education-institution, .education-description {
-    text-align: left;
-}
-
 .education-institution {
     margin-top: $default-spacing;
     margin-bottom: $default-spacing / 2;

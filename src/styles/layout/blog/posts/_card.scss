@@ -5,22 +5,6 @@
 .blog-card {
     @include card-upscale(all 0.5s ease-in-out);
     
-    * {
-        text-align: left;
-    }
-
-    h2 {
-        font-size: $medium-text-size;
-    }
-    
-    .content {
-        padding: 20rem;
-
-        > *:not(:first-child) {
-            margin-top: 10rem;
-        }
-    }
-
     &.hide-card {
         opacity: 0;
         max-width: 0;

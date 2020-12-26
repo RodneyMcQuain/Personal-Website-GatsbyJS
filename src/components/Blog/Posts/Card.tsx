@@ -9,6 +9,7 @@ import { IBlogPost } from '../BlogTypes';
 import IconText from '../../Shared/IconText';
 import { FaBook } from '@meronex/icons/fa';
 import Div from '../../Shared/UnstyledDiv';
+import ImageTopCard from '../../Shared/ImageTopCard';
 import '../../../styles/layout/blog/posts/_card.scss';
 
 interface IBlogCardProps {
@@ -18,40 +19,38 @@ interface IBlogCardProps {
 }
 
 const Card = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
-    const { node } = post;
-    const { title, date, path, featuredImage, category, tags } = node.frontmatter;
+    const { node: { excerpt, frontmatter } } = post;
+    const { title, date, path, featuredImage, category, tags } = frontmatter;
     const mightHideCard = isShown(categoryFilter, category, tagFilters, tags) ? '' : 'hide-card';
 
     return (
-        <div className={`margin-container blog-card col-xs-12 col-sm-6 col-md-4 col-lg-4 ${mightHideCard}`}>
-            <div className="-curved-border -layered-box-shadow">
-                <div key={node.id}>
-                    <Img className="container-top-image" fluid={featuredImage.childImageSharp.fluid} />
-                    <div className="content">
-                        <div className="icons">
-                            <Div><PublishedOnDate date={date} /></Div>
-                            <Div><Category category={category} /></Div>
-                            <Div><Tags tags={tags} /></Div>
-                        </div>
-                        <h2>{title}</h2>
-                        <p className="-secondary-text">{node.excerpt}</p>
-                        <Link className="btn -secondary-text" to={path} aria-label={`Read more about ${title}`}>
-                            <IconText icon={<FaBook />} text="Read More" />
-                        </Link>
-                    </div>
-                </div>
+        <ImageTopCard
+            image={featuredImage.childImageSharp.fluid}
+            imageAltText={title} 
+            className={`blog-card margin-container col-xs-12 col-sm-6 col-md-4 col-lg-4 ${mightHideCard}`}
+            hasInnerMargin
+        >
+            <div className="icons">
+                <Div><PublishedOnDate date={date} /></Div>
+                <Div><Category category={category} /></Div>
+                <Div><Tags tags={tags} /></Div>
             </div>
-        </div>
+            <h2>{title}</h2>
+            <p className="-secondary-text">{excerpt}</p>
+            <Link className="btn -secondary-text" to={path} aria-label={`Read more about ${title}`}>
+                <IconText icon={<FaBook />} text="Read More" />
+            </Link>
+        </ImageTopCard>
     );
 }
 
 const isShown = (
-    categoryFilter: string, 
-    currentCategory: string, 
-    tagFilters: string[], 
+    categoryFilter: string,
+    currentCategory: string,
+    tagFilters: string[],
     currentTags: string[]
-): boolean => ( 
-    (categoryFilter === ALL_FILTER || currentCategory === categoryFilter) 
+): boolean => (
+    (categoryFilter === ALL_FILTER || currentCategory === categoryFilter)
     && hasTag(tagFilters, currentTags)
 );
 
@@ -62,7 +61,7 @@ const hasTag = (tagFilters: string[], currentTags: string[]): boolean => {
     for (const currentTag of currentTags)
         for (const tagFilter of tagFilters)
             if (tagFilter === currentTag)
-                return true;  
+                return true;
 
     return false;
 }

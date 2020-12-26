@@ -1,8 +1,6 @@
 @import '../helpers/variables/variables';
 
 .project-container {
-    max-height: 100%;
-
     p, span, a {
         font-size: $secondary-text-size;
     }
@@ -15,7 +13,7 @@
     li {
         margin: $spacing-between-elements;
         display: inline-block;
-        padding: 4rem;
+        padding: 2rem 4rem;
         border-radius: $minor-border-radius;
         border: 1rem solid $darker-white;
         font-size: 12rem;
