@@ -9,7 +9,7 @@ const Institution = ({ institution: { institution, location, degree, graduationD
     <ImageTopCard
         image={image.childImageSharp.fluid}
         imageAltText={institution}
-        className="col-lg-6 col-md-6 col-sm-6 col-xs-12 upscale-container"
+        className="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin-container upscale-container"
     >
         <h2 className="education-institution">
             {institution} - <HoverIconText
