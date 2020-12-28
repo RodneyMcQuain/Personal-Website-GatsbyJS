@@ -37,6 +37,7 @@ const ProjectsStaticQuery = () => (
                             technologies
                             description
                             gitHubUrl
+                            siteUrl
                         }
                     }
                 }

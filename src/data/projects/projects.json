@@ -10,6 +10,23 @@
         "gitHubUrl": "https://github.com/RodneyMcQuain/Melee-CSS-Color-Changer"
     },
     {
+        "title": "The Digit-Inator",
+        "image": "digit-inator.png",
+        "technologies": [
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Tensorflow",
+            "SCSS",
+            "Jest",
+            "React Testing Library",
+            "Adobe XD"
+        ],
+        "description": "The Digit-Inator allows you to convert your favorite hand drawn digit to text with the latest and greatest in computer vision. The user simply just draws a number using thier mouse or touch screen and the Digit-Inator gives its best guess at what the number is.",
+        "gitHubUrl": "https://github.com/RodneyMcQuain/Digit-Inator",
+        "siteUrl": "https://digit-inator.netlify.app/"
+    },
+    {
         "title": "Melee Notes Web App",
         "image": "meleeNotesWeb.jpg",
         "technologies": [
