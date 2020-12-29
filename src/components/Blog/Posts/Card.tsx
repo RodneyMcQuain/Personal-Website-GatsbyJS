@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Img from 'gatsby-image';
 import PublishedOnDate from '../Icons/PublishedOnDate';
 import Tags from '../Icons/Tags';
 import Category from '../Icons/Category';
@@ -20,13 +19,13 @@ interface IBlogCardProps {
 
 const Card = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
     const { node: { excerpt, frontmatter } } = post;
-    const { title, date, path, featuredImage, category, tags } = frontmatter;
+    const { title, date, path, featuredImage, featuredImageAltText, category, tags } = frontmatter;
     const mightHideCard = isShown(categoryFilter, category, tagFilters, tags) ? '' : 'hide-card';
 
     return (
         <ImageTopCard
             image={featuredImage.childImageSharp.fluid}
-            imageAltText={title} 
+            imageAltText={featuredImageAltText} 
             className={`blog-card margin-container col-xs-12 col-sm-6 col-md-4 col-lg-4 ${mightHideCard}`}
             hasInnerMargin
         >

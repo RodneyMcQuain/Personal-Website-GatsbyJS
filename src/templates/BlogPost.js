@@ -13,15 +13,15 @@ import HeaderTitle from '../components/Shared/HeaderTitle';
 import '../styles/layout/blog/post/_blog-post.scss';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
-    const { html, excerpt, tableOfContents, wordCount } = data.thisPost;
-    const { title, date, lastUpdatedDate, category, tags } = data.thisPost.frontmatter;
-    const featuredFluidImage = data.thisPost.frontmatter.featuredImage.childImageSharp.fluid;
+    const { html, excerpt, tableOfContents, wordCount: { words }, frontmatter } = data.thisPost;
+    const { title, date, lastUpdatedDate, featuredImageAltText, category, tags } = frontmatter;
+    const featuredFluidImage = frontmatter.featuredImage.childImageSharp.fluid;
     const blogPostGridClasses = "col-xs-12 col-sm-12 col-md-7";
 
     return (
         <Layout>
             <InViewAnimation>
-                <Img className="blog-featured-image" fluid={featuredFluidImage} />
+                <Img className="blog-featured-image" fluid={featuredFluidImage} alt={featuredImageAltText} />
                 <div className="container">
                     <SEO
                         title={title}
@@ -35,7 +35,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                                 <HeaderIcons
                                     date={date}
                                     lastUpdatedDate={lastUpdatedDate}
-                                    wordCount={wordCount.words}
+                                    wordCount={words}
                                     category={category}
                                     tags={tags}
                                 />
@@ -76,6 +76,7 @@ export const pageQuery = graphql`
                         }
                     }
                 }
+                featuredImageAltText
                 lastUpdatedDate(formatString: "MMMM DD, YYYY")
                 category
                 tags

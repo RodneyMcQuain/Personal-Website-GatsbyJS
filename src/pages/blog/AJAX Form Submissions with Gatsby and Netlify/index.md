@@ -4,6 +4,7 @@ date: "2019-08-25"
 title: "AJAX Form Submissions with Gatsby and Netlify"
 author: "Rodney McQuain"
 featuredImage: ./index.png
+featuredImageAltText: "Netlify logo."
 category: "Computer Science"
 tags: ["GatsbyJS", "React", "Netlify"]
 ---

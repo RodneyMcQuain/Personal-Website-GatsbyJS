@@ -4,6 +4,7 @@ date: "2019-12-21"
 title: "Integrating React into a Knockout Based App"
 author: "Rodney McQuain"
 featuredImage: ./index.png
+featuredImageAltText: "Knockout.js logo."
 category: "Computer Science"
 tags: ["React", "Knockout", "Durandal", "Aurelia"]
 ---

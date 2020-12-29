@@ -4,6 +4,7 @@ date: "2019-05-31"
 title: "Coloring in a 20 Year Old Video Game"
 author: "Rodney McQuain"
 featuredImage: ./index.png
+featuredImageAltText: "Super Smash Bros. Melee character select screen that has been heavily modified to be more colorful."
 lastUpdatedDate: "2019-11-11"
 category: "Computer Science"
 tags: ["Java", "JavaFX", "Low-Level", "Super Smash Bros. Melee"]

@@ -4,6 +4,7 @@ date: "2020-08-30"
 title: "Remote Mobbing Tools to Survive the Pandemic"
 author: "Rodney McQuain"
 featuredImage: ./index.png
+featuredImageAltText: "A person on a laptop computer typing with another person pointing at the screen and another person gesturing as if they're giving a suggestion to the person typing."
 category: "Software Process"
 tags: ["Collaboration", "Pair Programming", "Mob Programming"]
 ---
