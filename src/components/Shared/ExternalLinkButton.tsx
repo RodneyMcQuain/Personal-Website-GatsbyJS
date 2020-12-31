@@ -1,8 +1,9 @@
 import React from 'react';
+import { AllChildren } from '../../types/AllChildren';
 import ExternalLinkInNewTab from './ExternalLinkInNewTab';
 
 interface ExternalLinkButtonProps {
-    children: string | JSX.Element | JSX.Element[];
+    children: AllChildren;
     href: string;
     ariaLabel: string;
 }

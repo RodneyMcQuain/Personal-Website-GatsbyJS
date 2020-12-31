@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, RefObject } from 'react'
 import { useAddCssClass } from '../../services/useAddCssClass';
+import { AllChildren } from '../../types/AllChildren';
 
 interface IInViewAnimationProps {
-    children: JSX.Element;
+    children: AllChildren;
     className?: string;
 }
 

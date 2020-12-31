@@ -1,7 +1,8 @@
 import React from 'react';
+import { AllChildren } from '../../types/AllChildren';
 
 interface UnstyledExternalLinkProps {
-    children: string | JSX.Element | JSX.Element[];
+    children: AllChildren;
     href: string;
     className?: string;
     ariaLabel?: string;

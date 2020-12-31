@@ -1,9 +1,10 @@
 import React from 'react'
 import Img from 'gatsby-image';
 import styles from '../../styles/layout/ImageTopCard.module.scss';
+import { AllChildren } from '../../types/AllChildren';
 
 interface IImageTopCardProps {
-    children: JSX.Element[] | JSX.Element | string;
+    children: AllChildren;
     image: any;
     imageAltText: string;
     className?: string;

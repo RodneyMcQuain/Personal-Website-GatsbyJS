@@ -1,4 +1,5 @@
 import React from 'react';
+import { AllChildren } from '../../types/AllChildren';
 
 interface IHeaderTextProps {
     title: string;
@@ -15,7 +16,7 @@ const HeaderTitle = ({ title, className, id, isHeaderElement = true }: IHeaderTe
 
 interface IHeaderTitleWrapper {
     isHeaderElement: boolean;
-    children: JSX.Element;
+    children: AllChildren;
 }
 
 const headerClassName = "page-header";

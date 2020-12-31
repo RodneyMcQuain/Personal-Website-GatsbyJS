@@ -1,0 +1,1 @@
+export type AllChildren = string | JSX.Element | JSX.Element[];

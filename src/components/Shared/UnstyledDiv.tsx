@@ -1,7 +1,8 @@
 import React from 'react';
+import { AllChildren } from '../../types/AllChildren';
 
 interface UnstyledDiv {
-    children: string | JSX.Element | JSX.Element[];
+    children: AllChildren;
 }
 
 const UnstyledDiv = ({ children }: UnstyledDiv) => <div style={{fontSize: 'initial'}}>{children}</div>

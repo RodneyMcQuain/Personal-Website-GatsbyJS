@@ -1,12 +1,13 @@
 import React from 'react';
 import InViewAnimation from '../Shared/InViewAnimation';
 import HeaderTitle from '../Shared/HeaderTitle';
+import { AllChildren } from '../../types/AllChildren';
 
 interface IHeaderContentLayoutProps {
     title: string;
     id?: string;
     isDark?: boolean;
-    children: JSX.Element;
+    children: AllChildren;
 }
 
 const HeaderContentLayout = ({ title, id, isDark = false, children }: IHeaderContentLayoutProps) => (

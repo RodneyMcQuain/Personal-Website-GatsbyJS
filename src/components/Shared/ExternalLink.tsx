@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from '../../styles/layout/ExternalLink.module.scss';
+import { AllChildren } from '../../types/AllChildren';
 import ExternalLinkInNewTab from './ExternalLinkInNewTab';
 
 interface ILinkProps {
-    children: JSX.Element | JSX.Element[] | string;
+    children: AllChildren;
     href: string;
     shouldOpenInNewTab?: boolean;
 }
