@@ -1,11 +1,12 @@
 import React from 'react';
 import IconText from '../../../Shared/IconText';
 import { HOME_ROUTE } from '../../../../services/routes';
+import { IconType } from '../../../../types/IconType';
 
 interface INavBrandItemProps {
     text: string;
     url: string;
-    icon: JSX.Element;
+    icon: IconType;
 }
 
 const NavBrandItem = ({ text, url, icon }: INavBrandItemProps) => (
