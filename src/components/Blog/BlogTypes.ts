@@ -13,6 +13,7 @@ interface IFrontmatter {
     title: string;
     date: Date;
     featuredImage: any; // Don't know the type of gatsby-image
+    featuredImageAltText: string;
     category: string;
     tags: string[];
     lastUpdated: Date;
