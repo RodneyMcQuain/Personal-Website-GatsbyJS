@@ -1,0 +1,36 @@
+@import '../../../helpers/variables/variables';
+@import '../../../helpers/mixins/mixins';
+
+.contact-container {
+    padding: 20rem;
+    width: 55%;
+
+    :global(.input-lg) {
+        margin-bottom: 15rem;
+    }
+    
+    :global(.form-control) {
+        font-size: $secondary-text-size;
+    }
+    
+    label {
+        @include label-text();
+        float: left;
+    }
+
+    @include lg-media-query() {
+        width: 75%;
+    }
+
+    @include md-media-query() {
+        width: 80%;
+    }
+
+    @include sm-media-query() {
+        width: 90%;
+    }
+
+    @include xs-media-query() {
+        width: 100%;
+    }
+}

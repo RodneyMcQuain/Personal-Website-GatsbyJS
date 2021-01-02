@@ -1,0 +1,9 @@
+@import '../../../helpers/variables/text-size';
+
+.success-text {
+    color: green;
+
+    * {
+        font-size: $secondary-text-size;
+    }
+}

@@ -1,0 +1,11 @@
+@import '../../../helpers/mixins/mixins';
+
+.status-text {
+    max-height: 0;
+    @include height-transition-initial();
+
+    &.show-text {
+        max-height: 100%;
+        @include height-transition-open();
+    }
+}

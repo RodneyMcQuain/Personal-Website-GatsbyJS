@@ -3,16 +3,17 @@ import Link from 'gatsby-link';
 import Icon from '../../Shared/Icon';
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from '@meronex/icons/fa';
 import SingleWhiteSpace from '../../Shared/SingleWhiteSpace';
-import '../../../styles/layout/blog/post/_adjacent-navigation.scss';
+import styles from '../../../styles/layout/components/Blog/Post/AdjacentPostNavigation.module.scss';
+const { adjacentNavigationContainer, adjacentNavigation, previous: previousClass, next: nextClass } = styles;
 
 const AdjacentPostNavigation = ({ previous, next }) => (
-    <nav className="adjacent-navigation-container">
+    <nav className={adjacentNavigationContainer}>
         {
             next 
                 ? (
-                    <Link className="next" to={next.path}>
+                    <Link className={nextClass} to={next.path}>
                         <div id="next-post" className="-small-text -gray-text">Next Post</div>
-                        <div className="adjacent-navigation" aria-labelledby="next-post">
+                        <div className={adjacentNavigation} aria-labelledby="next-post">
                             <div><Icon icon={<FaLongArrowAltLeft />} /></div> 
                             <SingleWhiteSpace /><div>{next.title}</div>
                         </div>
@@ -23,9 +24,9 @@ const AdjacentPostNavigation = ({ previous, next }) => (
         {
             previous 
                 ? (
-                    <Link className="previous" to={previous.path}>
+                    <Link className={previousClass} to={previous.path}>
                         <div id="previous-post" className="-small-text -gray-text">Previous Post</div>
-                        <div className="adjacent-navigation" aria-labelledby="previous-post">
+                        <div className={adjacentNavigation} aria-labelledby="previous-post">
                             <div>{previous.title}</div> 
                             <SingleWhiteSpace /><div><Icon icon={<FaLongArrowAltRight />} /></div>
                         </div>

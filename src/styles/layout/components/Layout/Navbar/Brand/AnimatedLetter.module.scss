@@ -1,0 +1,14 @@
+@import '../../../../../helpers/variables/variables';
+
+$letter-animation-duration: 500ms;
+
+.animate-letter {
+    animation: bulge $letter-animation-duration 1;
+    color: $white;
+}
+
+@keyframes bulge { 50% { transform: scale(1.5) } }
+
+:export {
+    LETTER_ANIMATION_DURATION: $letter-animation-duration;
+}

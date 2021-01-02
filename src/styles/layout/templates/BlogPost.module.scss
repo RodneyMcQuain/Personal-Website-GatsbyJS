@@ -1,0 +1,41 @@
+@import '../../helpers/variables/variables';
+@import '../../helpers/mixins/media-queries';
+
+.blog-header-icons div {
+    text-align: left;
+    
+    &:last-child {
+        margin-bottom: -20rem;
+    }
+}
+
+.blog-post-title {
+    font-size: 36rem;
+    font-weight: bold;
+}
+
+.blog-featured-image {
+    height: $blog-featured-image-height;
+    z-index: $blog-featured-image-z-index;
+}
+
+.blog-post-content {
+    margin-top: -30rem;
+    padding: 25rem;
+    
+    background: white;
+    border-radius: $minor-border-radius;
+    z-index: $blog-post-content-z-index;
+}
+
+@include xs-media-query() {
+    .blog-post-content {
+        margin-top: 0;
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .blog-header-icons {
+        margin-top: 20rem;
+    }
+}

@@ -1,0 +1,40 @@
+@import '../../../../helpers/variables/variables';
+@import '../../../../helpers/mixins/mixins';
+
+.category-dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: $default-spacing;
+
+    &:before {
+        content: attr(title);
+        display: flex;
+        min-width: 100%;
+        @include label-text();
+    }
+
+    li {
+        border-radius: $minor-border-radius;
+        border: $darker-white solid 1rem;
+        padding: 10rem 20rem;
+        cursor: pointer;
+        font-size: $secondary-text-size;
+        transition: background-color 0.5s ease-in-out;
+
+        &:hover {
+            background: $white;
+        }
+
+        &.active {
+            background: $darker-white;
+        }
+    }
+}
+
+@include md-media-query() {
+    .category-dropdown {
+        width: 100%;
+    }
+}

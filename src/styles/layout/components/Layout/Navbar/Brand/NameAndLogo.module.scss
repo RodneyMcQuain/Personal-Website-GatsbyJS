@@ -1,0 +1,19 @@
+@import '../../../../../helpers/variables/variables';
+
+$logo-location: '../../../../../../assets/svg/logo.svg';
+
+.logo {
+    &.animate:before {
+        animation: rotate360 1s infinite;
+    }
+
+    &:before {
+        display: inline-block;
+        content: ' ';
+        background: url($logo-location) no-repeat;
+        width: 25rem;
+        height: 25rem;
+        background-size: 25rem 25rem;
+        margin-right: $default-spacing;
+    }
+}

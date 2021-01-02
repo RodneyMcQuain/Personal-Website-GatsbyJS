@@ -1,7 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Institution from './Institution';
-import '../../../styles/layout/_education.scss';
 import { EDUCATION_HASH } from '../../../services/homePageHashes';
 import HeaderContentLayout from '../../Layout/HeaderContentLayout';
 

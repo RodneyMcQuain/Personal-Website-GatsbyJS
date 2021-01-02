@@ -1,4 +1,5 @@
-import { NAVBAR_HEIGHT, LETTER_ANIMATION_DURATION, FEATURED_IMG_HEIGHT, MAX_FOOTER_HEIGHT } from './_variables.scss';
+import { NAVBAR_HEIGHT, FEATURED_IMG_HEIGHT, MAX_FOOTER_HEIGHT } from './_variables.scss';
+import { LETTER_ANIMATION_DURATION } from '../../layout/components/Layout/Navbar/Brand/AnimatedLetter.module.scss';
 
 export const NAVBAR_HEIGHT_REM = getUnitlessMeasurement(NAVBAR_HEIGHT, "rem");
 export const MAX_FOOTER_HEIGHT_REM = getUnitlessMeasurement(MAX_FOOTER_HEIGHT, "rem");

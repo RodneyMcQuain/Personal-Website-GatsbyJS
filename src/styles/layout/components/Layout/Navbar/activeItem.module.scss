@@ -1,0 +1,6 @@
+@import '../../../../helpers/variables/colors';
+@import './shared-nav-variables';
+
+.active {
+    border-bottom: $navbar-item-border-bottom-height solid $white;
+}

@@ -1,0 +1,40 @@
+@import "../../../helpers/variables/variables";
+@import "../../../helpers/mixins/media-queries";
+@import "../../../helpers/variables/text-size";
+@import "../../../helpers/variables/variables";
+
+.about-me-text {
+    text-align: left;
+    text-indent: 20rem;
+}
+
+$spacing-around-image: $default-spacing;
+.about-me-image-container {
+    float: right;
+
+    .image {
+        width: 330rem;
+        border-radius: $minor-border-radius;
+        margin-left: $spacing-around-image;
+    }
+
+    figcaption {
+        margin-top: $spacing-around-image;
+    }
+
+    @include sm-media-query() {
+        .image {
+            width: 300rem;
+        }
+    }
+
+    @include xs-media-query() {
+        float: none;
+        margin-bottom: $spacing-around-image;
+
+        .image {
+            margin: 0 auto;
+            width: 275rem;
+        }
+    }
+}

@@ -7,9 +7,9 @@ import BlogCategoryDropdown from '../components/Blog/Posts/CategoryDropdown';
 import TagDropdown from '../components/Blog/Posts/TagDropdown';
 import { ALL_FILTER } from '../components/Blog/ALL_FILTER';
 import TagPills from '../components/Blog/Posts/TagPills';
-import '../styles/layout/blog/posts/_filters.scss';
 import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
 import { isBrowser } from '../services/browser';
+import styles from '../styles/layout/pages/blog-posts.module.scss';
 
 const BlogPosts = ({ data }) => {
     const { edges, categories, tags } = data.allMarkdownRemark;
@@ -20,7 +20,7 @@ const BlogPosts = ({ data }) => {
         <Layout>
             <SEO title="Blog" />
             <HeaderContentLayout title="Blog Posts">
-                <div className='blog-filters'>
+                <div className={styles.blogFilters}>
                     <BlogCategoryDropdown
                         categories={categories.map(category => category.category)}
                         filter={currentCategory}

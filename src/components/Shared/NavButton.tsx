@@ -3,8 +3,9 @@ import { SetIsOpen } from '../../types/SetIsOpen';
 import Icon from './Icon';
 import IconText from '../Shared/IconText';
 import { FaTimes } from '@meronex/icons/fa';
-import { IconType } from '../../types//IconType';
-import '../../styles/layout/_nav-button.scss';
+import { IconType } from '../../types/IconType';
+import styles from '../../styles/layout/components/Shared/NavButton.module.scss';
+const { navButton, clicked } = styles;
 
 interface INavButtonProps {
     isOpen: boolean;
@@ -26,11 +27,11 @@ const NavButton = ({
     ariaLabel
 }: INavButtonProps) => {
     const icon = isOpen ? openIcon : closedIcon;
-    const className = isOpen ? 'clicked' : '';
+    const className = isOpen ? clicked : '';
 
     return (
         <button
-            className={`nav-btn ${extraClasses}`}
+            className={`${navButton} ${extraClasses}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label={`Show ${ariaLabel}`}
             aria-expanded={isOpen}

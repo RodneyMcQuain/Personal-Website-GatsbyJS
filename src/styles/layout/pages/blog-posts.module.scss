@@ -1,0 +1,17 @@
+@import '../../helpers/variables/breakpoints';
+@import '../../helpers/mixins/media-queries';
+
+.blog-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40rem;
+    flex-wrap: wrap;
+}
+
+@include md-media-query() {
+    .blog-filters {
+        flex-direction: column;
+        justify-content: left;
+    }
+}

@@ -1,0 +1,23 @@
+@import '../../../../helpers/variables/variables';
+@import './shared-nav-variables';
+
+.nav {
+    position: fixed;
+    background-color: $black;
+    min-height: $navbar-height;
+    top: 0;
+    width: 100vw;
+    z-index: $navbar-z-index;
+    
+    .toggle {
+        box-shadow: none;
+
+        float: right;
+        margin: 8rem $navbar-right-alignment 8rem 0;
+        border: #333 1rem solid;
+        
+        &:focus {
+            outline: none;
+        }
+    }
+}

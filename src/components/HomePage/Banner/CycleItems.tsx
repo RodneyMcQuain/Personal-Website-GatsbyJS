@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../../../styles/layout/banner/_item-cycle.scss';
+import styles from '../../../styles/layout/components/HomePage/Banner/CycleItems.module.scss';
 
 const DELAY_BETWEEN_ITEMS_MS = 3000;
 const DELAY_BETWEEN_CHARACTERS_MS = 50;
@@ -13,7 +13,7 @@ const CycleItems = ({ items, initialDelay = 0 }: ICycleItemsProps) => {
     const currentText = useDoCycle(items, initialDelay);
 
     return (
-        <span data-cycle-title={createItemCycleHoverText(items)} aria-label={createAriaLabel(items)} className={`item-cycle-base`}>
+        <span data-cycle-title={createItemCycleHoverText(items)} aria-label={createAriaLabel(items)} className={styles.itemCycleBase}>
             <span>{currentText}</span>
         </span>
     );

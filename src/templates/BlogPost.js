@@ -5,12 +5,13 @@ import InViewAnimation from '../components/Shared/InViewAnimation';
 import ResponsiveBlogMenu from '../components/Blog/Post/ResponsiveMenu';
 import SEO from '../components/Shared/SEO';
 import Img from 'gatsby-image';
-import ContactMe from '../components/Contact/ContactMe';
+import ContactMe from '../components/Shared/ContactMe';
 import AdjacentPostNavigation from '../components/Blog/Post/AdjacentPostNavigation';
 import HeaderIcons from '../components/Blog/Post/HeaderIcons';
 import Markdown from '../components/Shared/Markdown';
 import HeaderTitle from '../components/Shared/HeaderTitle';
-import '../styles/layout/blog/post/_blog-post.scss';
+import styles from '../styles/layout/templates/BlogPost.module.scss';
+const { blogFeaturedImage, blogPostTitle, blogPostContent } = styles;
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const { html, excerpt, tableOfContents, wordCount: { words }, frontmatter } = data.thisPost;
@@ -21,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     return (
         <Layout>
             <InViewAnimation>
-                <Img className="blog-featured-image" fluid={featuredFluidImage} alt={featuredImageAltText} />
+                <Img className={blogFeaturedImage} fluid={featuredFluidImage} alt={featuredImageAltText} />
                 <div className="container">
                     <SEO
                         title={title}
@@ -29,7 +30,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                         description={excerpt}
                         type={'article'}
                     />
-                    <div className={`${blogPostGridClasses} -layered-box-shadow blog-post-content`}>
+                    <div className={`${blogPostGridClasses} -layered-box-shadow ${blogPostContent}`}>
                         <article>
                             <header>
                                 <HeaderIcons
@@ -39,7 +40,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                                     category={category}
                                     tags={tags}
                                 />
-                                <HeaderTitle title={title} className="-left-align blog-post-title" isHeaderElement={false} />
+                                <HeaderTitle title={title} className={`-left-align ${blogPostTitle}`} isHeaderElement={false} />
                             </header>
 
                             <Markdown html={html} />

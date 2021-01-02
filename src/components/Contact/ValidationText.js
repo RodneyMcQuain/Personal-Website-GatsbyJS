@@ -1,10 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
+import validationTextStyles from '../../styles/layout/components/Contact/ValidationText.module.scss';
+import statusTextStyles from '../../styles/layout/components/Contact/statusText.module.scss';
+const { statusText, showText } = statusTextStyles;
 
 const ValidationText = ({ formData, setIsError, isDisplayed }) => {
     const validationText = useContactFormValidation(formData, setIsError);
 
-    return <p id="validation-text" className={isDisplayed && validationText ? 'show-text' : ''}>{validationText}</p>;
+    return (
+        <p
+            className={
+                `${statusText} ${validationTextStyles.validationText} 
+                ${isDisplayed && validationText ? showText : ''}`
+            }
+        >
+            {validationText}
+        </p>
+    );
 };
 
 const useContactFormValidation = (formData, setIsError) => {
@@ -14,8 +26,8 @@ const useContactFormValidation = (formData, setIsError) => {
         let newValidationText = !isValidEmail(formData.email) ? "Please provide a valid email." : "";
         newValidationText = atLeastOneEmpty(formData) ? "Please fill in empty fields." : newValidationText;
         setValidationText(newValidationText);
-    
-        const isError = atLeastOneEmpty(formData) || !isValidEmail(formData.email); 
+
+        const isError = atLeastOneEmpty(formData) || !isValidEmail(formData.email);
         setIsError(isError);
     }, [formData]);
 
@@ -26,7 +38,7 @@ const atLeastOneEmpty = formData => {
     for (const key in formData)
         if (formData[key].trim() === "")
             return true;
-    
+
     return false;
 }
 

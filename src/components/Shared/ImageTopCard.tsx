@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image';
-import styles from '../../styles/layout/ImageTopCard.module.scss';
+import styles from '../../styles/layout/components/Shared/ImageTopCard.module.scss';
 import { AllChildren } from '../../types/AllChildren';
 
 interface IImageTopCardProps {

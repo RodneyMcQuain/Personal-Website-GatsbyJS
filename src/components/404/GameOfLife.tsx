@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { getViewportHeightExcludingNavbar, getViewportWidth } from '../../services/dimensions';
-import '../../styles/layout/banner/_banner-animation.scss';
 
 type Board = IBoardElement[][];
 
@@ -14,10 +13,14 @@ const DEAD_COLOR = '#111';
 const CELL_SIZE_PX = 5;
 const IS_INITIALLY_ALIVE_PROBABILITY = 0.5;
 
-const GameOfLife = () => {
+interface GameOfLifeProps {
+    className: string;
+}
+
+const GameOfLife = ({ className }: GameOfLifeProps) => {
     const canvas = useGameOfLife();
 
-    return <canvas ref={canvas} className="game-of-life" />;
+    return <canvas ref={canvas} className={className} />;
 }
 
 function useGameOfLife() {

@@ -4,19 +4,20 @@ import ImageTopCard from '../Shared/ImageTopCard';
 import ExternalLinkButton from '../Shared/ExternalLinkButton';
 import { FaGithub } from '@meronex/icons/fa';
 import MdcWeb from '@meronex/icons/mdc/MdcWeb';
-import '../../styles/layout/_project.scss';
+import styles from '../../styles/layout/components/Projects/Project.module.scss';
+const { projectContainer, projectLinkContainer, languageTag } = styles;
 
 const Project = ({ project: { image, title, technologies, description, gitHubUrl, siteUrl } }) => (
     <ImageTopCard
         image={image.childImageSharp.fluid}
         imageAltText={`${title} project`}
-        className="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-container margin-container upscale-container"
+        className={`${projectContainer} col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-container upscale-container`}
         hasInnerMargin
     >
         <LanguageTags technologies={technologies} />
         <h2>{title}</h2>
         <p>{description}</p>
-        <div className="project-link-container">
+        <div className={projectLinkContainer}>
             {siteUrl && (
                 <ExternalLinkButton href={siteUrl} ariaLabel={`Go to the live site for ${title}`}>
                     <IconText icon={<MdcWeb />} text="Live Site" />
@@ -30,7 +31,7 @@ const Project = ({ project: { image, title, technologies, description, gitHubUrl
 );
 
 const LanguageTags = ({ technologies }) => (
-    <ul className="language-tag">
+    <ul className={languageTag}>
         {technologies.map(technology => <li key={technology}>{technology}</li>)}
     </ul>
 );

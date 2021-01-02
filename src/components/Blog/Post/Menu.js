@@ -4,7 +4,8 @@ import { useAddCssClass } from '../../../services/useAddCssClass';
 import BlogPostsList from './PostsList';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
 import { getViewportHeight } from '../../../services/dimensions';
-import '../../../styles/layout/blog/post/_menu.scss';
+import styles from '../../../styles/layout/components/Blog/Post/Menu.module.scss';
+const { blogMenu, offsetByFeaturedImage } = styles;
 
 const Menu = ({ posts, currentPostName, isOpen, tableOfContents, mightBeFooterInView }) => {
     const sidebarOffsetTopClass = useMenu();
@@ -12,7 +13,7 @@ const Menu = ({ posts, currentPostName, isOpen, tableOfContents, mightBeFooterIn
 
     return (
         <div className={
-            `blog-menu -curved-border -layered-box-shadow padding-container 
+            `${blogMenu} -curved-border -layered-box-shadow padding-container 
             ${sidebarOffsetTopClass} ${mightOpenMenu} ${mightBeFooterInView}`
         }>
             <h1>Table of Contents</h1>
@@ -25,7 +26,7 @@ const Menu = ({ posts, currentPostName, isOpen, tableOfContents, mightBeFooterIn
 };
 
 const useMenu = () => {
-    const [mightBeSidebarOffsetTop, shouldAddSidebarOffsetTop] = useAddCssClass("offset-by-featured-image");
+    const [mightBeSidebarOffsetTop, shouldAddSidebarOffsetTop] = useAddCssClass(offsetByFeaturedImage);
     const debouncedSetMenuHeightOffset = useFunctionThrottle(() => setSidebarHeightOffset(shouldAddSidebarOffsetTop), 500);
 
     useEffect(() => {

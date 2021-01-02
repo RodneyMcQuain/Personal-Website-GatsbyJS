@@ -7,6 +7,8 @@ import { useAddCssClass } from '../../../services/useAddCssClass';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
 import { getViewportHeight } from '../../../services/dimensions';
 import { FaEllipsisH } from '@meronex/icons/fa';
+import styles from '../../../styles/layout/components/Blog/Post/Menu.module.scss';
+const { blogMenuButton, footerInView } = styles;
 
 const ResponsiveMenu = ({ posts, currentPostName, tableOfContents }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +26,7 @@ const ResponsiveMenu = ({ posts, currentPostName, tableOfContents }) => {
             <NavButton
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
-                extraClasses={`btn blog-menu-btn hidden-md hidden-lg -layered-box-shadow ${mightBeFooterInView}`}
+                extraClasses={`btn ${blogMenuButton} hidden-md hidden-lg -layered-box-shadow ${mightBeFooterInView}`}
                 closedIcon={<FaEllipsisH />}
                 ariaLabel="Blog Menu"
             />
@@ -33,7 +35,7 @@ const ResponsiveMenu = ({ posts, currentPostName, tableOfContents }) => {
 };
 
 const useOffsetByFooter = () => {
-    const [mightBeFooterInView, shouldAddFooterInView] = useAddCssClass("footer-in-view");
+    const [mightBeFooterInView, shouldAddFooterInView] = useAddCssClass(footerInView);
     const debouncedSetMenuHeightOffset = useFunctionThrottle(() => setMenuButtonHeightOffset(shouldAddFooterInView), 500);
 
     useEffect(() => {
