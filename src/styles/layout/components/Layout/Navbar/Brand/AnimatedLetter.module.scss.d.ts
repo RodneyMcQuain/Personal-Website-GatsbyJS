@@ -1,0 +1,1 @@
+export const LETTER_ANIMATION_DURATION: string;
