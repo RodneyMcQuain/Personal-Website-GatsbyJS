@@ -4,7 +4,7 @@ import AboutMe from './AboutMe';
 import Education from './Education/Education';
 import Skills from './Skills/Skills';
 import WorkTimeline from './Work/Timeline';
-import ContactMe from '../Contact/ContactMe';
+import ContactMe from '../Shared/ContactMe';
 
 const HomePage = () => {
     useEffect(scrollToCurrentHash, []);
