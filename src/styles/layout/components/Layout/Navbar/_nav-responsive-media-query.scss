@@ -1,4 +1,4 @@
-@import './media-queries';
+@import '../../../../helpers/mixins/media-queries';
 
 @mixin nav-media-query() {
     @include sm-media-query() {

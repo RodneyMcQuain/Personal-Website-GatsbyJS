@@ -1,7 +1,7 @@
 @import '../../../../../helpers/variables/variables';
 @import '../../../../../helpers/mixins/mixins';
-@import '../../../../../helpers/mixins/nav-responsive-media-query';
-@import '../../../../../helpers/variables/nav';
+@import '../nav-responsive-media-query';
+@import '../shared-nav-variables';
 
 ul.brand-dropdown {
     position: absolute;

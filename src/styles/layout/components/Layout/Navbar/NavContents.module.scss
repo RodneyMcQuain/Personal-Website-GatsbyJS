@@ -1,7 +1,7 @@
 @import '../../../../helpers/variables/variables';
-@import '../../../../helpers/variables/nav';
 @import '../../../../helpers/mixins/mixins';
-@import '../../../../helpers/mixins/nav-responsive-media-query';
+@import './shared-nav-variables';
+@import './nav-responsive-media-query';
 
 .nav-contents {
     list-style-type: none;
