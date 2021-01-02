@@ -1,0 +1,75 @@
+@import '../../../../helpers/variables/variables';
+@import '../../../../helpers/variables/nav';
+@import '../../../../helpers/mixins/mixins';
+@import '../../../../helpers/mixins/nav-responsive-media-query';
+
+.nav-contents {
+    list-style-type: none;
+    padding: 0 $end-margin-spacing;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    li a {
+        display: block;
+        padding: $default-spacing 15rem;
+        line-height: 20rem;
+        position: relative;
+        text-decoration: none;
+
+        &, > span {
+            font-size: $secondary-text-size;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        &, span {
+            color: $white;
+            transition: color 0.5s ease-in-out;
+        }
+
+        &:after {
+            content: ' ';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: -1rem;
+            display: block;
+            z-index: -1;
+
+            border-bottom: $navbar-item-border-bottom-height $darker-white solid;
+            transform: scaleX(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &:hover {
+            &, span {
+                color: $darker-white;
+            }
+
+            &:not(:global(.active)):after {
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    @include nav-media-query() {
+        @include responsive-nav-menu();
+
+        margin: 0;
+        
+        border-top: 1rem solid $darker-white;
+        display: flex;
+        flex-direction: column;
+        background: $black;
+
+        &.open {
+            @include responsive-nav-menu-open();
+        }
+
+        li:first-child, li:last-child {
+            margin: 0;
+        }
+    }
+}

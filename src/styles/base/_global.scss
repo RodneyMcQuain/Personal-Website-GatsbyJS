@@ -263,3 +263,7 @@ a {
 .-left-align {
     text-align: left;
 }
+
+.-offset-by-footer {
+    margin-bottom: -$footer-xs-height;
+}

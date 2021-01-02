@@ -1,0 +1,8 @@
+@import '../../../../../helpers/variables/variables';
+
+.animate-letter {
+    animation: bulge $letter-animation-duration 1;
+    color: $white;
+}
+
+@keyframes bulge { 50% { transform: scale(1.5) } }

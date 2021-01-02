@@ -9,7 +9,8 @@ import IconText from '../../Shared/IconText';
 import { FaBook } from '@meronex/icons/fa';
 import Div from '../../Shared/UnstyledDiv';
 import ImageTopCard from '../../Shared/ImageTopCard';
-import '../../../styles/layout/blog/posts/_card.scss';
+import styles from '../../../styles/layout/components/Blog/Posts/Card.module.scss';
+const { blogCard, hideCard, icons } = styles;
 
 interface IBlogCardProps {
     post: IBlogPost;
@@ -20,16 +21,16 @@ interface IBlogCardProps {
 const Card = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
     const { node: { excerpt, frontmatter } } = post;
     const { title, date, path, featuredImage, featuredImageAltText, category, tags } = frontmatter;
-    const mightHideCard = isShown(categoryFilter, category, tagFilters, tags) ? '' : 'hide-card';
+    const mightHideCard = isShown(categoryFilter, category, tagFilters, tags) ? '' : hideCard;
 
     return (
         <ImageTopCard
             image={featuredImage.childImageSharp.fluid}
             imageAltText={featuredImageAltText} 
-            className={`blog-card margin-container col-xs-12 col-sm-6 col-md-4 col-lg-4 ${mightHideCard}`}
+            className={`${blogCard} margin-container col-xs-12 col-sm-6 col-md-4 col-lg-4 ${mightHideCard}`}
             hasInnerMargin
         >
-            <div className="icons">
+            <div className={icons}>
                 <Div><PublishedOnDate date={date} /></Div>
                 <Div><Category category={category} /></Div>
                 <Div><Tags tags={tags} /></Div>

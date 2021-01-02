@@ -1,0 +1,7 @@
+@import './media-queries';
+
+@mixin nav-media-query() {
+    @include sm-media-query() {
+        @content
+    }
+}

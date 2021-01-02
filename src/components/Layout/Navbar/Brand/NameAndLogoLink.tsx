@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { ACTIVE_CLASS_NAME } from '../NavContents';
 import NameAndLogo from './NameAndLogo';
 import { HOME_ROUTE } from '../../../../services/routes';
+import { ACTIVE_ITEM_CLASS_NAME } from '../activeItem';
 
 const NameLink = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -21,7 +21,7 @@ const NameLink = () => {
 
 const isActive = ({ isCurrent }) => (
     isCurrent
-        ? { className: ACTIVE_CLASS_NAME }
+        ? { className: ACTIVE_ITEM_CLASS_NAME }
         : null
 );
 

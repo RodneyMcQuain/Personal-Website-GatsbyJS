@@ -5,14 +5,15 @@ import NavBrand from './Brand/NavBrand';
 import { PROJECTS_ROUTE, BLOG_ROUTE, RESUME_ROUTE, CONTACT_ROUTE } from '../../../services/routes';
 import { ABOUT_ME_HASH, EDUCATION_HASH, SKILLS_HASH, WORK_HASH } from '../../../services/homePageHashes';
 import { FaBriefcase, FaPencilAlt, FaFilePdf, FaEnvelope} from '@meronex/icons/fa';
-
-export const ACTIVE_CLASS_NAME = 'active';
+import { ACTIVE_ITEM_CLASS_NAME } from './activeItem';
+import styles from '../../../styles/layout/components/Layout/Navbar/NavContents.module.scss';
+const { navContents, open } = styles;
 
 const NavContents = ({ isOpen }) => (
     <Scrollspy 
-        className={`nav-contents${isOpen ? " open" : ""}`}
+        className={`${navContents} ${isOpen ? open : ""}`}
         items={[ABOUT_ME_HASH, EDUCATION_HASH, WORK_HASH, SKILLS_HASH]} 
-        currentClassName={ACTIVE_CLASS_NAME}
+        currentClassName={ACTIVE_ITEM_CLASS_NAME}
     >
         <NavBrand />
         <NavItem text="Projects" url={`/${PROJECTS_ROUTE}`} icon={<FaBriefcase />} isSeparatePage={true} />

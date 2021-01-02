@@ -1,0 +1,48 @@
+@import '../../../../../helpers/variables/colors';
+@import '../../../../../helpers/variables/text-size';
+
+.brand {
+    margin-right: auto;
+    display: flex;
+
+    > a {
+        span {
+            font-size: $medium-text-size;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    a {
+        cursor: pointer;
+        margin-bottom: 2rem; //align brand border bottom with rest of navbar's border bottoms
+    }
+
+    .brand-dropdown-button {
+        box-shadow: none;
+        background: transparent;
+        border: none;
+
+        display: flex;
+        align-items: center;
+        color: $white !important;
+
+        &:hover {
+            color: $darker-white !important;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        :global(.icon) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .on-click-outside {
+        display: flex;
+    }
+}

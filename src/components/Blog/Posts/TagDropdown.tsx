@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import CloseOnOutsideClick from '../../Shared/CloseOnOutsideClick';
 import NavButton from '../../Shared/NavButton';
 import { FaCaretUp, FaCaretDown } from '@meronex/icons/fa';
-import '../../../styles/layout/blog/posts/_tag-dropdown.scss';
+import styles from '../../../styles/layout/components/Blog/Posts/TagDropdown.module.scss';
+const { tagDropdown: tagDropdownClass, tagDropdownText, tagContents, open: openClass } = styles;
 
 interface ITagDropdownProps {
     tags: string[];
@@ -14,19 +15,19 @@ const TagDropdown = ({ tags, tagFilters, setTagFilters }: ITagDropdownProps) => 
     const [isOpen, setIsOpen] = useState(false);
     
     return (
-        <CloseOnOutsideClick className="tag-dropdown" setIsOpen={setIsOpen}>
+        <CloseOnOutsideClick className={tagDropdownClass} setIsOpen={setIsOpen}>
             <NavButton
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
                 text='Tags'
                 openIcon={<FaCaretUp />}
                 closedIcon={<FaCaretDown />}
-                extraClasses='tag-dropdown-text'
+                extraClasses={tagDropdownText}
                 ariaLabel='Tags'
             />
             <ul 
                 role="listbox" 
-                className={`tag-contents -curved-border -layered-box-shadow ${isOpen ? 'open' : ''}`}
+                className={`${tagContents} -curved-border -layered-box-shadow ${isOpen ? openClass : ''}`}
             >
                 {tags.map(tag => (
                     <DropdownItem 

@@ -1,0 +1,122 @@
+@import '../../../../helpers/variables/variables';
+@import '../../../../helpers/mixins/media-queries';
+@import '../../../../helpers/animations';
+
+.banner {
+    height: calc(100vh - #{$navbar-height});
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .banner-container {
+        padding: 20rem;
+        background: black;
+        z-index: 1;
+        box-shadow: 0 0 15rem 10rem #020202;
+        opacity: 0.85;
+
+        position: absolute;
+        $distance-from-top: 32.5%;
+        $distance-from-left: 50%;
+        top: $distance-from-top;
+        left: $distance-from-left;
+        transform: translate(-$distance-from-left, -$distance-from-top);
+
+        .banner-hide {
+            opacity: 0;
+        }
+        
+        .banner-appear {
+            opacity: 1;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .banner-header {
+            font-weight: bold;
+            font-size: 75rem;
+            color: $white;
+            text-shadow: 2rem 2rem black;
+        }
+
+        .banner-text, .banner-button {
+            &, span, div {
+                font-size: 22rem;
+                color: $white;
+            }
+        }
+
+        .banner-text {
+            margin: 15rem auto;
+            max-width: 700rem;
+        }
+
+        .banner-button-container {
+            display: inline-block;
+            padding: $default-spacing;
+
+            .bounce svg {
+                animation: bounce $minor-pulse-animation-duration infinite ease-in-out;
+            }
+
+            .banner-button {
+                text-decoration: none;
+                border: 1rem solid $white;
+                padding: $default-spacing;
+                background: none;
+                position: relative;
+
+                &:before {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    animation: shadow-pulse $minor-pulse-animation-duration ease-in-out infinite;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    border-radius: 10rem;
+                }
+                
+                svg {
+                    fill: $white;
+                }
+
+                &, span, svg {
+                    transition: all 0.5s ease-in-out;
+                }
+
+                &:hover {
+                    background: $white;
+                    transform: $minor-scale;
+                    text-decoration: none;
+
+                    &, span, .banner-button-icon {
+                        color: $black;
+                    }
+
+                    svg {
+                        fill: $black;
+                    }
+
+                    &:before {
+                        animation-play-state: paused;
+                    }
+                }
+            }
+        }
+        
+        @include xs-media-query() {
+            .banner-header {
+                font-size: 45rem;
+            }
+            
+            .banner-text, .banner-button {
+                &, span, div {
+                    font-size: $secondary-text-size;
+                }
+            }
+        }
+    }
+}

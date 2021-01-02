@@ -1,4 +1,4 @@
-@function get-layered-box-shadow($x-offset) {
+@function get-layered-box-shadow($x-offset: 0) {
     $box-shadows: '';
     $current: 1;
     

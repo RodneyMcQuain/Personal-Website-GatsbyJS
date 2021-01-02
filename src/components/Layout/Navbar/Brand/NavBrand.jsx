@@ -4,21 +4,23 @@ import NavButton from '../../../Shared/NavButton';
 import CloseOnOutsideClick from '../../../Shared/CloseOnOutsideClick';
 import NameAndLogoLink from './NameAndLogoLink';
 import { FaCaretUp, FaCaretDown } from '@meronex/icons/fa';
+import styles from '../../../../styles/layout/components/Layout/Navbar/Brand/NavBrand.module.scss';
+const { brand, brandDropdownButton, onClickOutside } = styles;
 
 const NavBrand = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <li className="brand">
+        <li className={brand}>
             <NameAndLogoLink />
             <BrandContents isOpen={isOpen} />
-            <CloseOnOutsideClick className="on-click-outside" setIsOpen={setIsOpen}>
+            <CloseOnOutsideClick className={onClickOutside} setIsOpen={setIsOpen}>
                 <NavButton 
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
                     openIcon={<FaCaretUp />}
                     closedIcon={<FaCaretDown />}
-                    extraClasses="brand-dropdown-btn"
+                    extraClasses={brandDropdownButton}
                     ariaLabel="Dropdown for Links of Home Page"
                 />
             </CloseOnOutsideClick>

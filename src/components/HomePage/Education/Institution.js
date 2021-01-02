@@ -4,6 +4,8 @@ import { RiFilePaper2Line } from '@meronex/icons/ri';
 import HoverIconText from '../../Shared/HoverIconText';
 import { GoLocation } from '@meronex/icons/go';
 import ImageTopCard from '../../Shared/ImageTopCard';
+import styles from '../../../styles/layout/components/HomePage/Education/Institution.module.scss';
+const { institutionName, institutionDescription } = styles;
 
 const Institution = ({ institution: { institution, location, degree, graduationDate, gpa, image } }) => (
     <ImageTopCard
@@ -11,7 +13,7 @@ const Institution = ({ institution: { institution, location, degree, graduationD
         imageAltText={institution}
         className="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin-container upscale-container"
     >
-        <h2 className="education-institution">
+        <h2 className={institutionName}>
             {institution} - <HoverIconText
                 icon={<GoLocation />}
                 displayText={location}
@@ -19,7 +21,7 @@ const Institution = ({ institution: { institution, location, degree, graduationD
                 className="-small-text -gray-text"
             />
         </h2>
-        <p className="education-description">
+        <p className={institutionDescription}>
             <HoverIconText
                 icon={<FaGraduationCap />}
                 displayText={graduationDate}
@@ -27,7 +29,7 @@ const Institution = ({ institution: { institution, location, degree, graduationD
                 className="-gray-text -small-text"
             />
         </p>
-        <p className="education-description -secondary-text">
+        <p className={`${institutionDescription} -secondary-text`}>
             <HoverIconText
                 icon={<RiFilePaper2Line />}
                 displayText={degree}

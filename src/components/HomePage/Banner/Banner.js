@@ -5,7 +5,20 @@ import CycleItems from './CycleItems';
 import IconText from '../../Shared/IconText';
 import { FaChevronDown } from '@meronex/icons/fa';
 import SingleWhiteSpace from '../../Shared/SingleWhiteSpace';
-import '../../../styles/layout/banner/_banner.scss';
+import styles from '../../../styles/layout/components/HomePage/Banner/Banner.module.scss';
+const {
+    banner,
+    bannerContainer,
+    bannerHeader,
+    bannerText,
+    bannerHide,
+    bannerAppear,
+    bounce,
+    minorPulse,
+    bannerButtonContainer,
+    bannerButton,
+    bannerButtonIcon,
+} = styles;
 
 const itemsToCycle = [
     "Full-Stack Web Developer",
@@ -20,22 +33,22 @@ const Banner = () => {
     const [fadeHeader, fadeTextAndButton] = useBannerFade();
 
     return (
-        <header className="banner">
-            <div className="banner-container col-xl-12 col-md-12 col-sm-12 col-xs-12">
-                <h1 className={`banner-header banner-hide ${fadeHeader}`}>Rodney McQuain</h1>
-                <p className={`banner-text banner-hide ${fadeTextAndButton}`}>
+        <header className={banner}>
+            <div className={`${bannerContainer} col-xl-12 col-md-12 col-sm-12 col-xs-12`}>
+                <h1 className={`${bannerHeader} ${bannerHide} ${fadeHeader}`}>Rodney McQuain</h1>
+                <p className={`${bannerText} ${bannerHide} ${fadeTextAndButton}`}>
                     Hello, I'm a<SingleWhiteSpace /><CycleItems items={itemsToCycle} initialDelay={BUTTON_AND_TEXT_DISPLAY_DELAY_MS} />
                     <div>
                         Who's always looking for an opportunity to test my skills and grow
                     </div>
                 </p>
-                <div className={`banner-btn-container minor-pulse banner-hide ${fadeTextAndButton}`}>
-                    <a className="banner-btn -curved-border" href="#about-me">
-                        <IconText 
-                            text="Learn About Me" 
-                            icon={<FaChevronDown />} 
-                            className="banner-btn-icon bounce" 
-                            iconPosition="after" 
+                <div className={`${bannerButtonContainer} ${minorPulse} ${bannerHide} ${fadeTextAndButton}`}>
+                    <a className={`${bannerButton} -curved-border`} href="#about-me">
+                        <IconText
+                            text="Learn About Me"
+                            icon={<FaChevronDown />}
+                            className={`${bannerButtonIcon} ${bounce}`}
+                            iconPosition="after"
                         />
                     </a>
                 </div>
@@ -46,8 +59,8 @@ const Banner = () => {
 };
 
 const useBannerFade = () => {
-    const [mightBeHeaderTransition, shouldAddHeaderTransition] = useAddCssClass("banner-appear");
-    const [mightBeTextAndButtonTransition, shouldAddTextAndButtonTransition] = useAddCssClass("banner-appear");
+    const [mightBeHeaderTransition, shouldAddHeaderTransition] = useAddCssClass(bannerAppear);
+    const [mightBeTextAndButtonTransition, shouldAddTextAndButtonTransition] = useAddCssClass(bannerAppear);
 
     useEffect(() => {
         const headerTimer = setTimeout(() => shouldAddHeaderTransition(true), HEADER_DISPLAY_DELAY_MS);

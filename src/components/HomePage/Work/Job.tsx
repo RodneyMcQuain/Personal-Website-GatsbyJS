@@ -1,6 +1,8 @@
 import React from 'react';
 import { IJob } from './IJob';
 import SingleWhiteSpace from '../../Shared/SingleWhiteSpace';
+import styles from '../../../styles/layout/components/HomePage/Work/Timeline.module.scss';
+const { contentContainer, content, company: companyClass } = styles;
 
 interface IJobProps {
     work: IJob;
@@ -10,10 +12,10 @@ const Job = ({ work: { title, company, city, state, startDate, endDate } }: IJob
     const monthDifference = getMonthDifference(startDate, endDate);
 
     return (
-        <div className="content-container">
-            <div className="content -curved-border -layered-box-shadow">
+        <div className={contentContainer}>
+            <div className={`${content} -curved-border -layered-box-shadow`}>
                 <h2>{title}</h2>
-                <div className="-small-text company">
+                <div className={`${companyClass} -small-text`}>
                     {company} |<SingleWhiteSpace />
                     <span className="-small-text -gray-text">{city}, {state}</span>
                 </div>

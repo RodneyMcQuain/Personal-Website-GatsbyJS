@@ -4,6 +4,7 @@ import ContactFormField from './ContactFormField';
 import ContactIcon from './ContactIcon';
 import SuccessText from './SuccessText';
 import ValidationText from './ValidationText';
+import styles from '../../styles/layout/components/Contact/ContactForm.module.scss';
 
 const emptyForm = {
     name: "", 
@@ -39,7 +40,7 @@ const ContactForm = () => {
 
     return (
         <div className="col-xs-12">
-            <div className="center-container contact-container -curved-border -layered-box-shadow">
+            <div className={`${styles.contactContainer} center-container -curved-border -layered-box-shadow`}>
                 <ValidationText formData={formData} setIsError={setIsError} isDisplayed={isValidationTextDisplayed} />
                 <form 
                     name={CONTACT_FORM_NAME}

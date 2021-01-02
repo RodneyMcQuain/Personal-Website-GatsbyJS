@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Project from '../components/Projects/Project';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/Shared/SEO';
-import ContactMe from '../components/Contact/ContactMe';
+import ContactMe from '../components/Shared/ContactMe';
 import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
 
 const Projects = ({ projects }) => (

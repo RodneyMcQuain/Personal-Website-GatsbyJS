@@ -1,0 +1,50 @@
+@import '../../../../../helpers/variables/variables';
+@import '../../../../../helpers/mixins/mixins';
+@import '../../../../../helpers/mixins/nav-responsive-media-query';
+@import '../../../../../helpers/variables/nav';
+
+ul.brand-dropdown {
+    position: absolute;
+    z-index: $navbar-sub-menu-z-index;
+    background: $black;
+    top: $navbar-height;
+    border-radius: 0 0 $minor-border-radius $minor-border-radius;
+    @include height-transition-initial();
+
+    > li {
+        span, a {
+            font-size: $secondary-text-size;
+            font-weight: normal;
+            text-align: left;
+        }
+        
+        a:after {
+            left: $default-spacing;
+            right: $default-spacing;
+        }
+    }
+
+    &.open-dropdown {
+        @include height-transition-open();
+    }
+
+    @include nav-media-query() {
+        background: $white;
+
+        > li a {
+            &, span {
+                color: $black;
+            }
+
+            &:hover {
+                &, span {
+                    color: $lighter-black;
+                }
+            }
+        }
+
+        > li a:after {
+            border-bottom: $navbar-item-border-bottom-height $lighter-black solid;
+        }
+    }
+}

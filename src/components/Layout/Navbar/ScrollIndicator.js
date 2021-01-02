@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import '../../../styles/layout/_scroll-indicator.scss';
+import styles from '../../../styles/layout/components/Layout/Navbar/ScrollIndicator.module.scss';
 
 const ScrollIndicator = () => {
     const [width, setWidth] = useState("0%");
@@ -11,14 +11,14 @@ const ScrollIndicator = () => {
             const scrollPercent = (scroll / height) * 100;
             setWidth(scrollPercent + "%");
         };
- 
+
         window.addEventListener("scroll", scrollIndicatorEvent);
 
         return () => window.removeEventListener("scroll", scrollIndicatorEvent);
     }, []);
 
     return (
-        <div id="scroll-indicator" style={{width: width}}></div>
+        <div id={styles.scrollIndicator} style={{ width: width }}></div>
     );
 }
 

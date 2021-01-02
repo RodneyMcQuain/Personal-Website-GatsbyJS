@@ -1,0 +1,6 @@
+@import '../../../../helpers/variables/variables';
+@import '../../../../helpers/variables/nav';
+
+.active {
+    border-bottom: $navbar-item-border-bottom-height solid $white;
+}
