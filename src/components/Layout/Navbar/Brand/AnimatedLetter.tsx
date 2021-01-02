@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import SingleWhiteSpace from '../../../Shared/SingleWhiteSpace';
-import { LETTER_ANIMATION_DURATION_MS } from '../../../../styles/helpers/variables/variables';
 import styles from '../../../../styles/layout/components/Layout/Navbar/Brand/AnimatedLetter.module.scss';
+import { LETTER_ANIMATION_DURATION_MS } from '../../../../styles/helpers/variables/variables';
 
 interface IAnimatedLetterProps {
     letter: string;
@@ -14,6 +14,7 @@ const AnimatedLetter = ({ letter, animationDelay, isHovered }: IAnimatedLetterPr
 
     useEffect(() => {
         if (isHovered && !isAnimated) {
+            console.log(LETTER_ANIMATION_DURATION_MS);
             setTimeout(() => setIsAnimated(true), animationDelay);
             setTimeout(() => setIsAnimated(false), animationDelay + LETTER_ANIMATION_DURATION_MS);
         }
