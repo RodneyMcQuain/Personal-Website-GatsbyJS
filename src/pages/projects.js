@@ -29,7 +29,7 @@ const ProjectsStaticQuery = () => (
                             title
                             image {
                                 childImageSharp {
-                                    fluid {
+                                    fluid(maxWidth: 500, quality: 100) {
                                         ...fluidImage
                                     }
                                 }
