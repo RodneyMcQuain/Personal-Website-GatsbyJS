@@ -30,7 +30,7 @@ const ProjectsStaticQuery = () => (
                             image {
                                 childImageSharp {
                                     fluid {
-                                        ...GatsbyImageSharpFluid
+                                        ...fluidImage
                                     }
                                 }
                             }

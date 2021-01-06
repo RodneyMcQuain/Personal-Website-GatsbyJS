@@ -22,7 +22,7 @@ const EducationStaticQuery = () => (
                             image {
                                 childImageSharp {
                                     fluid {
-                                        ...GatsbyImageSharpFluid
+                                        ...fluidImage
                                     }
                                 }
                             }

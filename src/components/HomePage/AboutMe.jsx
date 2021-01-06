@@ -43,7 +43,7 @@ const AboutMeStaticQuery = () => (
                             image {
                                 childImageSharp {
                                     fluid {
-                                        ...GatsbyImageSharpFluid
+                                        ...fluidImage
                                     }
                                 }
                             }
