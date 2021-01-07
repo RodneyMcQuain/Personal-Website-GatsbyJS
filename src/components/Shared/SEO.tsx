@@ -9,13 +9,23 @@ interface ISEO {
     lang?: string;
     type?: 'article' | 'website';
     image?: string;
+    canonicalPath?: string;
 }
 
-const SEO = ({ title, description = null, lang = 'en', type = 'website', image = null }: ISEO) => {
+const SEO = ({ title, description = null, lang = 'en', type = 'website', image = null, canonicalPath = null }: ISEO) => {
     const { site: { siteMetadata } } = useStaticQuery(siteMetadataQuery);
 
     const metaDescription = description ?? siteMetadata.description;
     const imageUrl = siteMetadata.siteUrl + (image ?? siteMetadata.image);
+
+    const links = [];
+    if (canonicalPath) {
+        const canonicalUrl = siteMetadata.siteUrl + canonicalPath;
+        links.push({
+            rel: 'canonical',
+            href: canonicalUrl,
+        });
+    }
 
     return (
         <Helmet
@@ -68,6 +78,7 @@ const SEO = ({ title, description = null, lang = 'en', type = 'website', image =
                     content: imageUrl,
                 },
             ]}
+            link={links}
         />
     );
 }

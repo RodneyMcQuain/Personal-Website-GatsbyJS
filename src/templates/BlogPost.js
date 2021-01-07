@@ -15,7 +15,7 @@ const { blogFeaturedImage, blogPostTitle, blogPostContent } = styles;
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const { html, excerpt, tableOfContents, wordCount: { words }, frontmatter } = data.thisPost;
-    const { title, date, lastUpdatedDate, featuredImageAltText, category, tags } = frontmatter;
+    const { path, title, date, lastUpdatedDate, featuredImageAltText, category, tags } = frontmatter;
     const featuredFluidImage = frontmatter.featuredImage.childImageSharp.fluid;
     const blogPostGridClasses = "col-xs-12 col-sm-12 col-md-7";
 
@@ -29,6 +29,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                         image={featuredFluidImage.src}
                         description={excerpt}
                         type={'article'}
+                        canonicalPath={path}
                     />
                     <div className={`${blogPostGridClasses} -layered-box-shadow ${blogPostContent}`}>
                         <article>
