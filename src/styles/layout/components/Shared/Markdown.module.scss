@@ -28,6 +28,10 @@
 
     ul, ol {
         padding-left: 40rem;
+
+        :global(.gatsby-resp-image-wrapper) { // gatsby-remark-images class
+            margin: 0 !important; // override centering
+        }
     }
     
     h1, h2 {
