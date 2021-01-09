@@ -52,7 +52,13 @@ module.exports = {
                 ]
             }
         },
-        `gatsby-plugin-sitemap`,
+        {
+            resolve: `gatsby-plugin-sitemap`,
+            options: {
+                query: allSitesQuery(),
+                serialize: generateSitemap,
+            }
+        },
         {
             resolve: `gatsby-plugin-robots-txt`,
             options: {
@@ -88,7 +94,7 @@ module.exports = {
                 name: `data`
             },
         },
-        { 
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/src/pages`,
@@ -117,4 +123,36 @@ module.exports = {
             },
         },
     ],
+}
+
+function allSitesQuery() {
+    return `
+        {
+            site {
+                siteMetadata {
+                    siteUrl
+                }
+            }
+
+            allSitePage {
+                edges {
+                    node {
+                        path
+                    }
+                }
+            }
+        }
+    `;
+}
+
+function generateSitemap({ site, allSitePage }) {
+    const BLOG_POST_URL = '/blog-posts/';
+    const DEFAULT_PRIORITY = 0.5;
+    return allSitePage.edges.map(
+        ({ node: { path }}) => ({
+            url: site.siteMetadata.siteUrl + path,
+            changefreq: `daily`,
+            priority: path.includes(BLOG_POST_URL) && !path.endsWith(BLOG_POST_URL) ? DEFAULT_PRIORITY + 0.2 : DEFAULT_PRIORITY,
+        })
+    );
 }
