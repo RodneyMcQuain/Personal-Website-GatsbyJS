@@ -45,7 +45,7 @@
         font-weight: bold;
     }
 
-    p, ol, ul, table, .gatsby-highlight {
+    p, ol, ul, table, :global(.gatsby-highlight) {
         margin-bottom: $content-spacing;
     }
 
@@ -103,14 +103,14 @@
         @include anchor-underline();
     }
 
-    .language-text {
+    :global(.language-text) {
         background-image: $dark-gradient;
         color: $white;
         border-radius: $minor-border-radius;
         padding: 2.5rem 5rem;
     }
     
-    .gatsby-highlight {
+    :global(.gatsby-highlight) {
         position: relative;
         
         pre {
