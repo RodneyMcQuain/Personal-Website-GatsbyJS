@@ -22,7 +22,7 @@
             "React Testing Library",
             "Adobe XD"
         ],
-        "description": "The Digit-Inator allows you to convert your favorite hand drawn digit to text with the latest and greatest in computer vision. The user simply just draws a number using thier mouse or touch screen and the Digit-Inator gives its best guess at what the number is.",
+        "description": "The Digit-Inator allows you to convert your favorite hand drawn digit to text with the latest and greatest in computer vision. The user simply just draws a number using their mouse or touch screen and the Digit-Inator gives its best guess at what the number is.",
         "gitHubUrl": "https://github.com/RodneyMcQuain/Digit-Inator",
         "siteUrl": "https://digit-inator.netlify.app/"
     },
