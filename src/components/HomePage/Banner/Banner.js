@@ -23,7 +23,7 @@ const {
 const itemsToCycle = [
     "Full-Stack Web Developer",
     "Competitive Super Smash Bros. Melee Player",
-    "Computer Science Student",
+    "Software Consultant",
 ];
 
 const HEADER_DISPLAY_DELAY_MS = 250;
