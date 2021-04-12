@@ -5,11 +5,11 @@ import BlogPostsList from './PostsList';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
 import { getViewportHeight } from '../../../services/dimensions';
 import styles from '../../../styles/layout/components/Blog/Post/Menu.module.scss';
-const { blogMenu, offsetByFeaturedImage } = styles;
+const { blogMenu, offsetByFeaturedImage, open: openClass } = styles;
 
 const Menu = ({ posts, currentPostName, isOpen, tableOfContents, mightBeFooterInView }) => {
     const sidebarOffsetTopClass = useMenu();
-    const mightOpenMenu = isOpen ? "open" : "";
+    const mightOpenMenu = isOpen ? openClass : "";
 
     return (
         <div className={
