@@ -53,6 +53,10 @@
         font-size: $secondary-text-size;
     }
 
+    code :global(.comment) {
+        color: #A0C365;
+    }
+
     p, a, li, td {
         font-size: 18rem;
         line-height: 1.45em;
