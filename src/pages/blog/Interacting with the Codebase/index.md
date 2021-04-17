@@ -1,6 +1,6 @@
 ---
 path: "/blog-posts/interacting-with-the-codebase"
-date: "2021-04-11"
+date: "2021-04-13"
 title: "Interacting with the Codebase"
 author: "Rodney McQuain"
 featuredImage: ./index.jpg
