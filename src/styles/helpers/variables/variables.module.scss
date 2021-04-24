@@ -35,7 +35,7 @@ $minor-pulse-animation: minor-pulse $minor-pulse-animation-duration ease-in-out 
 $anchor-top-offset: $navbar-height + $default-spacing;
 
 :export {
-    FEATURED_IMG_HEIGHT: $blog-featured-image-height;
+    FEATURED_IMAGE_HEIGHT: $blog-featured-image-height;
     NAVBAR_HEIGHT: $navbar-height;
     MAX_FOOTER_HEIGHT: $footer-xs-height;
 }
