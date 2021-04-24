@@ -1,0 +1,26 @@
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 0 0 $white;
+        opacity: 0;
+    }
+
+    30% {
+        box-shadow: 0 0 0 4.5rem $white;
+        opacity: 0.2;        
+    }
+
+    50% {
+        box-shadow: 0 0 0 5rem $white;
+        opacity: 0.4;        
+    }
+
+    70% {
+        box-shadow: 0 0 0 4.5rem $white;
+        opacity: 0.2;        
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 $white;
+        opacity: 0;
+    }
+}
