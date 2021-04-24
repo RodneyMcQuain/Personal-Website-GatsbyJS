@@ -28,9 +28,13 @@ module.exports = {
         `gatsby-plugin-netlify`,
         {
             resolve: `gatsby-plugin-sass`,
-            postCssPlugins: [
-                require(`postcss-preset-env`)({ stage: 2 }),
-            ],
+            options: {
+                cssLoaderOptions: {
+                    modules: {
+                        exportLocalsConvention: 'camelCaseOnly',
+                    },
+                },
+            },
         },
         {
             resolve: `gatsby-plugin-manifest`,

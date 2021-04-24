@@ -3,8 +3,7 @@ import { Link } from 'gatsby';
 import InViewAnimation from './InViewAnimation';
 import ContactIcon from '../Contact/ContactIcon';
 import { CONTACT_ROUTE } from '../../services/routes';
-import styles from '../../styles/layout/components/Shared/ContactMe.module.scss';
-const { contactMe, contactMeTextWrapper, contactMeText, contactMeButton } = styles;
+import { contactMe, contactMeTextWrapper, contactMeText, contactMeButton } from '../../styles/layout/components/Shared/ContactMe.module.scss';
 
 const ContactMe = () => (
     <InViewAnimation>

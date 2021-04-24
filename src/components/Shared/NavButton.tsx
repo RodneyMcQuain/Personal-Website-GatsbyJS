@@ -4,8 +4,7 @@ import Icon from './Icon';
 import IconText from '../Shared/IconText';
 import { FaTimes } from '@meronex/icons/fa';
 import { IconType } from '../../types/IconType';
-import styles from '../../styles/layout/components/Shared/NavButton.module.scss';
-const { navButton, clicked } = styles;
+import { navButton, clicked } from '../../styles/layout/components/Shared/NavButton.module.scss';
 
 interface INavButtonProps {
     isOpen: boolean;

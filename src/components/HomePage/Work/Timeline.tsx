@@ -4,7 +4,7 @@ import Job from './Job';
 import { IJob } from './IJob';
 import { WORK_HASH } from '../../../services/homePageHashes';
 import HeaderContentLayout from '../../Layout/HeaderContentLayout';
-import styles from '../../../styles/layout/components/HomePage/Work/Timeline.module.scss';
+import { timeline } from '../../../styles/layout/components/HomePage/Work/Timeline.module.scss';
 
 interface IWorkTimelineProps {
     work: INode[];
@@ -16,7 +16,7 @@ interface INode {
 
 const Timeline = ({ work }: IWorkTimelineProps) => (
     <HeaderContentLayout title="Work Experience" id={WORK_HASH}>
-        <div className={styles.timeline}>
+        <div className={timeline}>
             {work.map(({ node }) => <Job work={node} />)}
         </div>
     </HeaderContentLayout>

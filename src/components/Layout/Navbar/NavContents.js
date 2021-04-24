@@ -6,8 +6,7 @@ import { PROJECTS_ROUTE, BLOG_ROUTE, RESUME_ROUTE, CONTACT_ROUTE } from '../../.
 import { ABOUT_ME_HASH, EDUCATION_HASH, SKILLS_HASH, WORK_HASH } from '../../../services/homePageHashes';
 import { FaBriefcase, FaPencilAlt, FaFilePdf, FaEnvelope} from '@meronex/icons/fa';
 import { ACTIVE_ITEM_CLASS_NAME } from './activeItem';
-import styles from '../../../styles/layout/components/Layout/Navbar/NavContents.module.scss';
-const { navContents, open } = styles;
+import { navContents, open } from '../../../styles/layout/components/Layout/Navbar/NavContents.module.scss';
 
 const NavContents = ({ isOpen }) => (
     <Scrollspy 

@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import CloseOnOutsideClick from '../../Shared/CloseOnOutsideClick';
 import NavButton from '../../Shared/NavButton';
 import { FaCaretUp, FaCaretDown } from '@meronex/icons/fa';
-import styles from '../../../styles/layout/components/Blog/Posts/TagDropdown.module.scss';
-const { tagDropdown: tagDropdownClass, tagDropdownText, tagContents, open: openClass } = styles;
+import { tagDropdown as tagDropdownClass, tagDropdownText, tagContents, open as openClass } from '../../../styles/layout/components/Blog/Posts/TagDropdown.module.scss';
 
 interface ITagDropdownProps {
     tags: string[];

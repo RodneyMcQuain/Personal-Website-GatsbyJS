@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from '../../../styles/layout/components/HomePage/Skills/SkillsSection.module.scss';
-const { skillSectionTitle, skillSectionList, item } = styles;
+import { skillSectionTitle, skillSectionList, item } from '../../../styles/layout/components/HomePage/Skills/SkillsSection.module.scss';
 
 const SkillSection = ({ skillSection: { title, skills} }) => (
     <div className="-top-margin col-lg-4 col-md-4 col-sm-4 col-xs-12">
