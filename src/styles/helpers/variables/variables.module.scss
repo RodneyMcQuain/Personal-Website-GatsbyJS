@@ -29,9 +29,6 @@ $navbar-right-alignment: 15rem;
 
 $body-bottom-padding: $footer-height * 2;
 
-$minor-pulse-animation-duration: 2s;
-$minor-pulse-animation: minor-pulse $minor-pulse-animation-duration ease-in-out infinite;
-
 $anchor-top-offset: $navbar-height + $default-spacing;
 
 :export {

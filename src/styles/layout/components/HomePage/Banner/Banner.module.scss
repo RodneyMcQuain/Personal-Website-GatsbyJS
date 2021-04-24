@@ -1,6 +1,8 @@
 @import '../../../../helpers/variables/variables.module';
 @import '../../../../helpers/mixins/media-queries';
-@import '../../../../helpers/animations';
+@import '../../../../helpers/animations/bounce';
+@import '../../../../helpers/animations/shadow-pulse';
+@import '../../../../helpers/animations/minor-pulse';
 
 .banner {
     height: calc(100vh - #{$navbar-height});

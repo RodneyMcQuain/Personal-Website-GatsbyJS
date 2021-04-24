@@ -96,7 +96,7 @@ ul {
         background: $white;
         color: $black;
         -webkit-transform: translate3D(0, 0, 0);
-        @include transform($minor-scale);
+        transform: $minor-scale;
 
         a, span {
             color: $black;
@@ -233,14 +233,6 @@ a {
 .row.display-flex > [class*='col-'] {
     display: flex;
     flex-direction: column;
-}
-
-.minor-pulse {
-    animation: $minor-pulse-animation;
-
-    &:hover {
-        animation-play-state: paused;
-    }
 }
 
 .-secondary-text {

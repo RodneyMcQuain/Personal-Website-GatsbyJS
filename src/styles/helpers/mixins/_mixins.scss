@@ -70,6 +70,6 @@
     transition: append($other-transitions, $card-upscale-transition);
 
     &:hover {
-        @include transform($minor-scale);
+        transform: $minor-scale;
     }
 }
