@@ -7,8 +7,7 @@ import { useAddCssClass } from '../../../services/useAddCssClass';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
 import { getViewportHeight } from '../../../services/dimensions';
 import { FaEllipsisH } from '@meronex/icons/fa';
-import styles from '../../../styles/layout/components/Blog/Post/Menu.module.scss';
-const { blogMenuButton, footerInView } = styles;
+import { blogMenuButton, footerInView }  from '../../../styles/layout/components/Blog/Post/Menu.module.scss';
 
 const ResponsiveMenu = ({ posts, currentPostName, tableOfContents }) => {
     const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { getViewportHeightExcludingNavbar, getViewportWidth } from '../../../services/dimensions';
-import styles from '../../../styles/layout/components/HomePage/Banner/ParametricCurves.module.scss';
+import { bannerAnimation } from '../../../styles/layout/components/HomePage/Banner/ParametricCurves.module.scss';
 
 interface IVector {
     n: number;
@@ -27,7 +27,7 @@ const OPACITY_VARIATION = 0.15;
 const ParametricCurves = () => {
     const canvas = useParametricCurves();
 
-    return <canvas ref={canvas} className={styles.bannerAnimation} />;
+    return <canvas ref={canvas} className={bannerAnimation} />;
 }
 
 function useParametricCurves() {

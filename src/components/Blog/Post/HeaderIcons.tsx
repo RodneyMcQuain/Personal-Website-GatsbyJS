@@ -5,7 +5,7 @@ import Category from '../Icons/Category';
 import Tags from '../Icons/Tags';
 import ReadTime from '../Icons/ReadTime';
 import Div from '../../Shared/UnstyledDiv';
-import styles from '../../../styles/layout/templates/BlogPost.module.scss';
+import { blogHeaderIcons } from '../../../styles/layout/templates/BlogPost.module.scss';
 
 interface IHeaderIconsProps {
     date: string;
@@ -16,7 +16,7 @@ interface IHeaderIconsProps {
 }
 
 const HeaderIcons = ({ date, lastUpdatedDate, wordCount, category, tags } : IHeaderIconsProps) => (
-    <div className={`${styles.blogHeaderIcons} -gray-text`}>
+    <div className={`${blogHeaderIcons} -gray-text`}>
         <Div><PublishedOnDate date={date} /></Div>
         <Div><UpdatedOnDate date={lastUpdatedDate} /></Div>
         <Div><ReadTime wordCount={wordCount} /></Div>

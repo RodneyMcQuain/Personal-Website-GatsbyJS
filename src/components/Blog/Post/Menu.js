@@ -4,8 +4,7 @@ import { useAddCssClass } from '../../../services/useAddCssClass';
 import BlogPostsList from './PostsList';
 import { useFunctionThrottle } from '../../../services/useFunctionThrottle';
 import { getViewportHeight } from '../../../services/dimensions';
-import styles from '../../../styles/layout/components/Blog/Post/Menu.module.scss';
-const { blogMenu, offsetByFeaturedImage, open: openClass } = styles;
+import { blogMenu, offsetByFeaturedImage, open as openClass } from '../../../styles/layout/components/Blog/Post/Menu.module.scss';
 
 const Menu = ({ posts, currentPostName, isOpen, tableOfContents, mightBeFooterInView }) => {
     const sidebarOffsetTopClass = useMenu();

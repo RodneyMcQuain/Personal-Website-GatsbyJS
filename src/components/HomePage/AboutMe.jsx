@@ -4,8 +4,7 @@ import HeaderContentLayout from '../Layout/HeaderContentLayout';
 import Img from 'gatsby-image';
 import { StaticQuery, graphql } from 'gatsby';
 import Link from '../Shared/ExternalLink';
-import styles from '../../styles/layout/components/HomePage/AboutMe.module.scss';
-const { aboutMeImageContainer, image: imageClass, aboutMeText } = styles;
+import { aboutMeImageContainer, image as imageClass, aboutMeText } from '../../styles/layout/components/HomePage/AboutMe.module.scss';
 
 const AboutMe = ({ data: { image, altText } }) => (
     <HeaderContentLayout title="About Me" id={ABOUT_ME_HASH}>

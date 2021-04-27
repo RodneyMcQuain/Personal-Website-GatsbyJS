@@ -4,8 +4,7 @@ import { RiFilePaper2Line } from '@meronex/icons/ri';
 import HoverIconText from '../../Shared/HoverIconText';
 import { GoLocation } from '@meronex/icons/go';
 import ImageTopCard from '../../Shared/ImageTopCard';
-import styles from '../../../styles/layout/components/HomePage/Education/Institution.module.scss';
-const { institutionName, institutionDescription } = styles;
+import { institutionName, institutionDescription } from '../../../styles/layout/components/HomePage/Education/Institution.module.scss';
 
 const Institution = ({ institution: { institution, location, degree, graduationDate, gpa, image } }) => (
     <ImageTopCard

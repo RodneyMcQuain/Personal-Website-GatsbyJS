@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAddCssClass } from '../../../../services/useAddCssClass';
 import AnimatedLetters from './AnimatedLetters';
-import styles from '../../../../styles/layout/components/Layout/Navbar/Brand/NameAndLogo.module.scss';
-const { logo, animate } = styles;
+import { logo, animate } from '../../../../styles/layout/components/Layout/Navbar/Brand/NameAndLogo.module.scss';
 
 const name = "Rodney McQuain";
 const letters = name.split("");

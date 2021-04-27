@@ -1,6 +1,6 @@
 import React from 'react';
 import { ALL_FILTER } from '../ALL_FILTER';
-import styles from '../../../styles/layout/components/Blog/Posts/CategoryDropdown.module.scss';
+import { active, categoryDropdown } from '../../../styles/layout/components/Blog/Posts/CategoryDropdown.module.scss';
 
 type SetFilter = (filter: string) => void;
 
@@ -10,10 +10,10 @@ interface IBlogCategoryDropdownProps {
     setFilter: SetFilter;
 }
 
-const ACTIVE_CLASS = styles.active;
+const ACTIVE_CLASS = active;
 
 const CategoryDropdown = ({ categories, filter, setFilter }: IBlogCategoryDropdownProps) => (
-    <ul title="Categories" className={styles.categoryDropdown}>
+    <ul title="Categories" className={categoryDropdown}>
         <DropdownItem
             category={ALL_FILTER}
             filter={filter}    

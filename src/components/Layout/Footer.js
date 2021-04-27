@@ -1,8 +1,7 @@
 import React from 'react';
 import Icon from '../Shared/Icon';
 import { FaGithub, FaLinkedinIn } from '@meronex/icons/fa';
-import styles from '../../styles/layout/components/Layout/Footer.module.scss';
-const { footer, footerIcons, footerCopyright, footerIcon } = styles;
+import { footer, footerCopyright, footerIcon, footerIcons } from '../../styles/layout/components/Layout/Footer.module.scss';
 
 const Footer = () => (
     <footer id={footer} className="dark-section">
