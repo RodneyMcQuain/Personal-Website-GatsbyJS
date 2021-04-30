@@ -4,8 +4,7 @@ import ScrollIndicator from './ScrollIndicator';
 import NavButton from '../../Shared/NavButton';
 import CloseOnOutsideClick from '../../Shared/CloseOnOutsideClick';
 import { FaBars } from '@meronex/icons/fa';
-import styles from '../../../styles/layout/components/Layout/Navbar/Navbar.module.scss';
-const { nav, toggle } = styles;
+import { nav, toggle } from '../../../styles/layout/components/Layout/Navbar/Navbar.module.scss';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

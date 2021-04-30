@@ -4,8 +4,7 @@ import ImageTopCard from '../Shared/ImageTopCard';
 import ExternalLinkButton from '../Shared/ExternalLinkButton';
 import { FaGithub } from '@meronex/icons/fa';
 import MdcWeb from '@meronex/icons/mdc/MdcWeb';
-import styles from '../../styles/layout/components/Projects/Project.module.scss';
-const { projectContainer, projectLinkContainer, languageTag } = styles;
+import { projectContainer, projectLinkContainer, languageTag } from '../../styles/layout/components/Projects/Project.module.scss';
 
 const Project = ({ project: { image, title, technologies, description, gitHubUrl, siteUrl } }) => (
     <ImageTopCard

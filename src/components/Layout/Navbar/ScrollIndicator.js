@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import styles from '../../../styles/layout/components/Layout/Navbar/ScrollIndicator.module.scss';
+import { scrollIndicator } from '../../../styles/layout/components/Layout/Navbar/ScrollIndicator.module.scss';
 
 const ScrollIndicator = () => {
     const [width, setWidth] = useState("0%");
@@ -18,7 +18,7 @@ const ScrollIndicator = () => {
     }, []);
 
     return (
-        <div id={styles.scrollIndicator} style={{ width: width }}></div>
+        <div id={scrollIndicator} style={{ width: width }}></div>
     );
 }
 

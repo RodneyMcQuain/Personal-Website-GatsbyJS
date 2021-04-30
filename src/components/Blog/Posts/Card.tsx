@@ -9,8 +9,7 @@ import IconText from '../../Shared/IconText';
 import { FaBook } from '@meronex/icons/fa';
 import Div from '../../Shared/UnstyledDiv';
 import ImageTopCard from '../../Shared/ImageTopCard';
-import styles from '../../../styles/layout/components/Blog/Posts/Card.module.scss';
-const { blogCard, hideCard, icons } = styles;
+import { blogCard, hideCard, icons } from '../../../styles/layout/components/Blog/Posts/Card.module.scss';
 
 interface IBlogCardProps {
     post: IBlogPost;

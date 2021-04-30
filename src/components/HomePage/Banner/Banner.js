@@ -5,8 +5,7 @@ import CycleItems from './CycleItems';
 import IconText from '../../Shared/IconText';
 import { FaChevronDown } from '@meronex/icons/fa';
 import SingleWhiteSpace from '../../Shared/SingleWhiteSpace';
-import styles from '../../../styles/layout/components/HomePage/Banner/Banner.module.scss';
-const {
+import {
     banner,
     bannerContainer,
     bannerHeader,
@@ -18,7 +17,7 @@ const {
     bannerButtonContainer,
     bannerButton,
     bannerButtonIcon,
-} = styles;
+} from '../../../styles/layout/components/HomePage/Banner/Banner.module.scss';
 
 const itemsToCycle = [
     "Full-Stack Web Developer",

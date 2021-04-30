@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from "prop-types";
-import validationTextStyles from '../../styles/layout/components/Contact/ValidationText.module.scss';
-import statusTextStyles from '../../styles/layout/components/Contact/statusText.module.scss';
-const { statusText, showText } = statusTextStyles;
+import { validationText as validationTextClass } from '../../styles/layout/components/Contact/ValidationText.module.scss';
+import { statusText, showText } from '../../styles/layout/components/Contact/statusText.module.scss';
 
 const ValidationText = ({ formData, setIsError, isDisplayed }) => {
     const validationText = useContactFormValidation(formData, setIsError);
@@ -10,7 +9,7 @@ const ValidationText = ({ formData, setIsError, isDisplayed }) => {
     return (
         <p
             className={
-                `${statusText} ${validationTextStyles.validationText} 
+                `${statusText} ${validationTextClass} 
                 ${isDisplayed && validationText ? showText : ''}`
             }
         >

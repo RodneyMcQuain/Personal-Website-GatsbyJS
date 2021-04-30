@@ -1,8 +1,7 @@
 import React from 'react';
 import { IJob } from './IJob';
 import SingleWhiteSpace from '../../Shared/SingleWhiteSpace';
-import styles from '../../../styles/layout/components/HomePage/Work/Timeline.module.scss';
-const { contentContainer, content, company: companyClass } = styles;
+import { contentContainer, content, company as companyClass } from '../../../styles/layout/components/HomePage/Work/Timeline.module.scss';
 
 interface IJobProps {
     work: IJob;

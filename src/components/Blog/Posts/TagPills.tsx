@@ -1,7 +1,7 @@
 import React from 'react';
 import IconText from '../../Shared/IconText';
 import { FaTimesCircle } from '@meronex/icons/fa';
-import styles from '../../../styles/layout/components/Blog/Posts/TagPills.module.scss';
+import { pills } from '../../../styles/layout/components/Blog/Posts/TagPills.module.scss';
 
 interface IPillsProps {
     tagFilters: string[];
@@ -9,7 +9,7 @@ interface IPillsProps {
 }
 
 const TagPills = ({ tagFilters, setTagFilters }: IPillsProps) => (
-    <ul className={styles.pills}>
+    <ul className={pills}>
         {tagFilters.map(thisTag => (            
             <li onClick={() => setTagFilters(tagFilters.filter(tagFilter => thisTag !== tagFilter))}>
                 <span className="btn" aria-label={`Remove ${thisTag} tag filter`}>

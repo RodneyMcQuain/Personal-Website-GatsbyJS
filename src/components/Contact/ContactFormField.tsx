@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import { IContactFormData } from '../../types/ContactFormData';
-import styles from '../../styles/layout/components/Contact/ContactFormField.module.scss';
+import { textArea } from '../../styles/layout/components/Contact/ContactFormField.module.scss';
 
 interface IContactFormFieldProps {
     name: string;
@@ -29,7 +29,7 @@ const ContactFormField = ({
                     <textarea
                         id={name}
                         name={name} 
-                        className={`${styles.textArea} form-control input-lg`}
+                        className={`${textArea} form-control input-lg`}
                         placeholder={placeholder}
                         value={value}
                         onChange={e => handleOnChange(e, formData, setFormData)}

@@ -2,8 +2,7 @@ import React from 'react';
 import NavBrandItem from './NavBrandItem';
 import { SKILLS_HASH, WORK_HASH, EDUCATION_HASH, ABOUT_ME_HASH } from '../../../../services/homePageHashes';
 import { FaUser, FaUniversity, FaBuilding, FaList } from '@meronex/icons/fa';
-import styles from '../../../../styles/layout/components/Layout/Navbar/Brand/NavBrandContents.module.scss';
-const { brandDropdown, openDropdown } = styles;
+import { brandDropdown, openDropdown } from '../../../../styles/layout/components/Layout/Navbar/Brand/NavBrandContents.module.scss';
 
 const NavBrandContents = ({ isOpen }) => (
     <ul className={`${brandDropdown} -layered-box-shadow ${isOpen ? openDropdown : ''}`}>

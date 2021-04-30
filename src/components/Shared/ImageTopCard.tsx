@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image';
-import styles from '../../styles/layout/components/Shared/ImageTopCard.module.scss';
+import { imageTopCard, contentPadding, innerMargin } from '../../styles/layout/components/Shared/ImageTopCard.module.scss';
 import { AllChildren } from '../../types/AllChildren';
 
 interface IImageTopCardProps {
@@ -12,10 +12,10 @@ interface IImageTopCardProps {
 }
 
 const ImageTopCard = ({ children, image, imageAltText, className = '', hasInnerMargin = false }: IImageTopCardProps) => (
-    <div className={`${styles.imageTopCard} ${className}`}>
+    <div className={`${imageTopCard} ${className}`}>
         <div className="-curved-border -layered-box-shadow">
             <Img fluid={image} className="container-top-image" alt={imageAltText} />
-            <div className={`${styles.contentPadding} ${hasInnerMargin ? styles.innerMargin : ''}`}>
+            <div className={`${contentPadding} ${hasInnerMargin ? innerMargin : ''}`}>
                 {children}
             </div>
         </div>

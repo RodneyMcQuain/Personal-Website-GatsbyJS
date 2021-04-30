@@ -10,8 +10,7 @@ import AdjacentPostNavigation from '../components/Blog/Post/AdjacentPostNavigati
 import HeaderIcons from '../components/Blog/Post/HeaderIcons';
 import Markdown from '../components/Shared/Markdown';
 import HeaderTitle from '../components/Shared/HeaderTitle';
-import styles from '../styles/layout/templates/BlogPost.module.scss';
-const { blogFeaturedImage, blogPostTitle, blogPostContent } = styles;
+import { blogFeaturedImage, blogPostTitle, blogPostContent } from '../styles/layout/templates/BlogPost.module.scss';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const { html, excerpt, tableOfContents, wordCount: { words }, frontmatter } = data.thisPost;

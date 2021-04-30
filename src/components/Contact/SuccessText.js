@@ -1,13 +1,12 @@
 
 import React from 'react';
-import successTextStyles from '../../styles/layout/components/Contact/SuccessText.module.scss';
-import statusTextStyles from '../../styles/layout/components/Contact/statusText.module.scss';
-const { statusText, showText } = statusTextStyles;
+import { successText } from '../../styles/layout/components/Contact/SuccessText.module.scss';
+import { statusText, showText } from '../../styles/layout/components/Contact/statusText.module.scss';
 
 const SuccessText = ({ isSuccess, isValidationTextDisplayed }) => (
     <div 
         className={
-            `${statusText} ${successTextStyles.successText} 
+            `${statusText} ${successText} 
             ${isSuccess && !isValidationTextDisplayed ? showText : ''}`
         }
     >
