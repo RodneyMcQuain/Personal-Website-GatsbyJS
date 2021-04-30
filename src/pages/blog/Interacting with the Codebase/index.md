@@ -20,7 +20,7 @@ So, how can we start making the codebase easier to work with? Don Norman, in his
 5. Mapping
 6. Conceptual Model
 
-These principles are often utilized in the UIs we create, but sometimes neglected in the codebases we maintain.  Maybe that's because they're not as apparent when looking at walls of code and files.  So, I'm going to examine how these principles apply to the code we write.
+These principles are often utilized in the UIs we create, but sometimes neglected in the codebases we maintain.  Maybe that's because they're not as apparent when looking at walls of code and files.  So, let's examine how these principles apply to the code we write.
 
 ## Affordances
 
