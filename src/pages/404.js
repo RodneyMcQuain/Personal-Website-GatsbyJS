@@ -9,7 +9,7 @@ const NotFoundPage = () => (
     <Layout>
         <InViewAnimation>
             <div className={notFoundContainer}>
-                <SEO title="404: Not found" />
+                <SEO title="404: Not found" shouldNotIndex />
                 <h1 className={glitch} data-text="404">404</h1>
                 <p>You just hit a route that doesn&#39;t exist...</p>
             </div>

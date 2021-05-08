@@ -11,7 +11,7 @@ const RESUME_FILE_NAME = "documents/Rodney McQuain - Resume 12-10-2018.pdf";
 
 const Resume = () => (
     <Layout>
-        <SEO title="Resume" />
+        <SEO title="Resume" shouldNotIndex />
         <HeaderContentLayout title="Resume">
             <SizeMe>
                 {({ size }) => (

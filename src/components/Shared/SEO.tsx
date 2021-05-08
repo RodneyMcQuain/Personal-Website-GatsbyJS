@@ -10,9 +10,10 @@ interface ISEO {
     type?: 'article' | 'website';
     image?: string;
     canonicalPath?: string;
+    shouldNotIndex?: boolean;
 }
 
-const SEO = ({ title, description = null, lang = 'en', type = 'website', image = null, canonicalPath = null }: ISEO) => {
+const SEO = ({ title, description = null, lang = 'en', type = 'website', image = null, canonicalPath = null, shouldNotIndex = false }: ISEO) => {
     const { site: { siteMetadata } } = useStaticQuery(siteMetadataQuery);
 
     const metaDescription = description ?? siteMetadata.description;
@@ -76,6 +77,10 @@ const SEO = ({ title, description = null, lang = 'en', type = 'website', image =
                 {
                     name: `twitter:image`,
                     content: imageUrl,
+                },
+                {
+                    name: `robots`,
+                    content: shouldNotIndex ? 'noindex' : 'index', 
                 },
             ]}
             link={links}
