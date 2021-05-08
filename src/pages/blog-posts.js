@@ -18,7 +18,7 @@ const BlogPosts = ({ data }) => {
 
     return (
         <Layout>
-            <SEO title="Blog" />
+            <SEO title="Blog" description="The home for my reflections on effectively building software." />
             <HeaderContentLayout title="Blog Posts">
                 <div className={blogFilters}>
                     <BlogCategoryDropdown
