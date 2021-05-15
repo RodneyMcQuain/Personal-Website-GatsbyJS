@@ -17,8 +17,7 @@
             "CSS",
             "SCSS",
             "SQL",
-            "GraphQL",
-            "FXML"
+            "GraphQL"
         ]
     },
     {
@@ -28,7 +27,6 @@
             "ASP.NET Core",
             "GatsbyJS",
             "Blazor",
-            "JavaFX",
             "Bootstrap",
             "Entity Framework Core"
         ]
