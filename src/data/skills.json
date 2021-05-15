@@ -44,6 +44,7 @@
         "title": "Testing",
         "skills": [
             "Test-Driven Development",
+            "Test Doubles",
             "Cypress",
             "Jasmine",
             "NUnit",
