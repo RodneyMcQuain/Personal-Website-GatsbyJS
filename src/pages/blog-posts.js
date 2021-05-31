@@ -1,55 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/Shared/SEO';
-import BlogCard from '../components/Blog/Posts/Card';
-import BlogCategoryDropdown from '../components/Blog/Posts/CategoryDropdown';
-import TagDropdown from '../components/Blog/Posts/TagDropdown';
-import { ALL_FILTER } from '../components/Blog/ALL_FILTER';
-import TagPills from '../components/Blog/Posts/TagPills';
 import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
-import { isBrowser } from '../services/browser';
-import { blogFilters } from '../styles/layout/pages/blog-posts.module.scss';
+import BlogContentContainer from '../components/Blog/Posts/ContentContainer';
 
-const BlogPosts = ({ data }) => {
-    const { edges, categories, tags } = data.allMarkdownRemark;
-    const [currentCategory, setCurrentCategory] = useState(getInitialCategoryFilter());
-    const [currentTags, setCurrentTags] = useState([]);
-
-    return (
-        <Layout>
-            <SEO title="Blog" description="The home for my reflections on effectively building software." />
-            <HeaderContentLayout title="Blog Posts">
-                <div className={blogFilters}>
-                    <BlogCategoryDropdown
-                        categories={categories.map(category => category.category)}
-                        filter={currentCategory}
-                        setFilter={setCurrentCategory}
-                    />
-
-                    <TagDropdown
-                        tags={tags.map(tag => tag.tag)}
-                        categoryFilter={currentCategory}
-                        tagFilters={currentTags}
-                        setTagFilters={setCurrentTags}
-                    />
-
-                    <TagPills tagFilters={currentTags} setTagFilters={setCurrentTags} />
-                </div>
-
-                <div className="row display-flex">
-                    {edges.map(post => <BlogCard post={post} categoryFilter={currentCategory} tagFilters={currentTags} />)}
-                </div>
-            </HeaderContentLayout>
-        </Layout>
-    );
-}
-
-const getInitialCategoryFilter = () => {
-    const locationSearch = isBrowser() && window.location.search;
-    const queryStringCategoryOrAll = new URLSearchParams(locationSearch).get('category') || ALL_FILTER;
-    return queryStringCategoryOrAll;
-};
+const BlogPosts = ({ data: { allMarkdownRemark: { edges, categories, tags } } }) => (
+    <Layout>
+        <SEO title="Blog" description="The home for my reflections on effectively building software." />
+        <HeaderContentLayout title="Blog Posts">
+            <BlogContentContainer
+                posts={edges}
+                categories={categories.map(c => c.category)}
+                tags={tags.map(t => t.tag)}
+            />
+        </HeaderContentLayout>
+    </Layout>
+);
 
 export const pageQuery = graphql`
     query BlogIndexQuery {
