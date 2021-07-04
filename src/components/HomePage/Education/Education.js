@@ -32,6 +32,7 @@ const EducationStaticQuery = () => (
                             minor
                             concentration
                             gpa
+                            gpaNote
                         }
                     }
                 }

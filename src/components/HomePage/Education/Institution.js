@@ -8,7 +8,7 @@ import { BisCalculator } from '@meronex/icons/bi';
 import { GoLocation } from '@meronex/icons/go';
 import { institutionName, institutionDescription, spaced, defaultMarginBottom } from '../../../styles/layout/components/HomePage/Education/Institution.module.scss';
 
-const Institution = ({ institution: { institution, location, degree, minor, concentration, graduationDate, gpa, image } }) => (
+const Institution = ({ institution: { institution, location, degree, minor, concentration, graduationDate, gpa, gpaNote, image } }) => (
     <ImageTopCard
         image={image.childImageSharp.fluid}
         imageAltText={institution}
@@ -50,13 +50,14 @@ const Institution = ({ institution: { institution, location, degree, minor, conc
                 </span>
             </p>
         }
-        <p className={institutionDescription}>
+        <p className={`${institutionDescription} ${spaced}`}>
             <span className="-secondary-text">
                 <IconText
                     icon={<BisCalculator />}
                     text={`${gpa} GPA`}
                 />
             </span>
+            {gpaNote && <span className="-small-text -gray-text">{gpaNote}</span>}
         </p>
     </ImageTopCard>
 );
