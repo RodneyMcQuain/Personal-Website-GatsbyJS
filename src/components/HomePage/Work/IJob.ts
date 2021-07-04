@@ -7,4 +7,7 @@ export interface IJob {
     endDate: string;
     city: string;
     state: string;
+    notablePoints?: NotablePoints;
 }
+
+export type NotablePoints = string[];

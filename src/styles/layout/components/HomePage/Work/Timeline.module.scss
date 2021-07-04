@@ -2,7 +2,8 @@
 @import "../../../../helpers/variables/breakpoints";
 @import "../../../../helpers/variables/text-size";
 @import "../../../../helpers/functions";
-@import "../../../../helpers/mixins/media-queries.scss";
+@import "../../../../helpers/mixins/media-queries";
+@import "../../../../helpers/variables/variables.module";
 
 $timeline-color: $black;
 $content-timeline-spacing: 30rem;
@@ -20,7 +21,7 @@ $work-card-spacing-between: 50rem;
     position: relative;
     padding: $work-card-spacing-between 0;
 
-    &:before {
+    &:before { // timeline vertical line
         content: "";
         position: absolute;
         top: 0;
@@ -39,9 +40,9 @@ $work-card-spacing-between: 50rem;
     }
 
     .content-container {
+        display: flex;
         position: relative;
-        max-width: 35%;
-        margin-left: 15%;
+        max-width: 50%;
         margin-bottom: $work-card-spacing-between;
 
         &:last-child {
@@ -60,6 +61,7 @@ $work-card-spacing-between: 50rem;
         }
 
         &:nth-child(odd) {
+            justify-content: flex-end;
             padding-right: $content-timeline-spacing;
 
             &:before {
@@ -80,6 +82,7 @@ $work-card-spacing-between: 50rem;
         }
 
         &:nth-child(even) {
+            justify-content: flex-start;
             margin-left: calc(50% + #{$content-timeline-spacing});
 
             &:before {
@@ -100,7 +103,9 @@ $work-card-spacing-between: 50rem;
         }
 
         .content {
-            padding: 20rem 10rem;
+            $content-horizontal-padding: 20rem;
+            padding: $content-horizontal-padding 10rem;
+            display: inline-block;
 
             h2,
             div {
@@ -140,20 +145,17 @@ $work-card-spacing-between: 50rem;
                 z-index: -1;
                 box-shadow: $triangle-box-shadow;
             }
+
+            ul {
+                list-style-type: disc;
+                margin-top: $default-spacing;
+                padding-left: $content-horizontal-padding;
+            }
         }
     }
 }
 
-@include lg-media-query() {
-    .timeline {
-        .content-container {
-            max-width: 50%;
-            margin-left: 0;
-        }
-    }
-}
-
-@include xs-media-query() {
+@include md-media-query() {
     .timeline {
         &:before {
             left: 0;
@@ -165,6 +167,7 @@ $work-card-spacing-between: 50rem;
 
             &:nth-child(odd),
             &:nth-child(even) {
+                justify-content: flex-start;
                 margin-left: $content-timeline-spacing;
                 padding: 0;
 

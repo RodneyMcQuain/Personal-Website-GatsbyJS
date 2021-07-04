@@ -37,6 +37,7 @@ const WorkTimelineStaticQuery = () => (
                             endDate(formatString: "MMMM DD, YYYY")
                             city
                             state
+                            notablePoints
                         }
                     }
                 }
