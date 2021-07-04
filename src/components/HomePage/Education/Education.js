@@ -27,8 +27,10 @@ const EducationStaticQuery = () => (
                                 }
                             }
                             location
-                            degree
                             graduationDate
+                            degree
+                            minor
+                            concentration
                             gpa
                         }
                     }

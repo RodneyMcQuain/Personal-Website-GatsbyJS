@@ -2,17 +2,28 @@
 @import '../../../../helpers/variables/variables.module';
 
 .institution-name {
-    margin-top: $default-spacing;
-    margin-bottom: $default-spacing / 2;
-    font-weight: bold;
+    display: inline;
     font-size: $medium-text-size;
-    display: flex;
-    align-items: center;
-    white-space: pre-wrap;
-    flex-wrap: wrap;
+    font-weight: bold;
+    margin-top: $default-spacing;
 }
 
 .institution-description {
-    margin-bottom: $default-spacing;
+    margin-bottom: $minor-spacing;
     font-size: initial;
+
+    &.default-margin-bottom {
+        margin-bottom: $default-spacing;
+    }
+}
+
+.spaced {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    align-items: baseline;
+
+    > *:first-child {
+        margin-right: $default-spacing;
+    }
 }

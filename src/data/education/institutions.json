@@ -3,16 +3,18 @@
         "institution": "Purdue University Fort Wayne",
         "image": "pufw.jpg",
         "location": "Fort Wayne, Indiana",
-        "degree": "BS in Computer Science",
         "graduationDate": "May 2021",
+        "degree": "BS in Computer Science",
+        "minor": "Mathematics",
+        "concentration": "Software Engineering",
         "gpa": "4.0/4.0"
     },
     {
         "institution": "Ivy Tech Community College",
         "image": "ivyTech.jpg",
         "location": "Fort Wayne, Indiana",
-        "degree": "AS in Software Development",
         "graduationDate": "December 2017",
+        "degree": "AS in Software Development",
         "gpa": "3.9/4.0"
     }
 ]
