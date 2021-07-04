@@ -9,7 +9,7 @@ const RESUME_FILE_PATH = "documents/Rodney McQuain - Resume - June 2021.pdf";
 
 const Resume = () => (
     <Layout>
-        <SEO title="Resume" shouldNotIndex />
+        <SEO title="Resume" />
         <HeaderContentLayout title="Resume">
             <embed src={RESUME_FILE_PATH} width="100%" height="800rem" />
             <br />
