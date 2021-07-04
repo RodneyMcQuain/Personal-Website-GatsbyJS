@@ -15,7 +15,7 @@ const Institution = ({ institution: { institution, location, degree, minor, conc
         className="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin-container upscale-container"
     >
         <span className={spaced}>
-            <h2 className={`${institutionName}`}>{institution}</h2>
+            <h2 className={institutionName}>{institution}</h2>
             <HoverIconText
                 icon={<GoLocation />}
                 displayText={location}
@@ -24,28 +24,24 @@ const Institution = ({ institution: { institution, location, degree, minor, conc
             />
         </span>
         <p className={`${institutionDescription} ${defaultMarginBottom}`}>
-            <HoverIconText
-                icon={<FaGraduationCap />}
-                displayText={`${graduationDate}`}
-                altText={`Graduation Date: ${graduationDate}`}
-                className="-gray-text -small-text"
-            /> 
+            <span className="-gray-text -small-text">
+                <IconText
+                    icon={<FaGraduationCap />}
+                    text={`Graduated ${graduationDate}`}
+                /> 
+            </span>
         </p>
-        <p className={`${institutionDescription} ${spaced} -secondary-text`}>
+        <p className={`${institutionDescription} ${spaced}`}>
             <HoverIconText
                 icon={<RiFilePaper2Line />}
                 displayText={degree}
                 altText={`Diploma: ${degree}`}
                 className="-secondary-text"
             /> 
-            {concentration && 
-                <span className={`-small-text -gray-text`}>
-                    Concentration on {concentration}
-                </span>
-            }
+            {concentration && <span className="-small-text -gray-text">Concentration on {concentration}</span>}
         </p>
         {minor && 
-            <p className={`${institutionDescription} -secondary-text`}>
+            <p className={institutionDescription}>
                 <span className="-small-text -gray-text">
                     <IconText
                         icon={<RiFilePaper2Line />}
@@ -54,12 +50,13 @@ const Institution = ({ institution: { institution, location, degree, minor, conc
                 </span>
             </p>
         }
-        <p className={`${institutionDescription} -secondary-text`}>
-            <IconText
-                icon={<BisCalculator />}
-                text={`${gpa} GPA`}
-                className="-secondary-text"
-            />
+        <p className={institutionDescription}>
+            <span className="-secondary-text">
+                <IconText
+                    icon={<BisCalculator />}
+                    text={`${gpa} GPA`}
+                />
+            </span>
         </p>
     </ImageTopCard>
 );
