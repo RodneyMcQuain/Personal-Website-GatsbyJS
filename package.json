@@ -35,9 +35,7 @@
         "react": "^16.9.0",
         "react-dom": "^16.8.6",
         "react-helmet": "^5.2.1",
-        "react-pdf": "^4.1.0",
         "react-scrollspy": "^3.4.0",
-        "react-sizeme": "^2.6.7",
         "reason-react": "^0.8.0",
         "webpack": "^5.35.1"
     },
