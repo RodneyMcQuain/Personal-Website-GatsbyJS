@@ -25,7 +25,14 @@ module.exports = {
         `gatsby-plugin-catch-links`,
         `gatsby-plugin-typescript`,
         `gatsby-plugin-tslint`,
-        `gatsby-plugin-netlify`,
+        {
+            resolve: `gatsby-plugin-netlify`,
+            options: {
+                headers: {
+                    "/*": [ "X-Frame-Options: SAMEORIGIN" ]
+                }
+            },
+        },
         {
             resolve: `gatsby-plugin-sass`,
             options: {
