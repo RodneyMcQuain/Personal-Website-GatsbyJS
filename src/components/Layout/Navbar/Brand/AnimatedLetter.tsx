@@ -14,7 +14,6 @@ const AnimatedLetter = ({ letter, animationDelay, isHovered }: IAnimatedLetterPr
 
     useEffect(() => {
         if (isHovered && !isAnimated) {
-            console.log(LETTER_ANIMATION_DURATION_MS);
             setTimeout(() => setIsAnimated(true), animationDelay);
             setTimeout(() => setIsAnimated(false), animationDelay + LETTER_ANIMATION_DURATION_MS);
         }
