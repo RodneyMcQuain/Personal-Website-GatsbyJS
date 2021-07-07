@@ -67,10 +67,10 @@ For example, you may want to have separate code reviews for a lot of namespace r
 
 Sometimes it may not be possible nor make sense to split code reviews, due to things like process, time, or technical restrictions.  If this is the case, split up your commits.  Give them a single responsibility.  This allows your reviewers to go through the code iteratively, in a similar fashion to how you developed it. 
 
-There are a few guidelines that you can follow to facilitate this.  From my view—there are 3 types of code:
+There are a few guidelines that you can follow to facilitate this.  From my view—there are 3 categories of commits:
 
-* Functional: code that—from the user's perspective—noticeably impacts them, such as new features
-* Non-functional: code that has little or no noticeable impact to the user, such as refactoring or system reliability improvements
+* Feature: code that—from the user's perspective—noticeably impacts them, such as new functionality
+* Chore: code that has little or no noticeable impact to the user, such as refactoring or system reliability improvements
 * Bug: code that was intended to be correct, but has some sort of defect
 
 If it can be helped, don't mix any of these 3 types of code in a single commit.  Another signifier to split a commit up is if the commit message includes *connective words*, such as "and."  If there are any *connective words*, consider separating the code and commit messages into multiple commits. 
