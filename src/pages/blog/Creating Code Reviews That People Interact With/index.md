@@ -17,7 +17,7 @@ It can be a little confusing.  I know my code isn't perfect.  I know my reviewer
 
 Well, there are a few things that are within your control that make your reviewers' lives easier and in turn lead to receiving valuable feedback.
 
-> *NOTE*: I'll be using git terms in the following advice.  This is to keep it simple and use terms that the most amount of people will be familiar with, but all of this advice likely applies to whatever version control system you use.
+> *NOTE*: I'll be using git terms in the following advice.  This is to keep it simple and use terms that the most amount of people will be familiar with, but all of these techniques likely apply to whatever version control system you use.
 
 ## Ask Questions
 
@@ -79,7 +79,7 @@ And don't forget, if your code review has this sort of commit organization, make
 
 ## Wrap Up
 
-To summarize, these are a few things you can do to get more interaction and value out of your code reviews:
+To summarize, these are a few techniques you can use to get more interaction and value out of your code reviews:
 
 * ask questions to directly get people involved with the review
 * refine the work so reviewers understand what they're reviewing
