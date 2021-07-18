@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBrandItem from './NavBrandItem';
-import { SKILLS_HASH, WORK_HASH, EDUCATION_HASH, ABOUT_ME_HASH } from '../../../../services/homePageHashes';
-import { FaUser, FaUniversity, FaBuilding, FaList } from '@meronex/icons/fa';
+import { SKILLS_HASH, WORK_HASH, EDUCATION_HASH, ABOUT_ME_HASH, TESTIMONIALS_HASH } from '../../../../services/homePageHashes';
+import { FaUser, FaUniversity, FaBuilding, FaList, FaComments } from '@meronex/icons/fa';
 import { brandDropdown, openDropdown } from '../../../../styles/layout/components/Layout/Navbar/Brand/NavBrandContents.module.scss';
 
 const NavBrandContents = ({ isOpen }) => (
@@ -10,6 +10,7 @@ const NavBrandContents = ({ isOpen }) => (
         <NavBrandItem text="Education" url={EDUCATION_HASH} icon={<FaUniversity />} />
         <NavBrandItem text="Work" url={WORK_HASH} icon={<FaBuilding />} />
         <NavBrandItem text="Skills" url={SKILLS_HASH} icon={<FaList />} />
+        <NavBrandItem text="Testimonials" url={TESTIMONIALS_HASH} icon={<FaComments />} />
     </ul>
 );
 

@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import Banner from './Banner/Banner';
 import AboutMe from './AboutMe';
 import Education from './Education/Education';
-import Skills from './Skills/Skills';
 import WorkTimeline from './Work/Timeline';
+import Skills from './Skills/Skills';
+import Testimonials from './Testimonials/TestimonialsSection';
 import ContactMe from '../Shared/ContactMe';
 
 const HomePage = () => {
@@ -16,6 +17,7 @@ const HomePage = () => {
             <Education />
             <WorkTimeline />
             <Skills />
+            <Testimonials />
             <div className="container">
                 <ContactMe />
             </div>
