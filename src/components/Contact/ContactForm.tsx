@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { IContactFormData } from '../../types/ContactFormData';
+import PaddingCard from '../Shared/PaddingCard';
 import ContactFormField from './ContactFormField';
 import ContactIcon from './ContactIcon';
 import SuccessText from './SuccessText';
 import ValidationText from './ValidationText';
+import { IContactFormData } from '../../types/ContactFormData';
 import { contactContainer } from '../../styles/layout/components/Contact/ContactForm.module.scss';
 
 const emptyForm = {
@@ -40,7 +41,7 @@ const ContactForm = () => {
 
     return (
         <div className="col-xs-12">
-            <div className={`${contactContainer} center-container -curved-border -layered-box-shadow`}>
+            <PaddingCard className={`${contactContainer} center-container`}>
                 <ValidationText formData={formData} setIsError={setIsError} isDisplayed={isValidationTextDisplayed} />
                 <form 
                     name={CONTACT_FORM_NAME}
@@ -103,7 +104,7 @@ const ContactForm = () => {
                     </div>
                 </form>
                 <SuccessText isSuccess={isSuccess} isValidationTextDisplayed={isValidationTextDisplayed} />
-            </div>
+            </PaddingCard>
         </div>
     );
 };

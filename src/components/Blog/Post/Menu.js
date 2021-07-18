@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PaddingCard from '../../Shared/PaddingCard';
 import { FEATURED_IMG_VIEWPORT_HEIGHT } from '../../../styles/helpers/variables/variables';
 import { useAddCssClass } from '../../../services/useAddCssClass';
 import BlogPostsList from './PostsList';
@@ -11,8 +12,8 @@ const Menu = ({ posts, currentPostName, isOpen, tableOfContents, mightBeFooterIn
     const mightOpenMenu = isOpen ? openClass : "";
 
     return (
-        <div className={
-            `${blogMenu} -curved-border -layered-box-shadow padding-container 
+        <PaddingCard className={
+            `${blogMenu} 
             ${sidebarOffsetTopClass} ${mightOpenMenu} ${mightBeFooterInView}`
         }>
             <h1>Table of Contents</h1>
@@ -20,7 +21,7 @@ const Menu = ({ posts, currentPostName, isOpen, tableOfContents, mightBeFooterIn
             <br />
             <h1>More Blog Posts</h1>
             <BlogPostsList posts={posts} currentPostName={currentPostName} />
-        </div>
+        </PaddingCard>
     );
 };
 

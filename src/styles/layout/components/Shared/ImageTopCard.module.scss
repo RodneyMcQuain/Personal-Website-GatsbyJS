@@ -1,4 +1,5 @@
 @import '../../../helpers/variables/text-size';
+@import '../../../helpers/variables/spacings';
 @import '../../../helpers/variables/variables.module';
 
 .image-top-card {
@@ -12,7 +13,7 @@
 }
 
 .content-padding {
-    padding: 15rem 20rem;
+    padding: $content-padding;
     
     &.inner-margin > *:not(:first-child) {
         margin-top: $default-spacing;

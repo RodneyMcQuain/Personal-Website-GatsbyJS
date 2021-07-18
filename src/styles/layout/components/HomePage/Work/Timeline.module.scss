@@ -3,6 +3,7 @@
 @import "../../../../helpers/variables/text-size";
 @import "../../../../helpers/functions";
 @import "../../../../helpers/mixins/media-queries";
+@import "../../../../helpers/variables/spacings";
 @import "../../../../helpers/variables/variables.module";
 
 $timeline-color: $black;
@@ -103,8 +104,6 @@ $work-card-spacing-between: 50rem;
         }
 
         .content {
-            $content-horizontal-padding: 20rem;
-            padding: $content-horizontal-padding 10rem;
             display: inline-block;
 
             h2,
