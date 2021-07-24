@@ -5,7 +5,7 @@ import { EDUCATION_HASH } from '../../../services/homePageHashes';
 import HeaderContentLayout from '../../Layout/HeaderContentLayout';
 
 const Education = ({ institutions }) => (
-    <HeaderContentLayout title="Education" id={EDUCATION_HASH} isDark={true}>
+    <HeaderContentLayout title="Education" id={EDUCATION_HASH}>
         {institutions.map(institution => <Institution key={institution.node.id} institution={institution.node} />)}
     </HeaderContentLayout>
 );

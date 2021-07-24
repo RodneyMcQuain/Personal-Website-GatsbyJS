@@ -14,10 +14,10 @@ const HomePage = () => {
         <>
             <Banner />
             <AboutMe />
-            <Education />
+            <Testimonials />
             <WorkTimeline />
             <Skills />
-            <Testimonials />
+            <Education />
             <div className="container">
                 <ContactMe />
             </div>
