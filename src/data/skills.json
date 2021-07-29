@@ -55,11 +55,10 @@
         "title": "Testing",
         "skills": [
             "Test-Driven Development",
-            "Test Doubles",
-            "Cypress",
-            "Jasmine",
-            "NUnit",
-            "Jest"
+            "Test Doubles (Moq, Jest, React Testing Library)",
+            "Unit Testing (XUnit, Jest)",
+            "End-to-End Testing (Cypress, Canopy)",
+            "Integration Testing"
         ]
     },
     {
