@@ -6,7 +6,9 @@ import HeaderContentLayout from '../../Layout/HeaderContentLayout';
 
 const Skills = ({ skills }) => (
     <HeaderContentLayout title="Skills" id={SKILLS_HASH} isDark>
-        {skills.map(skillSection => <SkillSection key={skillSection.node.id} skillSection={skillSection.node} />)}
+        <div class="row display-flex">
+            {skills.map(skillSection => <SkillSection key={skillSection.node.id} skillSection={skillSection.node} />)}
+        </div>
     </HeaderContentLayout>
 );
 

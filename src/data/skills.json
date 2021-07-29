@@ -1,5 +1,16 @@
 [
     {
+        "title": "Project Type Experience",
+        "skills": [
+            "Full-Stack Web Development",
+            "Desktop",
+            "API/Library/Package",
+            "Machine Learning",
+            "Internet of Things",
+            "Content Management System"
+        ]
+    },
+    {
         "title": "Programming Languages",
         "skills": [
             "JavaScript",
