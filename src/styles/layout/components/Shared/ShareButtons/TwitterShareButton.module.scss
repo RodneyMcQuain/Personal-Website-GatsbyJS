@@ -1,0 +1,9 @@
+@import '../../../../helpers/mixins/anchor-pseudo-class';
+
+.twitter {
+    background: rgb(29, 161, 242);
+    
+    @include anchor-with-pseudo-classes {
+        color: white;
+    }
+}

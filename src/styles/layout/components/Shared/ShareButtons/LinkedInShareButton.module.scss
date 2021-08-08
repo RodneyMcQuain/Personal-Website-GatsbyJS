@@ -1,0 +1,9 @@
+@import '../../../../helpers/mixins/anchor-pseudo-class';
+
+.linkedin {
+    background: rgb(40, 103, 178);
+
+    @include anchor-with-pseudo-classes {
+        color: white;
+    }
+}

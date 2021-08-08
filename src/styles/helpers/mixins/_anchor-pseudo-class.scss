@@ -1,0 +1,5 @@
+@mixin anchor-with-pseudo-classes() {
+    &, &:hover, &:active, &:focus {
+        @content;
+    }
+}

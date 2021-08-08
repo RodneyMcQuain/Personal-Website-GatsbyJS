@@ -72,12 +72,28 @@ ul {
     padding: 0;
 }
 
+$btn-hover-transition: all .5s ease-in-out;
+.btn-base {
+    display: inline-block;
+    padding: 6rem 12rem;
+    border-radius: 4rem;
+    box-shadow: 2rem 2rem 5rem #ccc;
+    transition: $btn-hover-transition;
+
+    &:hover {
+        -webkit-transform: translate3D(0, 0, 0);
+        transform: $minor-scale;
+    }
+
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
+
 .btn {
+    @extend .btn-base;
     background: $black;
     color: $white;
-    box-shadow: 2rem 2rem 5rem #ccc;
-    $btn-hover-transition: all .5s ease-in-out;
-    transition: $btn-hover-transition;
     overflow: hidden;
     position: relative;
 
@@ -95,8 +111,6 @@ ul {
         border: 1rem solid $black;
         background: $white;
         color: $black;
-        -webkit-transform: translate3D(0, 0, 0);
-        transform: $minor-scale;
 
         a, span {
             color: $black;

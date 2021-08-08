@@ -8,6 +8,7 @@ import Img from 'gatsby-image';
 import ContactMe from '../components/Shared/ContactMe';
 import AdjacentPostNavigation from '../components/Blog/Post/AdjacentPostNavigation';
 import HeaderIcons from '../components/Blog/Post/HeaderIcons';
+import ShareButtons from '../components/Blog/Post/ShareButtons';
 import Markdown from '../components/Shared/Markdown';
 import HeaderTitle from '../components/Shared/HeaderTitle';
 import { blogFeaturedImage, blogPostTitle, blogPostContent } from '../styles/layout/templates/BlogPost.module.scss';
@@ -45,6 +46,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
                             <Markdown html={html} />
                         </article>
+
+                        <ShareButtons textContent={`Check out "${title}"`} url={path} sharedMediaType="blog post" />
+                        
                         <AdjacentPostNavigation
                             previous={pageContext.previous ? pageContext.previous.frontmatter : null}
                             next={pageContext.next ? pageContext.next.frontmatter : null}

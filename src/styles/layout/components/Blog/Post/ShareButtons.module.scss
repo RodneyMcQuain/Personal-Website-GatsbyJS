@@ -1,0 +1,10 @@
+@import '../../../../helpers/variables/variables.module';
+@import '../../../../helpers/variables/spacings';
+
+.share-button-container {
+    margin-top: $large-spacing;
+
+    & > * {
+        margin: $spacing-between-elements;
+    }
+}

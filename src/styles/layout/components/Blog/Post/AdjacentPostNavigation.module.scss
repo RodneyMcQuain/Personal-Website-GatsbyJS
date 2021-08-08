@@ -1,8 +1,9 @@
 @import '../../../../helpers/variables/breakpoints';
 @import '../../../../helpers/mixins/media-queries';
+@import '../../../../helpers/variables/spacings';
 
 .adjacent-navigation-container {
-    margin-top: 50rem;
+    margin-top: $extra-large-spacing;
     display: flex;
     justify-content: space-between;
 

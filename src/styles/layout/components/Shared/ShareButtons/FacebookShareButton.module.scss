@@ -1,0 +1,9 @@
+@import '../../../../helpers/mixins/anchor-pseudo-class';
+
+.facebook {
+    background: rgb(66, 103, 178);
+    
+    @include anchor-with-pseudo-classes {
+        color: white;
+    }
+}
