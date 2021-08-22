@@ -1,8 +1,8 @@
 import React from 'react';
 import Icon from '../Shared/Icon';
-import { FaGithub } from '@meronex/icons/fa';
 import { footer, footerCopyright, footerIcon, footerIcons } from '../../styles/layout/components/Layout/Footer.module.scss';
 import LinkedInIcon from '../Shared/Icons/LinkedInIcon';
+import GitHubIcon from '../Shared/Icons/GitHubIcon';
 
 const Footer = () => (
     <footer id={footer} className="dark-section">
@@ -10,7 +10,7 @@ const Footer = () => (
 
         <div className={footerIcons}>
             <a className={`btn ${footerIcon}`} href="https://github.com/RodneyMcQuain/" aria-label="Go to my GitHub" title="My GitHub">
-                <Icon icon={<FaGithub />} />
+                <Icon icon={<GitHubIcon />} />
             </a>
             <a className={`btn ${footerIcon}`} href="https://www.linkedin.com/in/rodneymcquain/" aria-label="Go to my LinkedIn" title="My LinkedIn">
                 <Icon icon={<LinkedInIcon />} />

@@ -1,0 +1,9 @@
+@import '../../../helpers/mixins/anchor-pseudo-class';
+
+.github {
+    background: #333;
+
+    @include anchor-with-pseudo-classes {
+        color: #f5f5f5;
+    }
+}

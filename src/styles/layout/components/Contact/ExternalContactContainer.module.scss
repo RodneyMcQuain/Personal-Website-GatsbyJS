@@ -1,0 +1,10 @@
+@import '../../../helpers/variables/spacings';
+@import '../../../helpers/variables/variables.module';
+
+.external-contact-container {
+    margin-bottom: $default-spacing;
+
+    > * {
+        margin: $spacing-between-elements        
+    }
+}

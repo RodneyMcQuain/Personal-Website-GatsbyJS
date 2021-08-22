@@ -42,6 +42,7 @@ const ContactForm = () => {
     return (
         <div className="col-xs-12">
             <PaddingCard className={`${contactContainer} center-container`}>
+                <h2>Send Me an Email</h2>
                 <ValidationText formData={formData} setIsError={setIsError} isDisplayed={isValidationTextDisplayed} />
                 <form 
                     name={CONTACT_FORM_NAME}

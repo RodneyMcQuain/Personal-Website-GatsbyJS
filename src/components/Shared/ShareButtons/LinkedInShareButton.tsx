@@ -1,8 +1,8 @@
 import React from 'react';
 import ShareButton from './ShareButton';
 import IconText from '../IconText';
-import { linkedin } from '../../../styles/layout/components/Shared/ShareButtons/LinkedInShareButton.module.scss';
 import LinkedInIcon from '../Icons/LinkedInIcon';
+import { linkedin } from '../../../styles/layout/components/Shared/linkedInButtonStyle.module.scss';
 
 interface ILinkedInShareButtonProps {
     url: string;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { AllChildren } from '../../../types/AllChildren';
+import ExternalLinkButtonBase from '../ExternalLinkButtonBase';
 
 interface ShareButtonProps {
     className: string;
@@ -9,15 +10,13 @@ interface ShareButtonProps {
 }
 
 const ShareButton = ({ className, children, href, ariaLabel }: ShareButtonProps) => (
-    <a 
-        className={`btn-base -small-text ${className}`} 
-        target="_blank" 
-        rel="noopener noreferrer" 
+    <ExternalLinkButtonBase
+        className={`-small-text ${className}`} 
         href={href}
-        aria-label={ariaLabel}
+        ariaLabel={ariaLabel}
     >
         {children}
-    </a>
+    </ExternalLinkButtonBase>
 );
 
 export default ShareButton;
