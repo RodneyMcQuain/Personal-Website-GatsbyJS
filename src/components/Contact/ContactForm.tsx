@@ -8,10 +8,10 @@ import { IContactFormData } from '../../types/ContactFormData';
 import { contactContainer } from '../../styles/layout/components/Contact/ContactForm.module.scss';
 
 const emptyForm = {
-    name: "", 
+    name: "",
     email: "",
     subject: "",
-    message: "", 
+    message: "",
 };
 
 const THIS_PAGE = "/";
@@ -22,7 +22,7 @@ const ContactForm = () => {
     const [isError, setIsError] = useState(true);
     const [isSuccess, setIsSuccess] = useState(false);
     const [isValidationTextDisplayed, setIsValidationTextDisplayed] = useState(false);
-    
+
     const handleSubmit = event => {
         event.preventDefault();
 
@@ -40,73 +40,71 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="col-xs-12">
-            <PaddingCard className={`${contactContainer} center-container`}>
-                <h2>Send Me an Email</h2>
-                <ValidationText formData={formData} setIsError={setIsError} isDisplayed={isValidationTextDisplayed} />
-                <form 
-                    name={CONTACT_FORM_NAME}
-                    id={CONTACT_FORM_NAME}
-                    method="POST" 
-                    onSubmit={e => handleSubmit(e)}
-                    action={THIS_PAGE}
-                    data-netlify="true" 
-                    data-netlify-honeypot="bot-field" 
-                >
-                    <input type="hidden" name="bot-field" />
-                    <input type="hidden" name="form-name" value={CONTACT_FORM_NAME} />
-                    <ContactFormField 
-                        name="name"
-                        placeholder="Name"
-                        value={formData.name}
-                        formData={formData}
-                        setFormData={setFormData}                               
-                        setIsValidationTextDisplayed={setIsValidationTextDisplayed}
-                    />
+        <PaddingCard className={`${contactContainer} center-container`}>
+            <h2>Send Me an Email</h2>
+            <ValidationText formData={formData} setIsError={setIsError} isDisplayed={isValidationTextDisplayed} />
+            <form
+                name={CONTACT_FORM_NAME}
+                id={CONTACT_FORM_NAME}
+                method="POST"
+                onSubmit={e => handleSubmit(e)}
+                action={THIS_PAGE}
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+            >
+                <input type="hidden" name="bot-field" />
+                <input type="hidden" name="form-name" value={CONTACT_FORM_NAME} />
+                <ContactFormField
+                    name="name"
+                    placeholder="Name"
+                    value={formData.name}
+                    formData={formData}
+                    setFormData={setFormData}
+                    setIsValidationTextDisplayed={setIsValidationTextDisplayed}
+                />
 
-                    <ContactFormField 
-                        name="email"
-                        placeholder="Email"
-                        value={formData.email}    
-                        formData={formData}
-                        setFormData={setFormData}                               
-                        setIsValidationTextDisplayed={setIsValidationTextDisplayed}
-                    />
+                <ContactFormField
+                    name="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    formData={formData}
+                    setFormData={setFormData}
+                    setIsValidationTextDisplayed={setIsValidationTextDisplayed}
+                />
 
-                    <ContactFormField 
-                        name="subject"
-                        placeholder="Subject"
-                        value={formData.subject}                                     
-                        formData={formData}
-                        setFormData={setFormData}                               
-                        setIsValidationTextDisplayed={setIsValidationTextDisplayed}
-                    />
+                <ContactFormField
+                    name="subject"
+                    placeholder="Subject"
+                    value={formData.subject}
+                    formData={formData}
+                    setFormData={setFormData}
+                    setIsValidationTextDisplayed={setIsValidationTextDisplayed}
+                />
 
-                    <ContactFormField 
-                        name="message"
-                        placeholder="Message"
-                        value={formData.message}                                     
-                        formData={formData}
-                        setFormData={setFormData}                               
-                        setIsValidationTextDisplayed={setIsValidationTextDisplayed}
-                        isTextArea={true}
-                    />
+                <ContactFormField
+                    name="message"
+                    placeholder="Message"
+                    value={formData.message}
+                    formData={formData}
+                    setFormData={setFormData}
+                    setIsValidationTextDisplayed={setIsValidationTextDisplayed}
+                    isTextArea={true}
+                />
 
-                    <div>
-                        <button 
-                            type="submit" 
-                            name="submit" 
-                            className="btn btn-lg" 
-                            aria-label="Send Email" 
-                            disabled={isError}
-                        >
-                            <ContactIcon /> Send Email
-                        </button>
-                    </div>
-                </form>
-                <SuccessText isSuccess={isSuccess} isValidationTextDisplayed={isValidationTextDisplayed} />
-            </PaddingCard>
-        </div>
+                <div>
+                    <button
+                        type="submit"
+                        name="submit"
+                        className="btn btn-lg"
+                        aria-label="Send Email"
+                        disabled={isError}
+                    >
+                        <ContactIcon /> Send Email
+                    </button>
+                </div>
+            </form>
+            <SuccessText isSuccess={isSuccess} isValidationTextDisplayed={isValidationTextDisplayed} />
+        </PaddingCard>
     );
 };
 
@@ -115,7 +113,7 @@ const getNetlifyBody = (formData: IContactFormData): string => (
         "form-name": CONTACT_FORM_NAME,
         ...formData
     })
-        .toString() 
+        .toString()
 );
 
 export default ContactForm;
