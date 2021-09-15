@@ -5,6 +5,7 @@ title: "Creating Code Reviews That People Interact With"
 author: "Rodney McQuain"
 featuredImage: ./index.jpg
 featuredImageAltText: "5 people looking at a computer screen. One person operating the computer with a mouse and keyboard. Another person pointing at a specific part of the screen. A different person taking notes. The remaining 2 people spectating behind the other 3 people."
+lastUpdatedDate: "2021-09-14"
 category: "Software Process"
 tags: ["Code Review", "Feedback"]
 ---
@@ -50,6 +51,7 @@ Not everybody has the same context as you.  This only becomes more true as you s
 * what it means for this work to be considered complete
 * any assumptions you've made
 * a picture of the updated UI
+* why specific technical decisions were made
 * business knowledge that's involved in the work
 
 Having well refined documentation for your code review is good for a few reasons:
