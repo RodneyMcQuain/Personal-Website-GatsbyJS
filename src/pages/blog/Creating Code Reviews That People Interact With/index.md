@@ -56,9 +56,10 @@ Not everybody has the same context as you.  This only becomes more true as you s
 
 Having well refined documentation for your code review is good for a few reasons:
 
-* it's easier for your reviewers to identify bigger picture problems, such as architectural shortcomings
-* it answers questions that reviewers didn't know they had
-* it answers questions that people have, but didn't ask because they thought the answer wouldn't be very significant
+* it's easier for your reviewers to identify high-level problems, such as architectural shortcomings
+* it answers questions that reviewers didn't know they have
+* it creates a lower friction environment for reviewers to start confidently contributing
+* it answers questions that reviewers have, but don't ask because they think the value of the response won't be worth the time of correspondence
 * with the extra information, reviewers can give more educated, thorough, and accurate feedback
 
 ## Keep It Small
