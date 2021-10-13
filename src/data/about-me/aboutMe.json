@@ -1,4 +1,10 @@
 {
-    "image": "me.png",
-    "altText": "Me at a Super Smash Bros. Melee tournament"
+    "currentMe": {
+        "image": "me.png",
+        "altText": "Me at a Super Smash Bros. Melee tournament"
+    },
+    "youngMe": {
+        "image": "young-me.jpg",
+        "altText": "A picture of me as a 6 year old who's mildly amused, with frayed hair that goes halfway down my forhead, sporting a plaid shirt and glasses with circular lenses. Holding up an item in a plastic package with text that indicates that the item is a GameCube with a Game Boy catridge slot."
+    }
 }

@@ -1,40 +1,53 @@
 @import "../../../helpers/variables/variables.module";
 @import "../../../helpers/mixins/media-queries";
 @import "../../../helpers/variables/text-size";
-@import "../../../helpers/variables/variables.module";
+@import "../../../helpers/variables/spacings";
 
-.about-me-text {
-    text-align: left;
-    text-indent: 20rem;
-}
+.about-me-container {
+    .about-me-text {
+        text-align: left;
+        text-indent: 20rem;
 
-$spacing-around-image: $default-spacing;
-.about-me-image-container {
-    float: right;
-
-    .image {
-        width: 330rem;
-        border-radius: $minor-border-radius;
-        margin-left: $spacing-around-image;
-    }
-
-    figcaption {
-        margin-top: $spacing-around-image;
-    }
-
-    @include sm-media-query() {
-        .image {
-            width: 300rem;
+        &:first-of-type {
+            margin-bottom: $large-spacing;
         }
     }
 
-    @include xs-media-query() {
-        float: none;
-        margin-bottom: $spacing-around-image;
+    .about-me-image-container {
+        $vertical-spacing-around-image: $default-spacing;
+        $horizontal-spacing-around-image: $medium-spacing;
+
+        &.right {
+            float: right;
+            margin-left: $horizontal-spacing-around-image;
+            width: 330rem;
+        }
+
+        &.left {
+            float: left;
+            margin-right: $horizontal-spacing-around-image;
+            width: 205rem;
+        }
 
         .image {
-            margin: 0 auto;
-            width: 275rem;
+            border-radius: $minor-border-radius;
+        }
+
+        @include sm-media-query() {
+            &.right { width: 300rem; }
+
+            &.left { width: 175rem; }
+        }
+
+        @include xs-media-query() {
+            &.right, &.left {
+                float: none;
+                margin: 0 auto $vertical-spacing-around-image;
+            }
+
+            &.right { width: 275rem; }
+
+            &.left { width: 200rem; }
         }
     }
 }

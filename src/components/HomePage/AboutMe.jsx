@@ -1,34 +1,45 @@
 import React from 'react';
 import { ABOUT_ME_HASH } from '../../services/homePageHashes';
 import HeaderContentLayout from '../Layout/HeaderContentLayout';
-import Img from 'gatsby-image';
 import { StaticQuery, graphql } from 'gatsby';
 import Link from '../Shared/ExternalLink';
-import { aboutMeImageContainer, image as imageClass, aboutMeText } from '../../styles/layout/components/HomePage/AboutMe.module.scss';
+import Figure from '../Shared/Figure';
+import { aboutMeContainer, aboutMeImageContainer, image as imageClass, right, left, aboutMeText } from '../../styles/layout/components/HomePage/AboutMe.module.scss';
 
-const AboutMe = ({ data: { image, altText } }) => (
+const AboutMe = ({ data: { currentMe, youngMe } }) => (
     <HeaderContentLayout title="About Me" id={ABOUT_ME_HASH}>
-        <figure className={aboutMeImageContainer}>
-            <Img fluid={image.childImageSharp.fluid} className={`${imageClass} -layered-box-shadow`} alt={altText} />
-            <figcaption className="-small-text">
-                <em>
-                    Courtesy of <Link href="https://www.facebook.com/tinymeleephotography/" shouldOpenInNewTab>Tiny Melee Photography</Link>
-                </em>
-            </figcaption>
-        </figure>
-        <p className={aboutMeText}>
-            I recently received my AS in software development from Ivy Tech Community College and I currently attend
-            Purdue University Fort Wayne, looking to get my BS in computer science with a software engineering focus.
-            Countless hours of my time are dedicated to furthering my knowledge of programming and becoming the best
-            I can be.  I am highly self-motivated and eager to get employed in a position where I can test my skills
-            and further my growth as a software engineer.
-        </p>
-        <p className={aboutMeText}>
-            Aside from programming I put my time into competitive video games.  Just like programming it requires and improves
-            my critical thinking and problem solving skills.  I am currently ranked top 5 in Indiana for
-            Super Smash Bros. Melee.  Further, it is something I am very passionate about and is a testament
-            to my dedication of being the best that I can be at whatever I put my mind to.
-        </p>
+        <div className={aboutMeContainer}>
+            <Figure
+                fluidImage={currentMe.image.childImageSharp.fluid}
+                altText={currentMe.altText}
+                className={`${aboutMeImageContainer} ${right}`}
+                imageClassName={imageClass}
+            >
+                Courtesy of <Link href="https://www.facebook.com/tinymeleephotography/" shouldOpenInNewTab>Tiny Melee Photography</Link>
+            </Figure>
+            <p className={aboutMeText}>
+                Hey, what's up? I'm Rodney. I'm a passionate software developer that's engrossed in the world of software.
+                I specialize in full-stack web development and consulting—with heavy interests in software architecture, user experience, and agility.
+            </p>
+            <Figure
+                fluidImage={youngMe.image.childImageSharp.fluid}
+                altText={youngMe.altText}
+                className={`${aboutMeImageContainer} ${left}`}
+                imageClassName={imageClass}
+            >
+                Ecstatic about my first GameCube
+            </Figure>
+            <p className={aboutMeText}>
+                Ever since I was young I've had a fascination with dissecting software.
+                Starting out with spending my free time grinding for optimal play in video games.
+                Moving into creating some video game mods in high school.
+                Then—on a whim—choosing to study software in undergrad; finding something I really enjoy in the process and graduating at the top of my class.
+                Software has even weaseled its ways into my hobbies.
+                Alongside improving my soft and software skills, I play competitive <em>Super Smash Bros. Melee</em> semi-professionally.
+                I'm ranked 1st in Indiana often and have remained in the top 3 players across the years for the game.
+                In short, I love the kind of thinking that software—in all its forms—brings to my life.
+            </p>
+        </div>
     </HeaderContentLayout>
 );
 
@@ -39,14 +50,26 @@ const AboutMeStaticQuery = () => (
                 allAboutMeJson {
                     edges {
                         node {
-                            image {
-                                childImageSharp {
-                                    fluid(maxWidth: 500, quality: 100) {
-                                        ...fluidImage
+                            currentMe {
+                                image {
+                                    childImageSharp {
+                                        fluid(maxWidth: 500, quality: 100) {
+                                            ...fluidImage
+                                        }
                                     }
                                 }
+                                altText
                             }
-                            altText
+                            youngMe {
+                                image {
+                                    childImageSharp {
+                                        fluid(maxWidth: 500, quality: 100) {
+                                            ...fluidImage
+                                        }
+                                    }
+                                }
+                                altText
+                            }
                         }
                     }
                 }
