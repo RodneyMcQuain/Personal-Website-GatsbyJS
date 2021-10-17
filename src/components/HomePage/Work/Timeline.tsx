@@ -32,7 +32,6 @@ const WorkTimelineStaticQuery = () => (
                             id
                             company
                             title
-                            description
                             startDate(formatString: "MMMM DD, YYYY")
                             endDate(formatString: "MMMM DD, YYYY")
                             city
