@@ -37,9 +37,8 @@ const Banner = () => {
                 <h1 className={`${bannerHeader} ${bannerHide} ${fadeHeader}`}>Rodney McQuain</h1>
                 <p className={`${bannerText} ${bannerHide} ${fadeTextAndButton}`}>
                     Hello, I'm a<SingleWhiteSpace /><CycleItems items={itemsToCycle} initialDelay={BUTTON_AND_TEXT_DISPLAY_DELAY_MS} />
-                    <div>
-                        Who's always looking for an opportunity to test my skills and grow
-                    </div>
+                    <br />
+                    Who's always looking for an opportunity to test my skills and grow
                 </p>
                 <div className={`${bannerButtonContainer} ${minorPulse} ${bannerHide} ${fadeTextAndButton}`}>
                     <a className={`${bannerButton} -curved-border`} href="#about-me">

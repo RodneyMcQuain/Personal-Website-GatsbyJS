@@ -12,9 +12,12 @@
     align-items: center;
     position: relative;
 
+    &, .banner-container {
+        background: black;
+    }
+
     .banner-container {
         padding: 20rem;
-        background: black;
         z-index: 1;
         box-shadow: 0 0 15rem 10rem #020202;
         opacity: 0.85;
@@ -85,7 +88,7 @@
                     fill: $white;
                 }
 
-                &, span, svg {
+                span, svg {
                     transition: all 0.5s ease-in-out;
                 }
 
