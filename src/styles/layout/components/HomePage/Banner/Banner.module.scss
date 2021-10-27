@@ -71,6 +71,7 @@
                 padding: $default-spacing;
                 background: none;
                 position: relative;
+                transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 
                 &:before {
                     content: " ";
