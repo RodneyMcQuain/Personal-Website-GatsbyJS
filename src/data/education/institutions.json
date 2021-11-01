@@ -8,7 +8,15 @@
         "minor": "Mathematics",
         "concentration": "Software Engineering",
         "gpa": "4.0/4.0",
-        "gpaNote": "Graduated with \"Highest Distinction\""
+        "gpaNote": "Graduated with \"Highest Distinction\"",
+        "accomplishment": {
+            "mainNote": "Awarded best senior capstone project of the year by faculty and peers. Our 5 person team developed a web application called \"The Deep Learning Sandbox.\" The project utilizes deep learning (a subfield of machine learning/artificial intelligence) with the goals of:",
+            "subNotes": [
+                "enticing people to get interested in computer science via K–12 outreach programs that use our application",
+                "identifying the advantages and limitations of deep learning",
+                "learning and utilizing the latest deep learning technologies"
+            ]
+        }
     },
     {
         "institution": "Ivy Tech Community College",

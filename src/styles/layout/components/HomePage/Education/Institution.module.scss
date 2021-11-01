@@ -27,3 +27,14 @@
         margin-right: $default-spacing;
     }
 }
+
+.accomplishment {
+    ul {
+        padding-left: 25rem;
+        list-style-type: disc;
+    }
+
+    &, li {
+        font-size: $secondary-text-size;
+    }
+}

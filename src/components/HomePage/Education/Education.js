@@ -33,6 +33,10 @@ const EducationStaticQuery = () => (
                             concentration
                             gpa
                             gpaNote
+                            accomplishment {
+                               mainNote
+                               subNotes 
+                            }
                         }
                     }
                 }

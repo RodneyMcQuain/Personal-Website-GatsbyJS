@@ -2,13 +2,13 @@ import React from 'react';
 import HoverIconText from '../../Shared/HoverIconText';
 import IconText from '../../Shared/IconText';
 import ImageTopCard from '../../Shared/ImageTopCard';
-import { FaGraduationCap } from '@meronex/icons/fa';
+import { FaGraduationCap, FaStar } from '@meronex/icons/fa';
 import { RiFilePaper2Line } from '@meronex/icons/ri';
 import { BisCalculator } from '@meronex/icons/bi';
 import { GoLocation } from '@meronex/icons/go';
-import { institutionName, institutionDescription, spaced, defaultMarginBottom } from '../../../styles/layout/components/HomePage/Education/Institution.module.scss';
+import { institutionName, institutionDescription, spaced, defaultMarginBottom, accomplishment as accomplishmentClass } from '../../../styles/layout/components/HomePage/Education/Institution.module.scss';
 
-const Institution = ({ institution: { institution, location, degree, minor, concentration, graduationDate, gpa, gpaNote, image } }) => (
+const Institution = ({ institution: { institution, location, degree, minor, concentration, graduationDate, gpa, gpaNote, image, accomplishment } }) => (
     <ImageTopCard
         image={image.childImageSharp.fluid}
         imageAltText={institution}
@@ -59,6 +59,12 @@ const Institution = ({ institution: { institution, location, degree, minor, conc
             </span>
             {gpaNote && <span className="-small-text -gray-text">{gpaNote}</span>}
         </p>
+        {accomplishment &&
+            <p className={accomplishmentClass}>
+                <IconText icon={<FaStar />} text={accomplishment.mainNote} />
+                <ul>{accomplishment.subNotes.map(n => <li>{n}</li>)}</ul>
+            </p>    
+        }
     </ImageTopCard>
 );
 
