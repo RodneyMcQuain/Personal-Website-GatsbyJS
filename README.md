@@ -14,3 +14,10 @@ This site gives some information about me, the education I've received, the proj
 1. Run `yarn build` to create the production build
 2. Run `yarn serve` to run the production build
 3. Navigate to `http://localhost:8080` to view the application
+
+## Technology
+* ReactJS
+* TypeScript
+* SCSS Modules
+* GraphQL
+* GatsbyJS
