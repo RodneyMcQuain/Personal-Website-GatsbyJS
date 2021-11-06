@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useAddCssClass } from '../../../services/useAddCssClass';
-import ParametricCurves from './ParametricCurves';
+import ParametricCurves from './ParametricCurves/ParametricCurves';
 import CycleItems from './CycleItems';
 import IconText from '../../Shared/IconText';
 import { FaChevronDown } from '@meronex/icons/fa';
