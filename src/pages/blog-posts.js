@@ -5,10 +5,12 @@ import SEO from '../components/Shared/SEO';
 import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
 import BlogContentContainer from '../components/Blog/Posts/ContentContainer';
 
+const BLOG_TITLE = "Blog";
+
 const BlogPosts = ({ data: { allMarkdownRemark: { edges, categories, tags } } }) => (
     <Layout>
-        <SEO title="Blog" description="The home for my reflections on effectively building software." />
-        <HeaderContentLayout title="Blog Posts">
+        <SEO title={BLOG_TITLE} description="The home for my reflections on effectively building software." />
+        <HeaderContentLayout title={BLOG_TITLE}>
             <BlogContentContainer
                 posts={edges}
                 categories={categories.map(c => c.category)}
