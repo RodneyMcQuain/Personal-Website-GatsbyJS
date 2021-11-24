@@ -52,6 +52,15 @@
         ]
     },
     {
+        "title": "Design",
+        "skills": [
+            "Responsive Web Design",
+            "Don Norman's Fundamental Principles of Interaction",
+            "Web Content Accessibility Guidelines (WCAG)",
+            "Adobe XD"
+        ]
+    },
+    {
         "title": "Testing",
         "skills": [
             "Test-Driven Development",
