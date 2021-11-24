@@ -43,6 +43,17 @@
         ]
     },
     {
+        "title": "Software Architecture",
+        "skills": [
+            "SOLID Design Principles from Robert C. Martin",
+            "Design Patterns from The Gang of Four",
+            "Cohesion & Coupling from Structured Design",
+            "Layered Architecture",
+            "Model-View-Controller (MVC)",
+            "Model-View-ViewModel (MVVM)"
+        ]
+    },
+    {
         "title": "Process Experience",
         "skills": [
             "Agile",
