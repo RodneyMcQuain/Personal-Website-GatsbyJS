@@ -16,8 +16,8 @@ const HomePage = () => {
             <AboutMe />
             <Testimonials />
             <WorkTimeline />
-            <Skills />
             <Education />
+            <Skills />
             <div className="container">
                 <ContactMe />
             </div>

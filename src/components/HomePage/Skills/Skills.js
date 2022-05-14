@@ -5,7 +5,7 @@ import { SKILLS_HASH } from '../../../services/homePageHashes';
 import HeaderContentLayout from '../../Layout/HeaderContentLayout';
 
 const Skills = ({ skills }) => (
-    <HeaderContentLayout title="Skills" id={SKILLS_HASH} isDark>
+    <HeaderContentLayout title="Skills" id={SKILLS_HASH}>
         <div class="row display-flex">
             {skills.map(skillSection => <SkillSection key={skillSection.node.id} skillSection={skillSection.node} />)}
         </div>
