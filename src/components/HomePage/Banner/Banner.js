@@ -20,9 +20,11 @@ import {
 } from '../../../styles/layout/components/HomePage/Banner/Banner.module.scss';
 
 const itemsToCycle = [
-    "Full-Stack Web Developer",
-    "Competitive Super Smash Bros. Melee Player",
-    "Software Consultant",
+    "Software Generalist"
+    "Professional Namer of Things"
+    "Semi-Professional eSports Player",
+    "Compendious Consultant",
+    "Pragmatic Nerd",
 ];
 
 const HEADER_DISPLAY_DELAY_MS = 250;
