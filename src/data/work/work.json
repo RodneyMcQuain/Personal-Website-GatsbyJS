@@ -19,7 +19,7 @@
         "company": "Aptera",
         "title": "Software Developer",
         "startDate": "2021-01-01",
-        "endDate": null,
+        "endDate": "2021-06-01",
         "city": "Fort Wayne",
         "state": "Indiana",
         "notablePoints": [
@@ -34,5 +34,14 @@
             "Perform various types of work, such as full-stack web development, desktop development, API development, user experience, and accessibility",
             "Work with wide ranges of technology, such as JavaScript, ReactJS, C#, Blazor, and F#"
         ]
+    },
+    {
+        "company": "Core BTS",
+        "title": "Software Engineer",
+        "startDate": "2021-06-01",
+        "endDate": null,
+        "city": "Fort Wayne",
+        "state": "Indiana",
+        "notablePoints": [ "Employed via acquisition of my former organization (Aptera)" ]
     }
 ]
