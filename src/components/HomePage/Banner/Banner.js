@@ -20,8 +20,8 @@ import {
 } from '../../../styles/layout/components/HomePage/Banner/Banner.module.scss';
 
 const itemsToCycle = [
-    "Software Generalist"
-    "Professional Namer of Things"
+    "Software Generalist",
+    "Professional Namer of Things",
     "Semi-Professional eSports Player",
     "Compendious Consultant",
     "Pragmatic Nerd",
