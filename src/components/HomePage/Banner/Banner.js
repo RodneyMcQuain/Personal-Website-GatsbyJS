@@ -20,11 +20,13 @@ import {
 } from '../../../styles/layout/components/HomePage/Banner/Banner.module.scss';
 
 const itemsToCycle = [
-    "Software Generalist",
-    "Professional Namer of Things",
-    "Semi-Professional eSports Player",
-    "Compendious Consultant",
-    "Pragmatic Nerd",
+    "a Software Generalist",
+    "a Professional Namer of Things",
+    "a Semi-Professional eSports Player",
+    "an Empathetic Mentor",
+    "a Pragmatic Nerd",
+    "a Compendious Consultant",
+    "a Feedback Seeker",
 ];
 
 const HEADER_DISPLAY_DELAY_MS = 250;
@@ -38,7 +40,7 @@ const Banner = () => {
             <div className={`${bannerContainer} col-xl-12 col-md-12 col-sm-12 col-xs-12`}>
                 <h1 className={`${bannerHeader} ${bannerHide} ${fadeHeader}`}>Rodney McQuain</h1>
                 <p className={`${bannerText} ${bannerHide} ${fadeTextAndButton}`}>
-                    Hello, I'm a<SingleWhiteSpace /><CycleItems items={itemsToCycle} initialDelay={BUTTON_AND_TEXT_DISPLAY_DELAY_MS} />
+                    Hello, I'm<SingleWhiteSpace /><CycleItems items={itemsToCycle} initialDelay={BUTTON_AND_TEXT_DISPLAY_DELAY_MS} />
                     <br />
                     Who's always looking for an opportunity to test my skills and grow
                 </p>
