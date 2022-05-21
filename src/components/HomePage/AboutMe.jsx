@@ -18,8 +18,9 @@ const AboutMe = ({ data: { currentMe, youngMe } }) => (
                 Courtesy of <Link href="https://www.facebook.com/tinymeleephotography/" shouldOpenInNewTab>Tiny Melee Photography</Link>
             </Figure>
             <p className={aboutMeText}>
-                Hey, what's up? I'm Rodney. I'm a passionate software developer that's engrossed in the world of software.
-                I specialize in full-stack web development and consulting—with heavy interests in software architecture, user experience, and agility.
+                Hey, what's up? I'm Rodney. I'm a software engineer, fully engrossed in the world of software.
+                From full-stack web development to the steel industry to machine learning to the internet of things (IoT) and many other areas—I've worked on a variety of different types and domains of software projects.
+                Ultimately, I enjoy solving interesting and difficult problems and software is a phenomenal avenue that enables me to do it!
             </p>
             <Figure
                 fluidImage={youngMe.image.childImageSharp.fluid}
