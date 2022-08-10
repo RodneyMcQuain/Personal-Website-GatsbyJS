@@ -5,7 +5,7 @@ import IconText from '../components/Shared/IconText';
 import { FaDownload } from '@meronex/icons/fa';
 import HeaderContentLayout from '../components/Layout/HeaderContentLayout';
 
-const RESUME_FILE_PATH = "/documents/Rodney McQuain - Resume - May 2022.pdf";
+const RESUME_FILE_PATH = "/documents/Rodney McQuain - Resume - August 2022.pdf";
 
 const Resume = () => (
     <Layout>
