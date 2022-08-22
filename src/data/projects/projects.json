@@ -7,7 +7,8 @@
             "JavaFX"
         ],
         "description": "Melee CSS Color Changer is used to change various colors on the character select screen of Super Smash Bros. Melee. The user just provides the appropriate MnSlChr.usd and adjusts the colors for background, top frame, bottom frame, rules, cursor, and the many \"selects\" in the background.",
-        "gitHubUrl": "https://github.com/RodneyMcQuain/Melee-CSS-Color-Changer"
+        "gitHubUrl": "https://github.com/RodneyMcQuain/Melee-CSS-Color-Changer",
+        "associatedBlogPostPath": "/blog-posts/coloring-in-a-20-year-old-video-game"
     },
     {
         "title": "The Digit-Inator",

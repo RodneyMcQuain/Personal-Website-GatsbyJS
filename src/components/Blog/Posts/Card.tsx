@@ -6,7 +6,7 @@ import Category from '../Icons/Category';
 import { ALL_FILTER } from '../ALL_FILTER';
 import { IBlogPost } from '../BlogTypes';
 import IconText from '../../Shared/IconText';
-import { FaBook } from '@meronex/icons/fa';
+import ReadBlogIcon from '../Icons/ReadBlogIcon';
 import Div from '../../Shared/UnstyledDiv';
 import ImageTopCard from '../../Shared/ImageTopCard';
 import { blogCard, hideCard, icons } from '../../../styles/layout/components/Blog/Posts/Card.module.scss';
@@ -37,7 +37,7 @@ const Card = ({ post, categoryFilter, tagFilters }: IBlogCardProps) => {
             <h2>{title}</h2>
             <p className="-secondary-text">{excerpt}</p>
             <Link className="btn -secondary-text" to={path} aria-label={`Read more about ${title}`}>
-                <IconText icon={<FaBook />} text="Read More" />
+                <IconText icon={<ReadBlogIcon />} text="Read More" />
             </Link>
         </ImageTopCard>
     );

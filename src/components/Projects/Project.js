@@ -1,12 +1,14 @@
 import React from 'react';
+import Link from '../Shared/InternalLink';
 import IconText from '../Shared/IconText';
 import ImageTopCard from '../Shared/ImageTopCard';
 import ExternalLinkButton from '../Shared/ExternalLinkButton';
 import { FaGithub } from '@meronex/icons/fa';
+import ReadBlogIcon from '../Blog/Icons/ReadBlogIcon';
 import MdcWeb from '@meronex/icons/mdc/MdcWeb';
 import { projectContainer, projectLinkContainer, languageTag } from '../../styles/layout/components/Projects/Project.module.scss';
 
-const Project = ({ project: { image, title, technologies, description, gitHubUrl, siteUrl } }) => (
+const Project = ({ project: { image, title, technologies, description, gitHubUrl, siteUrl, associatedBlogPostMetadata } }) => (
     <ImageTopCard
         image={image.childImageSharp.fluid}
         imageAltText={`${title} project`}
@@ -25,7 +27,16 @@ const Project = ({ project: { image, title, technologies, description, gitHubUrl
             <ExternalLinkButton href={gitHubUrl} ariaLabel={`Go to GitHub for my ${title} project`}>
                 <IconText icon={<FaGithub />} text="GitHub" />
             </ExternalLinkButton>
+            <br />
+            
         </div>
+        {associatedBlogPostMetadata && (
+            <div>
+                <Link link={associatedBlogPostMetadata.path}>
+                    <IconText icon={<ReadBlogIcon />} text={`Read associated blog post "${associatedBlogPostMetadata.title}"`} />
+                </Link>
+            </div>
+        )}
     </ImageTopCard>
 );
 

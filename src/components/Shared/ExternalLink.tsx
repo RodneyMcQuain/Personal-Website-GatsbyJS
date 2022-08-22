@@ -1,5 +1,5 @@
 import React from 'react';
-import { link } from '../../styles/layout/components/Shared/ExternalLink.module.scss';
+import { link } from '../../styles/layout/components/Shared/underlineLink.module.scss';
 import { AllChildren } from '../../types/AllChildren';
 import ExternalLinkInNewTab from './ExternalLinkInNewTab';
 
