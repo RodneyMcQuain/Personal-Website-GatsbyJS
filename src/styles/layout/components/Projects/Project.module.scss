@@ -1,7 +1,8 @@
 @import '../../../helpers/variables/variables.module';
+@import '../../../helpers/variables/spacings';
 
 .project-container {
-    p, span, a {
+    p, span, a, .notable-points > li {
         font-size: $secondary-text-size;
     }
 
@@ -21,5 +22,10 @@
 
     .project-link-container > * {
         margin-right: $spacing-between-elements;
+    }
+
+    .notable-points {
+        list-style-type: disc;
+        padding-left: $content-horizontal-padding;
     }
 }

@@ -8,7 +8,10 @@
         ],
         "description": "Melee CSS Color Changer is used to change various colors on the character select screen of Super Smash Bros. Melee. The user just provides the appropriate MnSlChr.usd and adjusts the colors for background, top frame, bottom frame, rules, cursor, and the many \"selects\" in the background.",
         "gitHubUrl": "https://github.com/RodneyMcQuain/Melee-CSS-Color-Changer",
-        "associatedBlogPostPath": "/blog-posts/coloring-in-a-20-year-old-video-game"
+        "associatedBlogPostPath": "/blog-posts/coloring-in-a-20-year-old-video-game",
+        "notablePoints": [
+            "Lessened the time it takes to fully customize the CSS by 95% through automating the tedious process of identifying and altering specific bytes in a file and eliminating the need for low-level technical knowledge from the user"
+        ]
     },
     {
         "title": "The Digit-Inator",
@@ -32,7 +35,12 @@
         ],
         "description": "The Digit-Inator allows you to convert your favorite hand drawn digit to text with the latest and greatest in computer vision. The user simply just draws a number using their mouse or touch screen and the Digit-Inator gives its best guess at what the number is.",
         "gitHubUrl": "https://github.com/RodneyMcQuain/Digit-Inator",
-        "siteUrl": "https://digit-inator.netlify.app/"
+        "siteUrl": "https://digit-inator.netlify.app/",
+        "notablePoints": [
+            "Transformed digit-recognition accuracy from 35% to 99% by compressing a user’s drawing to align with the machine learning model’s dataset via minimizing stretching, maintaining aspect ratio, correcting color, decreasing drawable space, adding padding around the digit, increasing brush size, and removing noise to support detection for drawings of all sizes",
+            "Decreased time until a user can run a detection and get a result by 91% via pre-loading and caching the machine learning model",
+            "Increased confidence in modifying the machine learning model and drawing compression code by writing full end-to-end tests that cover 100% of detectable digits from the input of the user’s drawing to the output of the detection for the digit"
+        ]
     },
     {
         "title": "Melee Notes Web App",

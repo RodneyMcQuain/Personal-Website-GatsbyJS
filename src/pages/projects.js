@@ -39,6 +39,7 @@ const ProjectsStaticQuery = () => (
                             gitHubUrl
                             siteUrl
                             associatedBlogPostPath
+                            notablePoints
                         }
                     }
                 }
